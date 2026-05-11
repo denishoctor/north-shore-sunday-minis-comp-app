@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11T13:36:03.286Z",
+  "updated": "2026-05-11T16:22:36.097Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -251,6 +251,30 @@
       "age": "U7",
       "slug": "st-ives-u7-blue"
     },
+    "wXumK7xeYAM7xkdkD": {
+      "name": "St Ives Yellow 7",
+      "clubKey": "st-ives",
+      "age": "U7",
+      "slug": "st-ives-u7-yellow"
+    },
+    "52MoHPFgMFTPppk9H": {
+      "name": "Lane Cove Blue 7",
+      "clubKey": "lane-cove",
+      "age": "U7",
+      "slug": "lane-cove-u7-blue"
+    },
+    "zuXwJ9BmQHnz36gfH": {
+      "name": "Chatswood Green 7",
+      "clubKey": "chatswood",
+      "age": "U7",
+      "slug": "chatswood-u7-green"
+    },
+    "7ji49P5fD74pry8Sh": {
+      "name": "Lindfield 7",
+      "clubKey": "lindfield",
+      "age": "U7",
+      "slug": "lindfield-u7"
+    },
     "SgMo5P2wrBkSsiA75": {
       "name": "Chatswood Black 8",
       "clubKey": "chatswood",
@@ -322,30 +346,6 @@
       "clubKey": "lane-cove",
       "age": "U8",
       "slug": "lane-cove-u8-blue"
-    },
-    "wXumK7xeYAM7xkdkD": {
-      "name": "St Ives Yellow 7",
-      "clubKey": "st-ives",
-      "age": "U7",
-      "slug": "st-ives-u7-yellow"
-    },
-    "52MoHPFgMFTPppk9H": {
-      "name": "Lane Cove Blue 7",
-      "clubKey": "lane-cove",
-      "age": "U7",
-      "slug": "lane-cove-u7-blue"
-    },
-    "zuXwJ9BmQHnz36gfH": {
-      "name": "Chatswood Green 7",
-      "clubKey": "chatswood",
-      "age": "U7",
-      "slug": "chatswood-u7-green"
-    },
-    "7ji49P5fD74pry8Sh": {
-      "name": "Lindfield 7",
-      "clubKey": "lindfield",
-      "age": "U7",
-      "slug": "lindfield-u7"
     },
     "BKWEZ7Kev7a3KvTRd": {
       "name": "Chatswood Gold 8",
@@ -4776,6 +4776,64 @@
       }
     },
     {
+      "id": "74537e4b47736fac6",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 1",
+      "roundLabel": "Round 1",
+      "dateTime": "2026-05-02T23:20:00+00:00",
+      "venue": "Tryon Oval TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "G-7-6",
+      "home": {
+        "id": "wXumK7xeYAM7xkdkD",
+        "name": "St Ives Yellow 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
+        "clubKey": "st-ives"
+      },
+      "away": {
+        "id": "52MoHPFgMFTPppk9H",
+        "name": "Lane Cove Blue 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+        "clubKey": "lane-cove"
+      }
+    },
+    {
+      "id": "8a9f6229e0ca6d830",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 1",
+      "roundLabel": "Round 1",
+      "dateTime": "2026-05-02T23:20:00+00:00",
+      "venue": "Tryon Oval TT2 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "G-7-7",
+      "home": {
+        "id": "zuXwJ9BmQHnz36gfH",
+        "name": "Chatswood Green 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      },
+      "away": {
+        "id": "7ji49P5fD74pry8Sh",
+        "name": "Lindfield 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/48060.png?v=1712741642942",
+        "clubKey": "lindfield"
+      }
+    },
+    {
       "id": "512b1ad5b44cce88e",
       "type": "fixture",
       "competition": "SJRU Minis U8 Sunday",
@@ -4947,64 +5005,6 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
         "clubKey": "lane-cove"
-      }
-    },
-    {
-      "id": "74537e4b47736fac6",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 1",
-      "roundLabel": "Round 1",
-      "dateTime": "2026-05-02T23:20:00+00:00",
-      "venue": "Tryon Oval TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "G-7-6",
-      "home": {
-        "id": "wXumK7xeYAM7xkdkD",
-        "name": "St Ives Yellow 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
-        "clubKey": "st-ives"
-      },
-      "away": {
-        "id": "52MoHPFgMFTPppk9H",
-        "name": "Lane Cove Blue 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-        "clubKey": "lane-cove"
-      }
-    },
-    {
-      "id": "8a9f6229e0ca6d830",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 1",
-      "roundLabel": "Round 1",
-      "dateTime": "2026-05-02T23:20:00+00:00",
-      "venue": "Tryon Oval TT2 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "G-7-7",
-      "home": {
-        "id": "zuXwJ9BmQHnz36gfH",
-        "name": "Chatswood Green 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      },
-      "away": {
-        "id": "7ji49P5fD74pry8Sh",
-        "name": "Lindfield 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/48060.png?v=1712741642942",
-        "clubKey": "lindfield"
       }
     },
     {
