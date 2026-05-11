@@ -105,8 +105,8 @@ before the icon generator and the header logo render:
 
 | Filename | Variant | Used by |
 |---|---|---|
-| `docs/assets/sunday-minis-logo.png`         | **Cream / off-white background** — the version that sits well against the white header | `docs/index.html` header crest |
-| `docs/assets/sunday-minis-logo-on-navy.png` | **Navy background** — the version that becomes the PWA icon source | `scripts/generate-icons.py` (renders 192/512/512-maskable/180 icons) |
+| `docs/assets/sunday-minis-logo-w-bg.png` | **Cream / off-white background** | `docs/index.html` header crest (sits in a white circular badge frame) |
+| `docs/assets/sunday-minis-logo-b-bg.png` | **Navy background** | `scripts/generate-icons.py` source for the four PWA icons |
 
 Once you've saved both:
 

@@ -9,25 +9,32 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0b3b8c">
+<meta name="theme-color" content="#0a2059">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="NSM Sunday">
 <meta name="format-detection" content="telephone=no">
 <style>
+  /* Palette mirrors the Sunday Minis badge:
+       deep navy outer ring, warmer mid-navy, gold ribbon, white figure,
+       maroon ribbon-shadow accent. */
   :root {
-    --navy: #0b3b8c;
-    --navy-dark: #082a64;
-    --gold: #F4C842;
-    --cream: #EAF1FB;
-    --cream-edge: #C5D5EE;
-    --ink: #1A1A1A;
-    --muted: #6B6B6B;
-    --rule: #E5E5E5;
-    --green: #2E7D4F;
-    --maroon: #7E1A2B;
+    --navy:       #0a2059;
+    --navy-mid:   #11337a;
+    --navy-dark:  #06163e;
+    --gold:       #d4a93c;     /* badge gold */
+    --gold-soft:  #f1d782;
+    --cream:      #f4ecd1;     /* off-white background — echoes the cream-bg variant */
+    --cream-edge: #d8c891;
+    --ink:        #1A1A1A;
+    --ink-on-gold:#2A1F00;
+    --muted:      #6B6B6B;
+    --rule:       #E5E5E5;
+    --green:      #2E7D4F;
+    --maroon:     #7E1A2B;
   }
+  body { background: #FAF7EE; }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -38,49 +45,60 @@
   a { color: var(--navy); }
   .page { max-width: 980px; margin: 0 auto; background: #fff; min-height: 100vh; }
 
-  /* HEADER */
+  /* HEADER — deep-navy band with a gold rule, mirrors the badge ring/ribbon. */
   .header {
-    display: flex; align-items: center; gap: 14px;
-    padding: 12px 20px;
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 20px 18px;
     padding-left: max(20px, env(safe-area-inset-left));
     padding-right: max(20px, env(safe-area-inset-right));
-    border-bottom: 1px solid var(--rule);
+    background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: #fff;
     position: relative;
+    border-bottom: 3px solid var(--gold);
   }
-  .crest img { width: 56px; height: 56px; object-fit: contain; }
+  .crest {
+    width: 70px; height: 70px;
+    background: #fff;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,.35), inset 0 0 0 2px var(--navy-dark);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
   .title-block { flex: 1 1 auto; min-width: 0; }
   .eyebrow {
-    font-size: 11px; font-weight: 800; color: var(--navy);
-    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 2px;
+    font-size: 11px; font-weight: 800; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 3px;
   }
-  h1 { margin: 0; font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -.3px; }
-  .updated-stamp { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  h1 { margin: 0; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+  .updated-stamp { font-size: 11px; color: rgba(255,255,255,.7); margin-top: 4px; }
   .live-pill {
     display: inline-flex; align-items: center; gap: 4px;
-    font-size: 9px; font-weight: 800; color: var(--green);
-    background: #E8F5EE; border: 1px solid #BFE2D0;
+    font-size: 9px; font-weight: 800; color: var(--ink-on-gold);
+    background: var(--gold); border: 1px solid var(--gold-soft);
     padding: 2px 7px; border-radius: 999px; letter-spacing: .5px;
     text-transform: uppercase; margin-left: 8px; vertical-align: middle;
   }
-  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-on-gold); }
   .header-home {
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
-    color: var(--navy); background: var(--cream);
-    border: 1.5px solid var(--cream-edge);
+    color: var(--navy-dark); background: var(--gold);
+    border: 1.5px solid var(--gold-soft);
     padding: 6px 11px; border-radius: 999px;
     display: inline-flex; align-items: center; gap: 4px;
   }
   .header-home[hidden] { display: none; }
-  .header-home:hover { background: #fff; border-color: var(--navy); }
+  .header-home:hover { filter: brightness(1.06); }
 
   /* TOOLBAR — club filter row + team token grid */
   .toolbar {
-    padding: 10px 20px;
+    padding: 12px 20px;
     padding-left: max(20px, env(safe-area-inset-left));
     padding-right: max(20px, env(safe-area-inset-right));
-    background: #FCFCFC;
-    border-bottom: 1px solid var(--rule);
+    background: #fff;
+    border-bottom: 1px solid var(--cream-edge);
   }
   .club-row {
     display: flex; flex-wrap: wrap; gap: 5px;
@@ -90,17 +108,20 @@
   .club-chip {
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
-    color: var(--muted); background: #fff;
+    color: var(--navy-mid); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 4px 10px; border-radius: 999px;
+    padding: 5px 11px; border-radius: 999px;
     line-height: 1; white-space: nowrap;
-    transition: background .12s, border-color .12s, color .12s;
+    transition: background .12s, border-color .12s, color .12s, box-shadow .12s;
   }
   .club-chip:hover { border-color: var(--navy); color: var(--navy); }
   .club-chip.active {
-    background: var(--navy); color: #fff; border-color: var(--navy);
+    background: var(--navy); color: #fff;
+    border-color: var(--gold);
+    box-shadow: inset 0 -2px 0 var(--gold);
   }
-  .club-chip .club-count { opacity: .7; font-weight: 600; margin-left: 4px; }
+  .club-chip .club-count { opacity: .65; font-weight: 600; margin-left: 4px; }
+  .club-chip.active .club-count { color: var(--gold); opacity: 1; }
   .age-row {
     display: flex; flex-wrap: wrap; gap: 5px;
     margin-bottom: 8px;
@@ -108,14 +129,14 @@
   .age-row[hidden] { display: none; }
   .age-chip {
     appearance: none; cursor: pointer;
-    font-family: inherit; font-size: 11px; font-weight: 700;
-    color: var(--navy); background: var(--cream);
+    font-family: inherit; font-size: 11px; font-weight: 800;
+    color: var(--navy); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 4px 10px; border-radius: 999px;
-    line-height: 1; white-space: nowrap;
+    padding: 4px 12px; border-radius: 999px;
+    line-height: 1; white-space: nowrap; letter-spacing: .5px;
   }
   .age-chip:hover { border-color: var(--navy); }
-  .age-chip.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .age-chip.active { background: var(--gold); color: var(--ink-on-gold); border-color: var(--gold); }
 
   .token-grid {
     display: grid;
@@ -129,19 +150,25 @@
   .token {
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 12px; font-weight: 700;
-    color: var(--navy); background: var(--cream);
+    color: var(--navy); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 7px 9px; border-radius: 10px;
+    padding: 8px 10px; border-radius: 10px;
     text-align: left; line-height: 1.25;
     display: flex; flex-direction: column; gap: 2px;
     min-width: 0;
+    transition: border-color .12s, box-shadow .12s;
   }
-  .token:hover { border-color: var(--navy); }
-  .token.active { background: var(--navy); color: #fff; border-color: var(--navy); }
-  .token-age { font-size: 10px; font-weight: 800; opacity: .8; text-transform: uppercase; letter-spacing: .5px; }
+  .token:hover { border-color: var(--navy); box-shadow: 0 1px 4px rgba(10,32,89,.08); }
+  .token.active {
+    background: var(--navy); color: #fff;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px var(--gold) inset, 0 2px 6px rgba(10,32,89,.25);
+  }
+  .token-age { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .5px; }
+  .token.active .token-age { color: var(--gold-soft); }
   .token-name { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .token-club { font-size: 10px; font-weight: 600; opacity: .7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .token.active .token-age, .token.active .token-club { opacity: .85; }
+  .token.active .token-club { opacity: .85; }
 
   /* ACTION BAR — team selected only */
   .action-bar {
@@ -184,18 +211,31 @@
   .cal-option-label { font-size: 12px; font-weight: 700; }
   .cal-option-sub { font-size: 10.5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
 
-  /* WELCOME (no team selected) */
+  /* WELCOME (no team selected) — echoes the badge ribbons. */
   .welcome {
-    padding: 32px 28px 36px; text-align: center;
-    border-bottom: 1px solid var(--rule);
+    padding: 36px 28px 40px; text-align: center;
+    background: linear-gradient(180deg, #fff 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--cream-edge);
+    position: relative;
   }
-  .welcome h2 { font-size: 21px; font-weight: 800; color: var(--navy); margin: 0 0 8px; letter-spacing: -.3px; }
-  .welcome-sub { font-size: 14px; color: var(--muted); margin: 0 0 22px; line-height: 1.5; }
+  .welcome h2 {
+    display: inline-block;
+    font-size: 22px; font-weight: 800; color: var(--navy);
+    margin: 0 0 8px; letter-spacing: -.3px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .welcome-sub { font-size: 14px; color: var(--muted); margin: 14px auto 22px; line-height: 1.55; max-width: 560px; }
   .welcome-stats {
-    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-    font-size: 12px; color: var(--muted);
+    display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;
+    font-size: 12px; color: var(--muted); margin-top: 12px;
   }
-  .welcome-stats b { color: var(--navy); font-weight: 800; }
+  .welcome-stats > span {
+    display: inline-flex; align-items: baseline; gap: 5px;
+    background: #fff; border: 1px solid var(--cream-edge);
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .welcome-stats b { color: var(--navy); font-weight: 800; font-size: 14px; }
 
   /* CALENDAR LIST */
   #calendar { padding: 16px 0 40px; }
@@ -218,7 +258,8 @@
     border: 1px solid var(--rule); border-radius: 10px;
     background: #fff; overflow: hidden;
   }
-  .match-card.expanded { border-color: var(--navy); }
+  .match-card { border-left: 3px solid var(--gold); }
+  .match-card.expanded { border-color: var(--navy); border-left-color: var(--navy); }
   .match-card.has-lineup .match-row { cursor: pointer; }
   .match-row {
     display: grid;
@@ -340,7 +381,7 @@
 
   <div class="header">
     <div class="crest">
-      <img src="assets/sunday-minis-logo.png"
+      <img src="assets/sunday-minis-logo-w-bg.png"
            onerror="this.style.display='none'"
            alt="North Shore Minis Sunday Rugby logo">
     </div>
@@ -458,12 +499,19 @@ function buildClubRow() {
     if (!meta.clubKey) continue;
     (teamsByClub[meta.clubKey] ??= []).push(meta);
   }
-  const clubsWithTeams = Object.entries(CLUBS || {})
-    .filter(([key]) => (teamsByClub[key]?.length || 0) > 0);
+  // Pre-fetch (TEAM_META empty) show all configured clubs so the site looks
+  // alive on first deploy. Post-fetch, hide clubs that have zero teams in the
+  // live data — keeps the chip row tight to what's actually playing.
+  const hasData = Object.keys(TEAM_META || {}).length > 0;
+  const allClubs = Object.entries(CLUBS || {});
+  const clubsToShow = hasData
+    ? allClubs.filter(([key]) => (teamsByClub[key]?.length || 0) > 0)
+    : allClubs;
 
-  row.innerHTML = clubsWithTeams.map(([key, club]) => {
+  row.innerHTML = clubsToShow.map(([key, club]) => {
     const n = teamsByClub[key]?.length || 0;
-    return `<button class="club-chip" data-club="${esc(key)}" type="button">${esc(club.name)}<span class="club-count">${n}</span></button>`;
+    const countHtml = hasData ? `<span class="club-count">${n}</span>` : '';
+    return `<button class="club-chip" data-club="${esc(key)}" type="button">${esc(club.name)}${countHtml}</button>`;
   }).join('');
 
   row.querySelectorAll('.club-chip').forEach(btn => {
@@ -730,18 +778,27 @@ function renderLineupPanel(matchId) {
 }
 
 function renderWelcome() {
+  // Pre-first-fetch fallback: TEAM_META is empty until the workflow runs, so
+  // show the configured CLUBS whitelist size rather than 0. Once fixtures land,
+  // both numbers reflect the live data.
   const teamCount   = Object.keys(TEAM_SLUGS || {}).length;
-  const clubCount   = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
+  const liveClubCount = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
+  const configuredClubCount = Object.keys(CLUBS || {}).length;
+  const clubCount   = liveClubCount || configuredClubCount;
   const matchCount  = fixturesData?.totalMatches || 0;
+  const awaiting    = matchCount === 0;
   return `<div class="welcome">
     <h2>${esc(SITE?.name || 'Fixtures')}</h2>
-    <p class="welcome-sub">Pick a club above, then your team for the full Sunday Minis schedule, calendar sync &amp; team sheets.</p>
-    <p class="welcome-stats">
+    <p class="welcome-sub">${awaiting
+      ? 'Setting things up. Once the first fetch runs (hourly cron, or manual trigger via Actions), club chips above will populate and your team will be one tap away.'
+      : 'Pick a club above, then your team for the full Sunday Minis schedule, calendar sync &amp; team sheets.'
+    }</p>
+    <div class="welcome-stats">
       <span><b>${clubCount}</b> clubs</span>
-      <span><b>${teamCount}</b> teams</span>
-      <span><b>${matchCount}</b> matches</span>
+      <span><b>${teamCount || '—'}</b> teams</span>
+      <span><b>${matchCount || '—'}</b> matches</span>
       <span>U6–U9 SJRU Sunday</span>
-    </p>
+    </div>
   </div>`;
 }
 

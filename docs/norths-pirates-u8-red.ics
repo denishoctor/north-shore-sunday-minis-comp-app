@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Norths Pirates Red 8 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Norths Pirates Red 8 fixtur
+ es and results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-f17960dc5d7c60b4e-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260511T183009Z
+LAST-MODIFIED:20260511T183009Z
+DTSTART;TZID=Australia/Sydney:20260503T092000
+DTEND;TZID=Australia/Sydney:20260503T102000
+SUMMARY:Norths Pirates Red 8 vs Dee Why 8 | RND 1
+LOCATION:Tryon Oval TT6\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Dee Why 8\n📍 Tryon Oval TT6\, E
+ ast Lindfield\n📅 Round 1 · Sun\, 3 May · 9:20am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-8e8e5be8592849805-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260511T183009Z
+LAST-MODIFIED:20260511T183009Z
+DTSTART;TZID=Australia/Sydney:20260510T100000
+DTEND;TZID=Australia/Sydney:20260510T110000
+SUMMARY:Norths Pirates Red 8 vs Hornsby Red 8 | RND 2
+LOCATION:Tunks Park TT3\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Hornsby Red 8\n📍 Tunks Park TT3
+ \, Cammeray\n📅 Round 2 · Sun\, 10 May · 10:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-5a1a57e2ba70ce563-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260511T183009Z
+LAST-MODIFIED:20260511T183009Z
+DTSTART;TZID=Australia/Sydney:20260517T084000
+DTEND;TZID=Australia/Sydney:20260517T094000
+SUMMARY:Norths Pirates Red 8 vs Lane Cove Blue 8 | RND 3
+LOCATION:Melwood Oval TT2\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Lane Cove Blue 8\n📍 Melwood Ova
+ l TT2\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 SJR
+ U Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upd
+ ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
+  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
+ sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-c707491695eb3862e-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260511T183009Z
+LAST-MODIFIED:20260511T183009Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Norths Pirates Red 8 vs Chatswood Black 8 | RND 4
+LOCATION:Bantry Bay Oval TT1\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Chatswood Black 8\n📍 Bantry Bay
+  Oval TT1\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJ
+ RU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar up
+ dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
+ o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
+ -sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+END:VCALENDAR
