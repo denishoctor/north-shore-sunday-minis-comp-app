@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Killara-West Pymble Blue 7 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Killara-West Pymble Blue 7 
+ fixtures and results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-8b5f650116034c9bd-kwp-u7-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T084000
+DTEND;TZID=Australia/Sydney:20260503T094000
+SUMMARY:Killara-West Pymble Blue 7 vs Chatswood Gold 7 | RND 1
+LOCATION:Tryon Oval TT1\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 7 vs Chatswood Gold 7\n📍 Tryon
+  Oval TT1\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:40am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#kwp-u7-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-66f23dfa474c363d0-kwp-u7-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T092000
+DTEND;TZID=Australia/Sydney:20260510T102000
+SUMMARY:Killara-West Pymble Blue 7 vs St Ives Yellow 7 | RND 2
+LOCATION:Tunks Park TT6\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 7 vs St Ives Yellow 7\n📍 Tunks
+  Park TT6\, Cammeray\n📅 Round 2 · Sun\, 10 May · 9:20am AEST\n🏆 SJ
+ RU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
+ lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
+ dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
+ rth-shore-sunday-minis-comp-app/#kwp-u7-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-359931604ff6d17ee-kwp-u7-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T092000
+DTEND;TZID=Australia/Sydney:20260517T102000
+SUMMARY:Killara-West Pymble Blue 7 vs Norths Pirates Gold 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 7 vs Norths Pirates Gold 7\n📍 
+ Wakehurst Rugby Park TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 9:20am
+  AEST\n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may c
+ hange. This calendar updates automatically\n(Apple Calendar: ~every hour 
+ · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoct
+ or.github.io/north-shore-sunday-minis-comp-app/#kwp-u7-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-20a62ce4531249509-kwp-u7-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
+SUMMARY:Killara-West Pymble Blue 7 vs Lane Cove Gold 7 | RND 4
+LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 7 vs Lane Cove Gold 7\n📍 Beauc
+ hamp Park TT4\, Chatswood\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#kwp-u7-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-3a8142647a876922b-kwp-u7-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T100000
+DTEND;TZID=Australia/Sydney:20260524T110000
+SUMMARY:Killara-West Pymble Blue 7 vs Killara-West Pymble Gold 7 | RND 4
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 7 vs Killara-West Pymble Gold 7\n
+ 📍 Beauchamp Park TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 10:00
+ am AEST\n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may
+  change. This calendar updates automatically\n(Apple Calendar: ~every hour
+  · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoc
+ tor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -blue
+END:VEVENT
+END:VCALENDAR

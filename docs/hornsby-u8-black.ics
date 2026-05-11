@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Hornsby Black 8 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Hornsby Black 8 fixtures an
+ d results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-ac64059e051445cc2-hornsby-u8-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T092000
+DTEND;TZID=Australia/Sydney:20260503T102000
+SUMMARY:Hornsby Black 8 vs Norths Pirates Black 8 | RND 1
+LOCATION:Tryon Oval TT7\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Black 8\n📍 Tryon Oval
+  TT7\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 9:20am AEST\n🏆 SJ
+ RU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar up
+ dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
+ o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
+ -sunday-minis-comp-app/#hornsby-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u8-black
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-e8fbe6b3838001c1b-hornsby-u8-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T100000
+DTEND;TZID=Australia/Sydney:20260510T110000
+SUMMARY:Hornsby Black 8 vs St Ives 8 | RND 2
+LOCATION:Tunks Park TT2\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Black 8 vs St Ives 8\n📍 Tunks Park TT2\, Cammer
+ ay\n📅 Round 2 · Sun\, 10 May · 10:00am AEST\n🏆 SJRU Minis U8 Sunda
+ y\n\nℹ️ Venues and times may change. This calendar updates automatical
+ ly\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a 
+ change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-com
+ p-app/#hornsby-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u8-black
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-cb8fa853d4048f4a6-hornsby-u8-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T080000
+DTEND;TZID=Australia/Sydney:20260517T090000
+SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 3
+LOCATION:Melwood Oval TT3\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Black 8 vs Chatswood Green 8\n📍 Melwood Oval TT
+ 3\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#hornsby-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u8-black
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-dc65fdb643bc5cd76-hornsby-u8-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 4
+LOCATION:Bantry Bay Oval TT2\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Black 8 vs Chatswood Green 8\n📍 Bantry Bay Oval
+  TT2\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#hornsby-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u8-black
+END:VEVENT
+END:VCALENDAR

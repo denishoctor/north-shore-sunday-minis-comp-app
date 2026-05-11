@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Wakehurst Kings 8 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Wakehurst Kings 8 fixtures 
+ and results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-fb5b243ba1973232e-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T100000
+DTEND;TZID=Australia/Sydney:20260503T110000
+SUMMARY:Wakehurst Kings 8 vs Chatswood Gold 8 | RND 1
+LOCATION:Tryon Oval TT1\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Chatswood Gold 8\n📍 Tryon Oval TT1
+ \, East Lindfield\n📅 Round 1 · Sun\, 3 May · 10:00am AEST\n🏆 SJRU 
+ Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updat
+ es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
+ 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
+ nday-minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-1878b66db5814a3af-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T100000
+DTEND;TZID=Australia/Sydney:20260510T110000
+SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 2
+LOCATION:Tunks Park TT5\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Lane Cove Blue 8\n📍 Tunks Park TT5
+ \, Cammeray\n📅 Round 2 · Sun\, 10 May · 10:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-22c84a19fa86086ef-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T080000
+DTEND;TZID=Australia/Sydney:20260517T090000
+SUMMARY:Wakehurst Kings 8 vs Hornsby Red 8 | RND 3
+LOCATION:Melwood Oval TT4\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Hornsby Red 8\n📍 Melwood Oval TT4\
+ , Forestville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Mini
+ s U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-b597c38c7fdc2ae9c-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
+SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 4
+LOCATION:Bantry Bay Oval TT1\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Lane Cove Blue 8\n📍 Bantry Bay Ova
+ l TT1\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU M
+ inis U8 Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+END:VCALENDAR

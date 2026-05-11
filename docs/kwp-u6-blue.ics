@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Killara-West Pymble Blue 6 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Killara-West Pymble Blue 6 
+ fixtures and results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-fcde3f9b55e3541b0-kwp-u6-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T080000
+DTEND;TZID=Australia/Sydney:20260503T090000
+SUMMARY:Killara-West Pymble Blue 6 vs Norths Pirates Red 6 | RND 1
+LOCATION:Tryon Oval TT2\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Norths Pirates Red 6\n📍 T
+ ryon Oval TT2\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:00am AEST
+ \n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change
+ . This calendar updates automatically\n(Apple Calendar: ~every hour · Goo
+ gle Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.git
+ hub.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-72a2b26ba72fa020f-kwp-u6-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T080000
+DTEND;TZID=Australia/Sydney:20260510T090000
+SUMMARY:Killara-West Pymble Blue 6 vs Norths Pirates Black 6 | RND 2
+LOCATION:Tunks Park TT2\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Norths Pirates Black 6\n📍
+  Tunks Park TT2\, Cammeray\n📅 Round 2 · Sun\, 10 May · 8:00am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-a0912efe6359d3bb8-kwp-u6-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T080000
+DTEND;TZID=Australia/Sydney:20260517T090000
+SUMMARY:Killara-West Pymble Blue 6 vs Wakehurst Wombats 6 | RND 3
+LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Wakehurst Wombats 6\n📍 Wa
+ kehurst Rugby Park TT2\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am A
+ EST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may cha
+ nge. This calendar updates automatically\n(Apple Calendar: ~every hour · 
+ Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.
+ github.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
+ -blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-d8bd47a5c1e80ac30-kwp-u6-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Killara-West Pymble Blue 6 vs Chatswood Gold 6 | RND 4
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Chatswood Gold 6\n📍 Beauc
+ hamp Park TT2\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
+ -blue
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Lane Cove Gold 6 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Lane Cove Gold 6 fixtures a
+ nd results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-f62f774d236cd097b-lane-cove-u6-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T080000
+DTEND;TZID=Australia/Sydney:20260503T090000
+SUMMARY:Lane Cove Gold 6 vs Chatswood Gold 6 | RND 1
+LOCATION:Tryon Oval TT5\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Gold 6\n📍 Tryon Oval TT5\
+ , East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
+ r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
+ up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
+ hore-sunday-minis-comp-app/#lane-cove-u6-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u6-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-c9c8cc1d4c80f95c6-lane-cove-u6-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T080000
+DTEND;TZID=Australia/Sydney:20260510T090000
+SUMMARY:Lane Cove Gold 6 vs Norths Pirates Gold 6 | RND 2
+LOCATION:Tunks Park TT6\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 6 vs Norths Pirates Gold 6\n📍 Tunks Park
+  TT6\, Cammeray\n📅 Round 2 · Sun\, 10 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
+ r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
+ up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
+ hore-sunday-minis-comp-app/#lane-cove-u6-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u6-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4e2e205661c1ed071-lane-cove-u6-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T084000
+DTEND;TZID=Australia/Sydney:20260517T094000
+SUMMARY:Lane Cove Gold 6 vs St Ives Yellow 6 | RND 3
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 6 vs St Ives Yellow 6\n📍 Wakehurst Rugby
+  Park TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 SJR
+ U Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
+ endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
+ ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
+ th-shore-sunday-minis-comp-app/#lane-cove-u6-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u6-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-2b84865c3a814c358-lane-cove-u6-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
+SUMMARY:Lane Cove Gold 6 vs Wakehurst Wallabies 6 | RND 4
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 6 vs Wakehurst Wallabies 6\n📍 Beauchamp 
+ Park TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJ
+ RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
+ lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
+ dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
+ rth-shore-sunday-minis-comp-app/#lane-cove-u6-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u6-gold
+END:VEVENT
+END:VCALENDAR

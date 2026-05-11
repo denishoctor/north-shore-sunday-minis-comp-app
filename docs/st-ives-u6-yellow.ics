@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — St Ives Yellow 6 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — St Ives Yellow 6 fixtures a
+ nd results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-98b54bff47cd12fac-st-ives-u6-yellow@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T084000
+DTEND;TZID=Australia/Sydney:20260503T094000
+SUMMARY:St Ives Yellow 6 vs St Ives Blue 6 | RND 1
+LOCATION:Tryon Oval TT2\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 6 vs St Ives Blue 6\n📍 Tryon Oval TT2\, 
+ East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:40am AEST\n🏆 SJRU Mini
+ s U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#st-ives-u6-yellow
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
+ s-u6-yellow
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-340f34e016f7a2b90-st-ives-u6-yellow@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T084000
+DTEND;TZID=Australia/Sydney:20260510T094000
+SUMMARY:St Ives Yellow 6 vs Chatswood Green 6 | RND 2
+LOCATION:Tunks Park TT3\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 6 vs Chatswood Green 6\n📍 Tunks Park TT3
+ \, Cammeray\n📅 Round 2 · Sun\, 10 May · 8:40am AEST\n🏆 SJRU Minis 
+ U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar up
+ dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
+ o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
+ -sunday-minis-comp-app/#st-ives-u6-yellow
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
+ s-u6-yellow
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4e2e205661c1ed071-st-ives-u6-yellow@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T084000
+DTEND;TZID=Australia/Sydney:20260517T094000
+SUMMARY:St Ives Yellow 6 vs Lane Cove Gold 6 | RND 3
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 6 vs Lane Cove Gold 6\n📍 Wakehurst Rugby
+  Park TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 SJR
+ U Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
+ endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
+ ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
+ th-shore-sunday-minis-comp-app/#st-ives-u6-yellow
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
+ s-u6-yellow
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-baa4e4d2d402fba95-st-ives-u6-yellow@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
+SUMMARY:St Ives Yellow 6 vs Forest 6 | RND 4
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 6 vs Forest 6\n📍 Beauchamp Park TT3\, Ch
+ atswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU Minis U6 T
+ ri Time Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#st-ives-u6-yellow
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
+ s-u6-yellow
+END:VEVENT
+END:VCALENDAR

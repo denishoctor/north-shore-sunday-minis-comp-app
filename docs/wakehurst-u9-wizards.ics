@@ -1,0 +1,101 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Wakehurst Wizards 9 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Wakehurst Wizards 9 fixture
+ s and results 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-66e3dfc89fdc1326c-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T110000
+DTEND;TZID=Australia/Sydney:20260503T120000
+SUMMARY:Wakehurst Wizards 9 vs Lane Cove Gold 9 | RND 1
+LOCATION:Tryon Oval M1\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Lane Cove Gold 9\n📍 Tryon Oval M
+ 1\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 11:00am AEST\n🏆 SJRU
+  Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upda
+ tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
+ 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
+ unday-minis-comp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-5d24939e6bfdb43d5-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T083000
+DTEND;TZID=Australia/Sydney:20260510T093000
+SUMMARY:Wakehurst Wizards 9 vs St Ives 9 | RND 2
+LOCATION:Tunks Park M1\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs St Ives 9\n📍 Tunks Park M1\, Cam
+ meray\n📅 Round 2 · Sun\, 10 May · 8:30am AEST\n🏆 SJRU Minis U9 Sun
+ day\n\nℹ️ Venues and times may change. This calendar updates automatic
+ ally\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after 
+ a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-c
+ omp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9c29b15b70cf2135c-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T092000
+DTEND;TZID=Australia/Sydney:20260517T102000
+SUMMARY:Wakehurst Wizards 9 vs Forest Green 9 | RND 3
+LOCATION:Melwood Oval M1\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Forest Green 9\n📍 Melwood Oval M
+ 1\, Forestville\n📅 Round 3 · Sun\, 17 May · 9:20am AEST\n🏆 SJRU Mi
+ nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-2fad570fa09d87701-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
+SUMMARY:Wakehurst Wizards 9 vs Norths Pirates Black 9 | RND 4
+LOCATION:Bantry Bay Oval M2\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Norths Pirates Black 9\n📍 Bantry
+  Bay Oval M2\, Seaforth\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆
+  SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+END:VCALENDAR

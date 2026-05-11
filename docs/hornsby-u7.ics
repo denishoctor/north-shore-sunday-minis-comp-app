@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NSM Sunday Rugby//Fixtures 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NSM Sunday — Hornsby 7 2026
+X-WR-CALDESC:North Shore Minis Sunday Rugby — Hornsby 7 fixtures and resu
+ lts 2026
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:nsm-sunday-16b9713ca4fb361de-hornsby-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260503T084000
+DTEND;TZID=Australia/Sydney:20260503T094000
+SUMMARY:Hornsby 7 vs Norths Pirates Black 7 | RND 1
+LOCATION:Tryon Oval TT4\, East Lindfield\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs Norths Pirates Black 7\n📍 Tryon Oval TT4\,
+  East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:40am AEST\n🏆 SJRU Min
+ is U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#hornsby-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u7
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-62b9c438fe9b72901-hornsby-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260510T104000
+DTEND;TZID=Australia/Sydney:20260510T114000
+SUMMARY:Hornsby 7 vs Forest Black 7 | RND 2
+LOCATION:Tunks Park TT2\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs Forest Black 7\n📍 Tunks Park TT2\, Cammera
+ y\n📅 Round 2 · Sun\, 10 May · 10:40am AEST\n🏆 SJRU Minis U7 Tri Ti
+ me Sunday\n\nℹ️ Venues and times may change. This calendar updates aut
+ omatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs 
+ after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-m
+ inis-comp-app/#hornsby-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u7
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-11d0db6d3c3a485cb-hornsby-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T092000
+DTEND;TZID=Australia/Sydney:20260517T102000
+SUMMARY:Hornsby 7 vs Norths Pirates Red 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs Norths Pirates Red 7\n📍 Wakehurst Rugby Pa
+ rk TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 9:20am AEST\n🏆 SJRU M
+ inis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
+ ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
+  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
+ shore-sunday-minis-comp-app/#hornsby-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u7
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-15d3f855154bee46b-hornsby-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260517T100000
+DTEND;TZID=Australia/Sydney:20260517T110000
+SUMMARY:Hornsby 7 vs Killara-West Pymble Gold 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs Killara-West Pymble Gold 7\n📍 Wakehurst Ru
+ gby Park TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 10:00am AEST\n🏆
+  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#hornsby-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u7
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-611657b75fa7b97e8-hornsby-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260511T102636Z
+LAST-MODIFIED:20260511T102636Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
+SUMMARY:Hornsby 7 vs St Ives Blue 7 | RND 4
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs St Ives Blue 7\n📍 Beauchamp Park TT1\, Cha
+ tswood\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 SJRU Minis U7 Tr
+ i Time Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#hornsby-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u7
+END:VEVENT
+END:VCALENDAR
