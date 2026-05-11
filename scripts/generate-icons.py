@@ -16,11 +16,11 @@ Run:  python3 scripts/generate-icons.py
 from PIL import Image
 from pathlib import Path
 
-NAVY = (8, 42, 100)  # #082a64 — matches docs/index.html --navy-dark
+NAVY = (6, 22, 62)  # #06163e — matches docs/index.html --navy-dark
 
 ROOT = Path(__file__).parent.parent
 ASSETS = ROOT / "docs" / "assets"
-SOURCE = ASSETS / "sunday-minis-logo-on-navy.png"
+SOURCE = ASSETS / "sunday-minis-logo-b-bg.png"
 
 
 def render_icon(badge: Image.Image, size: int, *, scale: float) -> Image.Image:
@@ -45,10 +45,11 @@ def main() -> None:
     if not SOURCE.exists():
         raise SystemExit(
             f"missing source logo: {SOURCE}\n"
-            "Drop the navy-background variant of the Sunday Minis logo at that\n"
-            "path (PNG, RGBA, ≥512px). The cream/light variant should also be\n"
-            "saved alongside as docs/assets/sunday-minis-logo.png — the\n"
-            "browser header uses that one against the white background.")
+            "Drop the navy-background variant of the Sunday Minis logo at\n"
+            "docs/assets/sunday-minis-logo-b-bg.png (PNG, RGBA, ≥512px). The\n"
+            "cream/light variant lives alongside as\n"
+            "docs/assets/sunday-minis-logo-w-bg.png and is used in the browser\n"
+            "header against the white background.")
 
     badge = Image.open(SOURCE).convert("RGBA")
     targets = [

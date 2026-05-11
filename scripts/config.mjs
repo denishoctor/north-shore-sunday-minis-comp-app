@@ -105,6 +105,6 @@ export const SITE = {
   name:        'North Shore Minis Sunday Rugby',
   shortName:   'NSM Sunday',
   description: 'Fixtures, results, and team sheets for the North Shore Minis Sunday rugby competition (SJRU U6–U9).',
-  themeColor:  '#0b3b8c',
-  crestUrl:    'assets/sunday-minis-logo.png',
+  themeColor:  '#0a2059',
+  crestUrl:    'assets/sunday-minis-logo-w-bg.png',
 };

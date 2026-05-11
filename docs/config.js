@@ -7,8 +7,8 @@ window.NSM_SUNDAY_CONFIG = {
     "name": "North Shore Minis Sunday Rugby",
     "shortName": "NSM Sunday",
     "description": "Fixtures, results, and team sheets for the North Shore Minis Sunday rugby competition (SJRU U6–U9).",
-    "themeColor": "#0b3b8c",
-    "crestUrl": "assets/sunday-minis-logo.png"
+    "themeColor": "#0a2059",
+    "crestUrl": "assets/sunday-minis-logo-w-bg.png"
   },
   SEASON_END: "2026-09-15",
   AGE_GROUPS: ["U6","U7","U8","U9"],
