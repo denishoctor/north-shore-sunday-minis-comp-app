@@ -1,0 +1,66 @@
+name: Refresh Fixtures
+
+on:
+  schedule:
+    # Hourly, 24/7. Tighten or relax once we know how often the SJRU draws
+    # actually churn — Sunday Minis is lower-volume than the LCJRU multi-day grid.
+    - cron: '0 * * * *'
+    - cron: '30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch fixtures and diff
+        run: node scripts/fetch-fixtures.mjs
+
+      - name: Notify via ntfy.sh if fixtures changed
+        if: hashFiles('changes.txt') != ''
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_NSM_SUNDAY }}
+        run: |
+          # changes.txt may exist but be empty (no changes) — only send when non-empty.
+          if [ -s changes.txt ] && [ -n "$NTFY_TOPIC" ]; then
+            curl -s \
+              -H "Title: NSM Sunday Fixture Update" \
+              -H "Priority: high" \
+              -H "Tags: rugby_football,warning" \
+              -H "Content-Type: text/plain; charset=utf-8" \
+              --data-binary @changes.txt \
+              "https://ntfy.sh/$NTFY_TOPIC"
+            echo "✓ Notification sent to ntfy.sh"
+          fi
+
+      - name: Fetch match lineups
+        run: node scripts/fetch-lineups.mjs
+
+      - name: Commit updated fixtures
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/fixtures.json docs/config.js docs/*.ics docs/lineups.json
+          git diff --cached --quiet || git commit -m "chore: refresh fixtures $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Notify via ntfy.sh on failure
+        if: failure() && env.NTFY_TOPIC != ''
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_NSM_SUNDAY }}
+        run: |
+          curl -s \
+            -H "Title: NSM Sunday fetch failed" \
+            -H "Priority: high" \
+            -H "Tags: warning,x" \
+            -H "Content-Type: text/plain; charset=utf-8" \
+            --data "Fixture refresh failed. Check https://github.com/${{ github.repository }}/actions" \
+            "https://ntfy.sh/$NTFY_TOPIC"

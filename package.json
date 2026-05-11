@@ -1,0 +1,22 @@
+{
+  "name": "north-shore-sunday-minis-comp-app",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "setup": "git config core.hooksPath .githooks",
+    "serve": "node scripts/serve.mjs",
+    "fetch": "node scripts/fetch-fixtures.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node --test tests/fixtures-json.test.mjs tests/ics.test.mjs tests/lineup.test.mjs tests/normalise.test.mjs tests/render.test.mjs",
+    "test:api": "node --test tests/api.test.mjs",
+    "test:ics": "node --test tests/ics.test.mjs",
+    "test:json": "node --test tests/fixtures-json.test.mjs",
+    "test:lineup": "node --test tests/lineup.test.mjs",
+    "test:normalise": "node --test tests/normalise.test.mjs",
+    "test:render": "node --test tests/render.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

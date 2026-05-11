@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; manifest-src 'self'; worker-src 'self'">
+<title>North Shore Minis Sunday Rugby — Fixtures 2026</title>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b3b8c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="NSM Sunday">
+<meta name="format-detection" content="telephone=no">
+<style>
+  :root {
+    --navy: #0b3b8c;
+    --navy-dark: #082a64;
+    --gold: #F4C842;
+    --cream: #EAF1FB;
+    --cream-edge: #C5D5EE;
+    --ink: #1A1A1A;
+    --muted: #6B6B6B;
+    --rule: #E5E5E5;
+    --green: #2E7D4F;
+    --maroon: #7E1A2B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    margin: 0; background: #FAFAFA; color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  a { color: var(--navy); }
+  .page { max-width: 980px; margin: 0 auto; background: #fff; min-height: 100vh; }
+
+  /* HEADER */
+  .header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 20px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .crest img { width: 56px; height: 56px; object-fit: contain; }
+  .title-block { flex: 1 1 auto; min-width: 0; }
+  .eyebrow {
+    font-size: 11px; font-weight: 800; color: var(--navy);
+    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 2px;
+  }
+  h1 { margin: 0; font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -.3px; }
+  .updated-stamp { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 9px; font-weight: 800; color: var(--green);
+    background: #E8F5EE; border: 1px solid #BFE2D0;
+    padding: 2px 7px; border-radius: 999px; letter-spacing: .5px;
+    text-transform: uppercase; margin-left: 8px; vertical-align: middle;
+  }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .header-home {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--navy); background: var(--cream);
+    border: 1.5px solid var(--cream-edge);
+    padding: 6px 11px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .header-home[hidden] { display: none; }
+  .header-home:hover { background: #fff; border-color: var(--navy); }
+
+  /* TOOLBAR — club filter row + team token grid */
+  .toolbar {
+    padding: 10px 20px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    background: #FCFCFC;
+    border-bottom: 1px solid var(--rule);
+  }
+  .club-row {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin-bottom: 8px;
+  }
+  .club-row[hidden] { display: none; }
+  .club-chip {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--muted); background: #fff;
+    border: 1.5px solid var(--cream-edge);
+    padding: 4px 10px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+    transition: background .12s, border-color .12s, color .12s;
+  }
+  .club-chip:hover { border-color: var(--navy); color: var(--navy); }
+  .club-chip.active {
+    background: var(--navy); color: #fff; border-color: var(--navy);
+  }
+  .club-chip .club-count { opacity: .7; font-weight: 600; margin-left: 4px; }
+  .age-row {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin-bottom: 8px;
+  }
+  .age-row[hidden] { display: none; }
+  .age-chip {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--navy); background: var(--cream);
+    border: 1.5px solid var(--cream-edge);
+    padding: 4px 10px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+  }
+  .age-chip:hover { border-color: var(--navy); }
+  .age-chip.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+  .token-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  @media (min-width: 480px) { .token-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 720px) { .token-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 960px) { .token-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  .token-grid[hidden] { display: none; }
+  .token {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 700;
+    color: var(--navy); background: var(--cream);
+    border: 1.5px solid var(--cream-edge);
+    padding: 7px 9px; border-radius: 10px;
+    text-align: left; line-height: 1.25;
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 0;
+  }
+  .token:hover { border-color: var(--navy); }
+  .token.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .token-age { font-size: 10px; font-weight: 800; opacity: .8; text-transform: uppercase; letter-spacing: .5px; }
+  .token-name { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .token-club { font-size: 10px; font-weight: 600; opacity: .7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .token.active .token-age, .token.active .token-club { opacity: .85; }
+
+  /* ACTION BAR — team selected only */
+  .action-bar {
+    display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+    margin-top: 10px; padding-top: 10px;
+    border-top: 1px dashed var(--cream-edge);
+  }
+  .action-bar[hidden] { display: none; }
+  .action-btn {
+    appearance: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--navy); background: var(--cream);
+    border: 1.5px solid var(--cream-edge);
+    padding: 6px 11px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+  }
+  .action-btn:hover { border-color: var(--navy); }
+  .action-icon { font-size: 12px; }
+  .action-caret { font-size: 9px; opacity: .7; }
+  .action-menu { position: relative; }
+  .action-popover {
+    position: absolute; top: calc(100% + 6px); right: 0; z-index: 30;
+    display: none; flex-direction: column;
+    background: #fff; border: 1px solid var(--rule); border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    padding: 5px; min-width: 248px;
+  }
+  .action-popover.open { display: flex; }
+  .cal-option {
+    display: flex; align-items: flex-start; gap: 10px;
+    text-align: left; text-decoration: none;
+    font-family: inherit; color: var(--ink); background: transparent;
+    border: none; padding: 9px 10px; border-radius: 5px;
+    cursor: pointer; line-height: 1.2; width: 100%;
+  }
+  .cal-option:hover { background: var(--cream); color: var(--navy); }
+  .cal-option-icon { font-size: 14px; width: 18px; }
+  .cal-option-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .cal-option-label { font-size: 12px; font-weight: 700; }
+  .cal-option-sub { font-size: 10.5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
+
+  /* WELCOME (no team selected) */
+  .welcome {
+    padding: 32px 28px 36px; text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .welcome h2 { font-size: 21px; font-weight: 800; color: var(--navy); margin: 0 0 8px; letter-spacing: -.3px; }
+  .welcome-sub { font-size: 14px; color: var(--muted); margin: 0 0 22px; line-height: 1.5; }
+  .welcome-stats {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    font-size: 12px; color: var(--muted);
+  }
+  .welcome-stats b { color: var(--navy); font-weight: 800; }
+
+  /* CALENDAR LIST */
+  #calendar { padding: 16px 0 40px; }
+  #calendar:empty::after {
+    content: 'No matches found for this team yet.';
+    display: block; text-align: center; padding: 40px 28px; color: var(--muted);
+  }
+  .section-header {
+    padding: 14px 20px 6px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    font-size: 11px; font-weight: 800; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .match-card {
+    margin: 6px 12px;
+    margin-left: max(12px, env(safe-area-inset-left));
+    margin-right: max(12px, env(safe-area-inset-right));
+    border: 1px solid var(--rule); border-radius: 10px;
+    background: #fff; overflow: hidden;
+  }
+  .match-card.expanded { border-color: var(--navy); }
+  .match-card.has-lineup .match-row { cursor: pointer; }
+  .match-row {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 10px; align-items: center;
+    padding: 12px 14px;
+  }
+  .match-when {
+    display: flex; flex-direction: column; gap: 1px;
+    font-size: 11px; color: var(--muted); line-height: 1.3;
+  }
+  .match-when .when-day { font-weight: 800; color: var(--ink); font-size: 13px; }
+  .match-when .when-time { font-weight: 700; color: var(--navy); }
+  .match-teams { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .match-team {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--ink);
+    line-height: 1.2;
+  }
+  .match-team img { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; }
+  .match-team .team-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .match-meta {
+    font-size: 11px; color: var(--muted); margin-top: 4px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .match-meta .round-badge {
+    background: var(--cream); color: var(--navy);
+    padding: 1px 7px; border-radius: 999px;
+    font-weight: 800; font-size: 10px;
+  }
+  .match-meta .live-tag {
+    color: var(--green); font-weight: 700;
+  }
+  .match-meta .bye-tag { color: var(--maroon); font-weight: 700; }
+  .match-score {
+    text-align: right; min-width: 50px;
+    display: flex; flex-direction: column; gap: 2px;
+    font-size: 14px; font-weight: 800;
+  }
+  .match-score .home-s, .match-score .away-s {
+    color: var(--ink);
+    background: var(--cream); padding: 2px 7px; border-radius: 4px;
+  }
+  .match-score.played .home-s, .match-score.played .away-s { background: #E8F5EE; }
+  .match-venue {
+    padding: 0 14px 12px;
+    font-size: 12px; color: var(--muted); line-height: 1.4;
+  }
+  .match-venue a { color: var(--navy); text-decoration: none; }
+  .match-venue a:hover { text-decoration: underline; }
+  .match-venue .pitch-badge {
+    background: var(--cream); color: var(--navy);
+    padding: 1px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* LINEUP PANEL */
+  .lineup-panel {
+    border-top: 1px solid var(--rule);
+    padding: 14px;
+    display: none;
+    background: #FCFCFC;
+  }
+  .match-card.expanded .lineup-panel { display: block; }
+  .lineup-tabs {
+    display: flex; gap: 4px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .lineup-tab {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 700;
+    color: var(--muted); background: transparent;
+    border: none; padding: 6px 12px;
+    border-bottom: 2px solid transparent;
+  }
+  .lineup-tab.active { color: var(--navy); border-bottom-color: var(--navy); }
+  .lineup-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .lineup-side h4 {
+    margin: 0 0 6px; font-size: 11px; font-weight: 800;
+    color: var(--muted); text-transform: uppercase; letter-spacing: .8px;
+  }
+  .lineup-list { list-style: none; padding: 0; margin: 0; font-size: 12px; }
+  .lineup-list li { display: flex; gap: 6px; padding: 3px 0; }
+  .lineup-num {
+    display: inline-block; min-width: 22px; font-weight: 800; color: var(--navy);
+    font-variant-numeric: tabular-nums;
+  }
+  .lineup-name { color: var(--ink); }
+  .lineup-name.captain::after { content: ' (C)'; color: var(--muted); font-weight: 700; }
+  .lineup-empty {
+    text-align: center; color: var(--muted); font-size: 12px;
+    padding: 20px;
+  }
+  .lineup-source {
+    display: block; text-align: center; margin-top: 12px;
+    font-size: 11px; color: var(--muted);
+  }
+
+  /* FOOTER */
+  .footer-note {
+    border-top: 1px solid var(--rule);
+    padding: 20px 28px 32px;
+    font-size: 12px; color: var(--muted); text-align: center;
+    line-height: 1.7;
+  }
+  .footer-note a { color: var(--navy); text-decoration: none; }
+  .footer-note a:hover { text-decoration: underline; }
+  .footer-brand { display: block; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .footer-sep { margin: 0 6px; color: var(--cream-edge); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="crest">
+      <img src="assets/sunday-minis-logo.png"
+           onerror="this.style.display='none'"
+           alt="North Shore Minis Sunday Rugby logo">
+    </div>
+    <div class="title-block">
+      <div class="eyebrow">North Shore Minis · Sunday</div>
+      <div>
+        <h1>Fixtures &amp; Results</h1>
+        <span class="live-pill" aria-label="Draw is live"><span class="live-dot" aria-hidden="true"></span><span>Live</span></span>
+      </div>
+      <div id="updated-stamp" class="updated-stamp">Loading…</div>
+    </div>
+    <button class="header-home" id="clear-btn" type="button" hidden>
+      <span class="action-icon" aria-hidden="true">↩</span>
+      <span>Home</span>
+    </button>
+  </div>
+
+  <div class="toolbar">
+    <!-- Club filter row — narrows the team-token grid to one club's teams. -->
+    <div class="club-row" id="club-row" role="group" aria-label="Filter by club"></div>
+    <!-- Age band filter — narrows further once a club is selected. -->
+    <div class="age-row" id="age-row" role="group" aria-label="Filter by age band" hidden></div>
+    <!-- Team tokens — populated from window.NSM_SUNDAY_CONFIG.TEAM_SLUGS at boot.
+         Each token deep-links to a slug like #lane-cove-u7-gold. -->
+    <div class="token-grid" id="team-tokens"></div>
+
+    <div class="action-bar" id="action-bar" hidden>
+      <button class="action-btn" id="copy-link-btn" type="button">
+        <span class="action-icon" aria-hidden="true">🔗</span>
+        <span class="action-label">Share</span>
+      </button>
+      <div class="action-menu">
+        <button class="action-btn" id="cal-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="cal-popover">
+          <span class="action-icon" aria-hidden="true">📅</span>
+          <span class="action-label">Calendar</span>
+          <span class="action-caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="action-popover" id="cal-popover" role="menu">
+          <a class="cal-option" id="cal-ical" href="#" role="menuitem">
+            <span class="cal-option-icon" aria-hidden="true">📅</span>
+            <span class="cal-option-text">
+              <span class="cal-option-label">iCal / webcal</span>
+              <span class="cal-option-sub">iPhone, iPad, Mac</span>
+            </span>
+          </a>
+          <a class="cal-option" id="cal-google" href="#" target="_blank" rel="noopener" role="menuitem">
+            <span class="cal-option-icon" aria-hidden="true">🌐</span>
+            <span class="cal-option-text">
+              <span class="cal-option-label">Google Calendar</span>
+              <span class="cal-option-sub">Desktop — mobile app can't subscribe to feeds</span>
+            </span>
+          </a>
+          <button class="cal-option" id="cal-copy-ics" type="button" role="menuitem">
+            <span class="cal-option-icon" aria-hidden="true">📎</span>
+            <span class="cal-option-text">
+              <span class="cal-option-label">Copy ICS link</span>
+              <span class="cal-option-sub">For Outlook or other calendar apps</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="calendar"></div>
+
+  <div class="footer-note">
+    <span class="footer-brand" id="footer-brand">North Shore Minis Sunday Rugby · 2026 season</span>
+    <span>
+      <a href="https://xplorer.rugby/sjru-/fixtures-results?team=All&amp;comp=All&amp;season=2026&amp;tab=Fixtures" target="_blank" rel="noopener">Live draw on Rugby Xplorer ↗</a>
+      <span class="footer-sep">·</span>
+      <a href="mailto:?subject=NSM%20Sunday%20Rugby%20App%20Feedback">Send feedback</a>
+    </span>
+    <span style="display:block; margin-top:6px; font-size:11px;">
+      Beta — multi-club aggregate sourced from <a href="https://xplorer.rugby/" target="_blank" rel="noopener">Rugby Xplorer</a> via SJRU Sunday Minis comps.
+    </span>
+  </div>
+
+</div>
+
+<script src="./config.js"></script>
+<script type="module">
+import {
+  esc, clubFromTeam, clubFromCrest, shortTeamName,
+  fmtDow, fmtDate, fmtTime, rowId, scoreClass,
+  parseVenue, venueSlug, renderVenueDetails,
+} from './render.mjs';
+
+const CFG = window.NSM_SUNDAY_CONFIG || {};
+const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEAM_META, VENUES } = CFG;
+const SLUG_BY_ID  = Object.fromEntries(Object.entries(TEAM_SLUGS || {}).map(([s, id]) => [id, s]));
+
+const STORAGE_PREFIX = 'nsm-sunday';
+const TEAM_KEY  = `${STORAGE_PREFIX}-team`;
+const CLUB_KEY  = `${STORAGE_PREFIX}-club`;
+const AGE_KEY   = `${STORAGE_PREFIX}-age`;
+
+let fixturesData = null;
+let lineupsData  = null;
+let currentTeam  = null;
+let currentClub  = null;
+let currentAge   = null;
+
+// ── persistence ──────────────────────────────────────────────────────────────
+function lsGet(key) { try { return localStorage.getItem(key); } catch { return null; } }
+function lsSet(key, val) {
+  try { if (val) localStorage.setItem(key, val); else localStorage.removeItem(key); } catch {}
+}
+
+// ── toolbar build ────────────────────────────────────────────────────────────
+function buildClubRow() {
+  const row = document.getElementById('club-row');
+  const teamsByClub = {};
+  for (const meta of Object.values(TEAM_META || {})) {
+    if (!meta.clubKey) continue;
+    (teamsByClub[meta.clubKey] ??= []).push(meta);
+  }
+  const clubsWithTeams = Object.entries(CLUBS || {})
+    .filter(([key]) => (teamsByClub[key]?.length || 0) > 0);
+
+  row.innerHTML = clubsWithTeams.map(([key, club]) => {
+    const n = teamsByClub[key]?.length || 0;
+    return `<button class="club-chip" data-club="${esc(key)}" type="button">${esc(club.name)}<span class="club-count">${n}</span></button>`;
+  }).join('');
+
+  row.querySelectorAll('.club-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.club;
+      selectClub(key === currentClub ? null : key);
+    });
+  });
+}
+
+function buildAgeRow() {
+  const row = document.getElementById('age-row');
+  if (!currentClub) { row.setAttribute('hidden', ''); row.innerHTML = ''; return; }
+  const ages = AGE_GROUPS.filter(age =>
+    Object.values(TEAM_META || {}).some(m => m.clubKey === currentClub && m.age === age)
+  );
+  if (!ages.length) { row.setAttribute('hidden', ''); row.innerHTML = ''; return; }
+  row.removeAttribute('hidden');
+  row.innerHTML = ages.map(age =>
+    `<button class="age-chip" data-age="${esc(age)}" type="button">${esc(age)}</button>`
+  ).join('');
+  row.querySelectorAll('.age-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const age = btn.dataset.age;
+      selectAge(age === currentAge ? null : age);
+    });
+  });
+  syncAgeChips();
+}
+
+function buildTokenGrid() {
+  const grid = document.getElementById('team-tokens');
+  const all = Object.values(TEAM_META || {});
+  const filtered = all.filter(m =>
+    (!currentClub || m.clubKey === currentClub) &&
+    (!currentAge  || m.age     === currentAge)
+  );
+  // Sort: club name, then age, then variant/name
+  filtered.sort((a, b) => {
+    const ca = CLUBS?.[a.clubKey]?.name || '';
+    const cb = CLUBS?.[b.clubKey]?.name || '';
+    if (ca !== cb) return ca.localeCompare(cb);
+    if (a.age !== b.age) return (a.age || '').localeCompare(b.age || '');
+    return (a.name || '').localeCompare(b.name || '');
+  });
+  grid.innerHTML = filtered.map(m => {
+    const club = CLUBS?.[m.clubKey];
+    const display = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
+    return `<button class="token" data-team="${esc(TEAM_SLUGS[m.slug] || '')}" data-slug="${esc(m.slug)}" type="button" aria-label="${esc(m.name)}">
+      <span class="token-age">${esc(m.age || '')}</span>
+      <span class="token-name">${esc(display)}</span>
+      ${club ? `<span class="token-club">${esc(club.shortPrefix || club.name)}</span>` : ''}
+    </button>`;
+  }).join('');
+  grid.querySelectorAll('.token').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slug = btn.dataset.slug;
+      const teamId = TEAM_SLUGS[slug];
+      selectTeam(teamId === currentTeam ? null : teamId, slug);
+    });
+  });
+  syncTokens();
+}
+
+function syncClubChips() {
+  document.querySelectorAll('.club-chip').forEach(c =>
+    c.classList.toggle('active', c.dataset.club === currentClub)
+  );
+}
+function syncAgeChips() {
+  document.querySelectorAll('.age-chip').forEach(c =>
+    c.classList.toggle('active', c.dataset.age === currentAge)
+  );
+}
+function syncTokens() {
+  document.querySelectorAll('.token').forEach(t =>
+    t.classList.toggle('active', t.dataset.team === currentTeam)
+  );
+}
+
+// ── selection actions ────────────────────────────────────────────────────────
+function selectClub(key) {
+  currentClub = key || null;
+  lsSet(CLUB_KEY, currentClub);
+  currentAge  = null; lsSet(AGE_KEY, null);
+  syncClubChips();
+  buildAgeRow();
+  buildTokenGrid();
+  // Deselect team if it's no longer in the filtered set
+  if (currentTeam) {
+    const slug = SLUG_BY_ID[currentTeam];
+    const meta = TEAM_META?.[currentTeam];
+    if (key && meta?.clubKey !== key) selectTeam(null);
+  }
+}
+
+function selectAge(age) {
+  currentAge = age || null;
+  lsSet(AGE_KEY, currentAge);
+  buildTokenGrid();
+  if (currentTeam) {
+    const meta = TEAM_META?.[currentTeam];
+    if (age && meta?.age !== age) selectTeam(null);
+  }
+}
+
+function selectTeam(teamId, slugFromCaller) {
+  currentTeam = teamId || null;
+  lsSet(TEAM_KEY, currentTeam);
+  syncTokens();
+
+  const actionBar = document.getElementById('action-bar');
+  const homeBtn = document.getElementById('clear-btn');
+  if (teamId) {
+    actionBar.removeAttribute('hidden');
+    homeBtn.removeAttribute('hidden');
+    const slug = slugFromCaller || SLUG_BY_ID[teamId];
+    const webcalUrl = `${SITE_URL.replace(/^https?:\/\//, 'webcal://')}/${slug}.ics`;
+    const httpsIcs  = `${SITE_URL}/${slug}.ics`;
+    document.getElementById('cal-ical').href = webcalUrl;
+    document.getElementById('cal-google').href =
+      `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcalUrl)}`;
+    currentIcsUrl = httpsIcs;
+    history.pushState(null, '', '#' + slug);
+  } else {
+    actionBar.setAttribute('hidden', '');
+    homeBtn.setAttribute('hidden', '');
+    closeCalPopover();
+    if (location.hash) history.pushState(null, '', location.pathname);
+  }
+  render();
+}
+
+// ── URL hash routing ─────────────────────────────────────────────────────────
+function readHash() {
+  const raw = location.hash.replace('#', '');
+  const [slug, anchor] = raw.split('/');
+  const teamId = slug && TEAM_SLUGS?.[slug] ? TEAM_SLUGS[slug] : null;
+  return { teamId, slug, anchor };
+}
+
+// ── render: match list ───────────────────────────────────────────────────────
+function render() {
+  const cal = document.getElementById('calendar');
+  if (!fixturesData) { cal.innerHTML = ''; return; }
+  if (!currentTeam) { cal.innerHTML = renderWelcome(); return; }
+
+  const matches = fixturesData.matches.filter(m =>
+    m.home.id === currentTeam || m.away.id === currentTeam
+  );
+  if (!matches.length) { cal.innerHTML = ''; return; }
+
+  const now = new Date();
+  const upcoming = matches.filter(m => m.type === 'fixture' && new Date(m.dateTime) >= now);
+  const past     = [...matches.filter(m => m.type === 'result' || new Date(m.dateTime) < now)].reverse();
+
+  const meta = TEAM_META?.[currentTeam];
+  const teamLabel = meta?.name || 'Team';
+
+  const parts = [];
+  if (upcoming.length) {
+    parts.push(`<div class="section-header"><span>Upcoming · ${esc(teamLabel)}</span><span>${upcoming.length}</span></div>`);
+    parts.push(upcoming.map(m => renderMatch(m)).join(''));
+  }
+  if (past.length) {
+    parts.push(`<div class="section-header"><span>Played</span><span>${past.length}</span></div>`);
+    parts.push(past.map(m => renderMatch(m)).join(''));
+  }
+  cal.innerHTML = parts.join('');
+
+  cal.querySelectorAll('.match-card.has-lineup .match-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const card = row.closest('.match-card');
+      card.classList.toggle('expanded');
+    });
+  });
+
+  // Honour deep-link anchor (#slug/match-<id>)
+  const { anchor } = readHash();
+  if (anchor) {
+    const el = document.getElementById(anchor);
+    if (el) {
+      const card = el.closest('.match-card');
+      if (card) card.classList.add('expanded');
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+}
+
+function renderMatch(match) {
+  const hasLineup = lineupsData?.[match.id] &&
+    ((lineupsData[match.id].home?.length || 0) + (lineupsData[match.id].away?.length || 0) > 0);
+  const classes = ['match-card'];
+  if (hasLineup) classes.push('has-lineup');
+  if (match.isLive) classes.push('is-live');
+  if (match.isBye) classes.push('is-bye');
+
+  const round = (match.round || '').replace('Round ', 'R');
+  const venue = parseVenue(match.venue || '', VENUES || {});
+  const sc    = scoreClass(match);
+  const homeS = match.home.score ?? '';
+  const awayS = match.away.score ?? '';
+  const showScore = sc === 'played';
+
+  const dow  = fmtDow(match.dateTime);
+  const time = fmtTime(match.dateTime);
+  const hasTime = time !== '12:00am';
+
+  return `
+    <div class="${classes.join(' ')}" id="${esc(rowId(match))}" data-match-id="${esc(match.id)}">
+      <div class="match-row">
+        <div class="match-when">
+          <span class="when-day">${esc(dow)}</span>
+          <span>${esc(fmtDate(match.dateTime))}</span>
+          ${hasTime ? `<span class="when-time">${esc(time)}</span>` : ''}
+        </div>
+        <div>
+          <div class="match-teams">
+            <div class="match-team"><img src="${esc(match.home.crest || '')}" alt="" onerror="this.style.visibility='hidden'"><span class="team-name">${esc(match.home.name)}</span></div>
+            <div class="match-team"><img src="${esc(match.away.crest || '')}" alt="" onerror="this.style.visibility='hidden'"><span class="team-name">${esc(match.away.name)}</span></div>
+          </div>
+          <div class="match-meta">
+            ${round ? `<span class="round-badge">${esc(round)}</span>` : ''}
+            <span>${esc(match.competition)}</span>
+            ${match.isLive ? '<span class="live-tag">● LIVE</span>' : ''}
+            ${match.isBye ? '<span class="bye-tag">BYE</span>' : ''}
+            ${hasLineup ? '<span title="Team sheet available">📋 Lineup</span>' : ''}
+          </div>
+        </div>
+        <div class="match-score ${sc}">
+          ${showScore ? `<span class="home-s">${esc(homeS)}</span><span class="away-s">${esc(awayS)}</span>` : ''}
+        </div>
+      </div>
+      ${venue.display ? `<div class="match-venue">
+        <a href="${esc(venue.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(venue.display)}</a>
+        ${venue.pitch ? `<span class="pitch-badge">${esc(venue.pitch)}</span>` : ''}
+      </div>` : ''}
+      ${hasLineup ? renderLineupPanel(match.id) : ''}
+    </div>`;
+}
+
+function renderLineupPanel(matchId) {
+  const lu = lineupsData?.[matchId];
+  if (!lu) return '';
+  const xplorerUrl = `https://xplorer.rugby/sjru-/match-centre/${matchId}?tab=Player-Lineup`;
+  const renderSide = (players, label) => {
+    if (!players?.length) return `<div class="lineup-side"><h4>${esc(label)}</h4><p class="lineup-empty">No lineup yet.</p></div>`;
+    const starters = players.filter(p => !p.isSub);
+    const subs     = players.filter(p =>  p.isSub);
+    const mkRow = p => `<li><span class="lineup-num">${esc(p.number || p.position || '')}</span><span class="lineup-name ${p.captain ? 'captain' : ''}">${esc(p.name)}</span></li>`;
+    return `<div class="lineup-side">
+      <h4>${esc(label)} · Starters (${starters.length})</h4>
+      <ul class="lineup-list">${starters.map(mkRow).join('')}</ul>
+      ${subs.length ? `<h4 style="margin-top:10px;">Bench (${subs.length})</h4><ul class="lineup-list">${subs.map(mkRow).join('')}</ul>` : ''}
+    </div>`;
+  };
+  return `<div class="lineup-panel">
+    <div class="lineup-team">
+      ${renderSide(lu.home, 'Home')}
+      ${renderSide(lu.away, 'Away')}
+    </div>
+    <a class="lineup-source" href="${esc(xplorerUrl)}" target="_blank" rel="noopener">View on Rugby Xplorer ↗</a>
+  </div>`;
+}
+
+function renderWelcome() {
+  const teamCount   = Object.keys(TEAM_SLUGS || {}).length;
+  const clubCount   = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
+  const matchCount  = fixturesData?.totalMatches || 0;
+  return `<div class="welcome">
+    <h2>${esc(SITE?.name || 'Fixtures')}</h2>
+    <p class="welcome-sub">Pick a club above, then your team for the full Sunday Minis schedule, calendar sync &amp; team sheets.</p>
+    <p class="welcome-stats">
+      <span><b>${clubCount}</b> clubs</span>
+      <span><b>${teamCount}</b> teams</span>
+      <span><b>${matchCount}</b> matches</span>
+      <span>U6–U9 SJRU Sunday</span>
+    </p>
+  </div>`;
+}
+
+// ── Share / Calendar actions ─────────────────────────────────────────────────
+let currentIcsUrl = null;
+
+function closeCalPopover() {
+  const pop = document.getElementById('cal-popover');
+  pop.classList.remove('open');
+  document.getElementById('cal-trigger').setAttribute('aria-expanded', 'false');
+}
+
+document.getElementById('cal-trigger').addEventListener('click', e => {
+  e.stopPropagation();
+  const pop = document.getElementById('cal-popover');
+  const open = pop.classList.toggle('open');
+  document.getElementById('cal-trigger').setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+document.addEventListener('click', e => {
+  const menu = document.querySelector('.action-menu');
+  if (menu && !menu.contains(e.target)) closeCalPopover();
+});
+
+document.getElementById('cal-copy-ics').addEventListener('click', async () => {
+  if (!currentIcsUrl) return;
+  try { await navigator.clipboard.writeText(currentIcsUrl); } catch {}
+  closeCalPopover();
+});
+
+document.getElementById('copy-link-btn').addEventListener('click', async () => {
+  const slug = currentTeam ? SLUG_BY_ID[currentTeam] : '';
+  const url  = slug ? `${SITE_URL}/#${slug}` : SITE_URL;
+  if (navigator.share) {
+    try { await navigator.share({ title: 'NSM Sunday Rugby', text: TEAM_META?.[currentTeam]?.name || '', url }); return; } catch {}
+  }
+  try { await navigator.clipboard.writeText(url); } catch {}
+});
+
+document.getElementById('clear-btn').addEventListener('click', () => selectTeam(null));
+
+window.addEventListener('hashchange', () => {
+  const { teamId } = readHash();
+  if (teamId && teamId !== currentTeam) {
+    const meta = TEAM_META?.[teamId];
+    if (meta?.clubKey) {
+      currentClub = meta.clubKey; lsSet(CLUB_KEY, currentClub);
+      currentAge  = meta.age;     lsSet(AGE_KEY, currentAge);
+      syncClubChips(); buildAgeRow(); buildTokenGrid();
+    }
+    selectTeam(teamId);
+  }
+});
+
+// ── boot ─────────────────────────────────────────────────────────────────────
+(async function boot() {
+  // Restore previous selection (URL hash wins on initial load)
+  const hash = readHash();
+  currentClub = hash.teamId ? (TEAM_META?.[hash.teamId]?.clubKey || null) : (lsGet(CLUB_KEY) || null);
+  currentAge  = hash.teamId ? (TEAM_META?.[hash.teamId]?.age     || null) : (lsGet(AGE_KEY)  || null);
+  if (!hash.teamId) {
+    const saved = lsGet(TEAM_KEY);
+    currentTeam = saved && SLUG_BY_ID?.[saved] ? saved : null;
+  } else {
+    currentTeam = hash.teamId;
+  }
+
+  buildClubRow(); syncClubChips();
+  buildAgeRow();
+  buildTokenGrid();
+
+  const [fxRes, luRes] = await Promise.allSettled([
+    fetch('./fixtures.json').then(r => r.ok ? r.json() : null),
+    fetch('./lineups.json').then(r => r.ok ? r.json() : null),
+  ]);
+  fixturesData = fxRes.status === 'fulfilled' ? fxRes.value : null;
+  lineupsData  = luRes.status === 'fulfilled' ? luRes.value : null;
+
+  // Update header stamp
+  const stamp = document.getElementById('updated-stamp');
+  if (fixturesData?.updated) {
+    stamp.textContent = `Updated ${new Date(fixturesData.updated).toLocaleString('en-AU', {
+      timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
+    }).replace(' am', 'am').replace(' pm', 'pm')}`;
+  } else {
+    stamp.textContent = 'No fixture data yet — CI will populate on first run.';
+  }
+
+  // Re-enter team if it's still in the toolbar
+  if (currentTeam) selectTeam(currentTeam, hash.slug);
+  else render();
+})();
+
+// Service worker registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
+  });
+}
+</script>
+</body>
+</html>

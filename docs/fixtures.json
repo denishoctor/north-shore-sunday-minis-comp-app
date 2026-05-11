@@ -1,0 +1,24 @@
+{
+  "updated": "2026-05-11T00:00:00.000Z",
+  "season": "2026",
+  "site": {
+    "name": "North Shore Minis Sunday Rugby",
+    "shortName": "NSM Sunday"
+  },
+  "totalMatches": 0,
+  "clubs": {
+    "lane-cove":      { "id": 30901, "name": "Lane Cove JRU",          "shortPrefix": "Lane Cove" },
+    "chatswood":      { "id": 30878, "name": "Chatswood JRU",          "shortPrefix": "Chatswood" },
+    "hornsby":        { "id": 30898, "name": "Hornsby",                "shortPrefix": "Hornsby" },
+    "kwp":            { "id": 30900, "name": "Killara–West Pymble", "shortPrefix": "Killara-West Pymble" },
+    "lindfield":      { "id": 48060, "name": "Lindfield JRU",          "shortPrefix": "Lindfield" },
+    "norths-pirates": { "id": 50135, "name": "Norths Pirates",         "shortPrefix": "Norths Pirates" },
+    "dee-why":        { "id": 53286, "name": "Dee Why",                "shortPrefix": "Dee Why" },
+    "forest":         { "id": 53322, "name": "Forest Rugby",           "shortPrefix": "Forest" },
+    "st-ives":        { "id": 53546, "name": "St Ives JRU",            "shortPrefix": "St Ives" },
+    "wakehurst":      { "id": 53597, "name": "Wakehurst Rugby",        "shortPrefix": "Wakehurst" }
+  },
+  "teams": {},
+  "competitions": [],
+  "matches": []
+}
