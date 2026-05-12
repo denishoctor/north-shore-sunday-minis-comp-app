@@ -13,16 +13,76 @@ window.NSM_SUNDAY_CONFIG = {
   SEASON_END: "2026-09-15",
   AGE_GROUPS: ["U6","U7","U8","U9"],
   CLUBS: {
-    "lane-cove":      { "id": 30901, "name": "Lane Cove JRU",       "shortPrefix": "Lane Cove",           "url": "https://www.lcjru.com.au/",                           "homeGround": "Tantallon Oval" },
-    "chatswood":      { "id": 30878, "name": "Chatswood JRU",       "shortPrefix": "Chatswood",           "url": "https://www.chatswoodjuniorrugby.com.au/",            "homeGround": "Beauchamp Park" },
-    "hornsby":        { "id": 30898, "name": "Hornsby",             "shortPrefix": "Hornsby",             "url": "http://hjruc.com.au/",                                "homeGround": "Mark Taylor Oval" },
-    "kwp":            { "id": 30900, "name": "Killara–West Pymble", "shortPrefix": "Killara-West Pymble", "url": "https://www.kwprugby.com/",                           "homeGround": "Lofberg Oval" },
-    "lindfield":      { "id": 48060, "name": "Lindfield JRU",       "shortPrefix": "Lindfield",           "url": "https://www.lindfieldjuniorrugby.com.au/",            "homeGround": "Tryon Oval" },
-    "norths-pirates": { "id": 50135, "name": "Norths Pirates",      "shortPrefix": "Norths Pirates",      "url": "https://www.northspirates.rugby/",                    "homeGround": "Tunks Park" },
-    "dee-why":        { "id": 53286, "name": "Dee Why",             "shortPrefix": "Dee Why",             "url": "https://deewhylionsrugby.com.au/",                    "homeGround": "James Morgan Reserve" },
-    "forest":         { "id": 53322, "name": "Forest Rugby",        "shortPrefix": "Forest",              "url": "https://forestrugby.com.au/",                         "homeGround": "Melwood Oval" },
-    "st-ives":        { "id": 53546, "name": "St Ives JRU",         "shortPrefix": "St Ives",             "url": "https://www.stivesrugby.com.au/st-ives-junior-rugby", "homeGround": "Hassall Park" },
-    "wakehurst":      { "id": 53597, "name": "Wakehurst Rugby",     "shortPrefix": "Wakehurst",           "url": "https://www.wakehurst.rugby/",                        "homeGround": "Wakehurst Rugby Park" }
+    "lane-cove": {
+      "id": 30901,
+      "name": "Lane Cove JRU",
+      "shortPrefix": "Lane Cove",
+      "url": "https://www.lcjru.com.au/",
+      "homeGround": "Tantallon Oval"
+    },
+    "chatswood": {
+      "id": 30878,
+      "name": "Chatswood JRU",
+      "shortPrefix": "Chatswood",
+      "url": "https://www.chatswoodjuniorrugby.com.au/",
+      "homeGround": "Beauchamp Park"
+    },
+    "hornsby": {
+      "id": 30898,
+      "name": "Hornsby",
+      "shortPrefix": "Hornsby",
+      "url": "http://hjruc.com.au/",
+      "homeGround": "Mark Taylor Oval"
+    },
+    "kwp": {
+      "id": 30900,
+      "name": "Killara–West Pymble",
+      "shortPrefix": "Killara-West Pymble",
+      "url": "https://www.kwprugby.com/",
+      "homeGround": "Lofberg Oval"
+    },
+    "lindfield": {
+      "id": 48060,
+      "name": "Lindfield JRU",
+      "shortPrefix": "Lindfield",
+      "url": "https://www.lindfieldjuniorrugby.com.au/",
+      "homeGround": "Tryon Oval"
+    },
+    "norths-pirates": {
+      "id": 50135,
+      "name": "Norths Pirates",
+      "shortPrefix": "Norths Pirates",
+      "url": "https://www.northspirates.rugby/",
+      "homeGround": "Tunks Park"
+    },
+    "dee-why": {
+      "id": 53286,
+      "name": "Dee Why",
+      "shortPrefix": "Dee Why",
+      "url": "https://deewhylionsrugby.com.au/",
+      "homeGround": "James Morgan Reserve"
+    },
+    "forest": {
+      "id": 53322,
+      "name": "Forest Rugby",
+      "shortPrefix": "Forest",
+      "url": "https://forestrugby.com.au/",
+      "homeGround": "Melwood Oval"
+    },
+    "st-ives": {
+      "id": 53546,
+      "name": "St Ives JRU",
+      "shortPrefix": "St Ives",
+      "url": "https://www.stivesrugby.com.au/st-ives-junior-rugby",
+      "homeGround": "Hassall Park"
+    },
+    "wakehurst": {
+      "id": 53597,
+      "name": "Wakehurst Rugby",
+      "shortPrefix": "Wakehurst",
+      "url": "https://www.wakehurst.rugby/",
+      "homeGround": "Wakehurst Rugby Park"
+    }
   },
   COMPETITIONS: {
     "sjru-minis-u6-tri": {
@@ -47,8 +107,6 @@ window.NSM_SUNDAY_CONFIG = {
     }
   },
   TEAM_SLUGS: {
-    "forest-u7-green": "8oabGeCSmRTm23tGf",
-    "forest-u7-black": "WFbv5u7EoC8LLZEAp",
     "kwp-u6-blue": "PkDXPoiwLttEqBXqb",
     "norths-pirates-u6-red": "Si2oBYRTRidL26rZ7",
     "forest-u6": "twwirDZ3nFs3dHpxf",
@@ -63,6 +121,12 @@ window.NSM_SUNDAY_CONFIG = {
     "norths-pirates-u6-gold": "Ku2vor6ak4pXw7FA9",
     "chatswood-u6-black": "CYgNhNBFBQCMPyjFs",
     "wakehurst-u6-wombats": "DHRdoD6R9ceKvaZYE",
+    "forest-u7-green": "8oabGeCSmRTm23tGf",
+    "forest-u7-black": "WFbv5u7EoC8LLZEAp",
+    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
+    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
+    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
+    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
     "norths-pirates-u7-black": "Tc3RzjML5PEatcEWC",
     "hornsby-u7": "Cq53T4h5s3be8S5uH",
     "chatswood-u7-gold": "iBeagYjimSQGosTcw",
@@ -75,10 +139,10 @@ window.NSM_SUNDAY_CONFIG = {
     "wakehurst-u7-wildcats": "YXKtpRcuZY2pcJsvG",
     "wakehurst-u7-wasps": "oFRNkNkZX8jap2wJw",
     "st-ives-u7-blue": "MzNyb9tB2ZxzFzcQE",
-    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
-    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
-    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
-    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
+    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
+    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
+    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
+    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-black": "SgMo5P2wrBkSsiA75",
     "wakehurst-u8-krakens": "LMEwhv9GKtTfiswG2",
     "chatswood-u8-green": "bZ59JmnzFc2gn5og6",
@@ -91,10 +155,6 @@ window.NSM_SUNDAY_CONFIG = {
     "lane-cove-u8-gold": "azWv34qmnBYrN7atm",
     "kwp-u8-lindfield": "K6KJYRD4rKcpPgrdx",
     "lane-cove-u8-blue": "5SyzYzsjmbeaPZsXT",
-    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
-    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
-    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
-    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-gold": "BKWEZ7Kev7a3KvTRd",
     "wakehurst-u8-kings": "ohBqYch2RBPg4rKdQ",
     "chatswood-u9-green": "DbR93yCwTwovLMP8T",
@@ -115,18 +175,6 @@ window.NSM_SUNDAY_CONFIG = {
     "kwp-u7-gold": "e7BqvC4k5RA2b3vN9"
   },
   TEAM_META: {
-    "8oabGeCSmRTm23tGf": {
-      "name": "Forest Green 7",
-      "clubKey": "forest",
-      "age": "U7",
-      "slug": "forest-u7-green"
-    },
-    "WFbv5u7EoC8LLZEAp": {
-      "name": "Forest Black 7",
-      "clubKey": "forest",
-      "age": "U7",
-      "slug": "forest-u7-black"
-    },
     "PkDXPoiwLttEqBXqb": {
       "name": "Killara-West Pymble Blue 6",
       "clubKey": "kwp",
@@ -211,6 +259,42 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U6",
       "slug": "wakehurst-u6-wombats"
     },
+    "8oabGeCSmRTm23tGf": {
+      "name": "Forest Green 7",
+      "clubKey": "forest",
+      "age": "U7",
+      "slug": "forest-u7-green"
+    },
+    "WFbv5u7EoC8LLZEAp": {
+      "name": "Forest Black 7",
+      "clubKey": "forest",
+      "age": "U7",
+      "slug": "forest-u7-black"
+    },
+    "s8nwXDACJDAyqFEKA": {
+      "name": "St Ives Blue 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-blue"
+    },
+    "9xzWKyPJcHTkkfprX": {
+      "name": "St Ives Yellow 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-yellow"
+    },
+    "ymJaTNwY3jux89Ck9": {
+      "name": "Wakehurst Wallabies 6",
+      "clubKey": "wakehurst",
+      "age": "U6",
+      "slug": "wakehurst-u6-wallabies"
+    },
+    "9qtLtsMwDeFQ86H5J": {
+      "name": "Lindfield 6",
+      "clubKey": "lindfield",
+      "age": "U6",
+      "slug": "lindfield-u6"
+    },
     "Tc3RzjML5PEatcEWC": {
       "name": "Norths Pirates Black 7",
       "clubKey": "norths-pirates",
@@ -283,29 +367,29 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U7",
       "slug": "st-ives-u7-blue"
     },
-    "s8nwXDACJDAyqFEKA": {
-      "name": "St Ives Blue 6",
+    "wXumK7xeYAM7xkdkD": {
+      "name": "St Ives Yellow 7",
       "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-blue"
+      "age": "U7",
+      "slug": "st-ives-u7-yellow"
     },
-    "9xzWKyPJcHTkkfprX": {
-      "name": "St Ives Yellow 6",
-      "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-yellow"
+    "52MoHPFgMFTPppk9H": {
+      "name": "Lane Cove Blue 7",
+      "clubKey": "lane-cove",
+      "age": "U7",
+      "slug": "lane-cove-u7-blue"
     },
-    "ymJaTNwY3jux89Ck9": {
-      "name": "Wakehurst Wallabies 6",
-      "clubKey": "wakehurst",
-      "age": "U6",
-      "slug": "wakehurst-u6-wallabies"
+    "zuXwJ9BmQHnz36gfH": {
+      "name": "Chatswood Green 7",
+      "clubKey": "chatswood",
+      "age": "U7",
+      "slug": "chatswood-u7-green"
     },
-    "9qtLtsMwDeFQ86H5J": {
-      "name": "Lindfield 6",
+    "7ji49P5fD74pry8Sh": {
+      "name": "Lindfield 7",
       "clubKey": "lindfield",
-      "age": "U6",
-      "slug": "lindfield-u6"
+      "age": "U7",
+      "slug": "lindfield-u7"
     },
     "SgMo5P2wrBkSsiA75": {
       "name": "Chatswood Black 8",
@@ -378,30 +462,6 @@ window.NSM_SUNDAY_CONFIG = {
       "clubKey": "lane-cove",
       "age": "U8",
       "slug": "lane-cove-u8-blue"
-    },
-    "wXumK7xeYAM7xkdkD": {
-      "name": "St Ives Yellow 7",
-      "clubKey": "st-ives",
-      "age": "U7",
-      "slug": "st-ives-u7-yellow"
-    },
-    "52MoHPFgMFTPppk9H": {
-      "name": "Lane Cove Blue 7",
-      "clubKey": "lane-cove",
-      "age": "U7",
-      "slug": "lane-cove-u7-blue"
-    },
-    "zuXwJ9BmQHnz36gfH": {
-      "name": "Chatswood Green 7",
-      "clubKey": "chatswood",
-      "age": "U7",
-      "slug": "chatswood-u7-green"
-    },
-    "7ji49P5fD74pry8Sh": {
-      "name": "Lindfield 7",
-      "clubKey": "lindfield",
-      "age": "U7",
-      "slug": "lindfield-u7"
     },
     "BKWEZ7Kev7a3KvTRd": {
       "name": "Chatswood Gold 8",
@@ -522,8 +582,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beauchamp+Park+Nicholson+St%2C+Chatswood+NSW+2067%2C+Australia",
       "details": {
         "parking": "Upper carpark off Nicholson St (~15–18 spots) closest to the sportsground. Free 2-hour street parking along Beauchamp Ave, Darling St and Nicholson St rings the park if the carpark is full.",
-        "coffee":  { "onsite": "Clubhouse canteen open on game days." },
-        "notes":   "Home of Chatswood Junior Rugby. Council-managed (Willoughby)."
+        "coffee": {
+          "onsite": "Clubhouse canteen open on game days."
+        },
+        "notes": "Home of Chatswood Junior Rugby. Council-managed (Willoughby)."
       }
     },
     "Boronia Park": {
@@ -535,7 +597,7 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hassall+Park+Hassell+St%2C+St.+Ives+NSW+2075%2C+Australia",
       "details": {
         "parking": "Onsite parking exists but fills early on busy weekends — get in by 8am or expect to walk in from surrounding streets.",
-        "notes":   "Home of St Ives Junior Rugby. Clubhouse jointly run with St Ives Cricket and St Ives Junior Cricket."
+        "notes": "Home of St Ives Junior Rugby. Clubhouse jointly run with St Ives Cricket and St Ives Junior Cricket."
       }
     },
     "James Morgan Reserve": {
@@ -554,8 +616,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia",
       "details": {
         "parking": "Wheelchair-accessible carpark; additional parking on the corner of Lofberg Rd and Yanko Rd.",
-        "coffee":  { "onsite": "Canteen + BBQ in the clubhouse on game days; licensed bar." },
-        "notes":   "Home of KWP Rugby. Inside Ku-ring-gai Bicentennial Park — main entrance off Prince of Wales Dr."
+        "coffee": {
+          "onsite": "Canteen + BBQ in the clubhouse on game days; licensed bar."
+        },
+        "notes": "Home of KWP Rugby. Inside Ku-ring-gai Bicentennial Park — main entrance off Prince of Wales Dr."
       }
     },
     "Mark Taylor Oval": {
@@ -563,8 +627,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mark+Taylor+Oval+Waitara+Ave%2C+Waitara+NSW+2077%2C+Australia",
       "details": {
         "parking": "Parking along Waitara Ave and Park Ave.",
-        "coffee":  { "onsite": "New pavilion canteen + community room." },
-        "notes":   "Home of Hornsby Rugby. The 2024 pavilion upgrade added accessible change rooms for women’s teams."
+        "coffee": {
+          "onsite": "New pavilion canteen + community room."
+        },
+        "notes": "Home of Hornsby Rugby. The 2024 pavilion upgrade added accessible change rooms for women’s teams."
       }
     },
     "Mark Taylor Oval (Waitara Oval)": {
@@ -576,8 +642,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Melwood+Oval+Melwood+Ave%2C+Forestville+NSW+2087%2C+Australia",
       "details": {
         "parking": "Onsite parking in the War Memorial Playing Fields precinct; can fill at peak times — earlier is better.",
-        "coffee":  { "onsite": "Canteen with sausage sizzle on game days; coffee van + BBQ in winter." },
-        "notes":   "Home of Forest Rugby. 24 Melwood Ave, Forestville. 24/7 publicly-accessible defibrillator on site."
+        "coffee": {
+          "onsite": "Canteen with sausage sizzle on game days; coffee van + BBQ in winter."
+        },
+        "notes": "Home of Forest Rugby. 24 Melwood Ave, Forestville. 24/7 publicly-accessible defibrillator on site."
       }
     },
     "North Narrabeen Reserve": {
@@ -597,8 +665,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia",
       "details": {
         "parking": "On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.",
-        "coffee":  { "onsite": "Clubhouse canteen + bar; cart on game days." },
-        "notes":   "Home of Lane Cove Junior Rugby. Corner of Tantallon Rd and Epping Rd. Bus stops on both sides of Epping Rd."
+        "coffee": {
+          "onsite": "Clubhouse canteen + bar; cart on game days."
+        },
+        "notes": "Home of Lane Cove Junior Rugby. Corner of Tantallon Rd and Epping Rd. Bus stops on both sides of Epping Rd."
       }
     },
     "Tryon Oval": {
@@ -606,7 +676,7 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tryon+Oval+62a+Tryon+Rd%2C+East+Lindfield+NSW+2070%2C+Australia",
       "details": {
         "parking": "Onsite parking adjacent to the playground; on-street on Tryon Rd if full.",
-        "notes":   "Home of Lindfield Junior Rugby (100+ years at this ground). Nearest train: Lindfield (North Shore line)."
+        "notes": "Home of Lindfield Junior Rugby (100+ years at this ground). Nearest train: Lindfield (North Shore line)."
       }
     },
     "Tunks Park": {
@@ -614,8 +684,11 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia",
       "details": {
         "parking": "Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.",
-        "coffee":  { "onsite": "Coffee cart at the entrance on game days.", "nearby": "Cafe Carino — short walk." },
-        "notes":   "Home of Norths Pirates Junior Rugby (western end). Under the Cammeray Suspension Bridge — allow 5 min to walk in."
+        "coffee": {
+          "onsite": "Coffee cart at the entrance on game days.",
+          "nearby": "Cafe Carino — short walk."
+        },
+        "notes": "Home of Norths Pirates Junior Rugby (western end). Under the Cammeray Suspension Bridge — allow 5 min to walk in."
       }
     },
     "Wakehurst Rugby Park": {
@@ -623,8 +696,10 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wakehurst+Rugby+Park+Forest+Way+%26+Waldon+Rd%2C+Belrose+NSW+2085%2C+Australia",
       "details": {
         "parking": "Onsite parking adjacent to the clubhouse.",
-        "coffee":  { "onsite": "Canteen + BBQ + bar (the canteen is the club’s main fundraiser through the season)." },
-        "notes":   "Home of Wakehurst Rugby. Clubhouse open to spectators; bathroom + change facilities. Off Waldon Rd, Belrose."
+        "coffee": {
+          "onsite": "Canteen + BBQ + bar (the canteen is the club’s main fundraiser through the season)."
+        },
+        "notes": "Home of Wakehurst Rugby. Clubhouse open to spectators; bathroom + change facilities. Off Waldon Rd, Belrose."
       }
     }
   },
@@ -719,8 +794,14 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "gala",
       "galaTitle": "Inter-District Gala Day",
       "galaDescription": "Teams travel outside SJRU to play other-district sides. Draw published by SJRU closer to the date.",
-      "hosts": { "u6u7": null, "u8u9": null },
-      "matches": { "u6u7": 0, "u8u9": 0 }
+      "hosts": {
+        "u6u7": null,
+        "u8u9": null
+      },
+      "matches": {
+        "u6u7": 0,
+        "u8u9": 0
+      }
     },
     {
       "round": 8,
