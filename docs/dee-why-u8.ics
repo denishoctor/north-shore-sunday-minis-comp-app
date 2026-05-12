@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-f17960dc5d7c60b4e-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Dee Why 8 vs Norths Pirates Red 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-f5a2945ddec8a5266-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Dee Why 8 vs Chatswood Gold 8 | RND 2
@@ -63,15 +63,15 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u8
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6a89b81e1d2c30e61-dee-why-u8@denishoctor.github.io
+UID:nsm-sunday-1215bebecc97ee53d-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Dee Why 8 vs Chatswood Gold 8 | RND 3
-LOCATION:Melwood Oval TT2\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Dee Why 8 vs Chatswood Gold 8\n📍 Melwood Oval TT2\, For
+LOCATION:Melwood Oval TT4\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Chatswood Gold 8\n📍 Melwood Oval TT4\, For
  estville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Minis U8 
  Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
  tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
@@ -81,20 +81,38 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u8
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-f2b2ac2dc71cede1a-dee-why-u8@denishoctor.github.io
+UID:nsm-sunday-86d152b6abe362fbb-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260524T084000
-DTEND;TZID=Australia/Sydney:20260524T094000
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Dee Why 8 vs Norths Pirates Black 8 | RND 4
-LOCATION:Bantry Bay Oval TT3\, Seaforth\, Sydney NSW
-DESCRIPTION:🏉 Dee Why 8 vs Norths Pirates Black 8\n📍 Bantry Bay Oval 
- TT3\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU Min
- is U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
- automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
- rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
- y-minis-comp-app/#dee-why-u8
+LOCATION:Hassall Park TT6\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Norths Pirates Black 8\n📍 Hassall Park TT6
+ \, St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U
+ 8 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
+ matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
+ fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
+ nis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-393902b400737eb0f-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260531T080000
+DTEND;TZID=Australia/Sydney:20260531T090000
+SUMMARY:Dee Why 8 vs Hornsby Red 8 | RND 5
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Hornsby Red 8\n📍 Beauchamp Park TT2\, Chat
+ swood\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU Minis U8 Sun
+ day\n\nℹ️ Venues and times may change. This calendar updates automatic
+ ally\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after 
+ a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-c
+ omp-app/#dee-why-u8
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u8
 END:VEVENT

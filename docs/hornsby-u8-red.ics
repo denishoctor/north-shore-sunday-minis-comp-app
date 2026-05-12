@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-a64050181839884a0-hornsby-u8-red@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Hornsby Red 8 vs Lane Cove Gold 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-8e8e5be8592849805-hornsby-u8-red@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Hornsby Red 8 vs Norths Pirates Red 8 | RND 2
@@ -63,15 +63,15 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-red
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-22c84a19fa86086ef-hornsby-u8-red@denishoctor.github.io
+UID:nsm-sunday-26cb2fb97f20b3427-hornsby-u8-red@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Hornsby Red 8 vs Wakehurst Kings 8 | RND 3
-LOCATION:Melwood Oval TT4\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Red 8 vs Wakehurst Kings 8\n📍 Melwood Oval TT4\
+LOCATION:Melwood Oval TT2\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Red 8 vs Wakehurst Kings 8\n📍 Melwood Oval TT2\
  , Forestville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Mini
  s U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
  utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
@@ -81,20 +81,38 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-red
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-ab305b9f8c70279da-hornsby-u8-red@denishoctor.github.io
+UID:nsm-sunday-7f0a5e1773586b20b-hornsby-u8-red@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Hornsby Red 8 vs Chatswood Gold 8 | RND 4
-LOCATION:Bantry Bay Oval TT3\, Seaforth\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Red 8 vs Chatswood Gold 8\n📍 Bantry Bay Oval TT
- 3\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis
-  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
- tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
-  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
- minis-comp-app/#hornsby-u8-red
+LOCATION:Hassall Park TT3\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Red 8 vs Chatswood Gold 8\n📍 Hassall Park TT3\,
+  St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U8 
+ Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
+ tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
+ er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
+ s-comp-app/#hornsby-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
+ y-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-393902b400737eb0f-hornsby-u8-red@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260531T080000
+DTEND;TZID=Australia/Sydney:20260531T090000
+SUMMARY:Hornsby Red 8 vs Dee Why 8 | RND 5
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Hornsby Red 8 vs Dee Why 8\n📍 Beauchamp Park TT2\, Chat
+ swood\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU Minis U8 Sun
+ day\n\nℹ️ Venues and times may change. This calendar updates automatic
+ ally\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after 
+ a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-c
+ omp-app/#hornsby-u8-red
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-red
 END:VEVENT

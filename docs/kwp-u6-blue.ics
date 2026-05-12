@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fcde3f9b55e3541b0-kwp-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Killara-West Pymble Blue 6 vs Norths Pirates Red 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-72a2b26ba72fa020f-kwp-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Killara-West Pymble Blue 6 vs Norths Pirates Black 6 | RND 2
@@ -63,34 +63,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
  -blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-243f73cca686f7699-kwp-u6-blue@denishoctor.github.io
+UID:nsm-sunday-1135e862e54b23001-kwp-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260516T080000
-DTEND;TZID=Australia/Sydney:20260516T090000
-SUMMARY:Killara-West Pymble Blue 6 vs Wakehurst Wombats 6 | RND 3
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Wakehurst Wombats 6\n📍 Ta
- ntallon Oval TT3\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 8:00am
-  AEST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may c
- hange. This calendar updates automatically\n(Apple Calendar: ~every hour 
- · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoct
- or.github.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
- -blue
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-a0912efe6359d3bb8-kwp-u6-blue@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Killara-West Pymble Blue 6 vs Wakehurst Wombats 6 | RND 3
-LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
 DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Wakehurst Wombats 6\n📍 Wa
- kehurst Rugby Park TT2\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am A
+ kehurst Rugby Park TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am A
  EST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may cha
  nge. This calendar updates automatically\n(Apple Calendar: ~every hour · 
  Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.
@@ -99,34 +81,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
  -blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-f28d03b25d050f096-kwp-u6-blue@denishoctor.github.io
+UID:nsm-sunday-2a8d9cecc1d2badf8-kwp-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260523T080000
-DTEND;TZID=Australia/Sydney:20260523T090000
-SUMMARY:Killara-West Pymble Blue 6 vs Chatswood Gold 6 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Chatswood Gold 6\n📍 Lofbe
- rg Oval TT1\, West Pymble\n📅 Round 4 · Sat\, 23 May · 8:00am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#kwp-u6-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
- -blue
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-d8bd47a5c1e80ac30-kwp-u6-blue@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Killara-West Pymble Blue 6 vs Chatswood Gold 6 | RND 4
-LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Chatswood Gold 6\n📍 Beauc
- hamp Park TT2\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n
+LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Chatswood Gold 6\n📍 Lofbe
+ rg Oval TT1\, West Pymble\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n
  🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
  e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
@@ -135,16 +99,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u6
  -blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-fd9026a6a6c619a81-kwp-u6-blue@denishoctor.github.io
+UID:nsm-sunday-665a0daeb25dc4d5d-kwp-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260530T080000
-DTEND;TZID=Australia/Sydney:20260530T090000
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260531T080000
+DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Killara-West Pymble Blue 6 vs Killara-West Pymble Gold 6 | RND 5
 LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
 DESCRIPTION:🏉 Killara-West Pymble Blue 6 vs Killara-West Pymble Gold 6\n
- 📍 Wakehurst Rugby Park TT1\, Belrose\n📅 Round 5 · Sat\, 30 May · 8
+ 📍 Wakehurst Rugby Park TT1\, Belrose\n📅 Round 5 · Sun\, 31 May · 8
  :00am AEST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times 
  may change. This calendar updates automatically\n(Apple Calendar: ~every h
  our · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denis

@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-b67721280fe703689-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Forest Green 7 vs Forest Black 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-511fed4d89279f1ef-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Forest Green 7 vs Chatswood Green 7 | RND 2
@@ -63,34 +63,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u7-green
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-576db006ec472fa40-forest-u7-green@denishoctor.github.io
+UID:nsm-sunday-3354f738bbb8abf92-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260516T100000
-DTEND;TZID=Australia/Sydney:20260516T110000
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260517T092000
+DTEND;TZID=Australia/Sydney:20260517T102000
 SUMMARY:Forest Green 7 vs Lane Cove Gold 7 | RND 3
-LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Forest Green 7 vs Lane Cove Gold 7\n📍 Tantallon Oval TT
- 1\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 10:00am AEST\n🏆 SJ
- RU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#forest-u7-green
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
- -u7-green
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-5bd6293954335e5ed-forest-u7-green@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260517T080000
-DTEND;TZID=Australia/Sydney:20260517T090000
-SUMMARY:Forest Green 7 vs St Ives Yellow 7 | RND 3
-LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Forest Green 7 vs St Ives Yellow 7\n📍 Wakehurst Rugby P
- ark TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU 
+LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Forest Green 7 vs Lane Cove Gold 7\n📍 Wakehurst Rugby P
+ ark TT3\, Belrose\n📅 Round 3 · Sun\, 17 May · 9:20am AEST\n🏆 SJRU 
  Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calen
  dar updates automatically\n(Apple Calendar: ~every hour · Google Calendar
  : up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north
@@ -99,34 +81,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u7-green
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-b4e32c82945ea144e-forest-u7-green@denishoctor.github.io
+UID:nsm-sunday-2bfad0dda4506e5e8-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260523T100000
-DTEND;TZID=Australia/Sydney:20260523T110000
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
 SUMMARY:Forest Green 7 vs Wakehurst Wasps 7 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Forest Green 7 vs Wakehurst Wasps 7\n📍 Lofberg Oval TT1
- \, West Pymble\n📅 Round 4 · Sat\, 23 May · 10:00am AEST\n🏆 SJRU Mi
- nis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
- r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#forest-u7-green
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
- -u7-green
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-1a57e564b5f24059a-forest-u7-green@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260524T080000
-DTEND;TZID=Australia/Sydney:20260524T090000
-SUMMARY:Forest Green 7 vs Wakehurst Wasps 7 | RND 4
-LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Forest Green 7 vs Wakehurst Wasps 7\n📍 Beauchamp Park T
- T1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Min
+LOCATION:Lofberg Oval TT4\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Forest Green 7 vs Wakehurst Wasps 7\n📍 Lofberg Oval TT4
+ \, West Pymble\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 SJRU Min
  is U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar
   updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
  p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
@@ -135,16 +99,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u7-green
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-7c7ced72bd7e5b25f-forest-u7-green@denishoctor.github.io
+UID:nsm-sunday-c6a7f2d5456a92c91-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T081700Z
-LAST-MODIFIED:20260512T081700Z
-DTSTART;TZID=Australia/Sydney:20260530T092000
-DTEND;TZID=Australia/Sydney:20260530T102000
+DTSTAMP:20260512T105655Z
+LAST-MODIFIED:20260512T105655Z
+DTSTART;TZID=Australia/Sydney:20260531T092000
+DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Forest Green 7 vs Wakehurst Wildcats 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
 DESCRIPTION:🏉 Forest Green 7 vs Wakehurst Wildcats 7\n📍 Wakehurst Rug
- by Park TT1\, Belrose\n📅 Round 5 · Sat\, 30 May · 9:20am AEST\n🏆 S
+ by Park TT3\, Belrose\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 S
  JRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
  alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
  ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
