@@ -40,27 +40,42 @@ export const AGE_GROUPS = ['U6', 'U7', 'U8', 'U9'];
 //   shortPrefix  stripped from team names for the compact token
 //   url          official club site (verified by web-search probe 2026-05-12)
 //   homeGround   venue key into VENUES — the club's normal home base
+//   primary      primary club colour hex (jersey / crest) — verified by
+//                web-search 2026-05-12 for 8 of 10; St Ives + Wakehurst use
+//                colours inferred from team naming + retro jersey references
+//   accent       secondary club colour hex — used sparingly as a token/chip
+//                trim. Falls back to gold if omitted.
 export const CLUBS = {
   'lane-cove':      { id: 30901, name: 'Lane Cove JRU',       shortPrefix: 'Lane Cove',
-    url: 'https://www.lcjru.com.au/',                            homeGround: 'Tantallon Oval' },
+    url: 'https://www.lcjru.com.au/',                            homeGround: 'Tantallon Oval',
+    primary: '#0a2059', accent: '#d4a93c' },                        // Royal Blue + Gold + White
   'chatswood':      { id: 30878, name: 'Chatswood JRU',       shortPrefix: 'Chatswood',
-    url: 'https://www.chatswoodjuniorrugby.com.au/',             homeGround: 'Beauchamp Park' },
+    url: 'https://www.chatswoodjuniorrugby.com.au/',             homeGround: 'Beauchamp Park',
+    primary: '#1b5e20', accent: '#d4a93c' },                        // Green + Gold (Stags, since 1947)
   'hornsby':        { id: 30898, name: 'Hornsby',             shortPrefix: 'Hornsby',
-    url: 'http://hjruc.com.au/',                                 homeGround: 'Mark Taylor Oval' },
+    url: 'http://hjruc.com.au/',                                 homeGround: 'Mark Taylor Oval',
+    primary: '#b71c1c', accent: '#1a1a1a' },                        // Red + Black + Gold (Lions, Waikato-inspired)
   'kwp':            { id: 30900, name: 'Killara–West Pymble', shortPrefix: 'Killara-West Pymble',
-    url: 'https://www.kwprugby.com/',                            homeGround: 'Lofberg Oval' },
+    url: 'https://www.kwprugby.com/',                            homeGround: 'Lofberg Oval',
+    primary: '#003e7e', accent: '#d4a93c' },                        // Royal Blue + Gold
   'lindfield':      { id: 48060, name: 'Lindfield JRU',       shortPrefix: 'Lindfield',
-    url: 'https://www.lindfieldjuniorrugby.com.au/',             homeGround: 'Tryon Oval' },
+    url: 'https://www.lindfieldjuniorrugby.com.au/',             homeGround: 'Tryon Oval',
+    primary: '#0288d1', accent: '#ffffff' },                        // Sky Blue + White (since 1919)
   'norths-pirates': { id: 50135, name: 'Norths Pirates',      shortPrefix: 'Norths Pirates',
-    url: 'https://www.northspirates.rugby/',                     homeGround: 'Tunks Park' },
+    url: 'https://www.northspirates.rugby/',                     homeGround: 'Tunks Park',
+    primary: '#1a1a1a', accent: '#b71c1c' },                        // Black + Red + Gold accent
   'dee-why':        { id: 53286, name: 'Dee Why',             shortPrefix: 'Dee Why',
-    url: 'https://deewhylionsrugby.com.au/',                     homeGround: 'James Morgan Reserve' },
+    url: 'https://deewhylionsrugby.com.au/',                     homeGround: 'James Morgan Reserve',
+    primary: '#c62828', accent: '#ffffff' },                        // Red (B&I Lions inspired)
   'forest':         { id: 53322, name: 'Forest Rugby',        shortPrefix: 'Forest',
-    url: 'https://forestrugby.com.au/',                          homeGround: 'Melwood Oval' },
+    url: 'https://forestrugby.com.au/',                          homeGround: 'Melwood Oval',
+    primary: '#0b3d1c', accent: '#ffffff' },                        // Bottle Green + White
   'st-ives':        { id: 53546, name: 'St Ives JRU',         shortPrefix: 'St Ives',
-    url: 'https://www.stivesrugby.com.au/st-ives-junior-rugby',  homeGround: 'Hassall Park' },
+    url: 'https://www.stivesrugby.com.au/st-ives-junior-rugby',  homeGround: 'Hassall Park',
+    primary: '#1565c0', accent: '#fdd835' },                        // Blue + Yellow (inferred from team naming)
   'wakehurst':      { id: 53597, name: 'Wakehurst Rugby',     shortPrefix: 'Wakehurst',
-    url: 'https://www.wakehurst.rugby/',                         homeGround: 'Wakehurst Rugby Park' },
+    url: 'https://www.wakehurst.rugby/',                         homeGround: 'Wakehurst Rugby Park',
+    primary: '#039be5', accent: '#1a1a1a' },                        // Light Blue + Black (retro-jersey reference)
 
   // Pending / not-this-season:
   //

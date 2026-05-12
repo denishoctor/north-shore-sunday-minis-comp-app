@@ -77,9 +77,20 @@
     border-color: var(--gold);
     color: var(--gold);
   }
-  @media (max-width: 480px) {
-    .header-nav { gap: 3px; }
-    .header-nav-link { padding: 5px 8px; font-size: 10.5px; }
+  @media (max-width: 600px) {
+    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 14px; }
+    .crest { width: 56px; height: 56px; }
+    .title-block { flex: 1 1 180px; }
+    .eyebrow { letter-spacing: 1px; }
+    .header-nav {
+      order: 4;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(212,169,60,.25);
+    }
+    .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
 
   .intro {
@@ -103,9 +114,13 @@
     .clubs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
 
+  /* Each card sets --club-color inline; CSS uses it for the left rail and
+     the primary CTA so each club's identity reads at a glance. */
   .club-card {
+    --club-color:  var(--navy);
+    --club-accent: var(--gold);
     background: #fff; border: 1px solid var(--cream-edge);
-    border-left: 3px solid var(--gold);
+    border-left: 4px solid var(--club-color);
     border-radius: 10px;
     padding: 14px 16px;
     display: flex; flex-direction: column; gap: 10px;
@@ -159,11 +174,11 @@
     padding: 6px 12px; border-radius: 999px;
     line-height: 1; white-space: nowrap;
   }
-  .club-action:hover { border-color: var(--navy); background: var(--cream); }
+  .club-action:hover { border-color: var(--club-color); background: var(--cream); }
   .club-action.primary {
-    color: #fff; background: var(--navy); border-color: var(--navy);
+    color: #fff; background: var(--club-color); border-color: var(--club-color);
   }
-  .club-action.primary:hover { background: var(--navy-dark); }
+  .club-action.primary:hover { filter: brightness(1.08); }
 
   .footer-note {
     border-top: 1px solid var(--rule);
@@ -221,7 +236,10 @@ function renderCard([key, club]) {
   const summary = teamSummary(key);
   const homeVenue = club.homeGround ? VENUES?.[club.homeGround] : null;
   const crestUrl = `https://dpf0m541u9zk8.cloudfront.net/ru/team/${club.id}.png`;
-  return `<section class="club-card" id="club-${esc(key)}">
+  const cardStyle = club.primary
+    ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
+    : '';
+  return `<section class="club-card" id="club-${esc(key)}"${cardStyle}>
     <div class="club-card-head">
       <div class="club-card-crest" style="background-image: url('${esc(crestUrl)}'); background-color: var(--cream)" role="img" aria-label="${esc(club.name)} crest"></div>
       <div class="club-card-titles">

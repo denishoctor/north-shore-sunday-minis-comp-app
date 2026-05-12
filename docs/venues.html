@@ -77,9 +77,20 @@
     border-color: var(--gold);
     color: var(--gold);
   }
-  @media (max-width: 480px) {
-    .header-nav { gap: 3px; }
-    .header-nav-link { padding: 5px 8px; font-size: 10.5px; }
+  @media (max-width: 600px) {
+    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 14px; }
+    .crest { width: 56px; height: 56px; }
+    .title-block { flex: 1 1 180px; }
+    .eyebrow { letter-spacing: 1px; }
+    .header-nav {
+      order: 4;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(212,169,60,.25);
+    }
+    .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
 
   .intro {

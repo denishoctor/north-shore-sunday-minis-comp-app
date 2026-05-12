@@ -18,70 +18,90 @@ window.NSM_SUNDAY_CONFIG = {
       "name": "Lane Cove JRU",
       "shortPrefix": "Lane Cove",
       "url": "https://www.lcjru.com.au/",
-      "homeGround": "Tantallon Oval"
+      "homeGround": "Tantallon Oval",
+      "primary": "#0a2059",
+      "accent": "#d4a93c"
     },
     "chatswood": {
       "id": 30878,
       "name": "Chatswood JRU",
       "shortPrefix": "Chatswood",
       "url": "https://www.chatswoodjuniorrugby.com.au/",
-      "homeGround": "Beauchamp Park"
+      "homeGround": "Beauchamp Park",
+      "primary": "#1b5e20",
+      "accent": "#d4a93c"
     },
     "hornsby": {
       "id": 30898,
       "name": "Hornsby",
       "shortPrefix": "Hornsby",
       "url": "http://hjruc.com.au/",
-      "homeGround": "Mark Taylor Oval"
+      "homeGround": "Mark Taylor Oval",
+      "primary": "#b71c1c",
+      "accent": "#1a1a1a"
     },
     "kwp": {
       "id": 30900,
       "name": "Killara–West Pymble",
       "shortPrefix": "Killara-West Pymble",
       "url": "https://www.kwprugby.com/",
-      "homeGround": "Lofberg Oval"
+      "homeGround": "Lofberg Oval",
+      "primary": "#003e7e",
+      "accent": "#d4a93c"
     },
     "lindfield": {
       "id": 48060,
       "name": "Lindfield JRU",
       "shortPrefix": "Lindfield",
       "url": "https://www.lindfieldjuniorrugby.com.au/",
-      "homeGround": "Tryon Oval"
+      "homeGround": "Tryon Oval",
+      "primary": "#0288d1",
+      "accent": "#ffffff"
     },
     "norths-pirates": {
       "id": 50135,
       "name": "Norths Pirates",
       "shortPrefix": "Norths Pirates",
       "url": "https://www.northspirates.rugby/",
-      "homeGround": "Tunks Park"
+      "homeGround": "Tunks Park",
+      "primary": "#1a1a1a",
+      "accent": "#b71c1c"
     },
     "dee-why": {
       "id": 53286,
       "name": "Dee Why",
       "shortPrefix": "Dee Why",
       "url": "https://deewhylionsrugby.com.au/",
-      "homeGround": "James Morgan Reserve"
+      "homeGround": "James Morgan Reserve",
+      "primary": "#c62828",
+      "accent": "#ffffff"
     },
     "forest": {
       "id": 53322,
       "name": "Forest Rugby",
       "shortPrefix": "Forest",
       "url": "https://forestrugby.com.au/",
-      "homeGround": "Melwood Oval"
+      "homeGround": "Melwood Oval",
+      "primary": "#0b3d1c",
+      "accent": "#ffffff"
     },
     "st-ives": {
       "id": 53546,
       "name": "St Ives JRU",
       "shortPrefix": "St Ives",
       "url": "https://www.stivesrugby.com.au/st-ives-junior-rugby",
-      "homeGround": "Hassall Park"
+      "homeGround": "Hassall Park",
+      "primary": "#1565c0",
+      "accent": "#fdd835"
     },
     "wakehurst": {
       "id": 53597,
       "name": "Wakehurst Rugby",
       "shortPrefix": "Wakehurst",
       "url": "https://www.wakehurst.rugby/",
-      "homeGround": "Wakehurst Rugby Park"
+      "homeGround": "Wakehurst Rugby Park",
+      "primary": "#039be5",
+      "accent": "#1a1a1a"
     }
   },
   COMPETITIONS: {
@@ -611,7 +631,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Manly",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/keirle-park.jpg", "caption": "Pitch layout — TT1–TT8 plus MOD1, MOD2", "asOf": "2026-03" }
+        "map": {
+          "src": "assets/venues/keirle-park.jpg",
+          "caption": "Pitch layout — TT1–TT8 plus MOD1, MOD2",
+          "asOf": "2026-03"
+        }
       }
     },
     "Lofberg Oval": {
@@ -667,7 +691,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Lane Cove North",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/tantallon-oval.jpg", "caption": "Pitch layout — TT1–TT4 (A, B, C, D in the draw)", "asOf": "2026-05" },
+        "map": {
+          "src": "assets/venues/tantallon-oval.jpg",
+          "caption": "Pitch layout — TT1–TT4 (A, B, C, D in the draw)",
+          "asOf": "2026-05"
+        },
         "parking": "On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.",
         "coffee": {
           "onsite": "Clubhouse canteen + bar; cart on game days."
@@ -687,7 +715,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Cammeray",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/tunks-park.jpg", "caption": "Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5", "asOf": "2026-03" },
+        "map": {
+          "src": "assets/venues/tunks-park.jpg",
+          "caption": "Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5",
+          "asOf": "2026-03"
+        },
         "parking": "Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.",
         "coffee": {
           "onsite": "Coffee cart at the entrance on game days.",

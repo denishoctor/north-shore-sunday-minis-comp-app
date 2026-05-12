@@ -95,9 +95,24 @@
     border-color: var(--gold);
     color: var(--gold);
   }
-  @media (max-width: 480px) {
-    .header-nav { gap: 3px; }
-    .header-nav-link { padding: 5px 8px; font-size: 10.5px; }
+  /* On narrow screens (≤600px) the right-side nav + Home button compete with
+     the title-block for room and the eyebrow ends up wrapping line-by-line.
+     Drop the nav to its own row beneath title+home, shrink the crest, and
+     give title-block flex-basis so the eyebrow has a sensible line length. */
+  @media (max-width: 600px) {
+    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 14px; }
+    .crest { width: 56px; height: 56px; }
+    .title-block { flex: 1 1 180px; }
+    .eyebrow { letter-spacing: 1px; }
+    .header-nav {
+      order: 4;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(212,169,60,.25);
+    }
+    .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
   .header-home {
     appearance: none; cursor: pointer;
@@ -123,23 +138,30 @@
     margin-bottom: 8px;
   }
   .club-row[hidden] { display: none; }
+  /* Each club chip inlines --club-color (primary) and --club-accent. Default
+     to navy/gold so chips without club data still render cleanly. */
   .club-chip {
+    --club-color:  var(--navy);
+    --club-accent: var(--gold);
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
     color: var(--navy-mid); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 5px 11px; border-radius: 999px;
+    border-left: 3px solid var(--club-color);
+    padding: 5px 11px 5px 9px; border-radius: 999px;
     line-height: 1; white-space: nowrap;
     transition: background .12s, border-color .12s, color .12s, box-shadow .12s;
   }
-  .club-chip:hover { border-color: var(--navy); color: var(--navy); }
+  .club-chip:hover { border-color: var(--club-color); color: var(--club-color); }
+  /* Active: solid club colour with white text. color-mix isn't needed since
+     the primary hex was already chosen for contrast against white. */
   .club-chip.active {
-    background: var(--navy); color: #fff;
-    border-color: var(--gold);
-    box-shadow: inset 0 -2px 0 var(--gold);
+    background: var(--club-color); color: #fff;
+    border-color: var(--club-color);
+    box-shadow: inset 0 -2px 0 var(--club-accent);
   }
   .club-chip .club-count { opacity: .65; font-weight: 600; margin-left: 4px; }
-  .club-chip.active .club-count { color: var(--gold); opacity: 1; }
+  .club-chip.active .club-count { color: var(--club-accent); opacity: 1; }
   .age-row {
     display: flex; flex-wrap: wrap; gap: 5px;
     margin-bottom: 8px;
@@ -165,24 +187,29 @@
   @media (min-width: 720px) { .token-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
   @media (min-width: 960px) { .token-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
   .token-grid[hidden] { display: none; }
+  /* Tokens inherit --club-color from inline style. Default fallback covers the
+     case where a token's club isn't determinable. */
   .token {
+    --club-color:  var(--navy);
+    --club-accent: var(--gold);
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 12px; font-weight: 700;
     color: var(--navy); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 5px 8px; border-radius: 8px;
+    border-left: 3px solid var(--club-color);
+    padding: 5px 8px 5px 6px; border-radius: 8px;
     text-align: left; line-height: 1.2;
     display: flex; flex-direction: column; gap: 1px;
     min-width: 0;
     transition: border-color .12s, box-shadow .12s;
   }
-  .token:hover { border-color: var(--navy); box-shadow: 0 1px 4px rgba(10,32,89,.08); }
+  .token:hover { border-color: var(--club-color); box-shadow: 0 1px 4px rgba(10,32,89,.08); }
   .token.active {
-    background: var(--navy); color: #fff;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 2px var(--gold) inset, 0 2px 6px rgba(10,32,89,.25);
+    background: var(--club-color); color: #fff;
+    border-color: var(--club-accent);
+    box-shadow: 0 0 0 2px var(--club-accent) inset, 0 2px 6px rgba(10,32,89,.25);
   }
-  .token-age { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .5px; }
+  .token-age { font-size: 10px; font-weight: 800; color: var(--club-accent); text-transform: uppercase; letter-spacing: .5px; }
   .token.active .token-age { color: var(--gold-soft); }
   .token-name { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .token-club { font-size: 10px; font-weight: 600; opacity: .7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -693,7 +720,12 @@ function buildClubRow() {
   row.innerHTML = clubsToShow.map(([key, club]) => {
     const n = teamsByClub[key]?.length || 0;
     const countHtml = hasData ? `<span class="club-count">${n}</span>` : '';
-    return `<button class="club-chip" data-club="${esc(key)}" type="button">${esc(club.name)}${countHtml}</button>`;
+    // --club-color drives the active-state shading via CSS color-mix below.
+    // Accent is used for the underline shadow when active.
+    const styleAttr = club.primary
+      ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
+      : '';
+    return `<button class="club-chip" data-club="${esc(key)}" type="button"${styleAttr}>${esc(club.name)}${countHtml}</button>`;
   }).join('');
 
   row.querySelectorAll('.club-chip').forEach(btn => {
@@ -737,7 +769,10 @@ function buildTokenGrid() {
   grid.innerHTML = filtered.map(m => {
     const club = CLUBS?.[m.clubKey];
     const display = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
-    return `<button class="token" data-team="${esc(TEAM_SLUGS[m.slug] || '')}" data-slug="${esc(m.slug)}" type="button" aria-label="${esc(m.name)}">
+    const styleAttr = club?.primary
+      ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
+      : '';
+    return `<button class="token" data-team="${esc(TEAM_SLUGS[m.slug] || '')}" data-slug="${esc(m.slug)}" type="button" aria-label="${esc(m.name)}"${styleAttr}>
       <span class="token-age">${esc(m.age || '')}</span>
       <span class="token-name">${esc(display)}</span>
       ${club ? `<span class="token-club">${esc(club.shortPrefix || club.name)}</span>` : ''}
