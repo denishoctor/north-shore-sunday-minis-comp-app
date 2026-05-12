@@ -1,10 +1,18 @@
-// SJRU Sunday Minis 2026 — round schedule and host venues.
+// SJRU Sunday Minis 2026 — round schedule and host venues (DRAFT FALLBACK).
 //
 // Each Sunday in the season has up to two host venues: one for U6/U7 and one
 // for U8/U9. Sometimes both age bands share a venue (Rounds 1, 2, 13). The
-// schedule comes from the LCJRU 2026 club calendar, which mirrors the SJRU
-// Sunday Minis circular — Sunday Minis is centrally drawn, so every club
-// playing in the comp travels to these hosts.
+// schedule below comes from the LCJRU 2026 club calendar, which mirrors the
+// SJRU Sunday Minis circular — Sunday Minis is centrally drawn, so every
+// club playing in the comp travels to these hosts.
+//
+// IMPORTANT — these are early-season DRAFT hosts:
+// The host venue can move once SJRU publishes the actual draw to Rugby
+// Xplorer (R5 2026 was a confirmed example: Tantallon/Lofberg in the
+// draft, different venue once Xplorer published). The fetch script
+// (buildRoundsSummary in scripts/fetch-fixtures.mjs) treats live data as
+// the source of truth and falls back to these values ONLY when no
+// matches have been published for that (round, age band) yet.
 //
 // Source: https://github.com/denishoctor/lcjru-fixtures/blob/main/scripts/events.mjs
 // Used by:
