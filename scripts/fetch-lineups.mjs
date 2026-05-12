@@ -36,11 +36,15 @@ const FETCH_TIMEOUT_MS = 8000;            // per-request hard ceiling
 const CIRCUIT_BREAKER  = 6;               // consecutive failures → abort the loop
 const SAVE_EVERY       = 25;              // checkpoint lineups.json every N matches
 const URL_PATTERNS = [
-  // Match-centre is contextual on Rugby Xplorer; match data is global, so any
-  // valid entity slug renders the same sheet. /sjru-/ first since these are SJRU
-  // matches; /lcjru-/ as fallback (known-good upstream pattern); finally no
-  // prefix in case the route is moving toward a clean URL.
-  (id) => `https://xplorer.rugby/sjru-/match-centre/${id}?tab=Player-Lineup`,
+  // Match-centre URLs on Rugby Xplorer are scoped to a tenant slug but the
+  // match data is global, so any *valid* slug renders the same sheet. Manual
+  // probe (2026-05-12, user-confirmed):
+  //   /sjru-/    → ERR_CONNECTION_ABORTED  (no such tenant — don't try)
+  //   /lcjru-/   → works, renders Player Lineup tab
+  //   no prefix  → 404
+  // So we pin to /lcjru-/ as the primary. The no-prefix entry stays as a
+  // forward-looking fallback in case Rugby Xplorer moves to a clean URL scheme
+  // and starts redirecting from the tenant-prefixed routes.
   (id) => `https://xplorer.rugby/lcjru-/match-centre/${id}?tab=Player-Lineup`,
   (id) => `https://xplorer.rugby/match-centre/${id}?tab=Player-Lineup`,
 ];
