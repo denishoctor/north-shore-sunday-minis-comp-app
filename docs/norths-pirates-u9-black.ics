@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-e6133e61c023d6ec2-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Norths Pirates Black 9 vs Chatswood Gold 9 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-90e514c615749cfb8-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260510T110000
 DTEND;TZID=Australia/Sydney:20260510T120000
 SUMMARY:Norths Pirates Black 9 vs Norths Pirates Red 9 | RND 2
@@ -65,97 +65,97 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-71e00f681baa0073f-norths-pirates-u9-black@denishoctor.github
+UID:nsm-sunday-fe53b954d05bc553b-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260516T101000
-DTEND;TZID=Australia/Sydney:20260516T111000
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
+DTSTART;TZID=Australia/Sydney:20260517T085000
+DTEND;TZID=Australia/Sydney:20260517T095000
+SUMMARY:Norths Pirates Black 9 vs Chatswood Green 9 | RND 3
+LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 9 vs Chatswood Green 9\n📍 Melwood 
+ Oval M2\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:50am AEST\n🏆 S
+ JRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#norths-pirates-u9-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u9-black
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-ac096af30b9b338cf-norths-pirates-u9-black@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
+DTSTART;TZID=Australia/Sydney:20260517T091500
+DTEND;TZID=Australia/Sydney:20260517T101500
 SUMMARY:Norths Pirates Black 9 vs Killara-West Pymble Blue 9 | RND 3
-LOCATION:Mark Taylor Oval M1\, Waitara\, Sydney NSW
+LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
 DESCRIPTION:🏉 Norths Pirates Black 9 vs Killara-West Pymble Blue 9\n📍
-  Mark Taylor Oval M1\, Waitara\n📅 Round 3 · Sat\, 16 May · 10:10am AE
- ST\n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This 
- calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#norths-pirates-u9-black
+  Melwood Oval M2\, Forestville\n📅 Round 3 · Sun\, 17 May · 9:15am AES
+ T\n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This c
+ alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
+ ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
+ orth-shore-sunday-minis-comp-app/#norths-pirates-u9-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-05982331552dfe7e5-norths-pirates-u9-black@denishoctor.github
+UID:nsm-sunday-e245f34acd0b8ae95-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260517T101000
-DTEND;TZID=Australia/Sydney:20260517T111000
-SUMMARY:Norths Pirates Black 9 vs Killara-West Pymble Blue 9 | RND 3
-LOCATION:Melwood Oval M1\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 9 vs Killara-West Pymble Blue 9\n📍
-  Melwood Oval M1\, Forestville\n📅 Round 3 · Sun\, 17 May · 10:10am AE
- ST\n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This 
- calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#norths-pirates-u9-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u9-black
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-eb4d14ab213908818-norths-pirates-u9-black@denishoctor.github
- .io
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260523T092000
-DTEND;TZID=Australia/Sydney:20260523T102000
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Norths Pirates Black 9 vs Wakehurst Wizards 9 | RND 4
-LOCATION:Tantallon Oval M1\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 9 vs Wakehurst Wizards 9\n📍 Tantal
- lon Oval M1\, Lane Cove North\n📅 Round 4 · Sat\, 23 May · 9:20am AEST
- \n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#norths-pirates-u9-black
+LOCATION:Hassall Park M1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 9 vs Wakehurst Wizards 9\n📍 Hassal
+ l Park M1\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJR
+ U Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upd
+ ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
+  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
+ sunday-minis-comp-app/#norths-pirates-u9-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-2fad570fa09d87701-norths-pirates-u9-black@denishoctor.github
+UID:nsm-sunday-33b3a93a9e53d6f42-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260524T092000
-DTEND;TZID=Australia/Sydney:20260524T102000
-SUMMARY:Norths Pirates Black 9 vs Wakehurst Wizards 9 | RND 4
-LOCATION:Bantry Bay Oval M2\, Seaforth\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 9 vs Wakehurst Wizards 9\n📍 Bantry
-  Bay Oval M2\, Seaforth\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆
-  SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar
-  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
- p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
- ore-sunday-minis-comp-app/#norths-pirates-u9-black
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
+DTSTART;TZID=Australia/Sydney:20260524T085000
+DTEND;TZID=Australia/Sydney:20260524T095000
+SUMMARY:Norths Pirates Black 9 vs Lindfield 9 | RND 4
+LOCATION:Hassall Park M4\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 9 vs Lindfield 9\n📍 Hassall Park M
+ 4\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:50am AEST\n🏆 SJRU Minis 
+ U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates aut
+ omatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs 
+ after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-m
+ inis-comp-app/#norths-pirates-u9-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-018d87f9fb67ff34f-norths-pirates-u9-black@denishoctor.github
+UID:nsm-sunday-c308f6d7987fc2f17-norths-pirates-u9-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260530T085000
-DTEND;TZID=Australia/Sydney:20260530T095000
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
+DTSTART;TZID=Australia/Sydney:20260531T085000
+DTEND;TZID=Australia/Sydney:20260531T095000
 SUMMARY:Norths Pirates Black 9 vs St Ives 9 | RND 5
-LOCATION:Balmoral Oval M2\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 9 vs St Ives 9\n📍 Balmoral Oval M2
- \n📅 Round 5 · Sat\, 30 May · 8:50am AEST\n🏆 SJRU Minis U9 Sunday\n
- \nℹ️ Venues and times may change. This calendar updates automatically\
- n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a cha
- nge)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-comp-a
- pp/#norths-pirates-u9-black
+LOCATION:Beauchamp Park M1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 9 vs St Ives 9\n📍 Beauchamp Park M
+ 1\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:50am AEST\n🏆 SJRU Mini
+ s U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#norths-pirates-u9-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-black
 END:VEVENT

@@ -128,7 +128,11 @@ export const VENUES = {
       notes: 'Home of Dee Why Lions Rugby. Corner of Fisher Rd North and Carawa Rd, Cromer. Council-managed (Northern Beaches).',
     },
   },
-  'Keirle Park':                     { suburb: 'Manly',           mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia' },
+  'Keirle Park':                     { suburb: 'Manly',           mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia',
+    details: {
+      map: { src: 'assets/venues/keirle-park.jpg', caption: 'Pitch layout — TT1–TT8 plus MOD1, MOD2', asOf: '2026-03' },
+    },
+  },
   'Lofberg Oval':                    { suburb: 'West Pymble',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia',
     details: {
       parking: 'Wheelchair-accessible carpark; additional parking on the corner of Lofberg Rd and Yanko Rd.',
@@ -156,6 +160,7 @@ export const VENUES = {
   'Rawson Oval':                     { suburb: 'Mosman',          mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rawson+Oval%2C+Cross+St%2C+Mosman+NSW+2088%2C+Australia' },
   'Tantallon Oval':                  { suburb: 'Lane Cove North', mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia',
     details: {
+      map:     { src: 'assets/venues/tantallon-oval.jpg', caption: 'Pitch layout — TT1–TT4 (A, B, C, D in the draw)', asOf: '2026-05' },
       parking: 'On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.',
       coffee:  { onsite: 'Clubhouse canteen + bar; cart on game days.' },
       notes:   'Home of Lane Cove Junior Rugby. Corner of Tantallon Rd and Epping Rd. Bus stops on both sides of Epping Rd.',
@@ -169,6 +174,7 @@ export const VENUES = {
   },
   'Tunks Park':                      { suburb: 'Cammeray',        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia',
     details: {
+      map:     { src: 'assets/venues/tunks-park.jpg', caption: 'Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5', asOf: '2026-03' },
       parking: 'Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.',
       coffee:  { onsite: 'Coffee cart at the entrance on game days.', nearby: 'Cafe Carino — short walk.' },
       notes:   'Home of Norths Pirates Junior Rugby (western end). Under the Cammeray Suspension Bridge — allow 5 min to walk in.',

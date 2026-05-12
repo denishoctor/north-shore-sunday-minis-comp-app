@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; manifest-src 'self'; worker-src 'self'">
 <title>Venues — North Shore Minis Sunday Rugby 2026</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
@@ -49,7 +50,7 @@
   }
   .crest {
     width: 64px; height: 64px;
-    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/96% no-repeat;
+    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/102% no-repeat;
     border: 2px solid var(--gold);
     border-radius: 50%;
     box-shadow: 0 2px 10px rgba(0,0,0,.35);
@@ -62,15 +63,24 @@
     text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 3px;
   }
   h1 { margin: 0; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
-  .header-back {
-    appearance: none; cursor: pointer;
+  .header-nav { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .header-nav-link {
     font-family: inherit; font-size: 11px; font-weight: 700;
-    color: var(--navy-dark); background: var(--gold);
-    border: 1.5px solid var(--gold-soft); text-decoration: none;
-    padding: 6px 11px; border-radius: 999px;
-    display: inline-flex; align-items: center; gap: 4px;
+    color: rgba(255,255,255,.85); text-decoration: none;
+    padding: 6px 10px; border-radius: 999px;
+    border: 1.5px solid rgba(212,169,60,.35);
+    transition: background .12s, color .12s, border-color .12s;
+    line-height: 1; white-space: nowrap;
   }
-  .header-back:hover { filter: brightness(1.06); }
+  .header-nav-link:hover {
+    background: rgba(212,169,60,.15);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  @media (max-width: 480px) {
+    .header-nav { gap: 3px; }
+    .header-nav-link { padding: 5px 8px; font-size: 10.5px; }
+  }
 
   .intro {
     padding: 18px 24px; font-size: 14px; color: var(--muted);
@@ -151,7 +161,10 @@
       <div class="eyebrow">North Shore Minis · Sunday</div>
       <h1>Venues — 2026</h1>
     </div>
-    <a class="header-back" href="index.html">← Fixtures</a>
+    <nav class="header-nav" aria-label="Section navigation">
+      <a class="header-nav-link" href="index.html">← Fixtures</a>
+      <a class="header-nav-link" href="clubs.html">Clubs</a>
+    </nav>
   </div>
 
   <div class="intro">
@@ -176,15 +189,27 @@ const { VENUES, ROUNDS } = window.NSM_SUNDAY_CONFIG;
 
 // Walk ROUNDS to build a venue → hosting-weeks map: which Sundays each venue
 // hosts U6/U7 and/or U8/U9 across the season. Sorted by round number.
+// Build venue → hosting-weeks map. When a round hosts BOTH age bands at the
+// same venue (R1, R2, R13 typically) we merge into one badge — "U6/U7 + U8/U9"
+// — instead of stacking two identical-date badges.
 function hostingByVenue() {
   const map = new Map();
   for (const r of (ROUNDS || [])) {
     if (r.status === 'bye') continue;
-    for (const [band, label] of [['u6u7', 'U6/U7'], ['u8u9', 'U8/U9']]) {
-      const v = r.hosts?.[band];
-      if (!v) continue;
-      if (!map.has(v)) map.set(v, []);
-      map.get(v).push({ round: r.round, ages: label, date: r.date, finalRound: r.finalRound });
+    const v67 = r.hosts?.u6u7;
+    const v89 = r.hosts?.u8u9;
+    if (v67 && v89 && v67 === v89) {
+      if (!map.has(v67)) map.set(v67, []);
+      map.get(v67).push({ round: r.round, ages: 'U6/U7 + U8/U9', date: r.date, finalRound: r.finalRound });
+      continue;
+    }
+    if (v67) {
+      if (!map.has(v67)) map.set(v67, []);
+      map.get(v67).push({ round: r.round, ages: 'U6/U7', date: r.date, finalRound: r.finalRound });
+    }
+    if (v89) {
+      if (!map.has(v89)) map.set(v89, []);
+      map.get(v89).push({ round: r.round, ages: 'U8/U9', date: r.date, finalRound: r.finalRound });
     }
   }
   return map;

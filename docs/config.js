@@ -139,10 +139,6 @@ window.NSM_SUNDAY_CONFIG = {
     "wakehurst-u7-wildcats": "YXKtpRcuZY2pcJsvG",
     "wakehurst-u7-wasps": "oFRNkNkZX8jap2wJw",
     "st-ives-u7-blue": "MzNyb9tB2ZxzFzcQE",
-    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
-    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
-    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
-    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-black": "SgMo5P2wrBkSsiA75",
     "wakehurst-u8-krakens": "LMEwhv9GKtTfiswG2",
     "chatswood-u8-green": "bZ59JmnzFc2gn5og6",
@@ -155,6 +151,10 @@ window.NSM_SUNDAY_CONFIG = {
     "lane-cove-u8-gold": "azWv34qmnBYrN7atm",
     "kwp-u8-lindfield": "K6KJYRD4rKcpPgrdx",
     "lane-cove-u8-blue": "5SyzYzsjmbeaPZsXT",
+    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
+    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
+    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
+    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-gold": "BKWEZ7Kev7a3KvTRd",
     "wakehurst-u8-kings": "ohBqYch2RBPg4rKdQ",
     "chatswood-u9-green": "DbR93yCwTwovLMP8T",
@@ -367,30 +367,6 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U7",
       "slug": "st-ives-u7-blue"
     },
-    "wXumK7xeYAM7xkdkD": {
-      "name": "St Ives Yellow 7",
-      "clubKey": "st-ives",
-      "age": "U7",
-      "slug": "st-ives-u7-yellow"
-    },
-    "52MoHPFgMFTPppk9H": {
-      "name": "Lane Cove Blue 7",
-      "clubKey": "lane-cove",
-      "age": "U7",
-      "slug": "lane-cove-u7-blue"
-    },
-    "zuXwJ9BmQHnz36gfH": {
-      "name": "Chatswood Green 7",
-      "clubKey": "chatswood",
-      "age": "U7",
-      "slug": "chatswood-u7-green"
-    },
-    "7ji49P5fD74pry8Sh": {
-      "name": "Lindfield 7",
-      "clubKey": "lindfield",
-      "age": "U7",
-      "slug": "lindfield-u7"
-    },
     "SgMo5P2wrBkSsiA75": {
       "name": "Chatswood Black 8",
       "clubKey": "chatswood",
@@ -462,6 +438,30 @@ window.NSM_SUNDAY_CONFIG = {
       "clubKey": "lane-cove",
       "age": "U8",
       "slug": "lane-cove-u8-blue"
+    },
+    "wXumK7xeYAM7xkdkD": {
+      "name": "St Ives Yellow 7",
+      "clubKey": "st-ives",
+      "age": "U7",
+      "slug": "st-ives-u7-yellow"
+    },
+    "52MoHPFgMFTPppk9H": {
+      "name": "Lane Cove Blue 7",
+      "clubKey": "lane-cove",
+      "age": "U7",
+      "slug": "lane-cove-u7-blue"
+    },
+    "zuXwJ9BmQHnz36gfH": {
+      "name": "Chatswood Green 7",
+      "clubKey": "chatswood",
+      "age": "U7",
+      "slug": "chatswood-u7-green"
+    },
+    "7ji49P5fD74pry8Sh": {
+      "name": "Lindfield 7",
+      "clubKey": "lindfield",
+      "age": "U7",
+      "slug": "lindfield-u7"
     },
     "BKWEZ7Kev7a3KvTRd": {
       "name": "Chatswood Gold 8",
@@ -609,7 +609,10 @@ window.NSM_SUNDAY_CONFIG = {
     },
     "Keirle Park": {
       "suburb": "Manly",
-      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia"
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia",
+      "details": {
+        "map": { "src": "assets/venues/keirle-park.jpg", "caption": "Pitch layout — TT1–TT8 plus MOD1, MOD2", "asOf": "2026-03" }
+      }
     },
     "Lofberg Oval": {
       "suburb": "West Pymble",
@@ -664,6 +667,7 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Lane Cove North",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia",
       "details": {
+        "map": { "src": "assets/venues/tantallon-oval.jpg", "caption": "Pitch layout — TT1–TT4 (A, B, C, D in the draw)", "asOf": "2026-05" },
         "parking": "On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.",
         "coffee": {
           "onsite": "Clubhouse canteen + bar; cart on game days."
@@ -683,6 +687,7 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Cammeray",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia",
       "details": {
+        "map": { "src": "assets/venues/tunks-park.jpg", "caption": "Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5", "asOf": "2026-03" },
         "parking": "Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.",
         "coffee": {
           "onsite": "Coffee cart at the entrance on game days.",
@@ -742,8 +747,8 @@ window.NSM_SUNDAY_CONFIG = {
         "u8u9": "Melwood Oval"
       },
       "matches": {
-        "u6u7": 18,
-        "u8u9": 15
+        "u6u7": 19,
+        "u8u9": 16
       }
     },
     {
@@ -756,22 +761,22 @@ window.NSM_SUNDAY_CONFIG = {
         "u8u9": "Bantry Bay Oval"
       },
       "matches": {
-        "u6u7": 18,
-        "u8u9": 15
+        "u6u7": 21,
+        "u8u9": 16
       }
     },
     {
       "round": 5,
       "date": "2026-05-31",
-      "status": "scheduled",
+      "status": "published",
       "finalRound": false,
       "hosts": {
         "u6u7": "Tantallon Oval",
         "u8u9": "Lofberg Oval"
       },
       "matches": {
-        "u6u7": 0,
-        "u8u9": 0
+        "u6u7": 19,
+        "u8u9": 16
       }
     },
     {
@@ -792,8 +797,8 @@ window.NSM_SUNDAY_CONFIG = {
       "round": 7,
       "date": null,
       "status": "gala",
-      "galaTitle": "Inter-District Gala Day",
-      "galaDescription": "Teams travel outside SJRU to play other-district sides. Draw published by SJRU closer to the date.",
+      "galaTitle": "SJRU Inter-District Gala Day",
+      "galaDescription": "Clubs from across all SJRU districts come together for a one-day festival. Draw published by SJRU closer to the date.",
       "hosts": {
         "u6u7": null,
         "u8u9": null

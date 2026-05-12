@@ -21,12 +21,13 @@ export const ROUNDS = [
   { round:  4, date: '2026-05-24', u6u7: 'Beauchamp Park',          u8u9: 'Bantry Bay Oval'         },
   { round:  5, date: '2026-05-31', u6u7: 'Tantallon Oval',          u8u9: 'Lofberg Oval'            },
   { round:  6, date: '2026-06-14', u6u7: 'Hassall Park',            u8u9: 'James Morgan Reserve'    },
-  // Round 7 — Inter-District Gala Day. Teams travel outside SJRU to play
-  // other-district sides. Date confirmed by SJRU notice (TBC until they
-  // publish the gala draw). The UI labels gala rounds separately.
+  // Round 7 — SJRU Inter-District Gala Day. Clubs from across all the SJRU
+  // districts (Gordon, Warringah, Eastern Suburbs, Manly, etc.) come together
+  // for a one-day festival. Date stays null until SJRU publishes the draw.
+  // The UI labels gala rounds separately from regular Sunday-Minis rounds.
   { round:  7, date: null,         u6u7: null,                      u8u9: null,         gala: true,
-    galaTitle: 'Inter-District Gala Day',
-    galaDescription: 'Teams travel outside SJRU to play other-district sides. Draw published by SJRU closer to the date.',
+    galaTitle: 'SJRU Inter-District Gala Day',
+    galaDescription: 'Clubs from across all SJRU districts come together for a one-day festival. Draw published by SJRU closer to the date.',
   },
   { round:  8, date: '2026-07-26', u6u7: 'Tunks Park',              u8u9: 'Beauchamp Park'          },
   { round:  9, date: '2026-08-02', u6u7: 'Mark Taylor Oval',        u8u9: 'Wakehurst Rugby Park'    },

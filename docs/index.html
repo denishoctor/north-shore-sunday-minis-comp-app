@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; manifest-src 'self'; worker-src 'self'">
 <title>North Shore Minis Sunday Rugby — Fixtures 2026</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
@@ -58,7 +59,7 @@
   }
   .crest {
     width: 76px; height: 76px;
-    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/96% no-repeat;
+    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/102% no-repeat;
     border: 2px solid var(--gold);
     border-radius: 50%;
     box-shadow: 0 2px 10px rgba(0,0,0,.35);
@@ -80,6 +81,24 @@
     text-transform: uppercase; margin-left: 8px; vertical-align: middle;
   }
   .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-on-gold); }
+  .header-nav { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .header-nav-link {
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: rgba(255,255,255,.85); text-decoration: none;
+    padding: 6px 10px; border-radius: 999px;
+    border: 1.5px solid rgba(212,169,60,.35);
+    transition: background .12s, color .12s, border-color .12s;
+    line-height: 1; white-space: nowrap;
+  }
+  .header-nav-link:hover {
+    background: rgba(212,169,60,.15);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  @media (max-width: 480px) {
+    .header-nav { gap: 3px; }
+    .header-nav-link { padding: 5px 8px; font-size: 10.5px; }
+  }
   .header-home {
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
@@ -250,6 +269,9 @@
     padding-bottom: 6px;
     border-bottom: 3px solid var(--gold);
   }
+  /* Featured row: auto-fit so an orphan trailing card stretches to fill its
+     row rather than sitting half-width. Primary "Next Sunday" always spans
+     full row on multi-col layouts. */
   .home-rounds {
     display: grid;
     grid-template-columns: 1fr;
@@ -259,17 +281,31 @@
     padding-right: max(18px, env(safe-area-inset-right));
   }
   @media (min-width: 720px) {
-    .home-rounds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .home-rounds .round-card.primary { grid-column: 1 / -1; }
-  }
-  @media (min-width: 1100px) {
-    .home-rounds { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .home-rounds { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .home-rounds .round-card.tier-next { grid-column: 1 / -1; }
   }
   .round-card {
     background: #fff; border: 1px solid var(--cream-edge); border-left: 3px solid var(--gold);
     border-radius: 10px; padding: 14px 16px;
+    transition: box-shadow .14s, transform .14s;
   }
-  .round-card.primary { border-left-color: var(--navy); box-shadow: 0 1px 8px rgba(10,32,89,.08); }
+  /* Tier shading — Next is the headline, After leans cool (upcoming), Last
+     warm-grey (just-past). Lets parents triangulate the featured row instantly. */
+  .round-card.tier-next {
+    border-left-color: var(--navy);
+    background: linear-gradient(160deg, #fff 0%, #f5f0dd 100%);
+    box-shadow: 0 2px 10px rgba(10,32,89,.10);
+  }
+  .round-card.tier-after {
+    border-left-color: var(--navy-mid);
+    background: linear-gradient(160deg, #fff 0%, #eef3fb 100%);
+  }
+  .round-card.tier-last {
+    border-left-color: #b8a06e;
+    background: linear-gradient(160deg, #fff 0%, #f6f4ee 100%);
+    opacity: .92;
+  }
+  .round-card.tier-other { border-left-color: var(--cream-edge); }
   .round-card-head {
     display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
     margin-bottom: 10px;
@@ -279,7 +315,9 @@
     text-transform: uppercase; letter-spacing: 1px;
     background: var(--cream); padding: 3px 9px; border-radius: 999px;
   }
-  .round-card.primary .round-card-label { background: var(--navy); color: var(--gold); }
+  .round-card.tier-next  .round-card-label { background: var(--navy); color: var(--gold); }
+  .round-card.tier-after .round-card-label { background: var(--navy-mid); color: #fff; }
+  .round-card.tier-last  .round-card-label { background: #b8a06e; color: #fff; }
   .round-card-when { font-size: 13px; font-weight: 700; color: var(--ink); }
   .host-row {
     display: grid;
@@ -307,25 +345,28 @@
   #home-content[hidden] { display: none; }
   #home-content .home-hero { border-bottom: none; }
   #home-content .home-rounds { padding-bottom: 6px; }
+  /* All-rounds strip: every playing round in numerical order. Dashed rule
+     above the toggle separates featured-this-weekend from full-season-strip. */
   #home-content .home-rounds-all {
     display: none;
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 0 18px 6px;
+    padding: 0 18px 18px;
     padding-left: max(18px, env(safe-area-inset-left));
     padding-right: max(18px, env(safe-area-inset-right));
+    border-bottom: 1px solid var(--cream-edge);
   }
   #home-content .home-rounds-all.expanded { display: grid; }
   @media (min-width: 720px) {
-    #home-content .home-rounds-all { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #home-content .home-rounds-all { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   }
-  @media (min-width: 1100px) {
-    #home-content .home-rounds-all { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  }
+  /* Dashed rule above the toggle separates featured-this-weekend from
+     full-season strip. */
   .home-rounds-toggle {
     display: flex; justify-content: center;
-    padding: 4px 18px 18px;
-    border-bottom: 1px solid var(--cream-edge);
+    padding: 12px 18px 14px;
+    margin: 0 18px;
+    border-top: 1px dashed var(--cream-edge);
   }
   .show-all-btn {
     appearance: none; cursor: pointer;
@@ -519,6 +560,10 @@
       <h1>Fixtures &amp; Results</h1>
       <div id="updated-stamp" class="updated-stamp">Loading…</div>
     </div>
+    <nav class="header-nav" aria-label="Section navigation">
+      <a class="header-nav-link" href="clubs.html">Clubs</a>
+      <a class="header-nav-link" href="venues.html">Venues</a>
+    </nav>
     <button class="header-home" id="clear-btn" type="button" hidden>
       <span class="action-icon" aria-hidden="true">↩</span>
       <span>Home</span>
@@ -587,7 +632,7 @@
       <span class="footer-sep">·</span>
       <a href="https://xplorer.rugby/lcjru-/fixtures-results?team=All&amp;comp=All&amp;season=2026&amp;tab=Fixtures" target="_blank" rel="noopener">Live draw on Rugby Xplorer ↗</a>
       <span class="footer-sep">·</span>
-      <a href="mailto:?subject=NSM%20Sunday%20Rugby%20App%20Feedback">Send feedback</a>
+      <a href="mailto:denishoctor@gmail.com?subject=NSM%20Sunday%20Rugby%20App%20Feedback">Send feedback</a>
     </span>
     <span style="display:block; margin-top:6px; font-size:11px;">
       Beta — multi-club aggregate sourced from <a href="https://xplorer.rugby/" target="_blank" rel="noopener">Rugby Xplorer</a> via SJRU Sunday Minis comps.
@@ -743,6 +788,7 @@ function selectClub(key) {
 function selectAge(age) {
   currentAge = age || null;
   lsSet(AGE_KEY, currentAge);
+  syncAgeChips();                      // toggle .active on the clicked chip
   buildTokenGrid();
   if (currentTeam) {
     const meta = TEAM_META?.[currentTeam];
@@ -1037,16 +1083,14 @@ const SHOW_ALL_KEY = `${STORAGE_PREFIX}-rounds-show-all`;
 
 function renderHome() {
   const todaySyd = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
-  // "Playing" rounds = anything that isn't a true bye. Gala rounds count — they
-  // ARE played, just in a different format. Rounds without dates (gala TBA)
-  // sort after dated ones by round number.
-  const playing = (ROUNDS || []).filter(r => r.status !== 'bye').slice().sort((a, b) => {
-    if (a.date && b.date) return a.date.localeCompare(b.date);
-    if (a.date) return -1;
-    if (b.date) return 1;
-    return (a.round || 0) - (b.round || 0);
-  });
-  const datedPlaying = playing.filter(r => r.date);
+  // Playing = anything that isn't a true bye. Gala rounds count. The all-rounds
+  // view always shows in numerical round order (R1…R7 gala…R13) so the season
+  // reads as a continuous strip rather than a date-shuffle.
+  const playing = (ROUNDS || []).filter(r => r.status !== 'bye').slice().sort((a, b) => (a.round || 0) - (b.round || 0));
+
+  // Featured (next/after/last) keys off dated rounds — gala without a date
+  // can't be featured, but still appears in the all-rounds strip below.
+  const datedPlaying = playing.filter(r => r.date).slice().sort((a, b) => a.date.localeCompare(b.date));
   const upcomingIdx = datedPlaying.findIndex(r => r.date >= todaySyd);
   const isToday  = upcomingIdx >= 0 && datedPlaying[upcomingIdx].date === todaySyd;
   const nextR    = upcomingIdx >= 0 ? datedPlaying[upcomingIdx] : null;
@@ -1060,19 +1104,23 @@ function renderHome() {
   const matchCount = fixturesData?.totalMatches || 0;
   const awaiting = matchCount === 0;
 
-  const headlineLabel = isToday ? 'Today' : (lastR && !nextR ? 'Last Sunday' : 'Next Sunday');
-
+  // Featured row: Last Sunday · Next Sunday (primary) · Sunday after.
+  // Each gets a distinct tier so CSS can shade them differently.
   const featured = [];
-  if (nextR) featured.push(roundCard(headlineLabel, nextR, /* primary */ true));
-  if (afterR && afterR !== nextR) featured.push(roundCard('Sunday after', afterR, false));
-  if (lastR && lastR !== nextR && lastR !== afterR) featured.push(roundCard('Last Sunday', lastR, false));
+  if (lastR && lastR !== nextR && lastR !== afterR) featured.push(roundCard(isToday ? 'Last week' : 'Last Sunday', lastR, 'last'));
+  if (nextR) featured.push(roundCard(isToday ? 'Today' : 'Next Sunday', nextR, 'next'));
+  if (afterR && afterR !== nextR) featured.push(roundCard('Sunday after', afterR, 'after'));
 
-  const featuredSet = new Set([nextR, afterR, lastR].filter(Boolean));
-  const remaining = playing.filter(r => !featuredSet.has(r));
+  // All-rounds strip ALWAYS contains every playing round, including the three
+  // featured ones in their R1…R13 position. Tier tag stays so the user can
+  // still spot "next" in the strip.
   const showAll = lsGet(SHOW_ALL_KEY) === '1';
-  const remainingHtml = remaining.length
+  const allRoundsHtml = playing.length
     ? `<div class="home-rounds-all ${showAll ? 'expanded' : ''}" id="home-rounds-all">${
-        remaining.map(r => roundCard(`Round ${r.round}${r.finalRound ? ' · Final' : ''}`, r, false)).join('')
+        playing.map(r => {
+          const tier = r === nextR ? 'next' : r === afterR ? 'after' : r === lastR ? 'last' : 'other';
+          return roundCard(`Round ${r.round}${r.finalRound ? ' · Final' : ''}${r.status === 'gala' ? ' · Gala' : ''}`, r, tier);
+        }).join('')
       }</div>`
     : '';
 
@@ -1092,13 +1140,13 @@ function renderHome() {
       </div>
     </div>
     ${featured.length ? `<div class="home-rounds">${featured.join('')}</div>` : ''}
-    ${remainingHtml}
-    ${remaining.length ? `<div class="home-rounds-toggle">
+    ${playing.length ? `<div class="home-rounds-toggle">
       <button class="show-all-btn" id="show-all-btn" type="button" aria-expanded="${showAll ? 'true' : 'false'}" aria-controls="home-rounds-all">
         <span class="show-all-label">${showAll ? 'Hide other rounds' : `Show all ${playing.length} rounds`}</span>
         <span class="show-all-chevron" aria-hidden="true">${showAll ? '▴' : '▾'}</span>
       </button>
     </div>` : ''}
+    ${allRoundsHtml}
   </div>`;
 }
 
@@ -1112,7 +1160,10 @@ function wireHomeInteractions() {
   });
 }
 
-function roundCard(label, round, primary) {
+// tier: 'next' | 'after' | 'last' | 'other' — drives distinct shading so the
+// featured row reads at a glance and the all-rounds strip still surfaces the
+// current week.
+function roundCard(label, round, tier = 'other') {
   if (!round) return '';
   const isGala  = round.status === 'gala';
   const hasDate = !!round.date;
@@ -1133,8 +1184,11 @@ function roundCard(label, round, primary) {
   const whenText = isGala
     ? (hasDate ? `${dow} ${date} · Round ${round.round} · Gala` : `Round ${round.round} · date TBA`)
     : `${dow} ${date} · Round ${round.round}${round.finalRound ? ' · Final' : ''}`;
+  const classes = ['round-card', `tier-${tier}`];
+  if (isGala) classes.push('gala');
+  if (tier === 'next') classes.push('primary');
   if (isGala) {
-    return `<div class="round-card gala ${primary ? 'primary' : ''}">
+    return `<div class="${classes.join(' ')}">
       <div class="round-card-head">
         <span class="round-card-label gala-label">${esc(label)}</span>
         <span class="round-card-when">${esc(whenText)}</span>
@@ -1145,7 +1199,7 @@ function roundCard(label, round, primary) {
       ${venueRow('u8u9', 'U8 / U9')}
     </div>`;
   }
-  return `<div class="round-card ${primary ? 'primary' : ''}">
+  return `<div class="${classes.join(' ')}">
     <div class="round-card-head">
       <span class="round-card-label">${esc(label)}</span>
       <span class="round-card-when">${esc(whenText)}</span>
