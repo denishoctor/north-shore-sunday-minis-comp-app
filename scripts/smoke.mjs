@@ -96,6 +96,12 @@ await check('lineups.json', `${base}/lineups.json`, [
   ['is valid JSON',      (_, b) => { try { const d = JSON.parse(b); return typeof d === 'object' && d !== null; } catch { return false; } }],
 ]);
 
+await check('venues.html', `${base}/venues.html`, [
+  ['HTTP 200',                          r      => r.status === 200],
+  ['imports renderVenueDetails',        (_, b) => b.includes('renderVenueDetails')],
+  ['has venues-list anchor',            (_, b) => b.includes('id="venues-list"')],
+]);
+
 await check('manifest.webmanifest', `${base}/manifest.webmanifest`, [
   ['HTTP 200',                          r      => r.status === 200],
   ['mentions NSM Sunday',               (_, b) => b.includes('NSM Sunday') || b.includes('North Shore Minis')],
