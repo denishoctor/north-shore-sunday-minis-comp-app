@@ -246,8 +246,8 @@ function renderCard([key, club]) {
         : '<span class="meta-chip"><span class="meta-label">TBA</span> no teams yet</span>'}
     </div>
     <div class="club-card-actions">
-      ${club.url ? `<a class="club-action primary" href="${esc(club.url)}" target="_blank" rel="noopener">Visit website ↗</a>` : ''}
-      <a class="club-action" href="index.html#${esc(key)}-club">View fixtures</a>
+      ${club.url ? `<a class="club-action primary" href="${esc(club.url)}" target="_blank" rel="noopener">Website ↗</a>` : ''}
+      <a class="club-action" href="index.html#${esc(key)}-club">Fixtures</a>
       ${homeVenue ? `<a class="club-action" href="${esc(homeVenue.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(club.homeGround)}</a>` : ''}
     </div>
   </section>`;
