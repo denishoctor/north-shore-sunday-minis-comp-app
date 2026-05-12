@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-bfc6386803ad5b2ff-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260503T101000
 DTEND;TZID=Australia/Sydney:20260503T111000
 SUMMARY:Lindfield 9 vs Chatswood Green 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-39a5df2fb853c13ba-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T110000
 DTEND;TZID=Australia/Sydney:20260510T120000
 SUMMARY:Lindfield 9 vs Lane Cove Gold 9 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e49dd2218f5f6c957-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T083000
 DTEND;TZID=Australia/Sydney:20260516T093000
 SUMMARY:Lindfield 9 vs Wakehurst Warriors 9 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u9
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-c6f564c2d1255a9ec-lindfield-u9@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T083000
+DTEND;TZID=Australia/Sydney:20260517T093000
+SUMMARY:Lindfield 9 vs Wakehurst Warriors 9 | RND 3
+LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 9 vs Wakehurst Warriors 9\n📍 Melwood Oval M2\
+ , Forestville\n📅 Round 3 · Sun\, 17 May · 8:30am AEST\n🏆 SJRU Mini
+ s U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#lindfield-u9
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u9
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-41d056d4bf0321d3a-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T092000
 DTEND;TZID=Australia/Sydney:20260523T102000
 SUMMARY:Lindfield 9 vs Seaforth Highlanders 9 | RND 4
@@ -99,10 +117,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u9
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-a3f19c4ac4ded84f0-lindfield-u9@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
+SUMMARY:Lindfield 9 vs Seaforth Highlanders 9 | RND 4
+LOCATION:Bantry Bay Oval M1\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 9 vs Seaforth Highlanders 9\n📍 Bantry Bay Ova
+ l M1\, Seaforth\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 SJRU Mi
+ nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#lindfield-u9
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u9
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-aaca1443a4ade34dd-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T085000
 DTEND;TZID=Australia/Sydney:20260530T095000
 SUMMARY:Lindfield 9 vs Lane Cove Blue 9 | RND 5

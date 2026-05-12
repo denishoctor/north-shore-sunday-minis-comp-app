@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-ebfa2fc242d1d6437-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Killara-West Pymble Gold 7 vs Norths Pirates Gold 7 | RND 2
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-35cb3c04fca687992-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T114000
 DTEND;TZID=Australia/Sydney:20260516T124000
 SUMMARY:Killara-West Pymble Gold 7 vs Wakehurst Wasps 7 | RND 3
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-7734c1e572231eb0d-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T132000
 DTEND;TZID=Australia/Sydney:20260516T142000
 SUMMARY:Killara-West Pymble Gold 7 vs Forest Black 7 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
  -gold
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-15d3f855154bee46b-kwp-u7-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T100000
+DTEND;TZID=Australia/Sydney:20260517T110000
+SUMMARY:Killara-West Pymble Gold 7 vs Hornsby 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Gold 7 vs Hornsby 7\n📍 Wakehurst Ru
+ gby Park TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 10:00am AEST\n🏆
+  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#kwp-u7-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -gold
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-c73af5475bb239537-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T094000
 DTEND;TZID=Australia/Sydney:20260523T104000
 SUMMARY:Killara-West Pymble Gold 7 vs Lane Cove Gold 7 | RND 4
@@ -101,8 +119,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-819e1757a4a374884-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T104000
 DTEND;TZID=Australia/Sydney:20260523T114000
 SUMMARY:Killara-West Pymble Gold 7 vs Killara-West Pymble Blue 7 | RND 4
@@ -117,10 +135,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
  -gold
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-3a8142647a876922b-kwp-u7-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T100000
+DTEND;TZID=Australia/Sydney:20260524T110000
+SUMMARY:Killara-West Pymble Gold 7 vs Killara-West Pymble Blue 7 | RND 4
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Gold 7 vs Killara-West Pymble Blue 7\n
+ 📍 Beauchamp Park TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 10:00
+ am AEST\n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may
+  change. This calendar updates automatically\n(Apple Calendar: ~every hour
+  · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoc
+ tor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u7
+ -gold
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-762feb0ea11179f47-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T110000
 DTEND;TZID=Australia/Sydney:20260530T120000
 SUMMARY:Killara-West Pymble Gold 7 vs Norths Pirates White 7 | RND 5
@@ -137,8 +173,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-16b49ec031814c4e5-kwp-u7-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T112000
 DTEND;TZID=Australia/Sydney:20260530T122000
 SUMMARY:Killara-West Pymble Gold 7 vs St Ives Yellow 7 | RND 5

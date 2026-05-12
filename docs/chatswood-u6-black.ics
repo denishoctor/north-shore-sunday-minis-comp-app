@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-6e8ef24290eef662e-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Chatswood Black 6 vs Wakehurst Wombats 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1d85e61db04c9ed91-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Chatswood Black 6 vs Killara-West Pymble Gold 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-69a01ab6bd32d531c-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T092000
 DTEND;TZID=Australia/Sydney:20260516T102000
 SUMMARY:Chatswood Black 6 vs St Ives Blue 6 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-black
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-5a06eeb9cd0a05d49-chatswood-u6-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T092000
+DTEND;TZID=Australia/Sydney:20260517T102000
+SUMMARY:Chatswood Black 6 vs St Ives Blue 6 | RND 3
+LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Black 6 vs St Ives Blue 6\n📍 Wakehurst Rugby 
+ Park TT3\, Belrose\n📅 Round 3 · Sun\, 17 May · 9:20am AEST\n🏆 SJRU
+  Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#chatswood-u6-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u6-black
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-34f808bfd45822a7f-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T104000
 DTEND;TZID=Australia/Sydney:20260523T114000
 SUMMARY:Chatswood Black 6 vs Norths Pirates White 6 | RND 4
@@ -101,8 +119,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-0d32a0df83b08b66d-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T120000
 DTEND;TZID=Australia/Sydney:20260523T130000
 SUMMARY:Chatswood Black 6 vs St Ives Blue 6 | RND 4
@@ -117,10 +135,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-black
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-657903b943ef59273-chatswood-u6-black@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
+SUMMARY:Chatswood Black 6 vs Chatswood Green 6 | RND 4
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Black 6 vs Chatswood Green 6\n📍 Beauchamp Par
+ k TT3\, Chatswood\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 SJRU 
+ Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calen
+ dar updates automatically\n(Apple Calendar: ~every hour · Google Calendar
+ : up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north
+ -shore-sunday-minis-comp-app/#chatswood-u6-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u6-black
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-73b05ede59add3d58-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T092000
 DTEND;TZID=Australia/Sydney:20260530T102000
 SUMMARY:Chatswood Black 6 vs Lane Cove Gold 6 | RND 5

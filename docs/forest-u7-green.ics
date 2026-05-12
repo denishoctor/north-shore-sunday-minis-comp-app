@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-b67721280fe703689-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Forest Green 7 vs Forest Black 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-511fed4d89279f1ef-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Forest Green 7 vs Chatswood Green 7 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-576db006ec472fa40-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T100000
 DTEND;TZID=Australia/Sydney:20260516T110000
 SUMMARY:Forest Green 7 vs Lane Cove Gold 7 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u7-green
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-5bd6293954335e5ed-forest-u7-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T080000
+DTEND;TZID=Australia/Sydney:20260517T090000
+SUMMARY:Forest Green 7 vs St Ives Yellow 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Forest Green 7 vs St Ives Yellow 7\n📍 Wakehurst Rugby P
+ ark TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU 
+ Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calen
+ dar updates automatically\n(Apple Calendar: ~every hour · Google Calendar
+ : up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north
+ -shore-sunday-minis-comp-app/#forest-u7-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
+ -u7-green
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-b4e32c82945ea144e-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T100000
 DTEND;TZID=Australia/Sydney:20260523T110000
 SUMMARY:Forest Green 7 vs Wakehurst Wasps 7 | RND 4
@@ -99,10 +117,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u7-green
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-1a57e564b5f24059a-forest-u7-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Forest Green 7 vs Wakehurst Wasps 7 | RND 4
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Forest Green 7 vs Wakehurst Wasps 7\n📍 Beauchamp Park T
+ T1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Min
+ is U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#forest-u7-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
+ -u7-green
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-7c7ced72bd7e5b25f-forest-u7-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T092000
 DTEND;TZID=Australia/Sydney:20260530T102000
 SUMMARY:Forest Green 7 vs Wakehurst Wildcats 7 | RND 5

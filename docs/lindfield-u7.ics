@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-8a9f6229e0ca6d830-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Lindfield 7 vs Chatswood Green 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-9d11daecd3b5595cf-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Lindfield 7 vs Wakehurst Wasps 7 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-ce2eb83d9065fbe98-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T100000
 DTEND;TZID=Australia/Sydney:20260516T110000
 SUMMARY:Lindfield 7 vs Norths Pirates White 7 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u7
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-1dca9935d7aa7f433-lindfield-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T100000
+DTEND;TZID=Australia/Sydney:20260517T110000
+SUMMARY:Lindfield 7 vs Norths Pirates White 7 | RND 3
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 7 vs Norths Pirates White 7\n📍 Wakehurst Rugb
+ y Park TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 10:00am AEST\n🏆 S
+ JRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
+ alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
+ ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
+ orth-shore-sunday-minis-comp-app/#lindfield-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u7
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-ee796ed5caf69445c-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T100000
 DTEND;TZID=Australia/Sydney:20260523T110000
 SUMMARY:Lindfield 7 vs Norths Pirates Black 7 | RND 4
@@ -99,10 +117,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u7
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-fde37c1c8a437d626-lindfield-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T100000
+DTEND;TZID=Australia/Sydney:20260524T110000
+SUMMARY:Lindfield 7 vs Norths Pirates Black 7 | RND 4
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 7 vs Norths Pirates Black 7\n📍 Beauchamp Park
+  TT3\, Chatswood\n📅 Round 4 · Sun\, 24 May · 10:00am AEST\n🏆 SJRU 
+ Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calen
+ dar updates automatically\n(Apple Calendar: ~every hour · Google Calendar
+ : up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north
+ -shore-sunday-minis-comp-app/#lindfield-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u7
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-975ebf094cf394d5d-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T100000
 DTEND;TZID=Australia/Sydney:20260530T110000
 SUMMARY:Lindfield 7 vs Hornsby 7 | RND 5

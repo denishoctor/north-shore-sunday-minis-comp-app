@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-3c1aebb1872810484-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Forest 6 vs Norths Pirates Black 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-68b8a82b3f218efe4-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Forest 6 vs Chatswood Gold 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-26731312dd044dbc2-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260516T084000
 DTEND;TZID=Australia/Sydney:20260516T094000
 SUMMARY:Forest 6 vs Norths Pirates Gold 6 | RND 3
@@ -81,10 +81,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u6
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-e7e7a2cf9c339ff26-forest-u6@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260517T084000
+DTEND;TZID=Australia/Sydney:20260517T094000
+SUMMARY:Forest 6 vs Norths Pirates Gold 6 | RND 3
+LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Forest 6 vs Norths Pirates Gold 6\n📍 Wakehurst Rugby Pa
+ rk TT2\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 SJRU M
+ inis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
+ ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
+  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
+ shore-sunday-minis-comp-app/#forest-u6
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
+ -u6
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-7f0314fc02f7dca75-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T084000
 DTEND;TZID=Australia/Sydney:20260523T094000
 SUMMARY:Forest 6 vs St Ives Yellow 6 | RND 4
@@ -101,8 +119,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-8b64d708422c8e1d7-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260523T092000
 DTEND;TZID=Australia/Sydney:20260523T102000
 SUMMARY:Forest 6 vs Norths Pirates Black 6 | RND 4
@@ -117,10 +135,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
  -u6
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-baa4e4d2d402fba95-forest-u6@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
+SUMMARY:Forest 6 vs St Ives Yellow 6 | RND 4
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Forest 6 vs St Ives Yellow 6\n📍 Beauchamp Park TT3\, Ch
+ atswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU Minis U6 T
+ ri Time Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#forest-u6
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#forest
+ -u6
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-6bf4430fa04e194aa-forest-u6@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T080741Z
-LAST-MODIFIED:20260512T080741Z
+DTSTAMP:20260512T081700Z
+LAST-MODIFIED:20260512T081700Z
 DTSTART;TZID=Australia/Sydney:20260530T080000
 DTEND;TZID=Australia/Sydney:20260530T090000
 SUMMARY:Forest 6 vs St Ives Blue 6 | RND 5
