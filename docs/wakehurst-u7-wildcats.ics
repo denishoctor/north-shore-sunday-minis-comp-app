@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-2b718fcce91a58cd3-wakehurst-u7-wildcats@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Wakehurst Wildcats 7 vs Norths Pirates Gold 7 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-ade833a122b91acac-wakehurst-u7-wildcats@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Wakehurst Wildcats 7 vs Lane Cove Gold 7 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-e3bd472a839648522-wakehurst-u7-wildcats@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260516T092000
 DTEND;TZID=Australia/Sydney:20260516T102000
 SUMMARY:Wakehurst Wildcats 7 vs Chatswood Gold 7 | RND 3
@@ -84,30 +84,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u7-wildcats
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-9b564bedb3cb0d303-wakehurst-u7-wildcats@denishoctor.github.i
- o
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260517T084000
-DTEND;TZID=Australia/Sydney:20260517T094000
-SUMMARY:Wakehurst Wildcats 7 vs Chatswood Gold 7 | RND 3
-LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wildcats 7 vs Chatswood Gold 7\n📍 Wakehurst R
- ugby Park TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆
-  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
-  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
- lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
- /north-shore-sunday-minis-comp-app/#wakehurst-u7-wildcats
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
- rst-u7-wildcats
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-6a0daf0f862096f17-wakehurst-u7-wildcats@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260523T122000
 DTEND;TZID=Australia/Sydney:20260523T132000
 SUMMARY:Wakehurst Wildcats 7 vs St Ives Yellow 7 | RND 4
@@ -122,30 +103,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u7-wildcats
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-b9ec450a1b6a5aa16-wakehurst-u7-wildcats@denishoctor.github.i
- o
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260524T084000
-DTEND;TZID=Australia/Sydney:20260524T094000
-SUMMARY:Wakehurst Wildcats 7 vs Wakehurst Warthogs 7 | RND 4
-LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wildcats 7 vs Wakehurst Warthogs 7\n📍 Beaucha
- mp Park TT4\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆
-  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
-  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
- lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
- /north-shore-sunday-minis-comp-app/#wakehurst-u7-wildcats
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
- rst-u7-wildcats
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-7c7ced72bd7e5b25f-wakehurst-u7-wildcats@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260530T092000
 DTEND;TZID=Australia/Sydney:20260530T102000
 SUMMARY:Wakehurst Wildcats 7 vs Forest Green 7 | RND 5

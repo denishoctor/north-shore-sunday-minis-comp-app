@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-038b29d4380cc4d22-wakehurst-u6-wallabies@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Wakehurst Wallabies 6 vs Lindfield 6 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-ff1900c49ecb70485-wakehurst-u6-wallabies@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Wakehurst Wallabies 6 vs St Ives Blue 6 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-bca0f3ec3531255cd-wakehurst-u6-wallabies@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260516T092000
 DTEND;TZID=Australia/Sydney:20260516T102000
 SUMMARY:Wakehurst Wallabies 6 vs Chatswood Green 6 | RND 3
@@ -84,30 +84,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u6-wallabies
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-dafd7bc3c1bff3180-wakehurst-u6-wallabies@denishoctor.github.
- io
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260517T092000
-DTEND;TZID=Australia/Sydney:20260517T102000
-SUMMARY:Wakehurst Wallabies 6 vs Chatswood Green 6 | RND 3
-LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wallabies 6 vs Chatswood Green 6\n📍 Wakehurst
-  Rugby Park TT2\, Belrose\n📅 Round 3 · Sun\, 17 May · 9:20am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#wakehurst-u6-wallabies
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
- rst-u6-wallabies
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-6a3521b490a8f0416-wakehurst-u6-wallabies@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260523T084000
 DTEND;TZID=Australia/Sydney:20260523T094000
 SUMMARY:Wakehurst Wallabies 6 vs Lane Cove Gold 6 | RND 4
@@ -122,30 +103,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u6-wallabies
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-2b84865c3a814c358-wakehurst-u6-wallabies@denishoctor.github.
- io
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260524T084000
-DTEND;TZID=Australia/Sydney:20260524T094000
-SUMMARY:Wakehurst Wallabies 6 vs Lane Cove Gold 6 | RND 4
-LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wallabies 6 vs Lane Cove Gold 6\n📍 Beauchamp 
- Park TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJ
- RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#wakehurst-u6-wallabies
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
- rst-u6-wallabies
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-bc11a2e65d4efb1f3-wakehurst-u6-wallabies@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260530T084000
 DTEND;TZID=Australia/Sydney:20260530T094000
 SUMMARY:Wakehurst Wallabies 6 vs Norths Pirates Red 6 | RND 5

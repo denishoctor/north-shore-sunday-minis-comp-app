@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-d43663e1088404693-norths-pirates-u9-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260503T115000
 DTEND;TZID=Australia/Sydney:20260503T125000
 SUMMARY:Norths Pirates Red 9 vs Forest Green 9 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-90e514c615749cfb8-norths-pirates-u9-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260510T110000
 DTEND;TZID=Australia/Sydney:20260510T120000
 SUMMARY:Norths Pirates Red 9 vs Norths Pirates Black 9 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-2be870f52b7959240-norths-pirates-u9-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260516T110000
 DTEND;TZID=Australia/Sydney:20260516T120000
 SUMMARY:Norths Pirates Red 9 vs Dee Why Black 9 | RND 3
@@ -84,30 +84,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-red
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-5c903c1ff6aeabea3-norths-pirates-u9-red@denishoctor.github.i
- o
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260517T110000
-DTEND;TZID=Australia/Sydney:20260517T120000
-SUMMARY:Norths Pirates Red 9 vs Dee Why Black 9 | RND 3
-LOCATION:Melwood Oval M1\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Red 9 vs Dee Why Black 9\n📍 Melwood Oval
-  M1\, Forestville\n📅 Round 3 · Sun\, 17 May · 11:00am AEST\n🏆 SJRU
-  Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upda
- tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
- 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
- unday-minis-comp-app/#norths-pirates-u9-red
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u9-red
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-4c132139be9917395-norths-pirates-u9-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260523T110000
 DTEND;TZID=Australia/Sydney:20260523T120000
 SUMMARY:Norths Pirates Red 9 vs Dee Why White 9 | RND 4
@@ -122,30 +103,11 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u9-red
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-14a9fe7f2cc83911c-norths-pirates-u9-red@denishoctor.github.i
- o
-SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
-DTSTART;TZID=Australia/Sydney:20260524T110000
-DTEND;TZID=Australia/Sydney:20260524T120000
-SUMMARY:Norths Pirates Red 9 vs Dee Why White 9 | RND 4
-LOCATION:Bantry Bay Oval M2\, Seaforth\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Red 9 vs Dee Why White 9\n📍 Bantry Bay O
- val M2\, Seaforth\n📅 Round 4 · Sun\, 24 May · 11:00am AEST\n🏆 SJRU
-  Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upda
- tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
- 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
- unday-minis-comp-app/#norths-pirates-u9-red
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u9-red
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-db6f5858c65888f19-norths-pirates-u9-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260512T052719Z
-LAST-MODIFIED:20260512T052719Z
+DTSTAMP:20260512T080741Z
+LAST-MODIFIED:20260512T080741Z
 DTSTART;TZID=Australia/Sydney:20260530T103000
 DTEND;TZID=Australia/Sydney:20260530T113000
 SUMMARY:Norths Pirates Red 9 vs Forest White 9 | RND 5
