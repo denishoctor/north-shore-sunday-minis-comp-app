@@ -99,31 +99,23 @@
      the title-block for room and the eyebrow ends up wrapping line-by-line.
      Drop the nav to its own row beneath title+home, shrink the crest, and
      give title-block flex-basis so the eyebrow has a sensible line length. */
+  /* On narrow screens (≤600px): crest + title-block on row 1 (full width),
+     nav drops to row 2 ANCHORED RIGHT via margin-left:auto so it sits in
+     the bottom-right of the header rather than a left-aligned separate band. */
   @media (max-width: 600px) {
-    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 14px; }
+    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 12px; }
     .crest { width: 56px; height: 56px; }
-    .title-block { flex: 1 1 180px; }
+    .title-block { flex: 1 1 calc(100% - 72px); }
     .eyebrow { letter-spacing: 1px; }
     .header-nav {
       order: 4;
-      width: 100%;
-      justify-content: flex-start;
+      margin-left: auto;
       gap: 6px;
-      padding-top: 6px;
-      border-top: 1px dashed rgba(212,169,60,.25);
     }
     .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
-  .header-home {
-    appearance: none; cursor: pointer;
-    font-family: inherit; font-size: 11px; font-weight: 700;
-    color: var(--navy-dark); background: var(--gold);
-    border: 1.5px solid var(--gold-soft);
-    padding: 6px 11px; border-radius: 999px;
-    display: inline-flex; align-items: center; gap: 4px;
-  }
-  .header-home[hidden] { display: none; }
-  .header-home:hover { filter: brightness(1.06); }
+  /* Home button removed: users deselect a team by clicking the active token
+     again, or by clicking the active club chip. */
 
   /* TOOLBAR — club filter row + team token grid */
   .toolbar {
@@ -591,10 +583,6 @@
       <a class="header-nav-link" href="clubs.html">Clubs</a>
       <a class="header-nav-link" href="venues.html">Venues</a>
     </nav>
-    <button class="header-home" id="clear-btn" type="button" hidden>
-      <span class="action-icon" aria-hidden="true">↩</span>
-      <span>Home</span>
-    </button>
   </div>
 
   <!-- "What's on" round cards — only rendered when no team is selected. Hidden
@@ -837,10 +825,8 @@ function selectTeam(teamId, slugFromCaller) {
   syncTokens();
 
   const actionBar = document.getElementById('action-bar');
-  const homeBtn = document.getElementById('clear-btn');
   if (teamId) {
     actionBar.removeAttribute('hidden');
-    homeBtn.removeAttribute('hidden');
     const slug = slugFromCaller || SLUG_BY_ID[teamId];
     const webcalUrl = `${SITE_URL.replace(/^https?:\/\//, 'webcal://')}/${slug}.ics`;
     const httpsIcs  = `${SITE_URL}/${slug}.ics`;
@@ -851,7 +837,6 @@ function selectTeam(teamId, slugFromCaller) {
     history.pushState(null, '', '#' + slug);
   } else {
     actionBar.setAttribute('hidden', '');
-    homeBtn.setAttribute('hidden', '');
     closeCalPopover();
     if (location.hash) history.pushState(null, '', location.pathname);
   }
@@ -1280,7 +1265,7 @@ document.getElementById('copy-link-btn').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(url); } catch {}
 });
 
-document.getElementById('clear-btn').addEventListener('click', () => selectTeam(null));
+// Home-button removed — users deselect by clicking the active token or chip again.
 
 window.addEventListener('hashchange', () => {
   const { teamId } = readHash();
