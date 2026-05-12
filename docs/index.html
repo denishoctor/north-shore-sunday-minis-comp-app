@@ -65,14 +65,17 @@
        the class on scroll past the eyebrow. */
     transition: padding .18s ease;
   }
+  /* Compact mode (scrolled past the top): hide the badge + title block so
+     the sticky bar shows ONLY the nav links — Clubs / Venues / Share /
+     Calendar. The flex-end justify on .header-nav keeps them right-aligned. */
   .header.compact {
     padding-top: 8px;
     padding-bottom: 8px;
+    align-items: center;
   }
-  .header.compact .crest { width: 44px; height: 44px; }
-  .header.compact .eyebrow,
-  .header.compact .updated-stamp { display: none; }
-  .header.compact h1 { font-size: 15px; }
+  .header.compact .crest,
+  .header.compact .title-block { display: none; }
+  .header.compact .header-nav { width: 100%; justify-content: flex-end; }
   .crest {
     width: 76px; height: 76px;
     background: #fff url('assets/sunday-minis-logo-w-bg.png') center/102% no-repeat;
@@ -644,6 +647,19 @@
   .footer-note a { color: var(--navy); text-decoration: none; }
   .footer-note a:hover { text-decoration: underline; }
   .footer-brand { display: block; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .footer-tbc-note {
+    display: block;
+    margin: 14px auto 0;
+    max-width: 560px;
+    padding: 10px 14px;
+    font-size: 11.5px; line-height: 1.5;
+    background: var(--cream);
+    border: 1px dashed var(--cream-edge);
+    border-radius: 8px;
+    color: var(--navy);
+    text-align: left;
+  }
+  .footer-tbc-note b { color: var(--maroon); }
   .footer-sep { margin: 0 6px; color: var(--cream-edge); }
 </style>
 </head>
@@ -743,6 +759,12 @@
     </span>
     <span style="display:block; margin-top:6px; font-size:11px;">
       Beta — multi-club aggregate sourced from <a href="https://xplorer.rugby/" target="_blank" rel="noopener">Rugby Xplorer</a> via SJRU Sunday Minis comps.
+    </span>
+    <span class="footer-tbc-note">
+      <b>TBC</b> on a round card means the SJRU schedule has the host
+      assigned (early-season draft) but the official draw — opponents,
+      pitch and kick-off — hasn't been published to Rugby Xplorer yet.
+      Once it is, the round flips from TBC to live fixture counts.
     </span>
   </div>
 
@@ -948,23 +970,26 @@ function selectClub(key) {
   syncClubChips();
   buildAgeRow();
   buildTokenGrid();
-  // Deselect team if it's no longer in the filtered set
+  // Deselect team if it's no longer in the filtered set. If selectTeam fires
+  // it'll re-render; otherwise we render here so the cross-team filter list
+  // appears immediately when a club is picked without a team.
   if (currentTeam) {
-    const slug = SLUG_BY_ID[currentTeam];
     const meta = TEAM_META?.[currentTeam];
-    if (key && meta?.clubKey !== key) selectTeam(null);
+    if (key && meta?.clubKey !== key) { selectTeam(null); return; }
   }
+  render();
 }
 
 function selectAge(age) {
   currentAge = age || null;
   lsSet(AGE_KEY, currentAge);
-  syncAgeChips();                      // toggle .active on the clicked chip
+  syncAgeChips();
   buildTokenGrid();
   if (currentTeam) {
     const meta = TEAM_META?.[currentTeam];
-    if (age && meta?.age !== age) selectTeam(null);
+    if (age && meta?.age !== age) { selectTeam(null); return; }
   }
+  render();
 }
 
 function selectTeam(teamId, slugFromCaller) {
@@ -1007,11 +1032,25 @@ function render() {
   const cal  = document.getElementById('calendar');
   const home = document.getElementById('home-content');
   if (!fixturesData) { cal.innerHTML = ''; home.setAttribute('hidden', ''); return; }
-  if (!currentTeam) {
+
+  // Routing:
+  //   - Team selected → renderTeamView (full timeline w/ placeholders).
+  //   - No team but any other filter (Rnd / Club / Age) → renderFilteredList
+  //     (a cross-team match list narrowed by the active filter combo).
+  //   - Nothing set → renderHome (round cards).
+  const hasNonTeamFilter = currentRound || currentClub || currentAge;
+  if (!currentTeam && !hasNonTeamFilter) {
     home.innerHTML = renderHome();
     home.removeAttribute('hidden');
     cal.innerHTML = '';
     wireHomeInteractions();
+    return;
+  }
+  if (!currentTeam) {
+    home.setAttribute('hidden', '');
+    home.innerHTML = '';
+    cal.innerHTML = renderFilteredList();
+    wireMatchCardInteractions(cal);
     return;
   }
   home.setAttribute('hidden', '');
@@ -1097,22 +1136,7 @@ function render() {
   }
   cal.innerHTML = parts.join('');
 
-  cal.querySelectorAll('.match-card.has-lineup .match-row').forEach(row => {
-    row.addEventListener('click', () => {
-      const card = row.closest('.match-card');
-      card.classList.toggle('expanded');
-    });
-  });
-  // Round-badge filter buttons — clicking the R3 chip on a match card toggles
-  // the global Rnd filter to that round. stopPropagation so the click doesn't
-  // also expand the lineup panel.
-  cal.querySelectorAll('.round-badge[data-round-filter]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const n = Number(btn.dataset.roundFilter);
-      selectRound(n === currentRound ? null : n);
-    });
-  });
+  wireMatchCardInteractions(cal);
 
   // Honour deep-link anchor (#slug/match-<id>)
   const { anchor } = readHash();
@@ -1124,6 +1148,76 @@ function render() {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+}
+
+// Reusable click + filter wiring for any container that holds .match-card
+// elements. Extracted so renderTeamView and renderFilteredList share it.
+function wireMatchCardInteractions(container) {
+  container.querySelectorAll('.match-card.has-lineup .match-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const card = row.closest('.match-card');
+      card.classList.toggle('expanded');
+    });
+  });
+  container.querySelectorAll('.round-badge[data-round-filter]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const n = Number(btn.dataset.roundFilter);
+      selectRound(n === currentRound ? null : n);
+    });
+  });
+}
+
+// Cross-team filtered list. Renders when no team is selected but at least
+// one of Rnd / Club / Age is active. Groups by competition (age band) +
+// round so the list reads "U7 Sunday · R3 · 18 matches" then the cards.
+function renderFilteredList() {
+  const all = fixturesData?.matches || [];
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+
+  const passes = (m) => {
+    if (currentRound) {
+      const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+      if (rn !== currentRound) return false;
+    }
+    if (currentClub) {
+      if (m.home.clubKey !== currentClub && m.away.clubKey !== currentClub) return false;
+    }
+    if (currentAge) {
+      if (m.age !== currentAge) return false;
+    }
+    return true;
+  };
+  const matches = all.filter(passes).sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+
+  if (!matches.length) {
+    return `<div class="welcome">
+      <p class="welcome-sub">No matches match the current filter${currentClub || currentAge || currentRound ? '' : ''}.
+      Try a different round or club — or clear the filter by clicking the active chip again.</p>
+    </div>`;
+  }
+
+  // Section header captures the active filter so the user always sees
+  // what they're looking at without scrolling back to the chip row.
+  const filterDesc = [
+    currentRound ? `Round ${currentRound}` : null,
+    currentClub  ? (CLUBS?.[currentClub]?.name || currentClub) : null,
+    currentAge   ? currentAge : null,
+  ].filter(Boolean).join(' · ');
+
+  const upcoming = matches.filter(m => m.type === 'fixture' && m.dateTime >= today);
+  const past     = matches.filter(m => m.type === 'result' || m.dateTime < today).reverse();
+
+  const parts = [];
+  if (upcoming.length) {
+    parts.push(`<div class="section-header"><span>Upcoming · ${esc(filterDesc)}</span><span>${upcoming.length}</span></div>`);
+    parts.push(upcoming.map(renderMatch).join(''));
+  }
+  if (past.length) {
+    parts.push(`<div class="section-header"><span>Played</span><span>${past.length}</span></div>`);
+    parts.push(past.map(renderMatch).join(''));
+  }
+  return parts.join('');
 }
 
 function renderMatch(match) {
@@ -1252,7 +1346,7 @@ function renderRoundPlaceholder(round, ageBand) {
         <div class="match-meta">
           <span class="round-badge">R${esc(round.round)}</span>
           <span>${esc(ageLabel)} host</span>
-          <span class="placeholder-status">Scheduled</span>
+          <span class="placeholder-status">TBC</span>
         </div>
       </div>
       <div></div>
@@ -1375,7 +1469,7 @@ function roundCard(label, round, tier = 'other') {
     return `<div class="host-row">
       <span class="host-age">${esc(ageLabel)}</span>
       <a class="host-venue" href="${esc(v.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(v.display)}</a>
-      <span class="host-count">${count ? `${count} match${count === 1 ? '' : 'es'}` : 'scheduled'}</span>
+      <span class="host-count">${count ? `${count} match${count === 1 ? '' : 'es'}` : 'TBC'}</span>
     </div>`;
   };
   const whenText = isGala
