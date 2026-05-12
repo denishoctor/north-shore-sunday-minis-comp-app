@@ -15,8 +15,8 @@
  * doesn't match the current pair.
  */
 
-const SHELL_CACHE = 'nsm-sunday-shell-v4';
-const DATA_CACHE  = 'nsm-sunday-data-v4';
+const SHELL_CACHE = 'nsm-sunday-shell-v5';
+const DATA_CACHE  = 'nsm-sunday-data-v5';
 
 const SHELL_FILES = [
   './',
@@ -31,6 +31,7 @@ const SHELL_FILES = [
   'assets/icon-512-maskable.png',
   'assets/apple-touch-icon-180.png',
   'assets/sunday-minis-logo-w-bg.png',
+  'favicon.svg',
 ];
 
 const DATA_PATHS = ['fixtures.json', 'lineups.json'];

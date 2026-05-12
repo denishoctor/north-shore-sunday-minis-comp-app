@@ -19,6 +19,7 @@ const baseRequired = [
   'index.html',
   'venues.html',
   'clubs.html',
+  'favicon.svg',
   'manifest.webmanifest',
   'sw.js',
   'assets/icon-192.png',
