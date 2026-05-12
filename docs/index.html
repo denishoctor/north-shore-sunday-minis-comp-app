@@ -57,14 +57,13 @@
     border-bottom: 3px solid var(--gold);
   }
   .crest {
-    width: 70px; height: 70px;
-    background: #fff;
+    width: 76px; height: 76px;
+    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/82% no-repeat;
     border: 2px solid var(--gold);
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,.35), inset 0 0 0 2px var(--navy-dark);
+    box-shadow: 0 2px 10px rgba(0,0,0,.35);
     flex-shrink: 0;
-    overflow: hidden;
+    box-sizing: border-box;
   }
   .title-block { flex: 1 1 auto; min-width: 0; }
   .eyebrow {
@@ -237,6 +236,73 @@
   }
   .welcome-stats b { color: var(--navy); font-weight: 800; font-size: 14px; }
 
+  /* HOME — "what's on this weekend" round cards. */
+  .home { display: flex; flex-direction: column; }
+  .home-hero {
+    padding: 32px 28px 22px; text-align: center;
+    background: linear-gradient(180deg, #fff 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--cream-edge);
+  }
+  .home-hero h2 {
+    display: inline-block;
+    font-size: 22px; font-weight: 800; color: var(--navy);
+    margin: 0 0 4px; letter-spacing: -.3px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .home-rounds {
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 18px;
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(18px, env(safe-area-inset-right));
+  }
+  .round-card {
+    background: #fff; border: 1px solid var(--cream-edge); border-left: 3px solid var(--gold);
+    border-radius: 10px; padding: 14px 16px;
+  }
+  .round-card.primary { border-left-color: var(--navy); box-shadow: 0 1px 8px rgba(10,32,89,.08); }
+  .round-card-head {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .round-card-label {
+    font-size: 11px; font-weight: 800; color: var(--navy);
+    text-transform: uppercase; letter-spacing: 1px;
+    background: var(--cream); padding: 3px 9px; border-radius: 999px;
+  }
+  .round-card.primary .round-card-label { background: var(--navy); color: var(--gold); }
+  .round-card-when { font-size: 13px; font-weight: 700; color: var(--ink); }
+  .host-row {
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    gap: 8px; align-items: center;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .host-row + .host-row { border-top: 1px dashed var(--cream-edge); }
+  .host-age {
+    font-size: 11px; font-weight: 800; color: var(--navy);
+    background: var(--gold); padding: 2px 8px; border-radius: 999px;
+    text-align: center; letter-spacing: .3px;
+  }
+  .host-venue { color: var(--navy); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .host-venue:hover { text-decoration: underline; }
+  .host-count {
+    font-size: 11px; font-weight: 700; color: var(--muted);
+    background: var(--cream); padding: 2px 8px; border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  /* Placeholder card for a scheduled-but-not-yet-published round. */
+  .match-placeholder { border-left-color: var(--cream-edge); background: #FCFCFC; }
+  .match-placeholder .placeholder-headline {
+    font-size: 13px; font-weight: 600; color: var(--muted); line-height: 1.3;
+  }
+  .match-placeholder .placeholder-status {
+    color: var(--muted); font-style: italic;
+  }
+  .match-placeholder .round-badge { background: #fff; border: 1px solid var(--cream-edge); }
+
   /* CALENDAR LIST */
   #calendar { padding: 16px 0 40px; }
   #calendar:empty::after {
@@ -380,11 +446,7 @@
 <div class="page">
 
   <div class="header">
-    <div class="crest">
-      <img src="assets/sunday-minis-logo-w-bg.png"
-           onerror="this.style.display='none'"
-           alt="North Shore Minis Sunday Rugby logo">
-    </div>
+    <div class="crest" role="img" aria-label="North Shore Minis Sunday Rugby logo"></div>
     <div class="title-block">
       <div class="eyebrow">North Shore Minis · Sunday</div>
       <div>
@@ -471,7 +533,7 @@ import {
 } from './render.mjs';
 
 const CFG = window.NSM_SUNDAY_CONFIG || {};
-const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEAM_META, VENUES } = CFG;
+const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEAM_META, VENUES, ROUNDS } = CFG;
 const SLUG_BY_ID  = Object.fromEntries(Object.entries(TEAM_SLUGS || {}).map(([s, id]) => [id, s]));
 
 const STORAGE_PREFIX = 'nsm-sunday';
@@ -657,28 +719,64 @@ function readHash() {
 function render() {
   const cal = document.getElementById('calendar');
   if (!fixturesData) { cal.innerHTML = ''; return; }
-  if (!currentTeam) { cal.innerHTML = renderWelcome(); return; }
+  if (!currentTeam) { cal.innerHTML = renderHome(); return; }
 
   const matches = fixturesData.matches.filter(m =>
     m.home.id === currentTeam || m.away.id === currentTeam
   );
-  if (!matches.length) { cal.innerHTML = ''; return; }
-
-  const now = new Date();
-  const upcoming = matches.filter(m => m.type === 'fixture' && new Date(m.dateTime) >= now);
-  const past     = [...matches.filter(m => m.type === 'result' || new Date(m.dateTime) < now)].reverse();
 
   const meta = TEAM_META?.[currentTeam];
   const teamLabel = meta?.name || 'Team';
+  const todaySyd  = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+
+  // Index this team's matches by round number so we can join with the static
+  // round schedule and fill in placeholders for unpublished future rounds.
+  const matchesByRound = new Map();
+  for (const m of matches) {
+    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    if (!Number.isNaN(rn)) matchesByRound.set(rn, m);
+  }
+
+  // Build the full chronological timeline for the team: every scheduled
+  // round in ROUNDS becomes either a live match or a placeholder card.
+  // Bye rounds and rounds with no date are skipped.
+  const ageBand = (meta?.age === 'U6' || meta?.age === 'U7') ? 'u6u7' : 'u8u9';
+  const timeline = [];
+  for (const r of (ROUNDS || [])) {
+    if (r.status === 'bye' || !r.date) continue;
+    const live = matchesByRound.get(r.round);
+    if (live) {
+      timeline.push({ kind: live.type === 'result' || live.dateTime < todaySyd ? 'past' : 'upcoming', match: live, round: r });
+    } else {
+      timeline.push({ kind: r.date < todaySyd ? 'past-placeholder' : 'upcoming-placeholder', round: r, ageBand });
+    }
+  }
+  // Also surface any matches whose round number wasn't in our static schedule
+  // (finals, friendlies). Stable order: original date.
+  const knownRoundNums = new Set([...matchesByRound.keys()]);
+  const orphanMatches = matches.filter(m => {
+    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    return Number.isNaN(rn) || !knownRoundNums.has(rn) || !(ROUNDS || []).find(r => r.round === rn);
+  });
+  for (const m of orphanMatches) {
+    if (timeline.some(t => t.match?.id === m.id)) continue;
+    timeline.push({ kind: m.type === 'result' ? 'past' : 'upcoming', match: m, round: null });
+  }
+
+  const upcoming = timeline.filter(t => t.kind === 'upcoming' || t.kind === 'upcoming-placeholder');
+  const past     = timeline.filter(t => t.kind === 'past' || t.kind === 'past-placeholder').reverse();
 
   const parts = [];
   if (upcoming.length) {
     parts.push(`<div class="section-header"><span>Upcoming · ${esc(teamLabel)}</span><span>${upcoming.length}</span></div>`);
-    parts.push(upcoming.map(m => renderMatch(m)).join(''));
+    parts.push(upcoming.map(t => t.match ? renderMatch(t.match) : renderRoundPlaceholder(t.round, ageBand)).join(''));
   }
   if (past.length) {
     parts.push(`<div class="section-header"><span>Played</span><span>${past.length}</span></div>`);
-    parts.push(past.map(m => renderMatch(m)).join(''));
+    parts.push(past.map(t => t.match ? renderMatch(t.match) : renderRoundPlaceholder(t.round, ageBand)).join(''));
+  }
+  if (!upcoming.length && !past.length) {
+    parts.push('<div class="welcome"><p class="welcome-sub">No matches scheduled for this team yet.</p></div>');
   }
   cal.innerHTML = parts.join('');
 
@@ -777,28 +875,105 @@ function renderLineupPanel(matchId) {
   </div>`;
 }
 
-function renderWelcome() {
-  // Pre-first-fetch fallback: TEAM_META is empty until the workflow runs, so
-  // show the configured CLUBS whitelist size rather than 0. Once fixtures land,
-  // both numbers reflect the live data.
-  const teamCount   = Object.keys(TEAM_SLUGS || {}).length;
-  const liveClubCount = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
-  const configuredClubCount = Object.keys(CLUBS || {}).length;
-  const clubCount   = liveClubCount || configuredClubCount;
-  const matchCount  = fixturesData?.totalMatches || 0;
-  const awaiting    = matchCount === 0;
-  return `<div class="welcome">
-    <h2>${esc(SITE?.name || 'Fixtures')}</h2>
-    <p class="welcome-sub">${awaiting
-      ? 'Setting things up. Once the first fetch runs (hourly cron, or manual trigger via Actions), club chips above will populate and your team will be one tap away.'
-      : 'Pick a club above, then your team for the full Sunday Minis schedule, calendar sync &amp; team sheets.'
-    }</p>
-    <div class="welcome-stats">
-      <span><b>${clubCount}</b> clubs</span>
-      <span><b>${teamCount || '—'}</b> teams</span>
-      <span><b>${matchCount || '—'}</b> matches</span>
-      <span>U6–U9 SJRU Sunday</span>
+// Placeholder card for a round that's in the static schedule but hasn't been
+// published to Rugby Xplorer yet (or is in the past with no recorded match).
+function renderRoundPlaceholder(round, ageBand) {
+  if (!round) return '';
+  const venueName = round.hosts?.[ageBand];
+  const v = venueName ? parseVenue(venueName, VENUES || {}) : { display: 'TBA', mapsUrl: '#' };
+  const dt = round.date ? new Date(round.date + 'T08:00:00+10:00') : null;
+  const dow  = dt ? fmtDow(dt.toISOString())  : '';
+  const date = dt ? fmtDate(dt.toISOString()) : '';
+  const ageLabel = ageBand === 'u6u7' ? 'U6 / U7' : 'U8 / U9';
+  return `<div class="match-card match-placeholder" data-round="${esc(round.round)}">
+    <div class="match-row">
+      <div class="match-when">
+        <span class="when-day">${esc(dow)}</span>
+        <span>${esc(date)}</span>
+      </div>
+      <div>
+        <div class="placeholder-headline">Round ${esc(round.round)}${round.finalRound ? ' · Final Round' : ''} — fixtures TBA</div>
+        <div class="match-meta">
+          <span class="round-badge">R${esc(round.round)}</span>
+          <span>${esc(ageLabel)} host</span>
+          <span class="placeholder-status">Scheduled</span>
+        </div>
+      </div>
+      <div></div>
     </div>
+    ${venueName ? `<div class="match-venue">
+      <a href="${esc(v.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(v.display)}</a>
+    </div>` : ''}
+  </div>`;
+}
+
+// "What's on" home view — keyed off the static schedule so it works even when
+// the live feed hasn't published the next round yet. Shows last / next / after
+// columns with the hosting venue for each age band.
+function renderHome() {
+  const todaySyd = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+  const all = (ROUNDS || []).filter(r => r.date && r.status !== 'bye').slice().sort((a, b) => a.date.localeCompare(b.date));
+  const upcomingIdx = all.findIndex(r => r.date >= todaySyd);
+  const isToday = upcomingIdx >= 0 && all[upcomingIdx].date === todaySyd;
+  const nextR   = upcomingIdx >= 0 ? all[upcomingIdx] : null;
+  const afterR  = upcomingIdx >= 0 ? all[upcomingIdx + 1] : null;
+  const lastR   = upcomingIdx > 0 ? all[upcomingIdx - 1] : (upcomingIdx === -1 ? all[all.length - 1] : null);
+
+  const liveClubCount = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
+  const clubCount = liveClubCount || Object.keys(CLUBS || {}).length;
+  const teamCount = Object.keys(TEAM_SLUGS || {}).length;
+  const matchCount = fixturesData?.totalMatches || 0;
+  const awaiting = matchCount === 0;
+
+  const headlineLabel = isToday ? 'Today' : (lastR && !nextR ? 'Last Sunday' : 'Next Sunday');
+  const headline = isToday ? nextR : nextR;
+
+  const sections = [];
+  if (headline) sections.push(roundCard(headlineLabel, headline, /* primary */ true));
+  if (afterR && nextR !== afterR) sections.push(roundCard('Sunday after', afterR, false));
+  if (lastR && lastR !== nextR) sections.push(roundCard('Last Sunday', lastR, false));
+
+  return `<div class="home">
+    <div class="home-hero">
+      <h2>${esc(SITE?.name || 'Fixtures')}</h2>
+      <p class="welcome-sub">${awaiting
+        ? 'Setting things up. The hourly workflow will populate club chips and teams shortly.'
+        : "Sunday Minis is centrally drawn — every club travels to the same host venue each weekend. Pick your club above for your team's full schedule."
+      }</p>
+      <div class="welcome-stats">
+        <span><b>${clubCount}</b> clubs</span>
+        <span><b>${teamCount || '—'}</b> teams</span>
+        <span><b>${matchCount || '—'}</b> matches</span>
+        <span>U6–U9 SJRU Sunday</span>
+      </div>
+    </div>
+    ${sections.length ? `<div class="home-rounds">${sections.join('')}</div>` : ''}
+  </div>`;
+}
+
+function roundCard(label, round, primary) {
+  if (!round) return '';
+  const dt = new Date(round.date + 'T08:00:00+10:00');
+  const dow  = fmtDow(dt.toISOString());
+  const date = fmtDate(dt.toISOString());
+  const venueRow = (ageBand, ageLabel) => {
+    const venueName = round.hosts?.[ageBand];
+    if (!venueName) return '';
+    const v = parseVenue(venueName, VENUES || {});
+    const count = round.matches?.[ageBand] || 0;
+    return `<div class="host-row">
+      <span class="host-age">${esc(ageLabel)}</span>
+      <a class="host-venue" href="${esc(v.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(v.display)}</a>
+      <span class="host-count">${count ? `${count} match${count === 1 ? '' : 'es'}` : 'scheduled'}</span>
+    </div>`;
+  };
+  return `<div class="round-card ${primary ? 'primary' : ''}">
+    <div class="round-card-head">
+      <span class="round-card-label">${esc(label)}</span>
+      <span class="round-card-when">${esc(dow)} ${esc(date)} · Round ${esc(round.round)}${round.finalRound ? ' · Final' : ''}</span>
+    </div>
+    ${venueRow('u6u7', 'U6 / U7')}
+    ${venueRow('u8u9', 'U8 / U9')}
   </div>`;
 }
 
