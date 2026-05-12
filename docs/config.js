@@ -18,70 +18,90 @@ window.NSM_SUNDAY_CONFIG = {
       "name": "Lane Cove JRU",
       "shortPrefix": "Lane Cove",
       "url": "https://www.lcjru.com.au/",
-      "homeGround": "Tantallon Oval"
+      "homeGround": "Tantallon Oval",
+      "primary": "#0a2059",
+      "accent": "#d4a93c"
     },
     "chatswood": {
       "id": 30878,
       "name": "Chatswood JRU",
       "shortPrefix": "Chatswood",
       "url": "https://www.chatswoodjuniorrugby.com.au/",
-      "homeGround": "Beauchamp Park"
+      "homeGround": "Beauchamp Park",
+      "primary": "#1b5e20",
+      "accent": "#d4a93c"
     },
     "hornsby": {
       "id": 30898,
       "name": "Hornsby",
       "shortPrefix": "Hornsby",
       "url": "http://hjruc.com.au/",
-      "homeGround": "Mark Taylor Oval"
+      "homeGround": "Mark Taylor Oval",
+      "primary": "#b71c1c",
+      "accent": "#1a1a1a"
     },
     "kwp": {
       "id": 30900,
       "name": "Killara–West Pymble",
       "shortPrefix": "Killara-West Pymble",
       "url": "https://www.kwprugby.com/",
-      "homeGround": "Lofberg Oval"
+      "homeGround": "Lofberg Oval",
+      "primary": "#003e7e",
+      "accent": "#d4a93c"
     },
     "lindfield": {
       "id": 48060,
       "name": "Lindfield JRU",
       "shortPrefix": "Lindfield",
       "url": "https://www.lindfieldjuniorrugby.com.au/",
-      "homeGround": "Tryon Oval"
+      "homeGround": "Tryon Oval",
+      "primary": "#0288d1",
+      "accent": "#ffffff"
     },
     "norths-pirates": {
       "id": 50135,
       "name": "Norths Pirates",
       "shortPrefix": "Norths Pirates",
       "url": "https://www.northspirates.rugby/",
-      "homeGround": "Tunks Park"
+      "homeGround": "Tunks Park",
+      "primary": "#1a1a1a",
+      "accent": "#b71c1c"
     },
     "dee-why": {
       "id": 53286,
       "name": "Dee Why",
       "shortPrefix": "Dee Why",
       "url": "https://deewhylionsrugby.com.au/",
-      "homeGround": "James Morgan Reserve"
+      "homeGround": "James Morgan Reserve",
+      "primary": "#c62828",
+      "accent": "#ffffff"
     },
     "forest": {
       "id": 53322,
       "name": "Forest Rugby",
       "shortPrefix": "Forest",
       "url": "https://forestrugby.com.au/",
-      "homeGround": "Melwood Oval"
+      "homeGround": "Melwood Oval",
+      "primary": "#0b3d1c",
+      "accent": "#ffffff"
     },
     "st-ives": {
       "id": 53546,
       "name": "St Ives JRU",
       "shortPrefix": "St Ives",
       "url": "https://www.stivesrugby.com.au/st-ives-junior-rugby",
-      "homeGround": "Hassall Park"
+      "homeGround": "Hassall Park",
+      "primary": "#1565c0",
+      "accent": "#fdd835"
     },
     "wakehurst": {
       "id": 53597,
       "name": "Wakehurst Rugby",
       "shortPrefix": "Wakehurst",
       "url": "https://www.wakehurst.rugby/",
-      "homeGround": "Wakehurst Rugby Park"
+      "homeGround": "Wakehurst Rugby Park",
+      "primary": "#039be5",
+      "accent": "#1a1a1a"
     }
   },
   COMPETITIONS: {

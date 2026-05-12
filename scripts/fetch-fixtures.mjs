@@ -526,7 +526,7 @@ async function main() {
     season: SEASON,
     site: { name: SITE.name, shortName: SITE.shortName },
     totalMatches: combined.length,
-    clubs: Object.fromEntries(Object.entries(CLUBS).map(([k, v]) => [k, { id: v.id, name: v.name, shortPrefix: v.shortPrefix, url: v.url || null, homeGround: v.homeGround || null }])),
+    clubs: Object.fromEntries(Object.entries(CLUBS).map(([k, v]) => [k, { id: v.id, name: v.name, shortPrefix: v.shortPrefix, url: v.url || null, homeGround: v.homeGround || null, primary: v.primary || null, accent: v.accent || null }])),
     teams: TEAM_META,
     competitions: Object.values(byComp),
     rounds,
