@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-ac64059e051445cc2-norths-pirates-u8-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Norths Pirates Black 8 vs Hornsby Black 8 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-45447566327ae7730-norths-pirates-u8-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Norths Pirates Black 8 vs Killara-West Pymble/Lindfield 8 | RND 2
@@ -68,8 +68,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-44d3b735df662b2c3-norths-pirates-u8-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260517T084000
+DTEND;TZID=Australia/Sydney:20260517T094000
+SUMMARY:Norths Pirates Black 8 vs Lane Cove Gold 8 | RND 3
+LOCATION:Melwood Oval TT3\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 8 vs Lane Cove Gold 8\n📍 Melwood O
+ val TT3\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 S
+ JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#norths-pirates-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-black
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-ab4a497bfe6427057-norths-pirates-u8-black@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Norths Pirates Black 8 vs Lane Cove Gold 8 | RND 3
@@ -87,8 +106,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-86d152b6abe362fbb-norths-pirates-u8-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Norths Pirates Black 8 vs Dee Why 8 | RND 4
@@ -103,11 +122,30 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-f2b2ac2dc71cede1a-norths-pirates-u8-black@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
+SUMMARY:Norths Pirates Black 8 vs Dee Why 8 | RND 4
+LOCATION:Bantry Bay Oval TT3\, Seaforth\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 8 vs Dee Why 8\n📍 Bantry Bay Oval 
+ TT3\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU Min
+ is U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
+ automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
+ rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
+ y-minis-comp-app/#norths-pirates-u8-black
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-black
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-9f8c0588e7b4392cd-norths-pirates-u8-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Norths Pirates Black 8 vs Wakehurst Kings 8 | RND 5

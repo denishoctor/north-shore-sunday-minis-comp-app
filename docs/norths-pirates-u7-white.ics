@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-af021b3d7589e971a-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Norths Pirates White 7 vs Norths Pirates Red 7 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-bf4d4323b8b9b2c16-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Norths Pirates White 7 vs St Ives Blue 7 | RND 2
@@ -65,11 +65,30 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-ce2eb83d9065fbe98-norths-pirates-u7-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260516T100000
+DTEND;TZID=Australia/Sydney:20260516T110000
+SUMMARY:Norths Pirates White 7 vs Lindfield 7 | RND 3
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 7 vs Lindfield 7\n📍 Tantallon Oval
+  TT2\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 10:00am AEST\n🏆
+  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#norths-pirates-u7-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-745200473cbf438fa-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:Norths Pirates White 7 vs Lindfield 7 | RND 3
@@ -84,11 +103,30 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-b78c31b0e531ab9bd-norths-pirates-u7-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260523T092000
+DTEND;TZID=Australia/Sydney:20260523T102000
+SUMMARY:Norths Pirates White 7 vs Forest Black 7 | RND 4
+LOCATION:Lofberg Oval TT2\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 7 vs Forest Black 7\n📍 Lofberg Ova
+ l TT2\, West Pymble\n📅 Round 4 · Sat\, 23 May · 9:20am AEST\n🏆 SJR
+ U Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
+ endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
+ ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
+ th-shore-sunday-minis-comp-app/#norths-pirates-u7-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-1f1697c8353b265fd-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T092000
 DTEND;TZID=Australia/Sydney:20260524T102000
 SUMMARY:Norths Pirates White 7 vs Forest Black 7 | RND 4
@@ -103,11 +141,49 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-6566ca5805912ed04-norths-pirates-u7-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260530T104000
+DTEND;TZID=Australia/Sydney:20260530T114000
+SUMMARY:Norths Pirates White 7 vs St Ives Yellow 7 | RND 5
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 7 vs St Ives Yellow 7\n📍 Wakehurst
+  Rugby Park TT4\, Belrose\n📅 Round 5 · Sat\, 30 May · 10:40am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-white
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-762feb0ea11179f47-norths-pirates-u7-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260530T110000
+DTEND;TZID=Australia/Sydney:20260530T120000
+SUMMARY:Norths Pirates White 7 vs Killara-West Pymble Gold 7 | RND 5
+LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 7 vs Killara-West Pymble Gold 7\n📍
+  Wakehurst Rugby Park TT1\, Belrose\n📅 Round 5 · Sat\, 30 May · 11:00
+ am AEST\n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may
+  change. This calendar updates automatically\n(Apple Calendar: ~every hour
+  · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoc
+ tor.github.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-9845bb8f9ce29c9c8-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T100000
 DTEND;TZID=Australia/Sydney:20260531T110000
 SUMMARY:Norths Pirates White 7 vs St Ives Yellow 7 | RND 5
@@ -125,8 +201,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-31761dbb1b4149253-norths-pirates-u7-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T104000
 DTEND;TZID=Australia/Sydney:20260531T114000
 SUMMARY:Norths Pirates White 7 vs Killara-West Pymble Gold 7 | RND 5

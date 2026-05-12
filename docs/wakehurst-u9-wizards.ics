@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-66e3dfc89fdc1326c-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Wakehurst Wizards 9 vs Lane Cove Gold 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5d24939e6bfdb43d5-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260510T083000
 DTEND;TZID=Australia/Sydney:20260510T093000
 SUMMARY:Wakehurst Wizards 9 vs St Ives 9 | RND 2
@@ -63,10 +63,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u9-wizards
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-c9dd72805c93fa83f-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260516T092000
+DTEND;TZID=Australia/Sydney:20260516T102000
+SUMMARY:Wakehurst Wizards 9 vs Forest Green 9 | RND 3
+LOCATION:Mark Taylor Oval M1\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Forest Green 9\n📍 Mark Taylor Ov
+ al M1\, Waitara\n📅 Round 3 · Sat\, 16 May · 9:20am AEST\n🏆 SJRU Mi
+ nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-857c2dcb40151933e-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T085000
 DTEND;TZID=Australia/Sydney:20260517T095000
 SUMMARY:Wakehurst Wizards 9 vs Forest Green 9 | RND 3
@@ -81,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u9-wizards
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-eb4d14ab213908818-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260523T092000
+DTEND;TZID=Australia/Sydney:20260523T102000
+SUMMARY:Wakehurst Wizards 9 vs Norths Pirates Black 9 | RND 4
+LOCATION:Tantallon Oval M1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Norths Pirates Black 9\n📍 Tantal
+ lon Oval M1\, Lane Cove North\n📅 Round 4 · Sat\, 23 May · 9:20am AEST
+ \n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This ca
+ lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
+ dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
+ rth-shore-sunday-minis-comp-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-e245f34acd0b8ae95-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Wakehurst Wizards 9 vs Norths Pirates Black 9 | RND 4
@@ -101,8 +137,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5956286af2e40d113-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T082500
 DTEND;TZID=Australia/Sydney:20260524T092500
 SUMMARY:Wakehurst Wizards 9 vs Lindfield 9 | RND 4
@@ -117,10 +153,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u9-wizards
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-9f80c14489bb0f71b-wakehurst-u9-wizards@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260530T094000
+DTEND;TZID=Australia/Sydney:20260530T104000
+SUMMARY:Wakehurst Wizards 9 vs Dee Why Black 9 | RND 5
+LOCATION:Balmoral Oval M1\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wizards 9 vs Dee Why Black 9\n📍 Balmoral Oval
+  M1\n📅 Round 5 · Sat\, 30 May · 9:40am AEST\n🏆 SJRU Minis U9 Sunda
+ y\n\nℹ️ Venues and times may change. This calendar updates automatical
+ ly\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a 
+ change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-com
+ p-app/#wakehurst-u9-wizards
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u9-wizards
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-d14c157ff3258d71e-wakehurst-u9-wizards@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T091500
 DTEND;TZID=Australia/Sydney:20260531T101500
 SUMMARY:Wakehurst Wizards 9 vs Dee Why Black 9 | RND 5

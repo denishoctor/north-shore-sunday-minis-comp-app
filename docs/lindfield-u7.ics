@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-8a9f6229e0ca6d830-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Lindfield 7 vs Chatswood Green 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-9d11daecd3b5595cf-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Lindfield 7 vs Wakehurst Wasps 7 | RND 2
@@ -63,10 +63,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u7
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-ce2eb83d9065fbe98-lindfield-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260516T100000
+DTEND;TZID=Australia/Sydney:20260516T110000
+SUMMARY:Lindfield 7 vs Norths Pirates White 7 | RND 3
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 7 vs Norths Pirates White 7\n📍 Tantallon Oval
+  TT2\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 10:00am AEST\n🏆
+  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#lindfield-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u7
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-745200473cbf438fa-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:Lindfield 7 vs Norths Pirates White 7 | RND 3
@@ -81,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u7
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-ee796ed5caf69445c-lindfield-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260523T100000
+DTEND;TZID=Australia/Sydney:20260523T110000
+SUMMARY:Lindfield 7 vs Norths Pirates Black 7 | RND 4
+LOCATION:Lofberg Oval TT2\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 7 vs Norths Pirates Black 7\n📍 Lofberg Oval T
+ T2\, West Pymble\n📅 Round 4 · Sat\, 23 May · 10:00am AEST\n🏆 SJRU 
+ Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calen
+ dar updates automatically\n(Apple Calendar: ~every hour · Google Calendar
+ : up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north
+ -shore-sunday-minis-comp-app/#lindfield-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u7
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-058de658f07b59bd9-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T094000
 DTEND;TZID=Australia/Sydney:20260524T104000
 SUMMARY:Lindfield 7 vs Norths Pirates Black 7 | RND 4
@@ -99,10 +135,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u7
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-975ebf094cf394d5d-lindfield-u7@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260530T100000
+DTEND;TZID=Australia/Sydney:20260530T110000
+SUMMARY:Lindfield 7 vs Hornsby 7 | RND 5
+LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 7 vs Hornsby 7\n📍 Wakehurst Rugby Park TT3\, 
+ Belrose\n📅 Round 5 · Sat\, 30 May · 10:00am AEST\n🏆 SJRU Minis U7 
+ Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar updat
+ es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
+ 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
+ nday-minis-comp-app/#lindfield-u7
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ eld-u7
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-0d8ea7bdc437bae24-lindfield-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T100000
 DTEND;TZID=Australia/Sydney:20260531T110000
 SUMMARY:Lindfield 7 vs Hornsby 7 | RND 5

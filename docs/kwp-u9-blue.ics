@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-6ab8f258881491478-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260503T101000
 DTEND;TZID=Australia/Sydney:20260503T111000
 SUMMARY:Killara-West Pymble Blue 9 vs St Ives 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-754811ff00ba74660-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Killara-West Pymble Blue 9 vs Forest Green 9 | RND 2
@@ -63,10 +63,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
  -blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-71e00f681baa0073f-kwp-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260516T101000
+DTEND;TZID=Australia/Sydney:20260516T111000
+SUMMARY:Killara-West Pymble Blue 9 vs Norths Pirates Black 9 | RND 3
+LOCATION:Mark Taylor Oval M1\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 9 vs Norths Pirates Black 9\n📍
+  Mark Taylor Oval M1\, Waitara\n📅 Round 3 · Sat\, 16 May · 10:10am AE
+ ST\n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#kwp-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
+ -blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-ac096af30b9b338cf-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T091500
 DTEND;TZID=Australia/Sydney:20260517T101500
 SUMMARY:Killara-West Pymble Blue 9 vs Norths Pirates Black 9 | RND 3
@@ -83,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5b231762199a192d9-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260517T094000
 DTEND;TZID=Australia/Sydney:20260517T104000
 SUMMARY:Killara-West Pymble Blue 9 vs Chatswood Green 9 | RND 3
@@ -99,10 +117,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
  -blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-df05f4691559c1a0d-kwp-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260523T101000
+DTEND;TZID=Australia/Sydney:20260523T111000
+SUMMARY:Killara-West Pymble Blue 9 vs Dee Why Black 9 | RND 4
+LOCATION:Tantallon Oval M2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 9 vs Dee Why Black 9\n📍 Tantal
+ lon Oval M2\, Lane Cove North\n📅 Round 4 · Sat\, 23 May · 10:10am AES
+ T\n🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This c
+ alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
+ ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
+ orth-shore-sunday-minis-comp-app/#kwp-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
+ -blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-e010d0efe8fb2580c-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260524T085000
 DTEND;TZID=Australia/Sydney:20260524T095000
 SUMMARY:Killara-West Pymble Blue 9 vs Dee Why Black 9 | RND 4
@@ -117,10 +153,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
  -blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-bbb5fc32e80408e88-kwp-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
+DTSTART;TZID=Australia/Sydney:20260530T103000
+DTEND;TZID=Australia/Sydney:20260530T113000
+SUMMARY:Killara-West Pymble Blue 9 vs Dee Why White 9 | RND 5
+LOCATION:Balmoral Oval M1\, Sydney NSW
+DESCRIPTION:🏉 Killara-West Pymble Blue 9 vs Dee Why White 9\n📍 Balmor
+ al Oval M1\n📅 Round 5 · Sat\, 30 May · 10:30am AEST\n🏆 SJRU Minis 
+ U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates aut
+ omatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs 
+ after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-m
+ inis-comp-app/#kwp-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#kwp-u9
+ -blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-987e26a26521d1dd4-kwp-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T132930Z
-LAST-MODIFIED:20260512T132930Z
+DTSTAMP:20260512T155905Z
+LAST-MODIFIED:20260512T155905Z
 DTSTART;TZID=Australia/Sydney:20260531T100500
 DTEND;TZID=Australia/Sydney:20260531T110500
 SUMMARY:Killara-West Pymble Blue 9 vs Dee Why White 9 | RND 5
