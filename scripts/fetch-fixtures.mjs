@@ -22,6 +22,7 @@ import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
   FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES,
 } from './config.mjs';
+import { ROUNDS } from './rounds.mjs';
 import { parseVenue, slugifyTeam, clubFromCrest } from '../docs/render.mjs';
 
 const ROOT      = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -412,6 +413,51 @@ function stableHost() {
   try { return new URL(SITE_URL).host; } catch { return 'nsm-sunday.local'; }
 }
 
+// ── rounds summary ───────────────────────────────────────────────────────────
+//
+// Cross-references the static SJRU Sunday Minis schedule (scripts/rounds.mjs)
+// with the matches we just fetched, producing a per-round summary that the
+// browser uses to render "what's on this weekend" even when Rugby Xplorer
+// hasn't published a particular round yet.
+//
+// For each round we report:
+//   - hosts.u6u7 / hosts.u8u9  : the scheduled venue (or the venue we
+//                                observed in the live data if it overrides)
+//   - matches.u6u7 / matches.u8u9 : how many matches our whitelisted clubs
+//                                   have in this round per age band
+//   - status: 'scheduled' (no matches yet, draft drawn)
+//           | 'published'  (Rugby Xplorer has published the matches)
+//           | 'bye'        (no rugby this weekend per the schedule)
+//
+// Matches the live data joins on by Sunday-date — Sunday Minis matches all
+// kick off the same weekend, so date is a sufficient join key.
+
+function buildRoundsSummary(matches) {
+  const matchesByDate = new Map();
+  for (const m of matches) {
+    const sydneyDate = new Date(m.dateTime).toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+    if (!matchesByDate.has(sydneyDate)) matchesByDate.set(sydneyDate, []);
+    matchesByDate.get(sydneyDate).push(m);
+  }
+
+  return ROUNDS.map(r => {
+    if (r.bye || !r.date) {
+      return { round: r.round, date: r.date, status: 'bye', hosts: { u6u7: null, u8u9: null }, matches: { u6u7: 0, u8u9: 0 } };
+    }
+    const dayMatches = matchesByDate.get(r.date) || [];
+    const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
+    const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
+    return {
+      round: r.round,
+      date: r.date,
+      status: dayMatches.length > 0 ? 'published' : 'scheduled',
+      finalRound: !!r.finalRound,
+      hosts: { u6u7: r.u6u7, u8u9: r.u8u9 },
+      matches: { u6u7: u67.length, u8u9: u89.length },
+    };
+  });
+}
+
 // ── main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -459,6 +505,8 @@ async function main() {
     for (const v of [...unknownVenues].sort()) console.warn(`     ${v}`);
   }
 
+  const rounds = buildRoundsSummary(combined);
+
   const output = {
     updated: new Date().toISOString(),
     season: SEASON,
@@ -467,6 +515,7 @@ async function main() {
     clubs: Object.fromEntries(Object.entries(CLUBS).map(([k, v]) => [k, { id: v.id, name: v.name, shortPrefix: v.shortPrefix }])),
     teams: TEAM_META,
     competitions: Object.values(byComp),
+    rounds,
     matches: combined,
   };
 
@@ -513,6 +562,7 @@ async function main() {
     `  TEAM_SLUGS: ${JSON.stringify(TEAM_SLUGS, null, 2).replace(/\n/g, '\n  ')},`,
     `  TEAM_META: ${JSON.stringify(TEAM_META, null, 2).replace(/\n/g, '\n  ')},`,
     `  VENUES: ${JSON.stringify(VENUES, null, 2).replace(/\n/g, '\n  ')},`,
+    `  ROUNDS: ${JSON.stringify(rounds, null, 2).replace(/\n/g, '\n  ')},`,
     '};',
     '',
   ].join('\n');
@@ -529,6 +579,16 @@ async function main() {
   for (const [key, club] of Object.entries(CLUBS)) {
     const teams = Object.values(TEAM_META).filter(t => t.clubKey === key);
     console.log(`  ${club.name.padEnd(28)} ${teams.length} team(s)`);
+  }
+
+  console.log('\nRound roll-up:');
+  for (const r of rounds) {
+    if (r.status === 'bye') {
+      console.log(`  R${String(r.round).padStart(2)}  ${'(bye)'.padEnd(13)}  no rugby`);
+      continue;
+    }
+    const tot = r.matches.u6u7 + r.matches.u8u9;
+    console.log(`  R${String(r.round).padStart(2)}  ${r.date}  ${r.status.padEnd(10)}  U6/U7→${r.hosts.u6u7 || '?'}  ·  U8/U9→${r.hosts.u8u9 || '?'}  (${tot} match${tot === 1 ? '' : 'es'})`);
   }
 }
 

@@ -622,4 +622,19 @@ window.NSM_SUNDAY_CONFIG = {
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wakehurst+Rugby+Park+Forest+Way+%26+Waldon+Rd%2C+Belrose+NSW+2085%2C+Australia"
     }
   },
+  ROUNDS: [
+    { "round": 1,  "date": "2026-05-03", "status": "scheduled", "hosts": { "u6u7": "Tryon Oval",           "u8u9": "Tryon Oval"           }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 2,  "date": "2026-05-10", "status": "scheduled", "hosts": { "u6u7": "Tunks Park",           "u8u9": "Tunks Park"           }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 3,  "date": "2026-05-17", "status": "scheduled", "hosts": { "u6u7": "Wakehurst Rugby Park", "u8u9": "Melwood Oval"         }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 4,  "date": "2026-05-24", "status": "scheduled", "hosts": { "u6u7": "Beauchamp Park",       "u8u9": "Bantry Bay Oval"      }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 5,  "date": "2026-05-31", "status": "scheduled", "hosts": { "u6u7": "Tantallon Oval",       "u8u9": "Lofberg Oval"         }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 6,  "date": "2026-06-14", "status": "scheduled", "hosts": { "u6u7": "Hassall Park",         "u8u9": "James Morgan Reserve" }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 7,  "date": null,         "status": "bye",       "hosts": { "u6u7": null,                   "u8u9": null                   }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 8,  "date": "2026-07-26", "status": "scheduled", "hosts": { "u6u7": "Tunks Park",           "u8u9": "Beauchamp Park"       }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 9,  "date": "2026-08-02", "status": "scheduled", "hosts": { "u6u7": "Mark Taylor Oval",     "u8u9": "Wakehurst Rugby Park" }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 10, "date": "2026-08-09", "status": "scheduled", "hosts": { "u6u7": "Melwood Oval",         "u8u9": "Tantallon Oval"       }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 11, "date": "2026-08-16", "status": "scheduled", "hosts": { "u6u7": "Wakehurst Rugby Park", "u8u9": "Mark Taylor Oval"     }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 12, "date": "2026-08-23", "status": "scheduled", "hosts": { "u6u7": "Lofberg Oval",         "u8u9": "Beauchamp Park"       }, "matches": { "u6u7": 0, "u8u9": 0 } },
+    { "round": 13, "date": "2026-08-30", "status": "scheduled", "finalRound": true, "hosts": { "u6u7": "Hassall Park", "u8u9": "Hassall Park" }, "matches": { "u6u7": 0, "u8u9": 0 } }
+  ],
 };
