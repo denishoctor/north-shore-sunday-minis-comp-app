@@ -432,6 +432,25 @@ function stableHost() {
 // Matches the live data joins on by Sunday-date — Sunday Minis matches all
 // kick off the same weekend, so date is a sufficient join key.
 
+// Returns the venue most matches in the given list cluster at, stripping
+// pitch suffix via parseVenue so "Tryon Oval TT1" and "Tryon Oval" count
+// as the same ground. Null if the list is empty.
+function dominantVenue(matches) {
+  if (!matches.length) return null;
+  const counts = new Map();
+  for (const m of matches) {
+    const { base } = parseVenue(m.venue || '', VENUES);
+    const key = base || (m.venue || '').trim();
+    if (!key) continue;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  let best = null, bestCount = 0;
+  for (const [v, c] of counts) {
+    if (c > bestCount) { best = v; bestCount = c; }
+  }
+  return best;
+}
+
 function buildRoundsSummary(matches) {
   const matchesByDate = new Map();
   for (const m of matches) {
@@ -440,33 +459,51 @@ function buildRoundsSummary(matches) {
     matchesByDate.get(sydneyDate).push(m);
   }
 
+  // Resolve a host venue for a (round, ageBand) pair. Live data from Xplorer
+  // wins — the static schedule in rounds.mjs was based on the early-season
+  // draft and CAN move (R5 2026 was the example: Tantallon/Lofberg in the
+  // draft, different venue once Xplorer published). Falls back to the static
+  // host only when the round has no live matches yet for that band.
+  const resolveHost = (staticHost, dayMatches, ageBand) => {
+    const ageMatches = dayMatches.filter(m => {
+      if (ageBand === 'u6u7') return m.age === 'U6' || m.age === 'U7';
+      return m.age === 'U8' || m.age === 'U9';
+    });
+    const fromLive = dominantVenue(ageMatches);
+    return fromLive || staticHost || null;
+  };
+
   return ROUNDS.map(r => {
     if (r.bye) {
       return { round: r.round, date: r.date, status: 'bye', hosts: { u6u7: null, u8u9: null }, matches: { u6u7: 0, u8u9: 0 } };
     }
+    const dayMatches = r.date ? (matchesByDate.get(r.date) || []) : [];
+    const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
+    const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
+
     if (r.gala) {
-      const dayMatches = r.date ? (matchesByDate.get(r.date) || []) : [];
-      const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
-      const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
       return {
         round: r.round,
         date: r.date,
         status: 'gala',
         galaTitle: r.galaTitle || 'Gala Day',
         galaDescription: r.galaDescription || null,
-        hosts: { u6u7: r.u6u7 || null, u8u9: r.u8u9 || null },
+        hosts: {
+          u6u7: resolveHost(r.u6u7, dayMatches, 'u6u7'),
+          u8u9: resolveHost(r.u8u9, dayMatches, 'u8u9'),
+        },
         matches: { u6u7: u67.length, u8u9: u89.length },
       };
     }
-    const dayMatches = r.date ? (matchesByDate.get(r.date) || []) : [];
-    const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
-    const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
     return {
       round: r.round,
       date: r.date,
       status: dayMatches.length > 0 ? 'published' : 'scheduled',
       finalRound: !!r.finalRound,
-      hosts: { u6u7: r.u6u7, u8u9: r.u8u9 },
+      hosts: {
+        u6u7: resolveHost(r.u6u7, dayMatches, 'u6u7'),
+        u8u9: resolveHost(r.u8u9, dayMatches, 'u8u9'),
+      },
       matches: { u6u7: u67.length, u8u9: u89.length },
     };
   });
