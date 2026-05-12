@@ -11,11 +11,17 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Need full history so a rebase against fresh origin/main works when
+          # another commit (manual or back-to-back cron) landed while we were
+          # fetching.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -29,7 +35,6 @@ jobs:
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_NSM_SUNDAY }}
         run: |
-          # changes.txt may exist but be empty (no changes) — only send when non-empty.
           if [ -s changes.txt ] && [ -n "$NTFY_TOPIC" ]; then
             curl -s \
               -H "Title: NSM Sunday Fixture Update" \
@@ -41,16 +46,40 @@ jobs:
             echo "✓ Notification sent to ntfy.sh"
           fi
 
+      # Lineups are nice-to-have: a 404 / shape change at Rugby Xplorer should
+      # not block the fixture refresh from committing. The script has its own
+      # circuit breaker (bails after N consecutive failures with zero successes)
+      # but we also cap wall-clock here and continue-on-error so a hang doesn't
+      # eat the whole hourly slot.
       - name: Fetch match lineups
+        timeout-minutes: 8
+        continue-on-error: true
         run: node scripts/fetch-lineups.mjs
 
-      - name: Commit updated fixtures
+      - name: Commit + push updated fixtures
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/fixtures.json docs/config.js docs/*.ics docs/lineups.json
-          git diff --cached --quiet || git commit -m "chore: refresh fixtures $(date -u +%Y-%m-%d)"
-          git push
+          if git diff --cached --quiet; then
+            echo "✓ No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: refresh fixtures $(date -u +%Y-%m-%d)"
+          # Cron runs and manual PR merges can race. Rebase fresh, then retry
+          # the push a couple of times on rejection before giving up.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME:-main}"
+            git rebase "origin/${GITHUB_REF_NAME:-main}" || { git rebase --abort; exit 1; }
+            if git push origin "HEAD:${GITHUB_REF_NAME:-main}"; then
+              echo "✓ Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected; backing off before retry $attempt"
+            sleep $((attempt * 5))
+          done
+          echo "✗ Push failed after 3 attempts"
+          exit 1
 
       - name: Notify via ntfy.sh on failure
         if: failure() && env.NTFY_TOPIC != ''

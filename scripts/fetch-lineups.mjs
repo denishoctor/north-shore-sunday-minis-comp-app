@@ -32,13 +32,26 @@ const FIXTURES_PATH = join(ROOT, 'docs', 'fixtures.json');
 const OUT_PATH      = join(ROOT, 'docs', 'lineups.json');
 
 const LOCK_MS   = 15 * 24 * 60 * 60 * 1000;
+const FETCH_TIMEOUT_MS = 8000;            // per-request hard ceiling
+const CIRCUIT_BREAKER  = 6;               // consecutive failures → abort the loop
+const SAVE_EVERY       = 25;              // checkpoint lineups.json every N matches
+const URL_PATTERNS = [
+  // Match-centre is contextual on Rugby Xplorer; match data is global, so any
+  // valid entity slug renders the same sheet. /sjru-/ first since these are SJRU
+  // matches; /lcjru-/ as fallback (known-good upstream pattern); finally no
+  // prefix in case the route is moving toward a clean URL.
+  (id) => `https://xplorer.rugby/sjru-/match-centre/${id}?tab=Player-Lineup`,
+  (id) => `https://xplorer.rugby/lcjru-/match-centre/${id}?tab=Player-Lineup`,
+  (id) => `https://xplorer.rugby/match-centre/${id}?tab=Player-Lineup`,
+];
+
 const forceAll  = process.argv.includes('--force-all');
 const matchArg  = (() => { const i = process.argv.indexOf('--match'); return i !== -1 ? process.argv[i + 1] : null; })();
 
 // ── fetch ─────────────────────────────────────────────────────────────────────
 
-async function withRetry(fn, attempts = 3) {
-  let delay = 2000;
+async function withRetry(fn, attempts = 2) {
+  let delay = 1500;
   for (let i = 0; i < attempts; i++) {
     try { return await fn(); } catch (err) {
       if (i === attempts - 1) throw err;
@@ -96,25 +109,57 @@ export function parseLineupData(pageProps) {
   return { home, away, homeCoaches, awayCoaches, officials };
 }
 
+// First call probes URL_PATTERNS to find the one Rugby Xplorer accepts for this
+// run; subsequent calls reuse the cached index. Lets us cope with the
+// /sjru-/ vs /lcjru-/ slug uncertainty without doing the probe per match.
+let workingPatternIdx = 0;
+
+async function fetchLineupFromPattern(matchId, patternIdx) {
+  const url = URL_PATTERNS[patternIdx](matchId);
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, {
+      signal: ac.signal,
+      headers: {
+        'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'accept-language': 'en-AU,en;q=0.9',
+        'origin':          'https://xplorer.rugby',
+        'referer':         'https://xplorer.rugby/',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const html = await res.text();
+    const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([^<]+)<\/script>/);
+    if (!m) throw new Error('No __NEXT_DATA__ in response');
+    const pageProps = JSON.parse(m[1])?.props?.pageProps ?? {};
+    return parseLineupData(pageProps);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchLineup(matchId) {
-  const url = `https://xplorer.rugby/sjru-/match-centre/${matchId}?tab=Player-Lineup`;
-  const res = await fetch(url, {
-    headers: {
-      'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-      'accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'accept-language': 'en-AU,en;q=0.9',
-      'origin':          'https://xplorer.rugby',
-      'referer':         'https://xplorer.rugby/',
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-
-  const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([^<]+)<\/script>/);
-  if (!m) throw new Error('No __NEXT_DATA__ in response');
-
-  const pageProps = JSON.parse(m[1])?.props?.pageProps ?? {};
-  return parseLineupData(pageProps);
+  // Try cached working pattern first (cheap when it works).
+  try {
+    return await fetchLineupFromPattern(matchId, workingPatternIdx);
+  } catch (err) {
+    // On miss, sweep remaining patterns once; the first that works becomes the
+    // new cached index. AbortError still bubbles up — no point sweeping if we
+    // timed out the network.
+    if (err.name === 'AbortError') throw err;
+    for (let i = 0; i < URL_PATTERNS.length; i++) {
+      if (i === workingPatternIdx) continue;
+      try {
+        const result = await fetchLineupFromPattern(matchId, i);
+        workingPatternIdx = i;
+        console.log(`  ↪ switched URL pattern to index ${i}`);
+        return result;
+      } catch { /* keep trying */ }
+    }
+    throw err;
+  }
 }
 
 // ── smoke test (--match <id>) ─────────────────────────────────────────────────
@@ -162,9 +207,12 @@ async function main() {
   console.log(`Fetching lineups: ${toFetch.length} matches (${locked} locked historic, forceAll=${forceAll})…`);
 
   const lineups = { ...existing };
-  let fetched = 0, errors = 0;
+  let fetched = 0, errors = 0, consecutiveFails = 0;
+  let circuitTripped = false;
+  const saveCheckpoint = () => writeFileSync(OUT_PATH, JSON.stringify(lineups, null, 2));
 
-  for (const match of toFetch) {
+  for (let i = 0; i < toFetch.length; i++) {
+    const match = toFetch[i];
     try {
       const { home, away, homeCoaches, awayCoaches, officials } = await withRetry(() => fetchLineup(match.id));
       lineups[match.id] = {
@@ -178,17 +226,29 @@ async function main() {
       };
       console.log(`  ✓ ${match.id}: home=${home.length} away=${away.length}`);
       fetched++;
+      consecutiveFails = 0;
     } catch (err) {
       console.warn(`  ✗ ${match.id}: ${err.message}`);
       if (!lineups[match.id]) {
         lineups[match.id] = { gameDateTime: match.dateTime, fetchedAt: null, home: [], away: [] };
       }
       errors++;
+      consecutiveFails++;
+      if (consecutiveFails >= CIRCUIT_BREAKER && fetched === 0) {
+        // No lineup ever published successfully + N in a row failing → the
+        // URL pattern is wrong or Rugby Xplorer is gating us. Bail rather
+        // than burn another half-hour trying the remaining matches.
+        console.error(`\n⚠ Circuit breaker tripped after ${consecutiveFails} consecutive failures with zero successes.`);
+        console.error('   Skipping the remaining matches and writing what we have.');
+        circuitTripped = true;
+        break;
+      }
     }
+    if ((i + 1) % SAVE_EVERY === 0) saveCheckpoint();
   }
 
-  writeFileSync(OUT_PATH, JSON.stringify(lineups, null, 2));
-  console.log(`\n✓ Written ${Object.keys(lineups).length} entries → docs/lineups.json (fetched ${fetched}, errors ${errors})`);
+  saveCheckpoint();
+  console.log(`\n✓ Written ${Object.keys(lineups).length} entries → docs/lineups.json (fetched ${fetched}, errors ${errors}${circuitTripped ? ', circuit-broken' : ''})`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
