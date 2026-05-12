@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; manifest-src 'self'; worker-src 'self'">
+<title>Venues — North Shore Minis Sunday Rugby 2026</title>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0a2059">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="NSM Sunday">
+<meta name="format-detection" content="telephone=no">
+<style>
+  :root {
+    --navy:       #0a2059;
+    --navy-dark:  #06163e;
+    --gold:       #d4a93c;
+    --gold-soft:  #f1d782;
+    --cream:      #f4ecd1;
+    --cream-edge: #d8c891;
+    --ink:        #1A1A1A;
+    --ink-on-gold:#2A1F00;
+    --muted:      #6B6B6B;
+    --rule:       #E5E5E5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    margin: 0; background: #FAF7EE; color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .page { max-width: 980px; margin: 0 auto; background: #fff; min-height: 100vh; }
+
+  /* HEADER — mirror index.html for visual continuity. */
+  .header {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 20px 18px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: #fff;
+    border-bottom: 3px solid var(--gold);
+  }
+  .crest {
+    width: 64px; height: 64px;
+    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/82% no-repeat;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,.35);
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .title-block { flex: 1 1 auto; min-width: 0; }
+  .eyebrow {
+    font-size: 11px; font-weight: 800; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 3px;
+  }
+  h1 { margin: 0; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+  .header-back {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--navy-dark); background: var(--gold);
+    border: 1.5px solid var(--gold-soft); text-decoration: none;
+    padding: 6px 11px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .header-back:hover { filter: brightness(1.06); }
+
+  .intro {
+    padding: 18px 24px; font-size: 14px; color: var(--muted);
+    background: #FFFDF5; border-bottom: 1px solid var(--cream-edge); line-height: 1.5;
+  }
+
+  .venue-card {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .venue-card:last-of-type { border-bottom: none; }
+  .venue-card-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px;
+    margin-bottom: 10px;
+  }
+  .venue-card-head h2 {
+    margin: 0; font-size: 18px; font-weight: 800; color: var(--navy);
+    letter-spacing: -.2px;
+  }
+  .venue-card-head .suburb { font-size: 13px; color: var(--muted); }
+  .venue-card-head .maps-link {
+    font-size: 12px; font-weight: 700; color: var(--navy);
+    text-decoration: none; margin-left: auto;
+  }
+  .venue-card-head .maps-link:hover { text-decoration: underline; }
+  .venue-card-hosting {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 8px; margin-bottom: 4px;
+  }
+  .hosting-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 700; color: var(--navy);
+    background: var(--cream); border: 1px solid var(--cream-edge);
+    padding: 3px 9px; border-radius: 999px;
+  }
+  .hosting-badge .ages { font-size: 10px; font-weight: 800; color: var(--ink-on-gold); background: var(--gold); padding: 1px 6px; border-radius: 999px; }
+  .venue-card-stub {
+    font-size: 12px; color: var(--muted); font-style: italic;
+  }
+
+  /* venue-panel styles mirrored from index.html so renderVenueDetails output looks the same. */
+  .venue-map-link { display: block; line-height: 0; }
+  .venue-map {
+    width: 100%; max-height: 70vh; object-fit: contain;
+    background: #000; border-radius: 4px;
+    border: 1px solid var(--cream-edge);
+  }
+  .venue-map-caption {
+    font-size: 11px; color: var(--muted); padding: 6px 2px 12px;
+    letter-spacing: .3px;
+  }
+  .venue-meta {
+    margin: 0 0 14px; font-size: 13px; line-height: 1.45; color: var(--ink);
+  }
+  .venue-meta-row { margin: 0 0 6px; }
+  .venue-meta-row:last-child { margin-bottom: 0; }
+  .venue-meta-label {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--muted); margin-right: 6px;
+  }
+
+  .footer-note {
+    border-top: 1px solid var(--rule);
+    padding: 20px 28px 32px;
+    font-size: 12px; color: var(--muted); text-align: center;
+    line-height: 1.7;
+  }
+  .footer-note a { color: var(--navy); text-decoration: none; }
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="crest" role="img" aria-label="North Shore Minis Sunday Rugby logo"></div>
+    <div class="title-block">
+      <div class="eyebrow">North Shore Minis · Sunday</div>
+      <h1>Venues — 2026</h1>
+    </div>
+    <a class="header-back" href="index.html">← Fixtures</a>
+  </div>
+
+  <div class="intro">
+    Every ground in the SJRU Sunday Minis 2026 draw. Tap a name to open it in Google Maps; the rounds-hosted chips show which weekend each ground is on the schedule for U6/U7 or U8/U9.
+  </div>
+
+  <div id="venues-list"></div>
+
+  <div class="footer-note">
+    North Shore Minis Sunday Rugby · 2026 · Beta — under active development. <br>
+    Got something to add (parking, coffee, pitch map)? Edit <code>scripts/config.mjs</code> and open a PR. ·
+    <a href="index.html">Fixtures</a>
+  </div>
+</div>
+
+<script src="./config.js"></script>
+<script type="module">
+import { esc, renderVenueDetails, venueSlug } from './render.mjs';
+
+const VENUE_ASSET_PREFIX = '';
+const { VENUES, ROUNDS } = window.NSM_SUNDAY_CONFIG;
+
+// Walk ROUNDS to build a venue → hosting-weeks map: which Sundays each venue
+// hosts U6/U7 and/or U8/U9 across the season. Sorted by round number.
+function hostingByVenue() {
+  const map = new Map();
+  for (const r of (ROUNDS || [])) {
+    if (r.status === 'bye') continue;
+    for (const [band, label] of [['u6u7', 'U6/U7'], ['u8u9', 'U8/U9']]) {
+      const v = r.hosts?.[band];
+      if (!v) continue;
+      if (!map.has(v)) map.set(v, []);
+      map.get(v).push({ round: r.round, ages: label, date: r.date, finalRound: r.finalRound });
+    }
+  }
+  return map;
+}
+
+function fmtRoundDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso + 'T08:00:00+10:00');
+  return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', timeZone: 'Australia/Sydney' });
+}
+
+function renderCard(name, v, hosting) {
+  const slug = venueSlug(name);
+  const details = renderVenueDetails(name, VENUES, { assetPrefix: VENUE_ASSET_PREFIX });
+  const stub = details ? '' : '<div class="venue-card-stub">Local intel for this ground hasn\'t been shared yet — got something to add? Drop us a note.</div>';
+  const hostingChips = (hosting || []).map(h =>
+    `<span class="hosting-badge"><span class="ages">${esc(h.ages)}</span> R${esc(h.round)}${h.finalRound ? ' · Final' : ''} · ${esc(fmtRoundDate(h.date))}</span>`
+  ).join('');
+  return `
+    <section class="venue-card" id="venue-${esc(slug)}">
+      <div class="venue-card-head">
+        <h2>${esc(name)}</h2>
+        ${v.suburb ? `<span class="suburb">${esc(v.suburb)}</span>` : ''}
+        <a class="maps-link" href="${esc(v.mapsUrl)}" target="_blank" rel="noopener">View on Google Maps ↗</a>
+      </div>
+      ${hostingChips ? `<div class="venue-card-hosting">${hostingChips}</div>` : ''}
+      ${details}
+      ${stub}
+    </section>`;
+}
+
+const hosting = hostingByVenue();
+
+// Two passes: venues that host this season (sorted by their earliest hosting
+// round), then the rest alphabetically. Lets parents focus on grounds they'll
+// actually visit while still surfacing alternates that come up later.
+const hostingNames = [...hosting.keys()].sort((a, b) => {
+  const ar = Math.min(...hosting.get(a).map(h => h.round));
+  const br = Math.min(...hosting.get(b).map(h => h.round));
+  return ar - br;
+});
+const otherNames = Object.keys(VENUES)
+  .filter(n => !hosting.has(n))
+  .sort((a, b) => a.localeCompare(b));
+
+const list = document.getElementById('venues-list');
+list.innerHTML = [
+  ...hostingNames.map(n => renderCard(n, VENUES[n], hosting.get(n))),
+  ...(otherNames.length ? [`<div class="intro" style="background:#FBFBFB; border-bottom:none; padding-top:24px;">Other grounds in the venue book — not on the 2026 Sunday Minis host roster but kept for reference.</div>`] : []),
+  ...otherNames.map(n => renderCard(n, VENUES[n], null)),
+].join('');
+
+// Deep-link scroll: the browser fires hashchange before our script runs; nudge it.
+if (location.hash) {
+  const target = document.querySelector(location.hash);
+  if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+}
+
+if ('serviceWorker' in navigator
+    && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => { /* best-effort */ });
+  });
+}
+</script>
+</body>
+</html>

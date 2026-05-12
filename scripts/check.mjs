@@ -17,6 +17,7 @@ const baseRequired = [
   'config.js',
   'render.mjs',
   'index.html',
+  'venues.html',
   'manifest.webmanifest',
   'sw.js',
   'assets/icon-192.png',

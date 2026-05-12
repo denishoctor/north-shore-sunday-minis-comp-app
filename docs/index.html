@@ -151,9 +151,9 @@
     font-family: inherit; font-size: 12px; font-weight: 700;
     color: var(--navy); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 8px 10px; border-radius: 10px;
-    text-align: left; line-height: 1.25;
-    display: flex; flex-direction: column; gap: 2px;
+    padding: 5px 8px; border-radius: 8px;
+    text-align: left; line-height: 1.2;
+    display: flex; flex-direction: column; gap: 1px;
     min-width: 0;
     transition: border-color .12s, box-shadow .12s;
   }
@@ -292,6 +292,36 @@
     background: var(--cream); padding: 2px 8px; border-radius: 999px;
     white-space: nowrap;
   }
+
+  /* home-content sits above the toolbar when no team is selected. Hidden once
+     the user picks a team so the match list claims the viewport. */
+  #home-content[hidden] { display: none; }
+  #home-content .home-hero { border-bottom: none; }
+  #home-content .home-rounds { padding-bottom: 6px; }
+  #home-content .home-rounds-all {
+    display: none; flex-direction: column; gap: 12px;
+    padding: 0 18px 6px;
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(18px, env(safe-area-inset-right));
+  }
+  #home-content .home-rounds-all.expanded { display: flex; }
+  .home-rounds-toggle {
+    display: flex; justify-content: center;
+    padding: 4px 18px 18px;
+    border-bottom: 1px solid var(--cream-edge);
+  }
+  .show-all-btn {
+    appearance: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--navy); background: #fff;
+    border: 1.5px solid var(--cream-edge);
+    padding: 6px 14px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+    transition: border-color .12s, background .12s;
+  }
+  .show-all-btn:hover { border-color: var(--navy); background: var(--cream); }
+  .show-all-chevron { font-size: 10px; opacity: .7; }
 
   /* Placeholder card for a scheduled-but-not-yet-published round. */
   .match-placeholder { border-left-color: var(--cream-edge); background: #FCFCFC; }
@@ -461,6 +491,10 @@
     </button>
   </div>
 
+  <!-- "What's on" round cards — only rendered when no team is selected. Hidden
+       once the user picks a team so the toolbar + match list claim the viewport. -->
+  <div id="home-content" hidden></div>
+
   <div class="toolbar">
     <!-- Club filter row — narrows the team-token grid to one club's teams. -->
     <div class="club-row" id="club-row" role="group" aria-label="Filter by club"></div>
@@ -513,7 +547,9 @@
   <div class="footer-note">
     <span class="footer-brand" id="footer-brand">North Shore Minis Sunday Rugby · 2026 season</span>
     <span>
-      <a href="https://xplorer.rugby/sjru-/fixtures-results?team=All&amp;comp=All&amp;season=2026&amp;tab=Fixtures" target="_blank" rel="noopener">Live draw on Rugby Xplorer ↗</a>
+      <a href="venues.html">Venues</a>
+      <span class="footer-sep">·</span>
+      <a href="https://xplorer.rugby/lcjru-/fixtures-results?team=All&amp;comp=All&amp;season=2026&amp;tab=Fixtures" target="_blank" rel="noopener">Live draw on Rugby Xplorer ↗</a>
       <span class="footer-sep">·</span>
       <a href="mailto:?subject=NSM%20Sunday%20Rugby%20App%20Feedback">Send feedback</a>
     </span>
@@ -717,9 +753,18 @@ function readHash() {
 
 // ── render: match list ───────────────────────────────────────────────────────
 function render() {
-  const cal = document.getElementById('calendar');
-  if (!fixturesData) { cal.innerHTML = ''; return; }
-  if (!currentTeam) { cal.innerHTML = renderHome(); return; }
+  const cal  = document.getElementById('calendar');
+  const home = document.getElementById('home-content');
+  if (!fixturesData) { cal.innerHTML = ''; home.setAttribute('hidden', ''); return; }
+  if (!currentTeam) {
+    home.innerHTML = renderHome();
+    home.removeAttribute('hidden');
+    cal.innerHTML = '';
+    wireHomeInteractions();
+    return;
+  }
+  home.setAttribute('hidden', '');
+  home.innerHTML = '';
 
   const matches = fixturesData.matches.filter(m =>
     m.home.id === currentTeam || m.away.id === currentTeam
@@ -909,15 +954,19 @@ function renderRoundPlaceholder(round, ageBand) {
 
 // "What's on" home view — keyed off the static schedule so it works even when
 // the live feed hasn't published the next round yet. Shows last / next / after
-// columns with the hosting venue for each age band.
+// columns with the hosting venue for each age band. The 'show all rounds'
+// toggle below expands to every playing round in the season.
+const SHOW_ALL_KEY = `${STORAGE_PREFIX}-rounds-show-all`;
+
 function renderHome() {
   const todaySyd = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
-  const all = (ROUNDS || []).filter(r => r.date && r.status !== 'bye').slice().sort((a, b) => a.date.localeCompare(b.date));
-  const upcomingIdx = all.findIndex(r => r.date >= todaySyd);
-  const isToday = upcomingIdx >= 0 && all[upcomingIdx].date === todaySyd;
-  const nextR   = upcomingIdx >= 0 ? all[upcomingIdx] : null;
-  const afterR  = upcomingIdx >= 0 ? all[upcomingIdx + 1] : null;
-  const lastR   = upcomingIdx > 0 ? all[upcomingIdx - 1] : (upcomingIdx === -1 ? all[all.length - 1] : null);
+  const playing = (ROUNDS || []).filter(r => r.date && r.status !== 'bye').slice().sort((a, b) => a.date.localeCompare(b.date));
+  const upcomingIdx = playing.findIndex(r => r.date >= todaySyd);
+  const isToday  = upcomingIdx >= 0 && playing[upcomingIdx].date === todaySyd;
+  const nextR    = upcomingIdx >= 0 ? playing[upcomingIdx] : null;
+  const afterR   = upcomingIdx >= 0 ? playing[upcomingIdx + 1] : null;
+  const lastR    = upcomingIdx > 0 ? playing[upcomingIdx - 1] : (upcomingIdx === -1 ? playing[playing.length - 1] : null);
+  const playedCount = playing.filter(r => r.matches?.u6u7 + r.matches?.u8u9 > 0 && r.date < todaySyd).length;
 
   const liveClubCount = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
   const clubCount = liveClubCount || Object.keys(CLUBS || {}).length;
@@ -926,29 +975,55 @@ function renderHome() {
   const awaiting = matchCount === 0;
 
   const headlineLabel = isToday ? 'Today' : (lastR && !nextR ? 'Last Sunday' : 'Next Sunday');
-  const headline = isToday ? nextR : nextR;
 
-  const sections = [];
-  if (headline) sections.push(roundCard(headlineLabel, headline, /* primary */ true));
-  if (afterR && nextR !== afterR) sections.push(roundCard('Sunday after', afterR, false));
-  if (lastR && lastR !== nextR) sections.push(roundCard('Last Sunday', lastR, false));
+  const featured = [];
+  if (nextR) featured.push(roundCard(headlineLabel, nextR, /* primary */ true));
+  if (afterR && afterR !== nextR) featured.push(roundCard('Sunday after', afterR, false));
+  if (lastR && lastR !== nextR && lastR !== afterR) featured.push(roundCard('Last Sunday', lastR, false));
+
+  const featuredSet = new Set([nextR, afterR, lastR].filter(Boolean));
+  const remaining = playing.filter(r => !featuredSet.has(r));
+  const showAll = lsGet(SHOW_ALL_KEY) === '1';
+  const remainingHtml = remaining.length
+    ? `<div class="home-rounds-all ${showAll ? 'expanded' : ''}" id="home-rounds-all">${
+        remaining.map(r => roundCard(`Round ${r.round}${r.finalRound ? ' · Final' : ''}`, r, false)).join('')
+      }</div>`
+    : '';
 
   return `<div class="home">
     <div class="home-hero">
       <h2>${esc(SITE?.name || 'Fixtures')}</h2>
       <p class="welcome-sub">${awaiting
         ? 'Setting things up. The hourly workflow will populate club chips and teams shortly.'
-        : "Sunday Minis is centrally drawn — every club travels to the same host venue each weekend. Pick your club above for your team's full schedule."
+        : "Sunday Minis is centrally drawn — every club travels to the same host venue each weekend. Pick your club below for your team's full schedule."
       }</p>
       <div class="welcome-stats">
         <span><b>${clubCount}</b> clubs</span>
         <span><b>${teamCount || '—'}</b> teams</span>
         <span><b>${matchCount || '—'}</b> matches</span>
+        <span><b>${playedCount}/${playing.length}</b> rounds played</span>
         <span>U6–U9 SJRU Sunday</span>
       </div>
     </div>
-    ${sections.length ? `<div class="home-rounds">${sections.join('')}</div>` : ''}
+    ${featured.length ? `<div class="home-rounds">${featured.join('')}</div>` : ''}
+    ${remainingHtml}
+    ${remaining.length ? `<div class="home-rounds-toggle">
+      <button class="show-all-btn" id="show-all-btn" type="button" aria-expanded="${showAll ? 'true' : 'false'}" aria-controls="home-rounds-all">
+        <span class="show-all-label">${showAll ? 'Hide other rounds' : `Show all ${playing.length} rounds`}</span>
+        <span class="show-all-chevron" aria-hidden="true">${showAll ? '▴' : '▾'}</span>
+      </button>
+    </div>` : ''}
   </div>`;
+}
+
+function wireHomeInteractions() {
+  const btn = document.getElementById('show-all-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const open = lsGet(SHOW_ALL_KEY) === '1';
+    lsSet(SHOW_ALL_KEY, open ? null : '1');
+    render();  // re-render to flip state + label
+  });
 }
 
 function roundCard(label, round, primary) {
