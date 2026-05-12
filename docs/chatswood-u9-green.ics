@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-bfc6386803ad5b2ff-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260503T101000
 DTEND;TZID=Australia/Sydney:20260503T111000
 SUMMARY:Chatswood Green 9 vs Lindfield 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1ac225525b846fb9e-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260510T083000
 DTEND;TZID=Australia/Sydney:20260510T093000
 SUMMARY:Chatswood Green 9 vs Wakehurst Warriors 9 | RND 2
@@ -63,10 +63,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-green
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-f8cef438e8965e368-chatswood-u9-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260516T092000
+DTEND;TZID=Australia/Sydney:20260516T102000
+SUMMARY:Chatswood Green 9 vs Seaforth Highlanders 9 | RND 3
+LOCATION:Mark Taylor Oval M2\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 9 vs Seaforth Highlanders 9\n📍 Mark Tay
+ lor Oval M2\, Waitara\n📅 Round 3 · Sat\, 16 May · 9:20am AEST\n🏆 S
+ JRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#chatswood-u9-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-green
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-6d24f1f0cc33ebd54-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260517T092000
 DTEND;TZID=Australia/Sydney:20260517T102000
 SUMMARY:Chatswood Green 9 vs Seaforth Highlanders 9 | RND 3
@@ -81,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-green
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-944c8ac83cf7305dc-chatswood-u9-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260523T101000
+DTEND;TZID=Australia/Sydney:20260523T111000
+SUMMARY:Chatswood Green 9 vs Lane Cove Blue 9 | RND 4
+LOCATION:Tantallon Oval M1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 9 vs Lane Cove Blue 9\n📍 Tantallon Oval
+  M1\, Lane Cove North\n📅 Round 4 · Sat\, 23 May · 10:10am AEST\n🏆 
+ SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#chatswood-u9-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-green
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-0a419741b4a83fe43-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260524T101000
 DTEND;TZID=Australia/Sydney:20260524T111000
 SUMMARY:Chatswood Green 9 vs Lane Cove Blue 9 | RND 4
@@ -95,6 +131,24 @@ DESCRIPTION:🏉 Chatswood Green 9 vs Lane Cove Blue 9\n📍 Bantry Bay Ova
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
   hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
  day-minis-comp-app/#chatswood-u9-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-021bce6b85b6ecdd0-chatswood-u9-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260530T094000
+DTEND;TZID=Australia/Sydney:20260530T104000
+SUMMARY:Chatswood Green 9 vs Chatswood Gold 9 | RND 5
+LOCATION:Balmoral Oval M2\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 9 vs Chatswood Gold 9\n📍 Balmoral Oval 
+ M2\n📅 Round 5 · Sat\, 30 May · 9:40am AEST\n🏆 SJRU Minis U9 Sunday
+ \n\nℹ️ Venues and times may change. This calendar updates automaticall
+ y\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a c
+ hange)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-comp
+ -app/#chatswood-u9-green
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-green
 END:VEVENT

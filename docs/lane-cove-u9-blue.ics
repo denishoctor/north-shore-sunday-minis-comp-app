@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-4b15e5772f5f71d4a-lane-cove-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Lane Cove Blue 9 vs Dee Why Black 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-92ebdcf55a6b98f1d-lane-cove-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Lane Cove Blue 9 vs Dee Why White 9 | RND 2
@@ -63,10 +63,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u9-blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-4b87d455e4fb39a6f-lane-cove-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260516T101000
+DTEND;TZID=Australia/Sydney:20260516T111000
+SUMMARY:Lane Cove Blue 9 vs Forest White 9 | RND 3
+LOCATION:Mark Taylor Oval M2\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 9 vs Forest White 9\n📍 Mark Taylor Oval 
+ M2\, Waitara\n📅 Round 3 · Sat\, 16 May · 10:10am AEST\n🏆 SJRU Mini
+ s U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#lane-cove-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u9-blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-26ec93db605657a87-lane-cove-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260517T101000
 DTEND;TZID=Australia/Sydney:20260517T111000
 SUMMARY:Lane Cove Blue 9 vs Forest White 9 | RND 3
@@ -81,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u9-blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-944c8ac83cf7305dc-lane-cove-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260523T101000
+DTEND;TZID=Australia/Sydney:20260523T111000
+SUMMARY:Lane Cove Blue 9 vs Chatswood Green 9 | RND 4
+LOCATION:Tantallon Oval M1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 9 vs Chatswood Green 9\n📍 Tantallon Oval
+  M1\, Lane Cove North\n📅 Round 4 · Sat\, 23 May · 10:10am AEST\n🏆 
+ SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#lane-cove-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u9-blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-0a419741b4a83fe43-lane-cove-u9-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260511T183009Z
-LAST-MODIFIED:20260511T183009Z
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
 DTSTART;TZID=Australia/Sydney:20260524T101000
 DTEND;TZID=Australia/Sydney:20260524T111000
 SUMMARY:Lane Cove Blue 9 vs Chatswood Green 9 | RND 4
@@ -95,6 +131,24 @@ DESCRIPTION:🏉 Lane Cove Blue 9 vs Chatswood Green 9\n📍 Bantry Bay Ova
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
   hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
  day-minis-comp-app/#lane-cove-u9-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u9-blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-aaca1443a4ade34dd-lane-cove-u9-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260512T045750Z
+LAST-MODIFIED:20260512T045750Z
+DTSTART;TZID=Australia/Sydney:20260530T085000
+DTEND;TZID=Australia/Sydney:20260530T095000
+SUMMARY:Lane Cove Blue 9 vs Lindfield 9 | RND 5
+LOCATION:Balmoral Oval M1\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 9 vs Lindfield 9\n📍 Balmoral Oval M1\n
+ 📅 Round 5 · Sat\, 30 May · 8:50am AEST\n🏆 SJRU Minis U9 Sunday\n\n
+ ℹ️ Venues and times may change. This calendar updates automatically\n(
+ Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a chang
+ e)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-comp-app
+ /#lane-cove-u9-blue
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u9-blue
 END:VEVENT
