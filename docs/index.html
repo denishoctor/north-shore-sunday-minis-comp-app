@@ -819,6 +819,8 @@ function selectRound(n) {
   currentRound = (typeof n === 'number') ? n : null;
   lsSet(ROUND_KEY, currentRound ? String(currentRound) : null);
   syncRoundChips();
+  syncShareButton();
+  updateHash();   // replaceState — chip toggles don't pile up back-stack entries
   render();
 }
 
@@ -955,12 +957,14 @@ function selectClub(key) {
   buildAgeRow();
   buildTokenGrid();
   // Deselect team if it's no longer in the filtered set. If selectTeam fires
-  // it'll re-render; otherwise we render here so the cross-team filter list
-  // appears immediately when a club is picked without a team.
+  // it'll re-render and updateHash itself; otherwise we updateHash + render
+  // here so the cross-team filter list appears immediately.
   if (currentTeam) {
     const meta = TEAM_META?.[currentTeam];
     if (key && meta?.clubKey !== key) { selectTeam(null); return; }
   }
+  syncShareButton();
+  updateHash();
   render();
 }
 
@@ -973,6 +977,8 @@ function selectAge(age) {
     const meta = TEAM_META?.[currentTeam];
     if (age && meta?.age !== age) { selectTeam(null); return; }
   }
+  syncShareButton();
+  updateHash();
   render();
 }
 
@@ -981,24 +987,75 @@ function selectTeam(teamId, slugFromCaller) {
   lsSet(TEAM_KEY, currentTeam);
   syncTokens();
 
-  const shareBtn = document.getElementById('copy-link-btn');
-  if (teamId) {
-    shareBtn.removeAttribute('hidden');
-    const slug = slugFromCaller || SLUG_BY_ID[teamId];
-    history.pushState(null, '', '#' + slug);
-  } else {
-    shareBtn.setAttribute('hidden', '');
-    if (location.hash) history.pushState(null, '', location.pathname);
-  }
+  // Share button visibility tracks ANY shareable state — team, round, club,
+  // or age. Centralised so selectRound / selectClub / selectAge can call it too.
+  syncShareButton();
+
+  // Team selection is a deliberate nav action — push to the browser history
+  // so back returns to the previous team / filter state. Filter chip toggles
+  // (Rnd / Club / Age) replaceState instead so the back-stack stays clean.
+  updateHash({ push: true });
   render();
 }
 
 // ── URL hash routing ─────────────────────────────────────────────────────────
+//
+// Hash carries every filter axis so any Rnd × Club × Age × Team combination
+// is shareable + bookmarkable. Format:
+//
+//   #lane-cove-u7-gold                    → team only (legacy share links keep working)
+//   #lane-cove-u7-gold/match-abc123       → team + scroll-to-match anchor (legacy)
+//   #lane-cove-u7-gold?rnd=5              → team + round filter
+//   #?rnd=5&club=lane-cove&age=U7         → no team, just filters
+//   #lane-cove-u7-gold/match-abc123?rnd=5 → all of the above stacked
+//
+// Path-style segment for the legacy team-slug + match-anchor, query-string for
+// the multi-axis filter state. Hash updates use replaceState by default so the
+// browser back-stack doesn't pile up an entry every chip click; team selection
+// uses pushState so navigating back reverts the team pick.
 function readHash() {
   const raw = location.hash.replace('#', '');
-  const [slug, anchor] = raw.split('/');
+  const [path = '', query = ''] = raw.split('?');
+  const [slug, anchor] = path.split('/');
   const teamId = slug && TEAM_SLUGS?.[slug] ? TEAM_SLUGS[slug] : null;
-  return { teamId, slug, anchor };
+  const filters = {};
+  if (query) {
+    for (const part of query.split('&')) {
+      if (!part) continue;
+      const [k, v = ''] = part.split('=');
+      if (k) filters[k] = decodeURIComponent(v);
+    }
+  }
+  return { teamId, slug, anchor, filters };
+}
+
+function buildHash() {
+  const slug = currentTeam ? (SLUG_BY_ID[currentTeam] || '') : '';
+  const parts = [];
+  if (currentRound) parts.push('rnd=' + encodeURIComponent(currentRound));
+  if (currentClub)  parts.push('club=' + encodeURIComponent(currentClub));
+  if (currentAge)   parts.push('age=' + encodeURIComponent(currentAge));
+  const qs = parts.length ? '?' + parts.join('&') : '';
+  if (!slug && !qs) return '';
+  return '#' + slug + qs;
+}
+
+function updateHash({ push = false } = {}) {
+  const want = buildHash();
+  if (want === location.hash) return;
+  const target = want || location.pathname;
+  if (push) history.pushState(null, '', target);
+  else      history.replaceState(null, '', target);
+}
+
+// Share button is visible whenever there's something share-worthy to encode —
+// team, round, club, or age. Called from every filter setter + at boot.
+function syncShareButton() {
+  const shareBtn = document.getElementById('copy-link-btn');
+  if (!shareBtn) return;
+  const hasShareable = currentTeam || currentRound || currentClub || currentAge;
+  if (hasShareable) shareBtn.removeAttribute('hidden');
+  else              shareBtn.setAttribute('hidden', '');
 }
 
 // ── render: match list ───────────────────────────────────────────────────────
@@ -1480,43 +1537,93 @@ function roundCard(label, round, tier = 'other') {
 // existing subscribers via direct webcal URL keep working.
 
 document.getElementById('copy-link-btn').addEventListener('click', async () => {
-  const slug = currentTeam ? SLUG_BY_ID[currentTeam] : '';
-  const url  = slug ? `${SITE_URL}/#${slug}` : SITE_URL;
+  // Build a link encoding the full current filter state (team + rnd + club +
+  // age) so any combination is shareable. buildHash() already returns the
+  // exact hash the address bar carries.
+  const hash = buildHash();
+  const url  = `${SITE_URL}/${hash}`;
+  // Compose share-sheet text from the active filters so a recipient knows
+  // what they're getting.
+  const text = (() => {
+    const parts = [];
+    if (currentTeam) parts.push(TEAM_META?.[currentTeam]?.name || '');
+    if (currentRound) parts.push(`Round ${currentRound}`);
+    if (!currentTeam && currentClub) parts.push(CLUBS?.[currentClub]?.name || '');
+    if (!currentTeam && currentAge)  parts.push(currentAge);
+    return parts.filter(Boolean).join(' · ') || 'Fixtures';
+  })();
   if (navigator.share) {
-    try { await navigator.share({ title: 'NSM Sunday Rugby', text: TEAM_META?.[currentTeam]?.name || '', url }); return; } catch {}
+    try { await navigator.share({ title: 'NSM Sunday Rugby', text, url }); return; } catch {}
   }
   try { await navigator.clipboard.writeText(url); } catch {}
 });
 
 // Home-button removed — users deselect by clicking the active token or chip again.
 
-window.addEventListener('hashchange', () => {
-  const { teamId } = readHash();
-  if (teamId && teamId !== currentTeam) {
-    const meta = TEAM_META?.[teamId];
-    if (meta?.clubKey) {
-      currentClub = meta.clubKey; lsSet(CLUB_KEY, currentClub);
-      currentAge  = meta.age;     lsSet(AGE_KEY, currentAge);
-      syncClubChips(); buildAgeRow(); buildTokenGrid();
-    }
-    selectTeam(teamId);
+// Hashchange (back/forward button, paste-link, hashchange from external): re-apply
+// the four filter axes from the URL without writing back. applyHashState handles
+// the same hash format the boot path parses.
+function applyHashState() {
+  const { teamId, filters } = readHash();
+  const want = {
+    team:  teamId || null,
+    rnd:   filters.rnd ? Number(filters.rnd) : null,
+    club:  filters.club || null,
+    age:   filters.age || null,
+  };
+  let changed = false;
+
+  if (want.rnd !== currentRound) {
+    currentRound = want.rnd;
+    lsSet(ROUND_KEY, currentRound ? String(currentRound) : null);
+    syncRoundChips();
+    changed = true;
   }
-});
+  if (want.club !== currentClub) {
+    currentClub = want.club;
+    lsSet(CLUB_KEY, currentClub);
+    syncClubChips();
+    buildAgeRow();
+    changed = true;
+  }
+  if (want.age !== currentAge) {
+    currentAge = want.age;
+    lsSet(AGE_KEY, currentAge);
+    syncAgeChips();
+    changed = true;
+  }
+  if (changed) buildTokenGrid();
+
+  if (want.team !== currentTeam) {
+    // selectTeam handles its own state + render + hash write. Skip the extra
+    // updateHash that selectTeam would do (we already came from the hash).
+    currentTeam = want.team;
+    lsSet(TEAM_KEY, currentTeam);
+    syncTokens();
+    changed = true;
+  }
+  if (changed) {
+    syncShareButton();
+    render();
+  }
+}
+
+window.addEventListener('hashchange', applyHashState);
 
 // ── boot ─────────────────────────────────────────────────────────────────────
 (async function boot() {
-  // Restore previous selection (URL hash wins on initial load)
+  // Restore previous selection. URL hash wins for every axis it specifies;
+  // localStorage fills in axes the hash doesn't carry. This lets a shared link
+  // like #?rnd=5 land cleanly even if the recipient has different prefs saved.
   const hash = readHash();
-  currentClub = hash.teamId ? (TEAM_META?.[hash.teamId]?.clubKey || null) : (lsGet(CLUB_KEY) || null);
-  currentAge  = hash.teamId ? (TEAM_META?.[hash.teamId]?.age     || null) : (lsGet(AGE_KEY)  || null);
-  if (!hash.teamId) {
-    const saved = lsGet(TEAM_KEY);
-    currentTeam = saved && SLUG_BY_ID?.[saved] ? saved : null;
-  } else {
-    currentTeam = hash.teamId;
-  }
-  const savedRound = lsGet(ROUND_KEY);
-  currentRound = savedRound ? Number(savedRound) : null;
+  const f = hash.filters || {};
+
+  currentTeam  = hash.teamId
+    || (lsGet(TEAM_KEY) && SLUG_BY_ID?.[lsGet(TEAM_KEY)] ? lsGet(TEAM_KEY) : null);
+
+  currentRound = f.rnd  ? Number(f.rnd) : (lsGet(ROUND_KEY) ? Number(lsGet(ROUND_KEY)) : null);
+  currentClub  = f.club || (hash.teamId ? (TEAM_META?.[hash.teamId]?.clubKey || null) : (lsGet(CLUB_KEY) || null));
+  currentAge   = f.age  || (hash.teamId ? (TEAM_META?.[hash.teamId]?.age     || null) : (lsGet(AGE_KEY)  || null));
 
   buildRoundRow();
   buildClubRow(); syncClubChips();
@@ -1560,6 +1667,11 @@ window.addEventListener('hashchange', () => {
   } else {
     stamp.textContent = 'No fixture data yet — CI will populate on first run.';
   }
+
+  // Sync the share-button visibility against whatever state we restored
+  // (selectTeam will redo this internally, but the no-team-but-filters-set
+  // path needs it too).
+  syncShareButton();
 
   // Re-enter team if it's still in the toolbar
   if (currentTeam) selectTeam(currentTeam, hash.slug);
