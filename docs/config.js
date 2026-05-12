@@ -611,7 +611,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Manly",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/keirle-park.jpg", "caption": "Pitch layout — TT1–TT8 plus MOD1, MOD2", "asOf": "2026-03" }
+        "map": {
+          "src": "assets/venues/keirle-park.jpg",
+          "caption": "Pitch layout — TT1–TT8 plus MOD1, MOD2",
+          "asOf": "2026-03"
+        }
       }
     },
     "Lofberg Oval": {
@@ -667,7 +671,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Lane Cove North",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/tantallon-oval.jpg", "caption": "Pitch layout — TT1–TT4 (A, B, C, D in the draw)", "asOf": "2026-05" },
+        "map": {
+          "src": "assets/venues/tantallon-oval.jpg",
+          "caption": "Pitch layout — TT1–TT4 (A, B, C, D in the draw)",
+          "asOf": "2026-05"
+        },
         "parking": "On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.",
         "coffee": {
           "onsite": "Clubhouse canteen + bar; cart on game days."
@@ -687,7 +695,11 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Cammeray",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia",
       "details": {
-        "map": { "src": "assets/venues/tunks-park.jpg", "caption": "Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5", "asOf": "2026-03" },
+        "map": {
+          "src": "assets/venues/tunks-park.jpg",
+          "caption": "Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5",
+          "asOf": "2026-03"
+        },
         "parking": "Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.",
         "coffee": {
           "onsite": "Coffee cart at the entrance on game days.",
