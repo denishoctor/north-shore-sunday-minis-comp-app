@@ -47,6 +47,9 @@
   .page { max-width: 980px; margin: 0 auto; background: #fff; min-height: 100vh; }
 
   /* HEADER — deep-navy band with a gold rule, mirrors the badge ring/ribbon. */
+  /* Header is sticky so the nav (Clubs / Venues / Share / Calendar) stays
+     reachable on scroll. The gold rule underneath doubles as the divider
+     once the toolbar scrolls past. */
   .header {
     display: flex; align-items: center; gap: 16px;
     padding: 16px 20px 18px;
@@ -54,9 +57,22 @@
     padding-right: max(20px, env(safe-area-inset-right));
     background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
     color: #fff;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     border-bottom: 3px solid var(--gold);
+    /* On scroll, header.compact compresses to a single-row form. JS toggles
+       the class on scroll past the eyebrow. */
+    transition: padding .18s ease;
   }
+  .header.compact {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .header.compact .crest { width: 44px; height: 44px; }
+  .header.compact .eyebrow,
+  .header.compact .updated-stamp { display: none; }
+  .header.compact h1 { font-size: 15px; }
   .crest {
     width: 76px; height: 76px;
     background: #fff url('assets/sunday-minis-logo-w-bg.png') center/102% no-repeat;
@@ -81,20 +97,26 @@
     text-transform: uppercase; margin-left: 8px; vertical-align: middle;
   }
   .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-on-gold); }
-  .header-nav { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .header-nav { display: flex; align-items: center; gap: 4px; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
   .header-nav-link {
+    appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
     color: rgba(255,255,255,.85); text-decoration: none;
+    background: transparent;
     padding: 6px 10px; border-radius: 999px;
     border: 1.5px solid rgba(212,169,60,.35);
     transition: background .12s, color .12s, border-color .12s;
     line-height: 1; white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 5px;
   }
-  .header-nav-link:hover {
+  .header-nav-link:hover, .header-nav-link[aria-expanded="true"] {
     background: rgba(212,169,60,.15);
     border-color: var(--gold);
     color: var(--gold);
   }
+  .header-nav-link[hidden] { display: none; }
+  .header-nav-action { display: inline-flex; align-items: center; }
+  .header-nav-action[hidden] { display: none; }
   /* On narrow screens (≤600px) the right-side nav + Home button compete with
      the title-block for room and the eyebrow ends up wrapping line-by-line.
      Drop the nav to its own row beneath title+home, shrink the crest, and
@@ -125,9 +147,44 @@
     background: #fff;
     border-bottom: 1px solid var(--cream-edge);
   }
+  /* Each filter block: label + chip row laid out as two columns so the label
+     sits in a stable gutter and the chips wrap freely on the right. */
+  .filter-block {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: start;
+  }
+  .filter-block:last-child { margin-bottom: 0; }
+  .filter-label {
+    font-size: 10px; font-weight: 800; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1px;
+    padding-top: 6px;        /* align baseline with chip text */
+    white-space: nowrap;
+  }
+  .team-area { display: flex; flex-direction: column; gap: 6px; }
+  /* Round chips — compact numeric pills. Gala stands out via the maroon tint. */
+  .round-row { display: flex; flex-wrap: wrap; gap: 5px; }
+  .round-chip {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 800;
+    color: var(--navy); background: #fff;
+    border: 1.5px solid var(--cream-edge);
+    padding: 4px 9px; border-radius: 6px;
+    line-height: 1; white-space: nowrap;
+    min-width: 28px; text-align: center;
+    transition: background .12s, border-color .12s, color .12s;
+  }
+  .round-chip:hover { border-color: var(--navy); }
+  .round-chip.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .round-chip.gala { color: var(--maroon); border-color: rgba(126,26,43,.35); }
+  .round-chip.gala:hover, .round-chip.gala.active { background: var(--maroon); color: var(--gold); border-color: var(--maroon); }
+  .round-chip.bye { color: var(--muted); border-style: dashed; cursor: default; }
+  .round-chip.bye:hover { border-color: var(--cream-edge); color: var(--muted); }
+
   .club-row {
     display: flex; flex-wrap: wrap; gap: 5px;
-    margin-bottom: 8px;
   }
   .club-row[hidden] { display: none; }
   /* Each club chip inlines --club-color (primary) and --club-accent. Default
@@ -156,7 +213,6 @@
   .club-chip.active .club-count { color: var(--club-accent); opacity: 1; }
   .age-row {
     display: flex; flex-wrap: wrap; gap: 5px;
-    margin-bottom: 8px;
   }
   .age-row[hidden] { display: none; }
   .age-chip {
@@ -226,13 +282,31 @@
   .action-btn:hover { border-color: var(--navy); }
   .action-icon { font-size: 12px; }
   .action-caret { font-size: 9px; opacity: .7; }
-  .action-menu { position: relative; }
+  .action-menu, .header-nav-menu { position: relative; }
+  /* Popover anchors to the trigger button. Cap width and clamp to viewport so
+     it doesn't overflow off-screen on narrow viewports — the original
+     right:0 anchor was clipping on mobile. */
   .action-popover {
-    position: absolute; top: calc(100% + 6px); right: 0; z-index: 30;
+    position: absolute; top: calc(100% + 6px); right: 0; z-index: 50;
     display: none; flex-direction: column;
     background: #fff; border: 1px solid var(--rule); border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.12);
-    padding: 5px; min-width: 248px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    padding: 5px;
+    min-width: 240px;
+    max-width: min(280px, calc(100vw - 24px));
+  }
+  /* On narrow viewports, anchor popover to the viewport's right edge
+     (instead of the trigger's right edge) so wide content can't overflow. */
+  @media (max-width: 600px) {
+    .action-popover {
+      position: fixed;
+      top: auto;
+      bottom: 12px;
+      right: 12px;
+      left: 12px;
+      max-width: none;
+      min-width: 0;
+    }
   }
   .action-popover.open { display: flex; }
   .cal-option {
@@ -482,7 +556,11 @@
     background: var(--cream); color: var(--navy);
     padding: 1px 7px; border-radius: 999px;
     font-weight: 800; font-size: 10px;
+    cursor: pointer; border: 1.5px solid transparent;
+    transition: border-color .12s, background .12s;
   }
+  .match-meta .round-badge:hover { border-color: var(--navy); }
+  .match-meta .round-badge.active { background: var(--navy); color: var(--gold); }
   .match-meta .live-tag {
     color: var(--green); font-weight: 700;
   }
@@ -582,32 +660,15 @@
     <nav class="header-nav" aria-label="Section navigation">
       <a class="header-nav-link" href="clubs.html">Clubs</a>
       <a class="header-nav-link" href="venues.html">Venues</a>
-    </nav>
-  </div>
-
-  <!-- "What's on" round cards — only rendered when no team is selected. Hidden
-       once the user picks a team so the toolbar + match list claim the viewport. -->
-  <div id="home-content" hidden></div>
-
-  <div class="toolbar">
-    <!-- Club filter row — narrows the team-token grid to one club's teams. -->
-    <div class="club-row" id="club-row" role="group" aria-label="Filter by club"></div>
-    <!-- Age band filter — narrows further once a club is selected. -->
-    <div class="age-row" id="age-row" role="group" aria-label="Filter by age band" hidden></div>
-    <!-- Team tokens — populated from window.NSM_SUNDAY_CONFIG.TEAM_SLUGS at boot.
-         Each token deep-links to a slug like #lane-cove-u7-gold. -->
-    <div class="token-grid" id="team-tokens"></div>
-
-    <div class="action-bar" id="action-bar" hidden>
-      <button class="action-btn" id="copy-link-btn" type="button">
-        <span class="action-icon" aria-hidden="true">🔗</span>
-        <span class="action-label">Share</span>
+      <!-- Share + Calendar appear only when a team is selected (JS toggles the
+           hidden attr). Kept inside the header so they remain reachable
+           when the page scrolls (header is sticky). -->
+      <button class="header-nav-link header-nav-action" id="copy-link-btn" type="button" hidden>
+        <span aria-hidden="true">🔗</span> Share
       </button>
-      <div class="action-menu">
-        <button class="action-btn" id="cal-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="cal-popover">
-          <span class="action-icon" aria-hidden="true">📅</span>
-          <span class="action-label">Calendar</span>
-          <span class="action-caret" aria-hidden="true">▾</span>
+      <div class="header-nav-action header-nav-menu" id="cal-menu" hidden>
+        <button class="header-nav-link" id="cal-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="cal-popover">
+          <span aria-hidden="true">📅</span> Calendar <span aria-hidden="true" style="opacity:.65;">▾</span>
         </button>
         <div class="action-popover" id="cal-popover" role="menu">
           <a class="cal-option" id="cal-ical" href="#" role="menuitem">
@@ -633,7 +694,38 @@
           </button>
         </div>
       </div>
+    </nav>
+  </div>
+
+  <!-- "What's on" round cards — only rendered when no team is selected. Hidden
+       once the user picks a team so the toolbar + match list claim the viewport. -->
+  <div id="home-content" hidden></div>
+
+  <div class="toolbar">
+    <!-- Round filter — chips 1…13 driven from ROUNDS. Each row gets an
+         inline label so the user can scan the filter axes at a glance. -->
+    <div class="filter-block">
+      <span class="filter-label">Rnd:</span>
+      <div class="round-row" id="round-row" role="group" aria-label="Filter by round"></div>
     </div>
+    <!-- Club filter row — narrows the team-token grid to one club's teams. -->
+    <div class="filter-block">
+      <span class="filter-label">Club:</span>
+      <div class="club-row" id="club-row" role="group" aria-label="Filter by club"></div>
+    </div>
+    <!-- Team picker — age sub-chips + team token grid. -->
+    <div class="filter-block filter-block-team">
+      <span class="filter-label">Team:</span>
+      <div class="team-area">
+        <div class="age-row" id="age-row" role="group" aria-label="Filter by age band" hidden></div>
+        <div class="token-grid" id="team-tokens"></div>
+      </div>
+    </div>
+
+    <!-- Share + Calendar moved to header-nav; this div remains so legacy JS
+         references (id="action-bar") that toggle hidden still work as a
+         no-op visual state. -->
+    <div class="action-bar" id="action-bar" hidden></div>
   </div>
 
   <div id="calendar"></div>
@@ -672,12 +764,14 @@ const STORAGE_PREFIX = 'nsm-sunday';
 const TEAM_KEY  = `${STORAGE_PREFIX}-team`;
 const CLUB_KEY  = `${STORAGE_PREFIX}-club`;
 const AGE_KEY   = `${STORAGE_PREFIX}-age`;
+const ROUND_KEY = `${STORAGE_PREFIX}-round`;
 
 let fixturesData = null;
 let lineupsData  = null;
 let currentTeam  = null;
 let currentClub  = null;
 let currentAge   = null;
+let currentRound = null;   // number (1…13) or null
 
 // ── persistence ──────────────────────────────────────────────────────────────
 function lsGet(key) { try { return localStorage.getItem(key); } catch { return null; } }
@@ -686,6 +780,42 @@ function lsSet(key, val) {
 }
 
 // ── toolbar build ────────────────────────────────────────────────────────────
+
+// Round-row: chips R1…R13 derived from ROUNDS. Bye rounds render disabled
+// (dashed border, no click); gala rounds get the maroon tint.
+function buildRoundRow() {
+  const row = document.getElementById('round-row');
+  if (!row) return;
+  const all = (ROUNDS || []).slice().sort((a, b) => (a.round || 0) - (b.round || 0));
+  row.innerHTML = all.map(r => {
+    const cls = ['round-chip'];
+    if (r.status === 'gala') cls.push('gala');
+    if (r.status === 'bye')  cls.push('bye');
+    const disabled = r.status === 'bye' ? ' disabled aria-disabled="true"' : '';
+    return `<button class="${cls.join(' ')}" data-round="${esc(r.round)}" type="button"${disabled}>${esc(r.round)}</button>`;
+  }).join('');
+  row.querySelectorAll('.round-chip:not(.bye)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const n = Number(btn.dataset.round);
+      selectRound(n === currentRound ? null : n);
+    });
+  });
+  syncRoundChips();
+}
+
+function syncRoundChips() {
+  document.querySelectorAll('.round-chip').forEach(c =>
+    c.classList.toggle('active', Number(c.dataset.round) === currentRound)
+  );
+}
+
+function selectRound(n) {
+  currentRound = (typeof n === 'number') ? n : null;
+  lsSet(ROUND_KEY, currentRound ? String(currentRound) : null);
+  syncRoundChips();
+  render();
+}
+
 function buildClubRow() {
   const row = document.getElementById('club-row');
   const teamsByClub = {};
@@ -744,6 +874,19 @@ function buildAgeRow() {
   syncAgeChips();
 }
 
+// Flip "Blue 7" → "7 Blue" — age digit moves to the front of the team
+// display name. Names without a trailing digit (e.g., joint teams already
+// stripped) pass through unchanged. Used by buildTokenGrid only; full team
+// names elsewhere stay as Rugby Xplorer publishes them.
+function flipAgeFirst(displayName) {
+  if (!displayName) return displayName;
+  const m = displayName.match(/^(.*?)\s*(\d+)\s*$/);
+  if (!m) return displayName;
+  const prefix = m[1].replace(/^[\/\s]+/, '').trim();
+  const num = m[2];
+  return prefix ? `${num} ${prefix}` : num;
+}
+
 function buildTokenGrid() {
   const grid = document.getElementById('team-tokens');
   const all = Object.values(TEAM_META || {});
@@ -751,12 +894,17 @@ function buildTokenGrid() {
     (!currentClub || m.clubKey === currentClub) &&
     (!currentAge  || m.age     === currentAge)
   );
-  // Alphabetical sort by team display name. With the club + age chip rows
-  // narrowing the list, alpha within the visible set is the most scannable.
-  filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+  // Sort by age band first (U6 → U9), then alphabetically by display name.
+  // The age label at top-left of each token is now redundant with the leading
+  // number in the name (e.g. "7 Blue"), but keep it as the visual anchor.
+  filtered.sort((a, b) => {
+    if ((a.age || '') !== (b.age || '')) return (a.age || '').localeCompare(b.age || '');
+    return (a.name || '').localeCompare(b.name || '');
+  });
   grid.innerHTML = filtered.map(m => {
     const club = CLUBS?.[m.clubKey];
-    const display = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
+    const baseName = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
+    const display = flipAgeFirst(baseName);
     const styleAttr = club?.primary
       ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
       : '';
@@ -824,9 +972,11 @@ function selectTeam(teamId, slugFromCaller) {
   lsSet(TEAM_KEY, currentTeam);
   syncTokens();
 
-  const actionBar = document.getElementById('action-bar');
+  const shareBtn = document.getElementById('copy-link-btn');
+  const calMenu  = document.getElementById('cal-menu');
   if (teamId) {
-    actionBar.removeAttribute('hidden');
+    shareBtn.removeAttribute('hidden');
+    calMenu.removeAttribute('hidden');
     const slug = slugFromCaller || SLUG_BY_ID[teamId];
     const webcalUrl = `${SITE_URL.replace(/^https?:\/\//, 'webcal://')}/${slug}.ics`;
     const httpsIcs  = `${SITE_URL}/${slug}.ics`;
@@ -836,7 +986,8 @@ function selectTeam(teamId, slugFromCaller) {
     currentIcsUrl = httpsIcs;
     history.pushState(null, '', '#' + slug);
   } else {
-    actionBar.setAttribute('hidden', '');
+    shareBtn.setAttribute('hidden', '');
+    calMenu.setAttribute('hidden', '');
     closeCalPopover();
     if (location.hash) history.pushState(null, '', location.pathname);
   }
@@ -918,8 +1069,13 @@ function render() {
     timeline.push({ kind: m.type === 'result' ? 'past' : 'upcoming', match: m, round: null });
   }
 
-  const upcoming = timeline.filter(t => /^upcoming/.test(t.kind));
-  const past     = timeline.filter(t => /^past/.test(t.kind)).reverse();
+  // When a Rnd filter is active, narrow the timeline to that round only.
+  const filteredTimeline = currentRound
+    ? timeline.filter(t => (t.round?.round === currentRound) || (t.match && parseInt((t.match.round || '').replace(/^Round /, ''), 10) === currentRound))
+    : timeline;
+
+  const upcoming = filteredTimeline.filter(t => /^upcoming/.test(t.kind));
+  const past     = filteredTimeline.filter(t => /^past/.test(t.kind)).reverse();
 
   const renderTimelineEntry = (t) => {
     if (t.match) return renderMatch(t.match);
@@ -947,6 +1103,16 @@ function render() {
       card.classList.toggle('expanded');
     });
   });
+  // Round-badge filter buttons — clicking the R3 chip on a match card toggles
+  // the global Rnd filter to that round. stopPropagation so the click doesn't
+  // also expand the lineup panel.
+  cal.querySelectorAll('.round-badge[data-round-filter]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const n = Number(btn.dataset.roundFilter);
+      selectRound(n === currentRound ? null : n);
+    });
+  });
 
   // Honour deep-link anchor (#slug/match-<id>)
   const { anchor } = readHash();
@@ -969,6 +1135,8 @@ function renderMatch(match) {
   if (match.isBye) classes.push('is-bye');
 
   const round = (match.round || '').replace('Round ', 'R');
+  const roundNum = parseInt((match.round || '').replace(/^Round /, ''), 10);
+  const roundActive = !Number.isNaN(roundNum) && roundNum === currentRound;
   const venue = parseVenue(match.venue || '', VENUES || {});
   const sc    = scoreClass(match);
   const homeS = match.home.score ?? '';
@@ -993,7 +1161,7 @@ function renderMatch(match) {
             <div class="match-team"><img src="${esc(match.away.crest || '')}" alt="" onerror="this.style.visibility='hidden'"><span class="team-name">${esc(match.away.name)}</span></div>
           </div>
           <div class="match-meta">
-            ${round ? `<span class="round-badge">${esc(round)}</span>` : ''}
+            ${round ? `<button class="round-badge ${roundActive ? 'active' : ''}" type="button" data-round-filter="${esc(roundNum)}" title="Filter to ${esc(round)}">${esc(round)}</button>` : ''}
             <span>${esc(match.competition)}</span>
             ${match.isLive ? '<span class="live-tag">● LIVE</span>' : ''}
             ${match.isBye ? '<span class="bye-tag">BYE</span>' : ''}
@@ -1125,15 +1293,24 @@ function renderHome() {
   const awaiting = matchCount === 0;
 
   // Featured row: Last Sunday · Next Sunday (primary) · Sunday after.
-  // Each gets a distinct tier so CSS can shade them differently.
-  const featured = [];
-  if (lastR && lastR !== nextR && lastR !== afterR) featured.push(roundCard(isToday ? 'Last week' : 'Last Sunday', lastR, 'last'));
-  if (nextR) featured.push(roundCard(isToday ? 'Today' : 'Next Sunday', nextR, 'next'));
-  if (afterR && afterR !== nextR) featured.push(roundCard('Sunday after', afterR, 'after'));
+  // When a Rnd filter is active, the featured row collapses to just that
+  // round so the user's intent ("show me round 3") is honoured prominently.
+  let featured = [];
+  if (currentRound) {
+    const r = playing.find(x => x.round === currentRound);
+    if (r) {
+      const tier = r === nextR ? 'next' : r === afterR ? 'after' : r === lastR ? 'last' : 'other';
+      featured.push(roundCard(`Round ${r.round}${r.finalRound ? ' · Final' : ''}${r.status === 'gala' ? ' · Gala' : ''}`, r, tier));
+    }
+  } else {
+    if (lastR && lastR !== nextR && lastR !== afterR) featured.push(roundCard(isToday ? 'Last week' : 'Last Sunday', lastR, 'last'));
+    if (nextR) featured.push(roundCard(isToday ? 'Today' : 'Next Sunday', nextR, 'next'));
+    if (afterR && afterR !== nextR) featured.push(roundCard('Sunday after', afterR, 'after'));
+  }
 
-  // All-rounds strip ALWAYS contains every playing round, including the three
-  // featured ones in their R1…R13 position. Tier tag stays so the user can
-  // still spot "next" in the strip.
+  // All-rounds strip ALWAYS contains every playing round in R1…R13 order.
+  // Round filter doesn't collapse the strip — gives the user context to
+  // un-filter or jump to a different round.
   const showAll = lsGet(SHOW_ALL_KEY) === '1';
   const allRoundsHtml = playing.length
     ? `<div class="home-rounds-all ${showAll ? 'expanded' : ''}" id="home-rounds-all">${
@@ -1292,10 +1469,24 @@ window.addEventListener('hashchange', () => {
   } else {
     currentTeam = hash.teamId;
   }
+  const savedRound = lsGet(ROUND_KEY);
+  currentRound = savedRound ? Number(savedRound) : null;
 
+  buildRoundRow();
   buildClubRow(); syncClubChips();
   buildAgeRow();
   buildTokenGrid();
+
+  // Sticky-header compact mode: once the user has scrolled past the eyebrow
+  // area, switch to a compact bar so the nav stays visible without eating
+  // viewport. The threshold is rough — exact px isn't critical.
+  const headerEl = document.querySelector('.header');
+  const onScroll = () => {
+    if (!headerEl) return;
+    headerEl.classList.toggle('compact', window.scrollY > 24);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   const [fxRes, luRes] = await Promise.allSettled([
     fetch('./fixtures.json').then(r => r.ok ? r.json() : null),
