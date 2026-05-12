@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-ac64059e051445cc2-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Hornsby Black 8 vs Norths Pirates Black 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e8fbe6b3838001c1b-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Hornsby Black 8 vs St Ives 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-7ca3e4e356afdce59-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 3
@@ -81,28 +81,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-cb8fa853d4048f4a6-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
-DTSTART;TZID=Australia/Sydney:20260517T080000
-DTEND;TZID=Australia/Sydney:20260517T090000
-SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 3
-LOCATION:Melwood Oval TT3\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Chatswood Green 8\n📍 Melwood Oval TT
- 3\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Mi
- nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
-  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
- hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
- ay-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-c0d25452ce3392942-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 4
@@ -117,28 +99,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-dc65fdb643bc5cd76-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
-DTSTART;TZID=Australia/Sydney:20260524T080000
-DTEND;TZID=Australia/Sydney:20260524T090000
-SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 4
-LOCATION:Bantry Bay Oval TT2\, Seaforth\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Chatswood Green 8\n📍 Bantry Bay Oval
-  TT2\, Seaforth\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Mi
- nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
-  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
- hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
- ay-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-ab3797f95665ce214-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161038Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Black 8 | RND 5

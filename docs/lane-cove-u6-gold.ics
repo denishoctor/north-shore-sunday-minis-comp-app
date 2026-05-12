@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-f62f774d236cd097b-lane-cove-u6-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161037Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Gold 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c9c8cc1d4c80f95c6-lane-cove-u6-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161037Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Lane Cove Gold 6 vs Norths Pirates Gold 6 | RND 2
@@ -63,28 +63,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6470bd583f4710255-lane-cove-u6-gold@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
-DTSTART;TZID=Australia/Sydney:20260516T084000
-DTEND;TZID=Australia/Sydney:20260516T094000
-SUMMARY:Lane Cove Gold 6 vs St Ives Yellow 6 | RND 3
-LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 6 vs St Ives Yellow 6\n📍 Tantallon Oval 
- TT1\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 8:40am AEST\n🏆 S
- JRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
- alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
- ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
- orth-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-3d8fc87ca9c8201b1-lane-cove-u6-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161037Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Lane Cove Gold 6 vs St Ives Yellow 6 | RND 3
@@ -99,28 +81,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6a3521b490a8f0416-lane-cove-u6-gold@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
-DTSTART;TZID=Australia/Sydney:20260523T084000
-DTEND;TZID=Australia/Sydney:20260523T094000
-SUMMARY:Lane Cove Gold 6 vs Wakehurst Wallabies 6 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 6 vs Wakehurst Wallabies 6\n📍 Lofberg Ov
- al TT1\, West Pymble\n📅 Round 4 · Sat\, 23 May · 8:40am AEST\n🏆 SJ
- RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-aaa9e3cf9d2a66386-lane-cove-u6-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161037Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Lane Cove Gold 6 vs Wakehurst Wallabies 6 | RND 4
@@ -135,28 +99,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-73b05ede59add3d58-lane-cove-u6-gold@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
-DTSTART;TZID=Australia/Sydney:20260530T092000
-DTEND;TZID=Australia/Sydney:20260530T102000
-SUMMARY:Lane Cove Gold 6 vs Chatswood Black 6 | RND 5
-LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Black 6\n📍 Wakehurst Rugb
- y Park TT3\, Belrose\n📅 Round 5 · Sat\, 30 May · 9:20am AEST\n🏆 SJ
- RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-86933b3e18f2cb807-lane-cove-u6-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T155905Z
-LAST-MODIFIED:20260512T155905Z
+DTSTAMP:20260512T161037Z
+LAST-MODIFIED:20260512T161037Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Black 6 | RND 5
