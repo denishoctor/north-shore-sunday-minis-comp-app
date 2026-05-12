@@ -15,13 +15,14 @@
  * doesn't match the current pair.
  */
 
-const SHELL_CACHE = 'nsm-sunday-shell-v3';
-const DATA_CACHE  = 'nsm-sunday-data-v3';
+const SHELL_CACHE = 'nsm-sunday-shell-v4';
+const DATA_CACHE  = 'nsm-sunday-data-v4';
 
 const SHELL_FILES = [
   './',
   'index.html',
   'venues.html',
+  'clubs.html',
   'render.mjs',
   'config.js',
   'manifest.webmanifest',

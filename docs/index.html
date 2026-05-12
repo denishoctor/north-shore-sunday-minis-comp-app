@@ -58,7 +58,7 @@
   }
   .crest {
     width: 76px; height: 76px;
-    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/82% no-repeat;
+    background: #fff url('assets/sunday-minis-logo-w-bg.png') center/96% no-repeat;
     border: 2px solid var(--gold);
     border-radius: 50%;
     box-shadow: 0 2px 10px rgba(0,0,0,.35);
@@ -251,10 +251,19 @@
     border-bottom: 3px solid var(--gold);
   }
   .home-rounds {
-    display: flex; flex-direction: column; gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
     padding: 18px;
     padding-left: max(18px, env(safe-area-inset-left));
     padding-right: max(18px, env(safe-area-inset-right));
+  }
+  @media (min-width: 720px) {
+    .home-rounds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-rounds .round-card.primary { grid-column: 1 / -1; }
+  }
+  @media (min-width: 1100px) {
+    .home-rounds { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
   .round-card {
     background: #fff; border: 1px solid var(--cream-edge); border-left: 3px solid var(--gold);
@@ -299,12 +308,20 @@
   #home-content .home-hero { border-bottom: none; }
   #home-content .home-rounds { padding-bottom: 6px; }
   #home-content .home-rounds-all {
-    display: none; flex-direction: column; gap: 12px;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 12px;
     padding: 0 18px 6px;
     padding-left: max(18px, env(safe-area-inset-left));
     padding-right: max(18px, env(safe-area-inset-right));
   }
-  #home-content .home-rounds-all.expanded { display: flex; }
+  #home-content .home-rounds-all.expanded { display: grid; }
+  @media (min-width: 720px) {
+    #home-content .home-rounds-all { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1100px) {
+    #home-content .home-rounds-all { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
   .home-rounds-toggle {
     display: flex; justify-content: center;
     padding: 4px 18px 18px;
@@ -332,6 +349,26 @@
     color: var(--muted); font-style: italic;
   }
   .match-placeholder .round-badge { background: #fff; border: 1px solid var(--cream-edge); }
+
+  /* Gala-day round card — distinct so parents can tell it apart from a regular
+     SJRU Sunday Minis round at a glance. Burgundy/gold from the badge ribbon. */
+  .round-card.gala {
+    border-left-color: var(--maroon);
+    background: linear-gradient(135deg, #fff 0%, #fdf6e9 100%);
+  }
+  .round-card.gala .round-card-label.gala-label { background: var(--maroon); color: var(--gold); }
+  .round-card.gala.primary { border-left-color: var(--gold); }
+  .gala-title {
+    font-size: 14px; font-weight: 800; color: var(--maroon);
+    letter-spacing: -.2px; margin-bottom: 6px;
+  }
+  .gala-description {
+    font-size: 12px; color: var(--muted); line-height: 1.45;
+    margin-bottom: 10px;
+  }
+  .match-gala { border-left-color: var(--maroon); background: linear-gradient(135deg, #FCFCFC 0%, #fdf6e9 100%); }
+  .match-gala .placeholder-headline { color: var(--maroon); font-weight: 700; }
+  .gala-badge { background: var(--maroon); color: var(--gold); border-color: var(--maroon); }
 
   /* CALENDAR LIST */
   #calendar { padding: 16px 0 40px; }
@@ -479,10 +516,7 @@
     <div class="crest" role="img" aria-label="North Shore Minis Sunday Rugby logo"></div>
     <div class="title-block">
       <div class="eyebrow">North Shore Minis · Sunday</div>
-      <div>
-        <h1>Fixtures &amp; Results</h1>
-        <span class="live-pill" aria-label="Draw is live"><span class="live-dot" aria-hidden="true"></span><span>Live</span></span>
-      </div>
+      <h1>Fixtures &amp; Results</h1>
       <div id="updated-stamp" class="updated-stamp">Loading…</div>
     </div>
     <button class="header-home" id="clear-btn" type="button" hidden>
@@ -547,6 +581,8 @@
   <div class="footer-note">
     <span class="footer-brand" id="footer-brand">North Shore Minis Sunday Rugby · 2026 season</span>
     <span>
+      <a href="clubs.html">Clubs</a>
+      <span class="footer-sep">·</span>
       <a href="venues.html">Venues</a>
       <span class="footer-sep">·</span>
       <a href="https://xplorer.rugby/lcjru-/fixtures-results?team=All&amp;comp=All&amp;season=2026&amp;tab=Fixtures" target="_blank" rel="noopener">Live draw on Rugby Xplorer ↗</a>
@@ -601,7 +637,10 @@ function buildClubRow() {
   // alive on first deploy. Post-fetch, hide clubs that have zero teams in the
   // live data — keeps the chip row tight to what's actually playing.
   const hasData = Object.keys(TEAM_META || {}).length > 0;
-  const allClubs = Object.entries(CLUBS || {});
+  // Alphabetise chip row — config order was source-of-truth (Lane Cove first as
+  // the fork's home club) but for an aggregate visitor coming in cold it's
+  // friendlier to read alphabetically.
+  const allClubs = Object.entries(CLUBS || {}).slice().sort((a, b) => a[1].name.localeCompare(b[1].name));
   const clubsToShow = hasData
     ? allClubs.filter(([key]) => (teamsByClub[key]?.length || 0) > 0)
     : allClubs;
@@ -647,14 +686,9 @@ function buildTokenGrid() {
     (!currentClub || m.clubKey === currentClub) &&
     (!currentAge  || m.age     === currentAge)
   );
-  // Sort: club name, then age, then variant/name
-  filtered.sort((a, b) => {
-    const ca = CLUBS?.[a.clubKey]?.name || '';
-    const cb = CLUBS?.[b.clubKey]?.name || '';
-    if (ca !== cb) return ca.localeCompare(cb);
-    if (a.age !== b.age) return (a.age || '').localeCompare(b.age || '');
-    return (a.name || '').localeCompare(b.name || '');
-  });
+  // Alphabetical sort by team display name. With the club + age chip rows
+  // narrowing the list, alpha within the visible set is the most scannable.
+  filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
   grid.innerHTML = filtered.map(m => {
     const club = CLUBS?.[m.clubKey];
     const display = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
@@ -784,11 +818,21 @@ function render() {
 
   // Build the full chronological timeline for the team: every scheduled
   // round in ROUNDS becomes either a live match or a placeholder card.
-  // Bye rounds and rounds with no date are skipped.
+  // Bye rounds are skipped entirely; gala rounds render a notice card.
   const ageBand = (meta?.age === 'U6' || meta?.age === 'U7') ? 'u6u7' : 'u8u9';
   const timeline = [];
   for (const r of (ROUNDS || [])) {
-    if (r.status === 'bye' || !r.date) continue;
+    if (r.status === 'bye') continue;
+    if (r.status === 'gala') {
+      const live = matchesByRound.get(r.round);
+      if (live) {
+        timeline.push({ kind: live.type === 'result' || (live.dateTime < todaySyd) ? 'past' : 'upcoming', match: live, round: r });
+      } else {
+        timeline.push({ kind: (r.date && r.date < todaySyd) ? 'past-gala' : 'upcoming-gala', round: r, ageBand });
+      }
+      continue;
+    }
+    if (!r.date) continue;
     const live = matchesByRound.get(r.round);
     if (live) {
       timeline.push({ kind: live.type === 'result' || live.dateTime < todaySyd ? 'past' : 'upcoming', match: live, round: r });
@@ -808,17 +852,23 @@ function render() {
     timeline.push({ kind: m.type === 'result' ? 'past' : 'upcoming', match: m, round: null });
   }
 
-  const upcoming = timeline.filter(t => t.kind === 'upcoming' || t.kind === 'upcoming-placeholder');
-  const past     = timeline.filter(t => t.kind === 'past' || t.kind === 'past-placeholder').reverse();
+  const upcoming = timeline.filter(t => /^upcoming/.test(t.kind));
+  const past     = timeline.filter(t => /^past/.test(t.kind)).reverse();
+
+  const renderTimelineEntry = (t) => {
+    if (t.match) return renderMatch(t.match);
+    if (/gala/.test(t.kind)) return renderGalaPlaceholder(t.round);
+    return renderRoundPlaceholder(t.round, ageBand);
+  };
 
   const parts = [];
   if (upcoming.length) {
     parts.push(`<div class="section-header"><span>Upcoming · ${esc(teamLabel)}</span><span>${upcoming.length}</span></div>`);
-    parts.push(upcoming.map(t => t.match ? renderMatch(t.match) : renderRoundPlaceholder(t.round, ageBand)).join(''));
+    parts.push(upcoming.map(renderTimelineEntry).join(''));
   }
   if (past.length) {
     parts.push(`<div class="section-header"><span>Played</span><span>${past.length}</span></div>`);
-    parts.push(past.map(t => t.match ? renderMatch(t.match) : renderRoundPlaceholder(t.round, ageBand)).join(''));
+    parts.push(past.map(renderTimelineEntry).join(''));
   }
   if (!upcoming.length && !past.length) {
     parts.push('<div class="welcome"><p class="welcome-sub">No matches scheduled for this team yet.</p></div>');
@@ -922,6 +972,33 @@ function renderLineupPanel(matchId) {
 
 // Placeholder card for a round that's in the static schedule but hasn't been
 // published to Rugby Xplorer yet (or is in the past with no recorded match).
+// Gala-round placeholder for team timelines. Date may be TBA at scheduling
+// time; when it's known and Xplorer publishes matches, the live-match branch
+// takes over and this is unused.
+function renderGalaPlaceholder(round) {
+  if (!round) return '';
+  const dt   = round.date ? new Date(round.date + 'T08:00:00+10:00') : null;
+  const dow  = dt ? fmtDow(dt.toISOString())  : '';
+  const date = dt ? fmtDate(dt.toISOString()) : '';
+  return `<div class="match-card match-placeholder match-gala" data-round="${esc(round.round)}">
+    <div class="match-row">
+      <div class="match-when">
+        <span class="when-day">${esc(dow || 'TBA')}</span>
+        <span>${esc(date || '')}</span>
+      </div>
+      <div>
+        <div class="placeholder-headline">🏆 ${esc(round.galaTitle || 'Gala Day')} — Round ${esc(round.round)}</div>
+        ${round.galaDescription ? `<div class="match-meta"><span>${esc(round.galaDescription)}</span></div>` : ''}
+        <div class="match-meta">
+          <span class="round-badge gala-badge">R${esc(round.round)} · GALA</span>
+          <span class="placeholder-status">Draw TBA</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>`;
+}
+
 function renderRoundPlaceholder(round, ageBand) {
   if (!round) return '';
   const venueName = round.hosts?.[ageBand];
@@ -960,13 +1037,22 @@ const SHOW_ALL_KEY = `${STORAGE_PREFIX}-rounds-show-all`;
 
 function renderHome() {
   const todaySyd = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
-  const playing = (ROUNDS || []).filter(r => r.date && r.status !== 'bye').slice().sort((a, b) => a.date.localeCompare(b.date));
-  const upcomingIdx = playing.findIndex(r => r.date >= todaySyd);
-  const isToday  = upcomingIdx >= 0 && playing[upcomingIdx].date === todaySyd;
-  const nextR    = upcomingIdx >= 0 ? playing[upcomingIdx] : null;
-  const afterR   = upcomingIdx >= 0 ? playing[upcomingIdx + 1] : null;
-  const lastR    = upcomingIdx > 0 ? playing[upcomingIdx - 1] : (upcomingIdx === -1 ? playing[playing.length - 1] : null);
-  const playedCount = playing.filter(r => r.matches?.u6u7 + r.matches?.u8u9 > 0 && r.date < todaySyd).length;
+  // "Playing" rounds = anything that isn't a true bye. Gala rounds count — they
+  // ARE played, just in a different format. Rounds without dates (gala TBA)
+  // sort after dated ones by round number.
+  const playing = (ROUNDS || []).filter(r => r.status !== 'bye').slice().sort((a, b) => {
+    if (a.date && b.date) return a.date.localeCompare(b.date);
+    if (a.date) return -1;
+    if (b.date) return 1;
+    return (a.round || 0) - (b.round || 0);
+  });
+  const datedPlaying = playing.filter(r => r.date);
+  const upcomingIdx = datedPlaying.findIndex(r => r.date >= todaySyd);
+  const isToday  = upcomingIdx >= 0 && datedPlaying[upcomingIdx].date === todaySyd;
+  const nextR    = upcomingIdx >= 0 ? datedPlaying[upcomingIdx] : null;
+  const afterR   = upcomingIdx >= 0 ? datedPlaying[upcomingIdx + 1] : null;
+  const lastR    = upcomingIdx > 0 ? datedPlaying[upcomingIdx - 1] : (upcomingIdx === -1 ? datedPlaying[datedPlaying.length - 1] : null);
+  const playedCount = playing.filter(r => r.date && (r.matches?.u6u7 + r.matches?.u8u9 > 0) && r.date < todaySyd).length;
 
   const liveClubCount = new Set(Object.values(TEAM_META || {}).map(m => m.clubKey).filter(Boolean)).size;
   const clubCount = liveClubCount || Object.keys(CLUBS || {}).length;
@@ -1028,9 +1114,11 @@ function wireHomeInteractions() {
 
 function roundCard(label, round, primary) {
   if (!round) return '';
-  const dt = new Date(round.date + 'T08:00:00+10:00');
-  const dow  = fmtDow(dt.toISOString());
-  const date = fmtDate(dt.toISOString());
+  const isGala  = round.status === 'gala';
+  const hasDate = !!round.date;
+  const dt    = hasDate ? new Date(round.date + 'T08:00:00+10:00') : null;
+  const dow   = hasDate ? fmtDow(dt.toISOString())  : '';
+  const date  = hasDate ? fmtDate(dt.toISOString()) : '';
   const venueRow = (ageBand, ageLabel) => {
     const venueName = round.hosts?.[ageBand];
     if (!venueName) return '';
@@ -1042,10 +1130,25 @@ function roundCard(label, round, primary) {
       <span class="host-count">${count ? `${count} match${count === 1 ? '' : 'es'}` : 'scheduled'}</span>
     </div>`;
   };
+  const whenText = isGala
+    ? (hasDate ? `${dow} ${date} · Round ${round.round} · Gala` : `Round ${round.round} · date TBA`)
+    : `${dow} ${date} · Round ${round.round}${round.finalRound ? ' · Final' : ''}`;
+  if (isGala) {
+    return `<div class="round-card gala ${primary ? 'primary' : ''}">
+      <div class="round-card-head">
+        <span class="round-card-label gala-label">${esc(label)}</span>
+        <span class="round-card-when">${esc(whenText)}</span>
+      </div>
+      <div class="gala-title">🏆 ${esc(round.galaTitle || 'Gala Day')}</div>
+      ${round.galaDescription ? `<div class="gala-description">${esc(round.galaDescription)}</div>` : ''}
+      ${venueRow('u6u7', 'U6 / U7')}
+      ${venueRow('u8u9', 'U8 / U9')}
+    </div>`;
+  }
   return `<div class="round-card ${primary ? 'primary' : ''}">
     <div class="round-card-head">
       <span class="round-card-label">${esc(label)}</span>
-      <span class="round-card-when">${esc(dow)} ${esc(date)} · Round ${esc(round.round)}${round.finalRound ? ' · Final' : ''}</span>
+      <span class="round-card-when">${esc(whenText)}</span>
     </div>
     ${venueRow('u6u7', 'U6 / U7')}
     ${venueRow('u8u9', 'U8 / U9')}

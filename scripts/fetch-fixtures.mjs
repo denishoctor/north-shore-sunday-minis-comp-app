@@ -441,10 +441,24 @@ function buildRoundsSummary(matches) {
   }
 
   return ROUNDS.map(r => {
-    if (r.bye || !r.date) {
+    if (r.bye) {
       return { round: r.round, date: r.date, status: 'bye', hosts: { u6u7: null, u8u9: null }, matches: { u6u7: 0, u8u9: 0 } };
     }
-    const dayMatches = matchesByDate.get(r.date) || [];
+    if (r.gala) {
+      const dayMatches = r.date ? (matchesByDate.get(r.date) || []) : [];
+      const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
+      const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
+      return {
+        round: r.round,
+        date: r.date,
+        status: 'gala',
+        galaTitle: r.galaTitle || 'Gala Day',
+        galaDescription: r.galaDescription || null,
+        hosts: { u6u7: r.u6u7 || null, u8u9: r.u8u9 || null },
+        matches: { u6u7: u67.length, u8u9: u89.length },
+      };
+    }
+    const dayMatches = r.date ? (matchesByDate.get(r.date) || []) : [];
     const u67 = dayMatches.filter(m => m.age === 'U6' || m.age === 'U7');
     const u89 = dayMatches.filter(m => m.age === 'U8' || m.age === 'U9');
     return {
@@ -512,7 +526,7 @@ async function main() {
     season: SEASON,
     site: { name: SITE.name, shortName: SITE.shortName },
     totalMatches: combined.length,
-    clubs: Object.fromEntries(Object.entries(CLUBS).map(([k, v]) => [k, { id: v.id, name: v.name, shortPrefix: v.shortPrefix }])),
+    clubs: Object.fromEntries(Object.entries(CLUBS).map(([k, v]) => [k, { id: v.id, name: v.name, shortPrefix: v.shortPrefix, url: v.url || null, homeGround: v.homeGround || null }])),
     teams: TEAM_META,
     competitions: Object.values(byComp),
     rounds,

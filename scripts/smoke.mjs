@@ -102,6 +102,12 @@ await check('venues.html', `${base}/venues.html`, [
   ['has venues-list anchor',            (_, b) => b.includes('id="venues-list"')],
 ]);
 
+await check('clubs.html', `${base}/clubs.html`, [
+  ['HTTP 200',                          r      => r.status === 200],
+  ['has clubs-grid anchor',             (_, b) => b.includes('id="clubs-grid"')],
+  ['references NSM_SUNDAY_CONFIG',      (_, b) => b.includes('NSM_SUNDAY_CONFIG')],
+]);
+
 await check('manifest.webmanifest', `${base}/manifest.webmanifest`, [
   ['HTTP 200',                          r      => r.status === 200],
   ['mentions NSM Sunday',               (_, b) => b.includes('NSM Sunday') || b.includes('North Shore Minis')],
