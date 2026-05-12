@@ -34,17 +34,33 @@ export const AGE_GROUPS = ['U6', 'U7', 'U8', 'U9'];
 // appear in the comps will be auto-listed via discoverClubs() in
 // fetch-fixtures.mjs. Add them here with the discovered ID to surface them in
 // the club filter UI.
+// Each entry:
+//   id           Rugby Xplorer entity ID (feed target + crest /<id>. match)
+//   name         display name on chips / clubs page
+//   shortPrefix  stripped from team names for the compact token
+//   url          official club site (verified by web-search probe 2026-05-12)
+//   homeGround   venue key into VENUES — the club's normal home base
 export const CLUBS = {
-  'lane-cove':      { id: 30901, name: 'Lane Cove JRU',          shortPrefix: 'Lane Cove' },
-  'chatswood':      { id: 30878, name: 'Chatswood JRU',          shortPrefix: 'Chatswood' },
-  'hornsby':        { id: 30898, name: 'Hornsby',                shortPrefix: 'Hornsby' },
-  'kwp':            { id: 30900, name: 'Killara–West Pymble',    shortPrefix: 'Killara-West Pymble' },
-  'lindfield':      { id: 48060, name: 'Lindfield JRU',          shortPrefix: 'Lindfield' },
-  'norths-pirates': { id: 50135, name: 'Norths Pirates',         shortPrefix: 'Norths Pirates' },
-  'dee-why':        { id: 53286, name: 'Dee Why',                shortPrefix: 'Dee Why' },
-  'forest':         { id: 53322, name: 'Forest Rugby',           shortPrefix: 'Forest' },
-  'st-ives':        { id: 53546, name: 'St Ives JRU',            shortPrefix: 'St Ives' },
-  'wakehurst':      { id: 53597, name: 'Wakehurst Rugby',        shortPrefix: 'Wakehurst' },
+  'lane-cove':      { id: 30901, name: 'Lane Cove JRU',       shortPrefix: 'Lane Cove',
+    url: 'https://www.lcjru.com.au/',                            homeGround: 'Tantallon Oval' },
+  'chatswood':      { id: 30878, name: 'Chatswood JRU',       shortPrefix: 'Chatswood',
+    url: 'https://www.chatswoodjuniorrugby.com.au/',             homeGround: 'Beauchamp Park' },
+  'hornsby':        { id: 30898, name: 'Hornsby',             shortPrefix: 'Hornsby',
+    url: 'http://hjruc.com.au/',                                 homeGround: 'Mark Taylor Oval' },
+  'kwp':            { id: 30900, name: 'Killara–West Pymble', shortPrefix: 'Killara-West Pymble',
+    url: 'https://www.kwprugby.com/',                            homeGround: 'Lofberg Oval' },
+  'lindfield':      { id: 48060, name: 'Lindfield JRU',       shortPrefix: 'Lindfield',
+    url: 'https://www.lindfieldjuniorrugby.com.au/',             homeGround: 'Tryon Oval' },
+  'norths-pirates': { id: 50135, name: 'Norths Pirates',      shortPrefix: 'Norths Pirates',
+    url: 'https://www.northspirates.rugby/',                     homeGround: 'Tunks Park' },
+  'dee-why':        { id: 53286, name: 'Dee Why',             shortPrefix: 'Dee Why',
+    url: 'https://deewhylionsrugby.com.au/',                     homeGround: 'James Morgan Reserve' },
+  'forest':         { id: 53322, name: 'Forest Rugby',        shortPrefix: 'Forest',
+    url: 'https://forestrugby.com.au/',                          homeGround: 'Melwood Oval' },
+  'st-ives':        { id: 53546, name: 'St Ives JRU',         shortPrefix: 'St Ives',
+    url: 'https://www.stivesrugby.com.au/st-ives-junior-rugby',  homeGround: 'Hassall Park' },
+  'wakehurst':      { id: 53597, name: 'Wakehurst Rugby',     shortPrefix: 'Wakehurst',
+    url: 'https://www.wakehurst.rugby/',                         homeGround: 'Wakehurst Rugby Park' },
 
   // Pending entity-ID discovery — uncomment and populate once seen in a live
   // SJRU Sunday Minis fan-out:
@@ -83,22 +99,78 @@ export const ICS_EVENT_MIN = 60;
 // in the fetched data (fetch-fixtures will log unknown venues).
 export const VENUES = {
   'Bantry Bay Oval':                 { suburb: 'Seaforth',        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Bantry+Bay+Oval+Reserve+St%2C+Seaforth+NSW+2092%2C+Australia' },
-  'Beauchamp Park':                  { suburb: 'Chatswood',       mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Beauchamp+Park+Nicholson+St%2C+Chatswood+NSW+2067%2C+Australia' },
+  'Beauchamp Park':                  { suburb: 'Chatswood',       mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Beauchamp+Park+Nicholson+St%2C+Chatswood+NSW+2067%2C+Australia',
+    details: {
+      parking: 'Upper carpark off Nicholson St (~15–18 spots) closest to the sportsground. Free 2-hour street parking along Beauchamp Ave, Darling St and Nicholson St rings the park if the carpark is full.',
+      coffee:  { onsite: 'Clubhouse canteen open on game days.' },
+      notes:   'Home of Chatswood Junior Rugby. Council-managed (Willoughby).',
+    },
+  },
   'Boronia Park':                    { suburb: 'Hunters Hill',    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Boronia+Park%2C+Park+Rd%2C+Hunters+Hill+NSW+2110%2C+Australia' },
-  'Hassall Park':                    { suburb: 'St Ives',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Hassall+Park+Hassell+St%2C+St.+Ives+NSW+2075%2C+Australia' },
-  'James Morgan Reserve':            { suburb: 'Cromer',          mapsUrl: 'https://www.google.com/maps/search/?api=1&query=James+Morgan+Reserve+Fisher+Rd+N+%26+Carawa+Rd%2C+Cromer+NSW+2099%2C+Australia' },
+  'Hassall Park':                    { suburb: 'St Ives',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Hassall+Park+Hassell+St%2C+St.+Ives+NSW+2075%2C+Australia',
+    details: {
+      parking: 'Onsite parking exists but fills early on busy weekends — get in by 8am or expect to walk in from surrounding streets.',
+      notes:   'Home of St Ives Junior Rugby. Clubhouse jointly run with St Ives Cricket and St Ives Junior Cricket.',
+    },
+  },
+  'James Morgan Reserve':            { suburb: 'Cromer',          mapsUrl: 'https://www.google.com/maps/search/?api=1&query=James+Morgan+Reserve+Fisher+Rd+N+%26+Carawa+Rd%2C+Cromer+NSW+2099%2C+Australia',
+    details: {
+      notes: 'Home of Dee Why Lions Rugby. Corner of Fisher Rd North and Carawa Rd, Cromer. Council-managed (Northern Beaches).',
+    },
+  },
   'Keirle Park':                     { suburb: 'Manly',           mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Keirle+Park%2C+Carlton+St%2C+Manly+NSW+2095%2C+Australia' },
-  'Lofberg Oval':                    { suburb: 'West Pymble',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia' },
-  'Mark Taylor Oval':                { suburb: 'Waitara',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Mark+Taylor+Oval+Waitara+Ave%2C+Waitara+NSW+2077%2C+Australia' },
+  'Lofberg Oval':                    { suburb: 'West Pymble',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia',
+    details: {
+      parking: 'Wheelchair-accessible carpark; additional parking on the corner of Lofberg Rd and Yanko Rd.',
+      coffee:  { onsite: 'Canteen + BBQ in the clubhouse on game days; licensed bar.' },
+      notes:   'Home of KWP Rugby. Inside Ku-ring-gai Bicentennial Park — main entrance off Prince of Wales Dr.',
+    },
+  },
+  'Mark Taylor Oval':                { suburb: 'Waitara',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Mark+Taylor+Oval+Waitara+Ave%2C+Waitara+NSW+2077%2C+Australia',
+    details: {
+      parking: 'Parking along Waitara Ave and Park Ave.',
+      coffee:  { onsite: 'New pavilion canteen + community room.' },
+      notes:   'Home of Hornsby Rugby. The 2024 pavilion upgrade added accessible change rooms for women’s teams.',
+    },
+  },
   'Mark Taylor Oval (Waitara Oval)': { suburb: 'Waitara',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Mark+Taylor+Oval+Waitara+Ave%2C+Waitara+NSW+2077%2C+Australia' },
-  'Melwood Oval':                    { suburb: 'Forestville',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Melwood+Oval+Melwood+Ave%2C+Forestville+NSW+2087%2C+Australia' },
+  'Melwood Oval':                    { suburb: 'Forestville',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Melwood+Oval+Melwood+Ave%2C+Forestville+NSW+2087%2C+Australia',
+    details: {
+      parking: 'Onsite parking in the War Memorial Playing Fields precinct; can fill at peak times — earlier is better.',
+      coffee:  { onsite: 'Canteen with sausage sizzle on game days; coffee van + BBQ in winter.' },
+      notes:   'Home of Forest Rugby. 24 Melwood Ave, Forestville. 24/7 publicly-accessible defibrillator on site.',
+    },
+  },
   'North Narrabeen Reserve':         { suburb: 'Narrabeen',       mapsUrl: 'https://www.google.com/maps/search/?api=1&query=North+Narrabeen+Reserve%2C+Pittwater+Rd%2C+Warriewood+NSW+2102%2C+Australia' },
   'Porter Reserve':                  { suburb: 'Newport',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Porter+Reserve%2C+Burke+St%2C+Newport+NSW+2106%2C+Australia' },
   'Rawson Oval':                     { suburb: 'Mosman',          mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rawson+Oval%2C+Cross+St%2C+Mosman+NSW+2088%2C+Australia' },
-  'Tantallon Oval':                  { suburb: 'Lane Cove North', mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia' },
-  'Tryon Oval':                      { suburb: 'East Lindfield',  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tryon+Oval+62a+Tryon+Rd%2C+East+Lindfield+NSW+2070%2C+Australia' },
-  'Tunks Park':                      { suburb: 'Cammeray',        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia' },
-  'Wakehurst Rugby Park':            { suburb: 'Belrose',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Wakehurst+Rugby+Park+Forest+Way+%26+Waldon+Rd%2C+Belrose+NSW+2085%2C+Australia' },
+  'Tantallon Oval':                  { suburb: 'Lane Cove North', mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tantallon+Oval+Lane+Cove+North+NSW+2066%2C+Australia',
+    details: {
+      parking: 'On-site parking via Epping Rd (eastbound) just after Fraser St — limited. Overflow on Fraser St and Tantallon Rd.',
+      coffee:  { onsite: 'Clubhouse canteen + bar; cart on game days.' },
+      notes:   'Home of Lane Cove Junior Rugby. Corner of Tantallon Rd and Epping Rd. Bus stops on both sides of Epping Rd.',
+    },
+  },
+  'Tryon Oval':                      { suburb: 'East Lindfield',  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tryon+Oval+62a+Tryon+Rd%2C+East+Lindfield+NSW+2070%2C+Australia',
+    details: {
+      parking: 'Onsite parking adjacent to the playground; on-street on Tryon Rd if full.',
+      notes:   'Home of Lindfield Junior Rugby (100+ years at this ground). Nearest train: Lindfield (North Shore line).',
+    },
+  },
+  'Tunks Park':                      { suburb: 'Cammeray',        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia',
+    details: {
+      parking: 'Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.',
+      coffee:  { onsite: 'Coffee cart at the entrance on game days.', nearby: 'Cafe Carino — short walk.' },
+      notes:   'Home of Norths Pirates Junior Rugby (western end). Under the Cammeray Suspension Bridge — allow 5 min to walk in.',
+    },
+  },
+  'Wakehurst Rugby Park':            { suburb: 'Belrose',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Wakehurst+Rugby+Park+Forest+Way+%26+Waldon+Rd%2C+Belrose+NSW+2085%2C+Australia',
+    details: {
+      parking: 'Onsite parking adjacent to the clubhouse.',
+      coffee:  { onsite: 'Canteen + BBQ + bar (the canteen is the club’s main fundraiser through the season).' },
+      notes:   'Home of Wakehurst Rugby. Clubhouse open to spectators; bathroom + change facilities. Off Waldon Rd, Belrose.',
+    },
+  },
 };
 
 export const SITE = {

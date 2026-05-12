@@ -21,8 +21,13 @@ export const ROUNDS = [
   { round:  4, date: '2026-05-24', u6u7: 'Beauchamp Park',          u8u9: 'Bantry Bay Oval'         },
   { round:  5, date: '2026-05-31', u6u7: 'Tantallon Oval',          u8u9: 'Lofberg Oval'            },
   { round:  6, date: '2026-06-14', u6u7: 'Hassall Park',            u8u9: 'James Morgan Reserve'    },
-  // Round 7 — bye weekend (long weekend / school holidays); no scheduled hosts.
-  { round:  7, date: null,         u6u7: null,                      u8u9: null,         bye: true   },
+  // Round 7 — Inter-District Gala Day. Teams travel outside SJRU to play
+  // other-district sides. Date confirmed by SJRU notice (TBC until they
+  // publish the gala draw). The UI labels gala rounds separately.
+  { round:  7, date: null,         u6u7: null,                      u8u9: null,         gala: true,
+    galaTitle: 'Inter-District Gala Day',
+    galaDescription: 'Teams travel outside SJRU to play other-district sides. Draw published by SJRU closer to the date.',
+  },
   { round:  8, date: '2026-07-26', u6u7: 'Tunks Park',              u8u9: 'Beauchamp Park'          },
   { round:  9, date: '2026-08-02', u6u7: 'Mark Taylor Oval',        u8u9: 'Wakehurst Rugby Park'    },
   { round: 10, date: '2026-08-09', u6u7: 'Melwood Oval',            u8u9: 'Tantallon Oval'          },
