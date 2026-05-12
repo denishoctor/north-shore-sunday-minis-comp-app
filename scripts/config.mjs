@@ -62,10 +62,20 @@ export const CLUBS = {
   'wakehurst':      { id: 53597, name: 'Wakehurst Rugby',     shortPrefix: 'Wakehurst',
     url: 'https://www.wakehurst.rugby/',                         homeGround: 'Wakehurst Rugby Park' },
 
-  // Pending entity-ID discovery — uncomment and populate once seen in a live
-  // SJRU Sunday Minis fan-out:
-  // 'raiders':   { id: null, name: 'Raiders Rugby', shortPrefix: 'Raiders' },
-  // 'seaforth':  { id: null, name: 'Seaforth',      shortPrefix: 'Seaforth' },
+  // Pending / not-this-season:
+  //
+  // 'seaforth' (Seaforth Raiders, raidersrugby.com.au) — confirmed by the club
+  //   2026-05-12 that their cohort is moving up to U10 in 2026, so they're
+  //   not in the U6–U9 Sunday Minis comp this season. Bring back for 2027
+  //   when their grading drops a Sunday Minis side again.
+  //
+  // 'raiders'  (Raiders Rugby, raidersrugby.com.au) — note: Seaforth and
+  //   Raiders are the same club in the SJRU directory. Don't add this twice.
+  //
+  // If a brand-new SJRU North Shore Sunday Minis club appears mid-season,
+  // discover their entity ID via the next live fetch (any team not yet in
+  // CLUBS will surface with `clubKey: null` and an "unknown club" warning),
+  // then add them here with the verified id.
 };
 
 // FEEDS drives the fetch fan-out. Each descriptor is one GraphQL request shape;

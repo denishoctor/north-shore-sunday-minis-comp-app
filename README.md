@@ -147,12 +147,11 @@ simple); icons are checked in.
 
 ## Open questions / pending
 
-- **Raiders Rugby + Seaforth:** the user flagged these as candidate clubs but
-  they don't appear in LCJRU's 2026 Sunday Minis fixtures (post-March SJRU
-  restructure may have changed their grading). Their Rugby Xplorer entity IDs
-  are unknown. Once the CI runner can probe `entityType: 'competition'`
-  (see `tests/api.test.mjs`), any teams from those clubs appearing in the
-  comp results will surface as "unknown clubKey" and we can add them.
+- **Seaforth Raiders:** confirmed by the club (2026-05-12) — their cohort
+  is moving up to U10 in 2026, so they're not in the U6–U9 Sunday Minis
+  comp this season. Re-add to `CLUBS` in `scripts/config.mjs` for 2027 if
+  their grading drops a Sunday Minis side again. (Note: "Seaforth" and
+  "Raiders Rugby" are the same SJRU entity — `raidersrugby.com.au`.)
 - **Custom domain:** GitHub Pages default URL ships in v1; CNAME deferred to v1.2.
 - **Comp vs club fan-out:** v1 uses per-club fan-out (known-good, mirrors
   upstream). Once `entityType: 'competition'` is verified live, an option to
