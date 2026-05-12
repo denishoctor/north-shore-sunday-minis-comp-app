@@ -65,17 +65,24 @@
        the class on scroll past the eyebrow. */
     transition: padding .18s ease;
   }
-  /* Compact mode (scrolled past the top): hide the badge + title block so
-     the sticky bar shows ONLY the nav links — Clubs / Venues / Share /
-     Calendar. The flex-end justify on .header-nav keeps them right-aligned. */
+  /* Compact mode (scrolled past the top): compress padding always.
+     On desktop, keep the crest + title visible (just smaller padding +
+     hidden eyebrow/stamp). On mobile, hide crest + title entirely so the
+     sticky bar shows ONLY the nav links — viewport is too narrow there. */
   .header.compact {
     padding-top: 8px;
     padding-bottom: 8px;
     align-items: center;
   }
-  .header.compact .crest,
-  .header.compact .title-block { display: none; }
-  .header.compact .header-nav { width: 100%; justify-content: flex-end; }
+  .header.compact .crest { width: 48px; height: 48px; }
+  .header.compact .eyebrow,
+  .header.compact .updated-stamp { display: none; }
+  .header.compact h1 { font-size: 16px; }
+  @media (max-width: 600px) {
+    .header.compact .crest,
+    .header.compact .title-block { display: none; }
+    .header.compact .header-nav { width: 100%; justify-content: flex-end; }
+  }
   .crest {
     width: 76px; height: 76px;
     background: #fff url('assets/sunday-minis-logo-w-bg.png') center/102% no-repeat;
@@ -365,9 +372,9 @@
     padding-bottom: 6px;
     border-bottom: 3px solid var(--gold);
   }
-  /* Featured row: auto-fit so an orphan trailing card stretches to fill its
-     row rather than sitting half-width. Primary "Next Sunday" always spans
-     full row on multi-col layouts. */
+  /* Featured row: Last / Next / After on a single row on desktop (3 columns
+     auto-fit; primary Next does NOT span full width any more — keeps the
+     three featured cards on one line so the user sees them side-by-side). */
   .home-rounds {
     display: grid;
     grid-template-columns: 1fr;
@@ -377,8 +384,7 @@
     padding-right: max(18px, env(safe-area-inset-right));
   }
   @media (min-width: 720px) {
-    .home-rounds { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .home-rounds .round-card.tier-next { grid-column: 1 / -1; }
+    .home-rounds { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   }
   .round-card {
     background: #fff; border: 1px solid var(--cream-edge); border-left: 3px solid var(--gold);
@@ -1573,11 +1579,21 @@ window.addEventListener('hashchange', () => {
 
   // Sticky-header compact mode: once the user has scrolled past the eyebrow
   // area, switch to a compact bar so the nav stays visible without eating
-  // viewport. The threshold is rough — exact px isn't critical.
+  // viewport. Hysteresis between the in/out thresholds prevents the
+  // collapsing-header from re-triggering itself on Android (Pixel reported
+  // a flicker loop when the page settles right at the toggle point).
   const headerEl = document.querySelector('.header');
+  const COMPACT_IN_PX  = 80;   // become compact once user has scrolled past 80px
+  const COMPACT_OUT_PX = 20;   // un-compact only after they scroll back above 20px
+  let lastCompact = false;
   const onScroll = () => {
     if (!headerEl) return;
-    headerEl.classList.toggle('compact', window.scrollY > 24);
+    const y = window.scrollY;
+    const next = lastCompact ? (y >= COMPACT_OUT_PX) : (y > COMPACT_IN_PX);
+    if (next !== lastCompact) {
+      headerEl.classList.toggle('compact', next);
+      lastCompact = next;
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
