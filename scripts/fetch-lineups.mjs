@@ -85,9 +85,13 @@ export function parseLineupData(pageProps) {
     return { home: [], away: [], homeCoaches: [], awayCoaches: [], officials };
   }
 
+  // Tag each entry by the array it came from, so isSub doesn't rely on
+  // parseInt(position) — which silently mis-labelled non-numeric position
+  // codes (e.g. "B", "R", "—") as starters because parseInt → NaN, and
+  // NaN >= 16 is false.
   const allPlayers = [
-    ...(lineUp.players     ?? []),
-    ...(lineUp.substitutes ?? []),
+    ...(lineUp.players     ?? []).map(p => ({ ...p, _fromSubs: false })),
+    ...(lineUp.substitutes ?? []).map(p => ({ ...p, _fromSubs: true  })),
   ];
 
   const cleanName = s => (s ?? '').trim().replace(/\s+/g, ' ');
@@ -96,11 +100,17 @@ export function parseLineupData(pageProps) {
     name:     cleanName(p.name),
     position: p.position ?? '',
     captain:  p.captainType === 'captain',
-    isSub:    parseInt(p.position) >= 16,
+    isSub:    p._fromSubs,
   });
 
-  // Sort starters 1–15 then bench 16+ by position number
-  const sort = arr => arr.slice().sort((a, b) => parseInt(a.position) - parseInt(b.position));
+  // Sort by position, but keep non-numeric positions (NaN) stable at the end.
+  const sort = arr => arr.slice().sort((a, b) => {
+    const pa = parseInt(a.position), pb = parseInt(b.position);
+    if (Number.isNaN(pa) && Number.isNaN(pb)) return 0;
+    if (Number.isNaN(pa)) return 1;
+    if (Number.isNaN(pb)) return -1;
+    return pa - pb;
+  });
 
   const home = sort(allPlayers.filter(p => p.isHome  === true )).map(normalisePlayer);
   const away = sort(allPlayers.filter(p => p.isHome  === false)).map(normalisePlayer);
