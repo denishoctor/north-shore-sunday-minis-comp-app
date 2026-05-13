@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-82ba80cf7b52c7e27-chatswood-u6-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Chatswood Green 6 vs Norths Pirates Gold 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-340f34e016f7a2b90-chatswood-u6-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Chatswood Green 6 vs St Ives Yellow 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-304485e056461b9ea-chatswood-u6-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Chatswood Green 6 vs Wakehurst Wallabies 6 | RND 3
@@ -83,36 +83,36 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-6a5fc765bbc611b04-chatswood-u6-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Chatswood Green 6 vs Norths Pirates Gold 6 | RND 4
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Green 6 vs Norths Pirates Gold 6\n📍 Tantallon
-  Oval TT3\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#chatswood-u6-green
+LOCATION:Lofberg Oval TT3\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 6 vs Norths Pirates Gold 6\n📍 Lofberg O
+ val TT3\, West Pymble\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 S
+ JRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
+ alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
+ ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
+ orth-shore-sunday-minis-comp-app/#chatswood-u6-green
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-green
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-87e7654310134191f-chatswood-u6-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Chatswood Green 6 vs Norths Pirates White 6 | RND 5
-LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Green 6 vs Norths Pirates White 6\n📍 Beaucham
- p Park TT4\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
- SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
- calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#chatswood-u6-green
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 6 vs Norths Pirates White 6\n📍 Wakehurs
+ t Rugby Park TT4\, Belrose\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#chatswood-u6-green
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-green
 END:VEVENT

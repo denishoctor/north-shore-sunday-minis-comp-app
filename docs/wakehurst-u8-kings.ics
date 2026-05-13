@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fb5b243ba1973232e-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260503T100000
 DTEND;TZID=Australia/Sydney:20260503T110000
 SUMMARY:Wakehurst Kings 8 vs Chatswood Gold 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1878b66db5814a3af-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-26cb2fb97f20b3427-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Wakehurst Kings 8 vs Hornsby Red 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-b126aa2cb5fe21890-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 4
@@ -101,14 +101,14 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-9f8c0588e7b4392cd-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Wakehurst Kings 8 vs Norths Pirates Black 8 | RND 5
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Kings 8 vs Norths Pirates Black 8\n📍 Lofberg 
- Oval TT1\, West Pymble\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Norths Pirates Black 8\n📍 Beaucham
+ p Park TT1\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
  SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
   to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho

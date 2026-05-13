@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-fcde3f9b55e3541b0-norths-pirates-u6-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Norths Pirates Red 6 vs Killara-West Pymble Blue 6 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-22e3b63feb13081ee-norths-pirates-u6-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Norths Pirates Red 6 vs Lane Cove Blue 6 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-069989de10bad9a70-norths-pirates-u6-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Norths Pirates Red 6 vs Killara-West Pymble Gold 6 | RND 3
@@ -87,18 +87,18 @@ BEGIN:VEVENT
 UID:nsm-sunday-e25ca24cbec7efbb6-norths-pirates-u6-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Norths Pirates Red 6 vs Wakehurst Wombats 6 | RND 4
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Red 6 vs Wakehurst Wombats 6\n📍 Tantallo
- n Oval TT3\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\
- n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change.
-  This calendar updates automatically\n(Apple Calendar: ~every hour · Goog
- le Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gith
- ub.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-red
+LOCATION:Lofberg Oval TT3\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 6 vs Wakehurst Wombats 6\n📍 Lofberg 
+ Oval TT3\, West Pymble\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 
+ SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#norths-pirates-u6-red
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u6-red
 END:VEVENT
@@ -106,18 +106,18 @@ BEGIN:VEVENT
 UID:nsm-sunday-86454c8c13e20711e-norths-pirates-u6-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T053018Z
+LAST-MODIFIED:20260513T053018Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Norths Pirates Red 6 vs Wakehurst Wallabies 6 | RND 5
-LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Red 6 vs Wakehurst Wallabies 6\n📍 Beauch
- amp Park TT2\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-red
+LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 6 vs Wakehurst Wallabies 6\n📍 Wakehu
+ rst Rugby Park TT2\, Belrose\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\
+ n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change.
+  This calendar updates automatically\n(Apple Calendar: ~every hour · Goog
+ le Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gith
+ ub.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-red
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u6-red
 END:VEVENT
