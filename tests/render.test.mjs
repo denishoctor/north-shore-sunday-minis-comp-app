@@ -5,15 +5,10 @@ import {
   scoreClass, parseVenue, venueSlug, renderVenueDetails,
   fmtDow, fmtDate, fmtTime, rowId,
 } from '../docs/render.mjs';
-
-const CLUBS = {
-  'lane-cove':      { id: 30901, name: 'Lane Cove JRU',       shortPrefix: 'Lane Cove' },
-  'chatswood':      { id: 30878, name: 'Chatswood JRU',       shortPrefix: 'Chatswood' },
-  'kwp':            { id: 30900, name: 'Killara–West Pymble', shortPrefix: 'Killara-West Pymble' },
-  'lindfield':      { id: 48060, name: 'Lindfield JRU',       shortPrefix: 'Lindfield' },
-  'norths-pirates': { id: 50135, name: 'Norths Pirates',      shortPrefix: 'Norths Pirates' },
-  'wakehurst':      { id: 53597, name: 'Wakehurst Rugby',     shortPrefix: 'Wakehurst' },
-};
+// Import the real CLUBS map rather than maintaining a parallel copy in the
+// test file — the old hardcoded shape silently drifted from config.mjs when
+// a new club was added.
+import { CLUBS } from '../scripts/config.mjs';
 
 describe('esc', () => {
   test('escapes the five XSS-relevant chars', () => {
