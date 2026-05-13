@@ -435,14 +435,16 @@
     max-width: min(280px, calc(100vw - 24px));
   }
   /* On narrow viewports, anchor popover to the viewport's right edge
-     (instead of the trigger's right edge) so wide content can't overflow. */
+     (instead of the trigger's right edge) so wide content can't overflow.
+     Respect safe-area insets so notched / Dynamic Island devices don't
+     clip the popover under the camera cutout. */
   @media (max-width: 600px) {
     .action-popover {
       position: fixed;
       top: auto;
-      bottom: 12px;
-      right: 12px;
-      left: 12px;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      right: max(12px, env(safe-area-inset-right));
+      left: max(12px, env(safe-area-inset-left));
       max-width: none;
       min-width: 0;
     }
