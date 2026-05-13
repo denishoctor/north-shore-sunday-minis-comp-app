@@ -1588,7 +1588,10 @@ function render() {
     parts.push(past.map(renderTimelineEntry).join(''));
   }
   if (!upcoming.length && !past.length) {
-    parts.push('<div class="welcome"><p class="welcome-sub">No matches scheduled for this team yet.</p></div>');
+    const filterHint = currentRounds.length
+      ? ` for round ${currentRounds.join(', ')}`
+      : '';
+    parts.push(`<div class="welcome"><p class="welcome-sub">No matches scheduled for <strong>${esc(teamLabel)}</strong>${filterHint} yet. Check back closer to the round, or pick a different team from the toolbar above.</p></div>`);
   }
   cal.innerHTML = parts.join('');
 
