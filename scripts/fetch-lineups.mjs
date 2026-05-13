@@ -136,7 +136,13 @@ async function fetchLineupFromPattern(matchId, patternIdx) {
     const res = await fetch(url, {
       signal: ac.signal,
       headers: {
-        'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        // We hit a public Next.js page Rugby Xplorer is happy to render for
+        // browsers, so we keep a current Chrome fingerprint. The
+        // `nsm-sunday-fixtures` token + URL is appended so an admin
+        // investigating their access logs can find us and reach out instead
+        // of blanket-blocking; the `From` header gives them a direct contact.
+        'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 nsm-sunday-fixtures/0.1 (+https://github.com/denishoctor/north-shore-sunday-minis-comp-app)',
+        'from':            'https://github.com/denishoctor/north-shore-sunday-minis-comp-app/issues',
         'accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'accept-language': 'en-AU,en;q=0.9',
         'origin':          'https://xplorer.rugby',
