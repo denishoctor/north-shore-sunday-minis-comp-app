@@ -2,10 +2,12 @@ name: Refresh Fixtures
 
 on:
   schedule:
-    # Hourly, 24/7. Tighten or relax once we know how often the SJRU draws
-    # actually churn — Sunday Minis is lower-volume than the LCJRU multi-day grid.
+    # Hourly, 24/7. SJRU draws don't change minute-to-minute — Sunday Minis
+    # rounds drop weekly, with the occasional mid-week tweak. Hourly is
+    # plenty; the previous 30-min cadence doubled CI cost for no real signal.
+    # If you need a faster pick-up around round publication, prefer manual
+    # `workflow_dispatch` over more frequent crons.
     - cron: '0 * * * *'
-    - cron: '30 * * * *'
   workflow_dispatch:
 
 # Serialise runs so a long-running fetch from one trigger can't race with the
