@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-06fa2098449395e6f-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Norths Pirates White 6 vs Killara-West Pymble Gold 6 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-25b641b3aec34947b-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Norths Pirates White 6 vs Wakehurst Wombats 6 | RND 2
@@ -65,11 +65,30 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u6-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-0695b1cf622a4fed8-norths-pirates-u6-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
+DTSTART;TZID=Australia/Sydney:20260516T084000
+DTEND;TZID=Australia/Sydney:20260516T094000
+SUMMARY:Norths Pirates White 6 vs Lane Cove Blue 6 | RND 3
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 6 vs Lane Cove Blue 6\n📍 Tantallon
+  Oval TT2\, Lane Cove North\n📅 Round 3 · Sat\, 16 May · 8:40am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u6-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-54ffc1748fe04286c-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Norths Pirates White 6 vs Lane Cove Blue 6 | RND 3
@@ -84,11 +103,49 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u6-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-f45027fb4928a243b-norths-pirates-u6-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
+DTSTART;TZID=Australia/Sydney:20260523T092000
+DTEND;TZID=Australia/Sydney:20260523T102000
+SUMMARY:Norths Pirates White 6 vs St Ives Blue 6 | RND 4
+LOCATION:Lofberg Oval TT3\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 6 vs St Ives Blue 6\n📍 Lofberg Ova
+ l TT3\, West Pymble\n📅 Round 4 · Sat\, 23 May · 9:20am AEST\n🏆 SJR
+ U Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
+ endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
+ ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
+ th-shore-sunday-minis-comp-app/#norths-pirates-u6-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u6-white
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-34f808bfd45822a7f-norths-pirates-u6-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
+DTSTART;TZID=Australia/Sydney:20260523T104000
+DTEND;TZID=Australia/Sydney:20260523T114000
+SUMMARY:Norths Pirates White 6 vs Chatswood Black 6 | RND 4
+LOCATION:Lofberg Oval TT4\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 6 vs Chatswood Black 6\n📍 Lofberg 
+ Oval TT4\, West Pymble\n📅 Round 4 · Sat\, 23 May · 10:40am AEST\n🏆
+  SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#norths-pirates-u6-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u6-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-3ead855b7513fccb4-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Norths Pirates White 6 vs St Ives Blue 6 | RND 4
@@ -106,8 +163,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-77023ceb3e88009d1-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260524T092000
 DTEND;TZID=Australia/Sydney:20260524T102000
 SUMMARY:Norths Pirates White 6 vs Chatswood Black 6 | RND 4
@@ -122,11 +179,30 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u6-white
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-380ef3f059110c745-norths-pirates-u6-white@denishoctor.github
+ .io
+SEQUENCE:0
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
+DTSTART;TZID=Australia/Sydney:20260530T092000
+DTEND;TZID=Australia/Sydney:20260530T102000
+SUMMARY:Norths Pirates White 6 vs Chatswood Green 6 | RND 5
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates White 6 vs Chatswood Green 6\n📍 Wakehurs
+ t Rugby Park TT4\, Belrose\n📅 Round 5 · Sat\, 30 May · 9:20am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-white
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u6-white
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-87e7654310134191f-norths-pirates-u6-white@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260512T233511Z
-LAST-MODIFIED:20260512T233511Z
+DTSTAMP:20260513T014845Z
+LAST-MODIFIED:20260513T014845Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Norths Pirates White 6 vs Chatswood Green 6 | RND 5
