@@ -1734,7 +1734,7 @@ function renderMatch(match) {
             <span>${esc(match.competition)}</span>
             ${match.isLive ? '<span class="live-tag">● LIVE</span>' : ''}
             ${match.isBye ? '<span class="bye-tag">BYE</span>' : ''}
-            ${hasLineup ? '<span title="Team sheet available">📋 Lineup</span>' : ''}
+            ${hasLineup ? '<span class="lineup-badge" role="img" aria-label="Team sheet available"><span aria-hidden="true">📋</span> Lineup</span>' : ''}
           </div>
         </div>
         <div class="match-score ${sc}">
