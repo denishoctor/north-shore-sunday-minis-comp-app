@@ -165,6 +165,32 @@ describe('fmt date/time', () => {
   test('fmtTime AEST', () => {
     assert.match(fmtTime('2026-05-02T00:00:00.000Z'), /10:00am/);
   });
+
+  // Sydney DST: clocks go back to AEST (UTC+10) on 1st Sun of April, and
+  // forward to AEDT (UTC+11) on 1st Sun of October. The Sunday Minis season
+  // straddles April but not October, so the AEST/AEDT boundary is in scope.
+  describe('DST handling — Australia/Sydney', () => {
+    test('a 10am Sydney kick-off in AEST winter shows as 10:00am', () => {
+      // 2026-07-05 10:00 AEST = 2026-07-05 00:00 UTC (Sydney is UTC+10)
+      assert.match(fmtTime('2026-07-05T00:00:00.000Z'), /10:00am/);
+      assert.match(fmtDow('2026-07-05T00:00:00.000Z'),  /Sun/);
+    });
+    test('a 10am Sydney kick-off in AEDT summer shows as 10:00am', () => {
+      // 2026-11-08 10:00 AEDT = 2026-11-07 23:00 UTC (Sydney is UTC+11)
+      assert.match(fmtTime('2026-11-07T23:00:00.000Z'), /10:00am/);
+      assert.match(fmtDow('2026-11-07T23:00:00.000Z'),  /Sun/);
+    });
+    test('DST-end Sunday (5 April 2026) renders as Sun and the correct day', () => {
+      // 2026-04-05 10:00 AEDT (just before the 03:00 turn-back) = 2026-04-04 23:00 UTC
+      assert.match(fmtDow('2026-04-04T23:00:00.000Z'),  /Sun/);
+      assert.match(fmtDate('2026-04-04T23:00:00.000Z'), /5 Apr/);
+    });
+    test('DST-start Sunday (4 October 2026) renders as Sun and the correct day', () => {
+      // 2026-10-04 10:00 AEDT (after the 02:00→03:00 spring-forward) = 2026-10-03 23:00 UTC
+      assert.match(fmtDow('2026-10-03T23:00:00.000Z'),  /Sun/);
+      assert.match(fmtDate('2026-10-03T23:00:00.000Z'), /4 Oct/);
+    });
+  });
 });
 
 describe('renderVenueDetails', () => {
