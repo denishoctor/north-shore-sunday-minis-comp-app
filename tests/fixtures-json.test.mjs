@@ -93,5 +93,19 @@ if (!existsSync(FIXTURES_PATH)) {
         assert.ok('clubKey' in m.away, 'away missing clubKey');
       }
     });
+
+    test('type=result implies both scores are non-null (or BYE)', () => {
+      // A "result" should mean the match has been played and scored; null
+      // scores on a result are a normalisation bug (or upstream drift).
+      // Byes legitimately carry no score.
+      const offenders = data.matches.filter(m =>
+        m.type === 'result' && !m.isBye &&
+        (m.home?.score == null || m.away?.score == null)
+      );
+      assert.equal(
+        offenders.length, 0,
+        `Results with null score(s): ${offenders.slice(0, 3).map(m => `${m.id} (${m.home?.name} vs ${m.away?.name})`).join('; ')}${offenders.length > 3 ? ` (+${offenders.length - 3} more)` : ''}`,
+      );
+    });
   });
 }

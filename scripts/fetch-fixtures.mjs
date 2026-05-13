@@ -150,7 +150,14 @@ async function fetchAll(type) {
 // ── normalise ─────────────────────────────────────────────────────────────────
 
 export function normalise(item) {
-  const type = item.status === 'Result' ? 'result' : 'fixture';
+  // Upstream occasionally returns status='Result' on matches that were
+  // cancelled / forfeited / never scored — both teams have score: null but
+  // the status flips. Treat those as fixtures so the renderer doesn't try
+  // to show "— vs —" and the data-integrity test stays useful.
+  const homeScore = item.homeTeam?.score !== '' ? item.homeTeam?.score : null;
+  const awayScore = item.awayTeam?.score !== '' ? item.awayTeam?.score : null;
+  const scoredResult = item.status === 'Result' && (homeScore != null || awayScore != null);
+  const type = scoredResult ? 'result' : 'fixture';
   return {
     id: item.id,
     type,
