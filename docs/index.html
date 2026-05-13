@@ -2183,11 +2183,11 @@ window.addEventListener('hashchange', applyHashState);
     });
 })();
 
-// Service worker registration
+// Service worker registration — kick off immediately rather than waiting on
+// the load event. Registration is async and doesn't block paint, so deferring
+// to window.load just costs us ~1 RTT of installation time on slow phones.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
-  });
+  navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
 }
 </script>
 </body>
