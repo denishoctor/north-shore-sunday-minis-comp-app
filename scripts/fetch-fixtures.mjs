@@ -108,16 +108,32 @@ async function fetchAllForFeed(feed, type) {
 
 // Fan out across every FEEDS descriptor for the requested type, then dedup by
 // match id (a match between two whitelisted clubs appears in both feeds).
+// One feed failing must not poison the rest: we use Promise.allSettled and
+// continue with whatever succeeded. The run is only fatal if *every* feed
+// fails — otherwise we log the failures and emit best-effort output.
 async function fetchAll(type) {
+  const results = await Promise.allSettled(FEEDS.map(feed => fetchAllForFeed(feed, type)));
+  const failures = [];
   const seen = new Map();
-  for (const feed of FEEDS) {
-    const items = await fetchAllForFeed(feed, type);
-    for (const item of items) {
+  results.forEach((r, i) => {
+    const feed = FEEDS[i];
+    if (r.status === 'rejected') {
+      failures.push({ feed, reason: r.reason?.message ?? String(r.reason) });
+      return;
+    }
+    for (const item of r.value) {
       // Defensive: even though we set `comps` on each feed, a stray response
       // outside the Sunday Minis set would be a config bug.
       if (!COMP_IDS.includes(item.compId)) continue;
       if (!seen.has(item.id)) seen.set(item.id, item);
     }
+  });
+  if (failures.length) {
+    console.warn(`⚠️  ${failures.length}/${FEEDS.length} ${type} feed(s) failed:`);
+    for (const f of failures) console.warn(`   entityId=${f.feed.entityId} (${f.feed.entityType}): ${f.reason}`);
+  }
+  if (failures.length === FEEDS.length) {
+    throw new Error(`All ${FEEDS.length} ${type} feeds failed — aborting.`);
   }
   return [...seen.values()];
 }
