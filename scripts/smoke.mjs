@@ -79,7 +79,7 @@ await check('index.html', `${base}/index.html`, [
   ['HTTP 200',                          r      => r.status === 200],
   ['has #calendar div',                 (_, b) => b.includes('id="calendar"')],
   ['has #club-row',                     (_, b) => b.includes('id="club-row"')],
-  ['has #team-tokens',                  (_, b) => b.includes('id="team-tokens"')],
+  ['has #team-cards',                   (_, b) => b.includes('id="team-cards"')],
   ['loads config.js',                   (_, b) => b.includes('config.js')],
   ['imports render.mjs',                (_, b) => b.includes('render.mjs')],
 ]);
