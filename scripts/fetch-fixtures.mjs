@@ -319,11 +319,11 @@ function icsNow() {
   return new Date().toISOString().replace(/[-:.]/g, '').slice(0, 15) + 'Z';
 }
 
-function icsEscape(str) {
+export function icsEscape(str) {
   return String(str ?? '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 }
 
-function icsFold(line) {
+export function icsFold(line) {
   const bytes = Buffer.from(line, 'utf8');
   if (bytes.length <= 75) return line;
   const out = [];

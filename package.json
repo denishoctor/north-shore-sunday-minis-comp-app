@@ -8,7 +8,7 @@
     "fetch": "node scripts/fetch-fixtures.mjs",
     "check": "node scripts/check.mjs",
     "smoke": "node scripts/smoke.mjs",
-    "test": "node --test tests/fixtures-json.test.mjs tests/ics.test.mjs tests/lineup.test.mjs tests/normalise.test.mjs tests/render.test.mjs",
+    "test": "node --test tests/fixtures-json.test.mjs tests/ics.test.mjs tests/ics-fold.test.mjs tests/lineup.test.mjs tests/normalise.test.mjs tests/render.test.mjs",
     "test:api": "node --test tests/api.test.mjs",
     "test:ics": "node --test tests/ics.test.mjs",
     "test:json": "node --test tests/fixtures-json.test.mjs",
