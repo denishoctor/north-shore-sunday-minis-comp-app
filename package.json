@@ -17,6 +17,6 @@
     "test:render": "node --test tests/render.test.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
