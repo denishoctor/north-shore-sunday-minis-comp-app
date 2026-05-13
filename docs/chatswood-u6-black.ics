@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-6e8ef24290eef662e-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Chatswood Black 6 vs Wakehurst Wombats 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1d85e61db04c9ed91-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Chatswood Black 6 vs Killara-West Pymble Gold 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c598c8fa4697e340c-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Chatswood Black 6 vs St Ives Blue 6 | RND 3
@@ -81,34 +81,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-cdb9cf3373d5be5a5-chatswood-u6-black@denishoctor.github.io
+UID:nsm-sunday-3ead855b7513fccb4-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260524T090000
-DTEND;TZID=Australia/Sydney:20260524T100000
-SUMMARY:Chatswood Black 6 vs St Ives Blue 6 | RND 4
-LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Black 6 vs St Ives Blue 6\n📍 Tantallon Oval T
- T2\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 9:00am AEST\n🏆 SJ
- RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#chatswood-u6-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u6-black
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-77023ceb3e88009d1-chatswood-u6-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260524T092000
-DTEND;TZID=Australia/Sydney:20260524T102000
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Chatswood Black 6 vs Norths Pirates White 6 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Black 6 vs Norths Pirates White 6\n📍 Lofberg 
- Oval TT1\, West Pymble\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Black 6 vs Norths Pirates White 6\n📍 Beaucham
+ p Park TT2\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 
  SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
  calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
  endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
@@ -119,18 +101,18 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-86933b3e18f2cb807-chatswood-u6-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Chatswood Black 6 vs Lane Cove Gold 6 | RND 5
-LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Black 6 vs Lane Cove Gold 6\n📍 Beauchamp Park
-  TT3\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 SJRU M
- inis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
- ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
-  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
- shore-sunday-minis-comp-app/#chatswood-u6-black
+LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Black 6 vs Lane Cove Gold 6\n📍 Tantallon Oval
+  TT3\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
+ SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#chatswood-u6-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u6-black
 END:VEVENT

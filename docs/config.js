@@ -780,7 +780,7 @@ window.NSM_SUNDAY_CONFIG = {
       },
       "matches": {
         "u6u7": 19,
-        "u8u9": 25
+        "u8u9": 16
       }
     },
     {
@@ -789,12 +789,12 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Lofberg Oval",
+        "u6u7": "Beauchamp Park",
         "u8u9": "Hassall Park"
       },
       "matches": {
-        "u6u7": 21,
-        "u8u9": 25
+        "u6u7": 19,
+        "u8u9": 16
       }
     },
     {
@@ -803,12 +803,12 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Wakehurst Rugby Park",
-        "u8u9": "Beauchamp Park"
+        "u6u7": "Tantallon Oval",
+        "u8u9": "Lofberg Oval"
       },
       "matches": {
         "u6u7": 19,
-        "u8u9": 25
+        "u8u9": 16
       }
     },
     {

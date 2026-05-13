@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-4b15e5772f5f71d4a-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Dee Why Black 9 vs Lane Cove Blue 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-0f88bc34b2d220c65-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260510T101000
 DTEND;TZID=Australia/Sydney:20260510T111000
 SUMMARY:Dee Why Black 9 vs Chatswood Gold 9 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-eac5a89f6cd505206-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260517T093000
 DTEND;TZID=Australia/Sydney:20260517T103000
 SUMMARY:Dee Why Black 9 vs Chatswood Gold 9 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-8a85d445c0f9b27fc-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260517T095500
 DTEND;TZID=Australia/Sydney:20260517T105500
 SUMMARY:Dee Why Black 9 vs Norths Pirates Black 9 | RND 3
@@ -99,28 +99,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-af670ecf473e6428e-dee-why-u9-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260517T100500
-DTEND;TZID=Australia/Sydney:20260517T110500
-SUMMARY:Dee Why Black 9 vs Norths Pirates Red 9 | RND 3
-LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Dee Why Black 9 vs Norths Pirates Red 9\n📍 Melwood Oval
-  M2\, Forestville\n📅 Round 3 · Sun\, 17 May · 10:05am AEST\n🏆 SJRU
-  Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upda
- tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
- 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
- unday-minis-comp-app/#dee-why-u9-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
- y-u9-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-0315cd219b9c22afa-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260524T085000
 DTEND;TZID=Australia/Sydney:20260524T095000
 SUMMARY:Dee Why Black 9 vs Killara-West Pymble Blue 9 | RND 4
@@ -135,28 +117,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e010d0efe8fb2580c-dee-why-u9-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260524T085000
-DTEND;TZID=Australia/Sydney:20260524T095000
-SUMMARY:Dee Why Black 9 vs Killara-West Pymble Blue 9 | RND 4
-LOCATION:Hassall Park M1\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Dee Why Black 9 vs Killara-West Pymble Blue 9\n📍 Hassal
- l Park M1\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:50am AEST\n🏆 SJR
- U Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upd
- ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#dee-why-u9-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
- y-u9-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-ccd65d0d971208a11-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260524T091000
 DTEND;TZID=Australia/Sydney:20260524T101000
 SUMMARY:Dee Why Black 9 vs Lane Cove Blue 9 | RND 4
@@ -171,34 +135,16 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u9-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-d14c157ff3258d71e-dee-why-u9-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260531T091500
-DTEND;TZID=Australia/Sydney:20260531T101500
-SUMMARY:Dee Why Black 9 vs Wakehurst Wizards 9 | RND 5
-LOCATION:Beauchamp Park M2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Dee Why Black 9 vs Wakehurst Wizards 9\n📍 Beauchamp Par
- k M2\, Chatswood\n📅 Round 5 · Sun\, 31 May · 9:15am AEST\n🏆 SJRU M
- inis U9 Sunday\n\nℹ️ Venues and times may change. This calendar update
- s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
-  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
- day-minis-comp-app/#dee-why-u9-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
- y-u9-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-858339414e49bc56e-dee-why-u9-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260531T110000
-DTEND;TZID=Australia/Sydney:20260531T120000
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
+DTSTART;TZID=Australia/Sydney:20260531T104000
+DTEND;TZID=Australia/Sydney:20260531T114000
 SUMMARY:Dee Why Black 9 vs Wakehurst Warriors 9 | RND 5
-LOCATION:Lofberg Oval M2\, West Pymble\, Sydney NSW
+LOCATION:Lofberg Oval M1\, West Pymble\, Sydney NSW
 DESCRIPTION:🏉 Dee Why Black 9 vs Wakehurst Warriors 9\n📍 Lofberg Oval
-  M2\, West Pymble\n📅 Round 5 · Sun\, 31 May · 11:00am AEST\n🏆 SJRU
+  M1\, West Pymble\n📅 Round 5 · Sun\, 31 May · 10:40am AEST\n🏆 SJRU
   Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upda
  tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s

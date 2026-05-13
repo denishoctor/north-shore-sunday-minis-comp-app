@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-bfc6386803ad5b2ff-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260503T101000
 DTEND;TZID=Australia/Sydney:20260503T111000
 SUMMARY:Lindfield 9 vs Chatswood Green 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-39a5df2fb853c13ba-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260510T110000
 DTEND;TZID=Australia/Sydney:20260510T120000
 SUMMARY:Lindfield 9 vs Lane Cove Gold 9 | RND 2
@@ -63,28 +63,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u9
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-ca236babc045c389a-lindfield-u9@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260517T080000
-DTEND;TZID=Australia/Sydney:20260517T090000
-SUMMARY:Lindfield 9 vs Wakehurst Warriors 9 | RND 3
-LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Wakehurst Warriors 9\n📍 Melwood Oval M2\
- , Forestville\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU Mini
- s U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
- utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
- s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
- -minis-comp-app/#lindfield-u9
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
- eld-u9
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-1f99be9e7918bf7b2-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260517T120000
 DTEND;TZID=Australia/Sydney:20260517T130000
 SUMMARY:Lindfield 9 vs Chatswood Green 9 | RND 3
@@ -101,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-af492856d30a9964b-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Lindfield 9 vs St Ives 9 | RND 4
@@ -117,92 +99,20 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u9
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-5956286af2e40d113-lindfield-u9@denishoctor.github.io
+UID:nsm-sunday-f2f3697f819eb2890-lindfield-u9@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260524T082500
-DTEND;TZID=Australia/Sydney:20260524T092500
-SUMMARY:Lindfield 9 vs Wakehurst Wizards 9 | RND 4
-LOCATION:Hassall Park M1\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Wakehurst Wizards 9\n📍 Hassall Park M1\,
-  St Ives\n📅 Round 4 · Sun\, 24 May · 8:25am AEST\n🏆 SJRU Minis U9 
- Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
- tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
- er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
- s-comp-app/#lindfield-u9
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
- eld-u9
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-33b3a93a9e53d6f42-lindfield-u9@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260524T085000
-DTEND;TZID=Australia/Sydney:20260524T095000
-SUMMARY:Lindfield 9 vs Norths Pirates Black 9 | RND 4
-LOCATION:Hassall Park M4\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Norths Pirates Black 9\n📍 Hassall Park M
- 4\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:50am AEST\n🏆 SJRU Minis 
- U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates aut
- omatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs 
- after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-m
- inis-comp-app/#lindfield-u9
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
- eld-u9
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-6ba9842d0463cd3f4-lindfield-u9@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260531T082500
-DTEND;TZID=Australia/Sydney:20260531T092500
-SUMMARY:Lindfield 9 vs Lane Cove Blue 9 | RND 5
-LOCATION:Beauchamp Park M2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Lane Cove Blue 9\n📍 Beauchamp Park M2\, 
- Chatswood\n📅 Round 5 · Sun\, 31 May · 8:25am AEST\n🏆 SJRU Minis U9
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
+DTSTART;TZID=Australia/Sydney:20260531T092000
+DTEND;TZID=Australia/Sydney:20260531T102000
+SUMMARY:Lindfield 9 vs Lane Cove Gold 9 | RND 5
+LOCATION:Lofberg Oval M2\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Lindfield 9 vs Lane Cove Gold 9\n📍 Lofberg Oval M2\, We
+ st Pymble\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 SJRU Minis U9
   Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
  atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
  ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
  is-comp-app/#lindfield-u9
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
- eld-u9
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-1124e22b61140157e-lindfield-u9@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260531T085000
-DTEND;TZID=Australia/Sydney:20260531T095000
-SUMMARY:Lindfield 9 vs Wakehurst Warriors 9 | RND 5
-LOCATION:Beauchamp Park M2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Wakehurst Warriors 9\n📍 Beauchamp Park M
- 2\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:50am AEST\n🏆 SJRU Mini
- s U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
- utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
- s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
- -minis-comp-app/#lindfield-u9
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
- eld-u9
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-f2f3697f819eb2890-lindfield-u9@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
-DTSTART;TZID=Australia/Sydney:20260531T101000
-DTEND;TZID=Australia/Sydney:20260531T111000
-SUMMARY:Lindfield 9 vs Lane Cove Gold 9 | RND 5
-LOCATION:Lofberg Oval M2\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Lindfield 9 vs Lane Cove Gold 9\n📍 Lofberg Oval M2\, We
- st Pymble\n📅 Round 5 · Sun\, 31 May · 10:10am AEST\n🏆 SJRU Minis U
- 9 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
- matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
- fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
- nis-comp-app/#lindfield-u9
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
  eld-u9
 END:VEVENT

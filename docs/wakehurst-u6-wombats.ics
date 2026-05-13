@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-6e8ef24290eef662e-wakehurst-u6-wombats@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Wakehurst Wombats 6 vs Chatswood Black 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-25b641b3aec34947b-wakehurst-u6-wombats@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Wakehurst Wombats 6 vs Norths Pirates White 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1135e862e54b23001-wakehurst-u6-wombats@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Wakehurst Wombats 6 vs Killara-West Pymble Blue 6 | RND 3
@@ -83,36 +83,36 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e25ca24cbec7efbb6-wakehurst-u6-wombats@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Wakehurst Wombats 6 vs Norths Pirates Red 6 | RND 4
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wombats 6 vs Norths Pirates Red 6\n📍 Tantallo
- n Oval TT3\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\
- n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change.
-  This calendar updates automatically\n(Apple Calendar: ~every hour · Goog
- le Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gith
- ub.io/north-shore-sunday-minis-comp-app/#wakehurst-u6-wombats
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wombats 6 vs Norths Pirates Red 6\n📍 Beaucham
+ p Park TT3\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 
+ SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#wakehurst-u6-wombats
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u6-wombats
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c70b0a2c1971a1f71-wakehurst-u6-wombats@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T042819Z
-LAST-MODIFIED:20260513T042819Z
+DTSTAMP:20260513T073708Z
+LAST-MODIFIED:20260513T073708Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Wakehurst Wombats 6 vs Lane Cove Blue 6 | RND 5
-LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Wombats 6 vs Lane Cove Blue 6\n📍 Beauchamp Pa
- rk TT3\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU
-  Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cale
- ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#wakehurst-u6-wombats
+LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Wombats 6 vs Lane Cove Blue 6\n📍 Tantallon Ov
+ al TT3\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#wakehurst-u6-wombats
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u6-wombats
 END:VEVENT
