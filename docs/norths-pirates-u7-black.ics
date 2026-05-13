@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-16b9713ca4fb361de-norths-pirates-u7-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053800Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Norths Pirates Black 7 vs Hornsby 7 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-8ddcc57a1d0112c01-norths-pirates-u7-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053800Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Norths Pirates Black 7 vs Norths Pirates Red 7 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-8e85d9bd670e66752-norths-pirates-u7-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053800Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:Norths Pirates Black 7 vs St Ives Blue 7 | RND 3
@@ -87,14 +87,14 @@ BEGIN:VEVENT
 UID:nsm-sunday-058de658f07b59bd9-norths-pirates-u7-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260524T094000
-DTEND;TZID=Australia/Sydney:20260524T104000
+DTSTAMP:20260513T053800Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260524T092000
+DTEND;TZID=Australia/Sydney:20260524T102000
 SUMMARY:Norths Pirates Black 7 vs Lindfield 7 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 7 vs Lindfield 7\n📍 Lofberg Oval T
- T1\, West Pymble\n📅 Round 4 · Sun\, 24 May · 9:40am AEST\n🏆 SJRU M
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 7 vs Lindfield 7\n📍 Beauchamp Park
+  TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 9:20am AEST\n🏆 SJRU M
  inis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
  ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
   up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
@@ -106,14 +106,14 @@ BEGIN:VEVENT
 UID:nsm-sunday-1b1a6bb9ab725d1d7-norths-pirates-u7-black@denishoctor.github
  .io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053800Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260531T100000
 DTEND;TZID=Australia/Sydney:20260531T110000
 SUMMARY:Norths Pirates Black 7 vs Forest Black 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Black 7 vs Forest Black 7\n📍 Wakehurst R
- ugby Park TT2\, Belrose\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Black 7 vs Forest Black 7\n📍 Tantallon O
+ val TT2\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n
  🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
  e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu

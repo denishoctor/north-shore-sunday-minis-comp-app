@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-1f3383c3ac01cc9a2-dee-why-u9-white@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Dee Why White 9 vs Seaforth Highlanders 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-92ebdcf55a6b98f1d-dee-why-u9-white@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Dee Why White 9 vs Lane Cove Blue 9 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-d9e511479ba8d793d-dee-why-u9-white@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260517T120000
 DTEND;TZID=Australia/Sydney:20260517T130000
 SUMMARY:Dee Why White 9 vs Lane Cove Gold 9 | RND 3
@@ -83,32 +83,32 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-195eb7a48af2b8fc6-dee-why-u9-white@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260524T102000
-DTEND;TZID=Australia/Sydney:20260524T112000
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260524T094000
+DTEND;TZID=Australia/Sydney:20260524T104000
 SUMMARY:Dee Why White 9 vs Chatswood Gold 9 | RND 4
-LOCATION:Tryon Oval M3\, East Lindfield\, Sydney NSW
-DESCRIPTION:🏉 Dee Why White 9 vs Chatswood Gold 9\n📍 Tryon Oval M3\, 
- East Lindfield\n📅 Round 4 · Sun\, 24 May · 10:20am AEST\n🏆 SJRU Mi
- nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
-  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
- hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
- ay-minis-comp-app/#dee-why-u9-white
+LOCATION:Hassall Park M1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Dee Why White 9 vs Chatswood Gold 9\n📍 Hassall Park M1\
+ , St Ives\n📅 Round 4 · Sun\, 24 May · 9:40am AEST\n🏆 SJRU Minis U9
+  Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
+ atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
+ ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
+ is-comp-app/#dee-why-u9-white
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u9-white
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c53edc9579f03387a-dee-why-u9-white@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260531T115000
-DTEND;TZID=Australia/Sydney:20260531T125000
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260531T104000
+DTEND;TZID=Australia/Sydney:20260531T114000
 SUMMARY:Dee Why White 9 vs Chatswood Green 9 | RND 5
 LOCATION:Lofberg Oval M2\, West Pymble\, Sydney NSW
 DESCRIPTION:🏉 Dee Why White 9 vs Chatswood Green 9\n📍 Lofberg Oval M2
- \, West Pymble\n📅 Round 5 · Sun\, 31 May · 11:50am AEST\n🏆 SJRU Mi
+ \, West Pymble\n📅 Round 5 · Sun\, 31 May · 10:40am AEST\n🏆 SJRU Mi
  nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
   automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund

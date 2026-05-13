@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-bfc6386803ad5b2ff-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260503T101000
 DTEND;TZID=Australia/Sydney:20260503T111000
 SUMMARY:Chatswood Green 9 vs Lindfield 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1ac225525b846fb9e-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
 DTSTART;TZID=Australia/Sydney:20260510T083000
 DTEND;TZID=Australia/Sydney:20260510T093000
 SUMMARY:Chatswood Green 9 vs Wakehurst Warriors 9 | RND 2
@@ -65,14 +65,14 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1f99be9e7918bf7b2-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260517T125000
-DTEND;TZID=Australia/Sydney:20260517T135000
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260517T120000
+DTEND;TZID=Australia/Sydney:20260517T130000
 SUMMARY:Chatswood Green 9 vs Lindfield 9 | RND 3
-LOCATION:Melwood Oval M2\, Forestville\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Green 9 vs Lindfield 9\n📍 Melwood Oval M2\, F
- orestville\n📅 Round 3 · Sun\, 17 May · 12:50pm AEST\n🏆 SJRU Minis 
+LOCATION:Melwood Oval M1\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 9 vs Lindfield 9\n📍 Melwood Oval M1\, F
+ orestville\n📅 Round 3 · Sun\, 17 May · 12:00pm AEST\n🏆 SJRU Minis 
  U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates aut
  omatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs 
  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-m
@@ -83,32 +83,32 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-abb723c45f8f7a38b-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260524T102000
-DTEND;TZID=Australia/Sydney:20260524T112000
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260524T103000
+DTEND;TZID=Australia/Sydney:20260524T113000
 SUMMARY:Chatswood Green 9 vs Wakehurst Warriors 9 | RND 4
-LOCATION:Tryon Oval M2\, East Lindfield\, Sydney NSW
-DESCRIPTION:🏉 Chatswood Green 9 vs Wakehurst Warriors 9\n📍 Tryon Oval
-  M2\, East Lindfield\n📅 Round 4 · Sun\, 24 May · 10:20am AEST\n🏆 S
- JRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar u
- pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#chatswood-u9-green
+LOCATION:Hassall Park M1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 9 vs Wakehurst Warriors 9\n📍 Hassall Pa
+ rk M1\, St Ives\n📅 Round 4 · Sun\, 24 May · 10:30am AEST\n🏆 SJRU M
+ inis U9 Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#chatswood-u9-green
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-green
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c53edc9579f03387a-chatswood-u9-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053018Z
-LAST-MODIFIED:20260513T053018Z
-DTSTART;TZID=Australia/Sydney:20260531T115000
-DTEND;TZID=Australia/Sydney:20260531T125000
+DTSTAMP:20260513T053801Z
+LAST-MODIFIED:20260513T053800Z
+DTSTART;TZID=Australia/Sydney:20260531T104000
+DTEND;TZID=Australia/Sydney:20260531T114000
 SUMMARY:Chatswood Green 9 vs Dee Why White 9 | RND 5
 LOCATION:Lofberg Oval M2\, West Pymble\, Sydney NSW
 DESCRIPTION:🏉 Chatswood Green 9 vs Dee Why White 9\n📍 Lofberg Oval M2
- \, West Pymble\n📅 Round 5 · Sun\, 31 May · 11:50am AEST\n🏆 SJRU Mi
+ \, West Pymble\n📅 Round 5 · Sun\, 31 May · 10:40am AEST\n🏆 SJRU Mi
  nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
   automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
