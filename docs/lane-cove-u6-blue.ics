@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-24418d8361c029d49-lane-cove-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053800Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Lane Cove Blue 6 vs Hornsby 6 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-22e3b63feb13081ee-lane-cove-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053800Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Lane Cove Blue 6 vs Norths Pirates Red 6 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-54ffc1748fe04286c-lane-cove-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053800Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Lane Cove Blue 6 vs Norths Pirates White 6 | RND 3
@@ -83,36 +83,36 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-d3b62c5dfbaaf4bdc-lane-cove-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053800Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Lane Cove Blue 6 vs Killara-West Pymble Gold 6 | RND 4
-LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Blue 6 vs Killara-West Pymble Gold 6\n📍 Beauc
- hamp Park TT2\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#lane-cove-u6-blue
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 6 vs Killara-West Pymble Gold 6\n📍 Tanta
+ llon Oval TT2\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 8:00am AE
+ ST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may chan
+ ge. This calendar updates automatically\n(Apple Calendar: ~every hour · G
+ oogle Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.g
+ ithub.io/north-shore-sunday-minis-comp-app/#lane-cove-u6-blue
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u6-blue
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-c70b0a2c1971a1f71-lane-cove-u6-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053800Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Lane Cove Blue 6 vs Wakehurst Wombats 6 | RND 5
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Blue 6 vs Wakehurst Wombats 6\n📍 Tantallon Ov
- al TT3\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#lane-cove-u6-blue
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 6 vs Wakehurst Wombats 6\n📍 Beauchamp Pa
+ rk TT3\, Chatswood\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU
+  Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#lane-cove-u6-blue
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u6-blue
 END:VEVENT

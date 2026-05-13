@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-e6133e61c023d6ec2-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Chatswood Gold 9 vs Norths Pirates Black 9 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-0f88bc34b2d220c65-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T101000
 DTEND;TZID=Australia/Sydney:20260510T111000
 SUMMARY:Chatswood Gold 9 vs Dee Why Black 9 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-eac5a89f6cd505206-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T093000
 DTEND;TZID=Australia/Sydney:20260517T103000
 SUMMARY:Chatswood Gold 9 vs Dee Why Black 9 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e20d18356a60c015d-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T102000
 DTEND;TZID=Australia/Sydney:20260517T112000
 SUMMARY:Chatswood Gold 9 vs Norths Pirates Black 9 | RND 3
@@ -99,10 +99,46 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-a316450c697126219-chatswood-u9-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260517T103000
+DTEND;TZID=Australia/Sydney:20260517T113000
+SUMMARY:Chatswood Gold 9 vs Dee Why White 9 | RND 3
+LOCATION:Melwood Oval M1\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 9 vs Dee Why White 9\n📍 Melwood Oval M1\
+ , Forestville\n📅 Round 3 · Sun\, 17 May · 10:30am AEST\n🏆 SJRU Min
+ is U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
+ automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
+ rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
+ y-minis-comp-app/#chatswood-u9-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-a61e2335a75a70886-chatswood-u9-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260524T085000
+DTEND;TZID=Australia/Sydney:20260524T095000
+SUMMARY:Chatswood Gold 9 vs Forest White 9 | RND 4
+LOCATION:Hassall Park M2\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 9 vs Forest White 9\n📍 Hassall Park M2\,
+  St Ives\n📅 Round 4 · Sun\, 24 May · 8:50am AEST\n🏆 SJRU Minis U9 
+ Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
+ tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
+ er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
+ s-comp-app/#chatswood-u9-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-gold
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-195eb7a48af2b8fc6-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260524T094000
 DTEND;TZID=Australia/Sydney:20260524T104000
 SUMMARY:Chatswood Gold 9 vs Dee Why White 9 | RND 4
@@ -117,34 +153,52 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-0e1485407ffb4bc05-chatswood-u9-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260531T094000
+DTEND;TZID=Australia/Sydney:20260531T104000
+SUMMARY:Chatswood Gold 9 vs Chatswood Green 9 | RND 5
+LOCATION:Beauchamp Park M1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 9 vs Chatswood Green 9\n📍 Beauchamp Park
+  M1\, Chatswood\n📅 Round 5 · Sun\, 31 May · 9:40am AEST\n🏆 SJRU Mi
+ nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#chatswood-u9-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u9-gold
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-438a35fff596266e5-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
-DTSTART;TZID=Australia/Sydney:20260531T092000
-DTEND;TZID=Australia/Sydney:20260531T102000
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260531T101000
+DTEND;TZID=Australia/Sydney:20260531T111000
 SUMMARY:Chatswood Gold 9 vs Lane Cove Blue 9 | RND 5
 LOCATION:Lofberg Oval M1\, West Pymble\, Sydney NSW
 DESCRIPTION:🏉 Chatswood Gold 9 vs Lane Cove Blue 9\n📍 Lofberg Oval M1
- \, West Pymble\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 SJRU Min
- is U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
- automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
- rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
- y-minis-comp-app/#chatswood-u9-gold
+ \, West Pymble\n📅 Round 5 · Sun\, 31 May · 10:10am AEST\n🏆 SJRU Mi
+ nis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#chatswood-u9-gold
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-30f749c5bebd0c4d9-chatswood-u9-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260513T053801Z
-LAST-MODIFIED:20260513T053800Z
-DTSTART;TZID=Australia/Sydney:20260531T102000
-DTEND;TZID=Australia/Sydney:20260531T112000
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260531T110000
+DTEND;TZID=Australia/Sydney:20260531T120000
 SUMMARY:Chatswood Gold 9 vs St Ives 9 | RND 5
 LOCATION:Lofberg Oval M1\, West Pymble\, Sydney NSW
 DESCRIPTION:🏉 Chatswood Gold 9 vs St Ives 9\n📍 Lofberg Oval M1\, West
-  Pymble\n📅 Round 5 · Sun\, 31 May · 10:20am AEST\n🏆 SJRU Minis U9 
+  Pymble\n📅 Round 5 · Sun\, 31 May · 11:00am AEST\n🏆 SJRU Minis U9 
  Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
  tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
  er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
