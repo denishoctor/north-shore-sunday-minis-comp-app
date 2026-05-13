@@ -15,9 +15,18 @@
  * Run:  node scripts/fetch-fixtures.mjs
  */
 
-import { writeFileSync, readFileSync, existsSync, readdirSync, unlinkSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync, readdirSync, unlinkSync, renameSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
+
+// Atomic write: stage to a sibling temp file, then rename. POSIX rename is
+// atomic on the same filesystem, so a partial-write crash leaves the existing
+// file untouched rather than producing a half-written config.js or ICS feed.
+function writeFileAtomic(path, contents) {
+  const tmp = `${path}.tmp-${process.pid}-${Date.now()}`;
+  writeFileSync(tmp, contents);
+  renameSync(tmp, path);
+}
 import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
   FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES,
@@ -588,16 +597,16 @@ async function main() {
 
   const changes = detectChanges(oldData, output);
 
-  writeFileSync(OUT_PATH, JSON.stringify(output, null, 2));
+  writeFileAtomic(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`✓ Written ${combined.length} matches → docs/fixtures.json`);
 
   if (changes.length > 0) {
     const msg = formatChanges(changes);
-    writeFileSync(DIFF_PATH, msg);
+    writeFileAtomic(DIFF_PATH, msg);
     console.log(`\n⚠️  ${changes.length} change(s) detected:\n`);
     console.log(msg);
   } else {
-    writeFileSync(DIFF_PATH, '');
+    writeFileAtomic(DIFF_PATH, '');
     console.log('✓ No changes to upcoming fixtures');
   }
 
@@ -608,7 +617,7 @@ async function main() {
   }
   for (const [slug, teamId] of Object.entries(TEAM_SLUGS)) {
     const ics = generateICS(slug, teamId, TEAM_META[teamId], combined, output.updated);
-    writeFileSync(join(DOCS_DIR, `${slug}.ics`), ics);
+    writeFileAtomic(join(DOCS_DIR, `${slug}.ics`), ics);
   }
   console.log(`✓ Written ${Object.keys(TEAM_SLUGS).length} ICS feeds → docs/*.ics`);
 
@@ -633,7 +642,7 @@ async function main() {
     '};',
     '',
   ].join('\n');
-  writeFileSync(CFG_PATH, configJs);
+  writeFileAtomic(CFG_PATH, configJs);
   console.log('✓ Written docs/config.js');
 
   // Per-competition summary.
