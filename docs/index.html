@@ -2147,15 +2147,13 @@ window.addEventListener('hashchange', applyHashState);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  const [fxRes, luRes] = await Promise.allSettled([
-    fetch('./fixtures.json').then(r => r.ok ? r.json() : null),
-    fetch('./lineups.json').then(r => r.ok ? r.json() : null),
-  ]);
-  fixturesData = fxRes.status === 'fulfilled' ? fxRes.value : null;
-  lineupsData  = luRes.status === 'fulfilled' ? luRes.value : null;
+  // Fixtures are critical-path (calendar can't render without them); lineups
+  // are nice-to-have (badge + roster modal). Await fixtures first so we can
+  // paint the calendar immediately, then hydrate lineups in the background
+  // — a slow or 404'd lineups.json must not block first render.
+  const fxRes = await fetch('./fixtures.json').then(r => r.ok ? r.json() : null).catch(() => null);
+  fixturesData = fxRes;
 
-  // Re-build axes that depend on live data — venues come from match records,
-  // clubs collapse to those actually playing now that we know who's on the draw.
   buildVenueRow();
   buildClubRow(); syncClubChips();
 
@@ -2169,16 +2167,20 @@ window.addEventListener('hashchange', applyHashState);
     stamp.textContent = 'No fixture data yet — CI will populate on first run.';
   }
 
-  // Sync the share-button + active-filter bar against whatever state we
-  // restored. render() below will redo it for the team-selected path too,
-  // but the no-team-but-filters-set path needs it explicitly.
   syncShareButton();
   syncActiveFilterBar();
-
-  // Rebuild team cards with live names now that fixtures have loaded,
-  // then render the appropriate view based on what we restored.
   buildTeamCards();
   render();
+
+  // Hydrate lineups asynchronously and re-render once they land. The lineup
+  // badge + roster modal degrade gracefully when lineupsData is null.
+  fetch('./lineups.json')
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null)
+    .then(data => {
+      lineupsData = data;
+      if (data) render();
+    });
 })();
 
 // Service worker registration
