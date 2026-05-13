@@ -11,12 +11,37 @@ const icsFiles = existsSync(DOCS)
   ? readdirSync(DOCS).filter(f => f.endsWith('.ics'))
   : [];
 
+// Each shipping team should have its own ICS feed; a regression that
+// accidentally deleted half of them would otherwise still pass with the
+// remaining files looking fine. Keep this minimum conservative — the
+// season currently ships 60+ feeds, so 30 is a wide guard rail.
+const MIN_EXPECTED_ICS_FILES = 30;
+
 if (icsFiles.length === 0) {
-  describe('ICS feeds', () => {
-    test.skip('no .ics files present yet — first CI run will populate', () => {});
-  });
+  if (process.env.ALLOW_MISSING_FIXTURES) {
+    describe('ICS feeds', () => {
+      test.skip('no .ics files yet — ALLOW_MISSING_FIXTURES set, skipping', () => {});
+    });
+  } else {
+    describe('ICS feeds', () => {
+      test('expected ICS feeds in docs/', () => {
+        assert.fail(
+          `No .ics feeds present under docs/.\n` +
+          `Run \`node scripts/fetch-fixtures.mjs\` to generate them, or set\n` +
+          `ALLOW_MISSING_FIXTURES=1 to skip this gate.`,
+        );
+      });
+    });
+  }
 } else {
   describe('ICS feeds', () => {
+    test(`at least ${MIN_EXPECTED_ICS_FILES} feeds shipped`, () => {
+      assert.ok(
+        icsFiles.length >= MIN_EXPECTED_ICS_FILES,
+        `only ${icsFiles.length} ICS files in docs/ — expected ≥${MIN_EXPECTED_ICS_FILES}.`,
+      );
+    });
+
     for (const file of icsFiles) {
       const body = readFileSync(join(DOCS, file), 'utf8');
 
