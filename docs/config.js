@@ -789,8 +789,8 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Beauchamp Park",
-        "u8u9": "Bantry Bay Oval"
+        "u6u7": "Lofberg Oval",
+        "u8u9": "Hassall Park"
       },
       "matches": {
         "u6u7": 21,
@@ -803,8 +803,8 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Tantallon Oval",
-        "u8u9": "Lofberg Oval"
+        "u6u7": "Wakehurst Rugby Park",
+        "u8u9": "Beauchamp Park"
       },
       "matches": {
         "u6u7": 19,

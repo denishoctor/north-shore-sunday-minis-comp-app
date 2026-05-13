@@ -39,6 +39,8 @@
   .page { max-width: 980px; margin: 0 auto; background: #fff; min-height: 100vh; }
 
   /* HEADER mirrors index.html for visual continuity. */
+  /* Header is sticky so the nav stays reachable on scroll — matches the
+     index page for visual symmetry. */
   .header {
     display: flex; align-items: center; gap: 16px;
     padding: 16px 20px 18px;
@@ -46,7 +48,26 @@
     padding-right: max(20px, env(safe-area-inset-right));
     background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     border-bottom: 3px solid var(--gold);
+    transition: padding .18s ease;
+  }
+  /* Compact-on-scroll: desktop keeps crest + h1 visible (just shrunk),
+     mobile hides them so the sticky bar shows only nav links. */
+  .header.compact {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    align-items: center;
+  }
+  .header.compact .crest { width: 44px; height: 44px; }
+  .header.compact .eyebrow { display: none; }
+  .header.compact h1 { font-size: 16px; }
+  @media (max-width: 600px) {
+    .header.compact .crest,
+    .header.compact .title-block { display: none; }
+    .header.compact .header-nav { width: 100%; justify-content: flex-end; }
   }
   .crest {
     width: 64px; height: 64px;
@@ -78,18 +99,11 @@
     color: var(--gold);
   }
   @media (max-width: 600px) {
-    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 14px; }
+    .header { flex-wrap: wrap; gap: 10px 12px; padding: 12px 16px 12px; }
     .crest { width: 56px; height: 56px; }
-    .title-block { flex: 1 1 180px; }
+    .title-block { flex: 1 1 calc(100% - 72px); }
     .eyebrow { letter-spacing: 1px; }
-    .header-nav {
-      order: 4;
-      width: 100%;
-      justify-content: flex-start;
-      gap: 6px;
-      padding-top: 6px;
-      border-top: 1px dashed rgba(212,169,60,.25);
-    }
+    .header-nav { order: 4; margin-left: auto; gap: 6px; }
     .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
 
@@ -200,7 +214,7 @@
       <h1>Clubs — 2026</h1>
     </div>
     <nav class="header-nav" aria-label="Section navigation">
-      <a class="header-nav-link" href="index.html">← Fixtures</a>
+      <a class="header-nav-link" href="index.html">Fixtures</a>
       <a class="header-nav-link" href="venues.html">Venues</a>
     </nav>
   </div>
@@ -253,8 +267,8 @@ function renderCard([key, club]) {
         : '<span class="meta-chip"><span class="meta-label">TBA</span> no teams yet</span>'}
     </div>
     <div class="club-card-actions">
-      ${club.url ? `<a class="club-action primary" href="${esc(club.url)}" target="_blank" rel="noopener">Visit website ↗</a>` : ''}
-      <a class="club-action" href="index.html#${esc(key)}-club">View fixtures</a>
+      ${club.url ? `<a class="club-action primary" href="${esc(club.url)}" target="_blank" rel="noopener">Website ↗</a>` : ''}
+      <a class="club-action" href="index.html#${esc(key)}-club">Fixtures</a>
       ${homeVenue ? `<a class="club-action" href="${esc(homeVenue.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(club.homeGround)}</a>` : ''}
     </div>
   </section>`;
@@ -265,6 +279,22 @@ const clubs = Object.entries(CLUBS || {})
   .sort((a, b) => a[1].name.localeCompare(b[1].name));
 
 document.getElementById('clubs-grid').innerHTML = clubs.map(renderCard).join('');
+
+// Sticky compact-mode on scroll. Hysteresis (enter at >80, exit at <20)
+// prevents the toggle flickering when the user parks at the threshold.
+const headerEl = document.querySelector('.header');
+let lastCompact = false;
+const onScroll = () => {
+  if (!headerEl) return;
+  const y = window.scrollY;
+  const next = lastCompact ? (y >= 20) : (y > 80);
+  if (next !== lastCompact) {
+    headerEl.classList.toggle('compact', next);
+    lastCompact = next;
+  }
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 if ('serviceWorker' in navigator
     && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
