@@ -8,6 +8,13 @@ on:
     - cron: '30 * * * *'
   workflow_dispatch:
 
+# Serialise runs so a long-running fetch from one trigger can't race with the
+# next cron / manual dispatch. The rebase-and-retry loop in the push step
+# already tolerates losing a race, but explicit serialisation is clearer.
+concurrency:
+  group: refresh-fixtures
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
