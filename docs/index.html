@@ -921,6 +921,17 @@ const CFG = window.NSM_SUNDAY_CONFIG || {};
 const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEAM_META, VENUES, ROUNDS } = CFG;
 const SLUG_BY_ID  = Object.fromEntries(Object.entries(TEAM_SLUGS || {}).map(([s, id]) => [id, s]));
 
+// Round numbers arrive from Xplorer as strings like "Round 1" / "Round 12";
+// the static schedule uses bare integers. Centralise the coercion + tolerate
+// "" / null / non-numeric (e.g. "Finals") by returning NaN so callers can
+// Number.isNaN-guard once and forget. Returning a number (not null) preserves
+// existing `Number.isNaN(rn)` guard idioms throughout the render path.
+function roundNumber(raw) {
+  if (raw == null) return NaN;
+  const m = String(raw).match(/(\d+)/);
+  return m ? parseInt(m[1], 10) : NaN;
+}
+
 const STORAGE_PREFIX = 'nsm-sunday';
 // Filter keys store CSVs (e.g. "lane-cove,manly"). parseCsv() also accepts a
 // bare single value, so single-value localStorage entries from older builds
@@ -1523,7 +1534,7 @@ function render() {
   // round schedule and fill in placeholders for unpublished future rounds.
   const matchesByRound = new Map();
   for (const m of matches) {
-    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    const rn = roundNumber(m.round);
     if (!Number.isNaN(rn)) matchesByRound.set(rn, m);
   }
 
@@ -1555,7 +1566,7 @@ function render() {
   // (finals, friendlies). Stable order: original date.
   const knownRoundNums = new Set([...matchesByRound.keys()]);
   const orphanMatches = matches.filter(m => {
-    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    const rn = roundNumber(m.round);
     return Number.isNaN(rn) || !knownRoundNums.has(rn) || !(ROUNDS || []).find(r => r.round === rn);
   });
   for (const m of orphanMatches) {
@@ -1566,7 +1577,7 @@ function render() {
   // When a Rnd filter is active, narrow the timeline to that round only.
   const roundSet = new Set(currentRounds);
   const filteredTimeline = currentRounds.length
-    ? timeline.filter(t => (t.round && roundSet.has(t.round.round)) || (t.match && roundSet.has(parseInt((t.match.round || '').replace(/^Round /, ''), 10))))
+    ? timeline.filter(t => (t.round && roundSet.has(t.round.round)) || (t.match && roundSet.has(roundNumber(t.match.round))))
     : timeline;
 
   const upcoming = filteredTimeline.filter(t => /^upcoming/.test(t.kind));
@@ -1643,7 +1654,7 @@ function renderFilteredList() {
       if (!teamSet.has(m.home.id) && !teamSet.has(m.away.id)) return false;
     }
     if (roundSet.size) {
-      const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+      const rn = roundNumber(m.round);
       if (!roundSet.has(rn)) return false;
     }
     if (clubSet.size) {
@@ -1707,7 +1718,7 @@ function renderMatch(match) {
   if (match.isBye) classes.push('is-bye');
 
   const round = (match.round || '').replace('Round ', 'R');
-  const roundNum = parseInt((match.round || '').replace(/^Round /, ''), 10);
+  const roundNum = roundNumber(match.round);
   const roundActive = !Number.isNaN(roundNum) && currentRounds.includes(roundNum);
   const venue = parseVenue(match.venue || '', VENUES || {});
   const sc    = scoreClass(match);
