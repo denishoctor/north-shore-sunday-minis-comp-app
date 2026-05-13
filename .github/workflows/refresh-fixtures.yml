@@ -45,14 +45,20 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_NSM_SUNDAY }}
         run: |
           if [ -s changes.txt ] && [ -n "$NTFY_TOPIC" ]; then
-            curl -s \
+            # --fail so non-2xx surfaces as a step failure; --show-error for
+            # the message body; --silent to hide the progress meter. We don't
+            # echo the URL — $NTFY_TOPIC is a private topic slug.
+            if curl --fail --silent --show-error \
               -H "Title: NSM Sunday Fixture Update" \
               -H "Priority: high" \
               -H "Tags: rugby_football,warning" \
               -H "Content-Type: text/plain; charset=utf-8" \
               --data-binary @changes.txt \
-              "https://ntfy.sh/$NTFY_TOPIC"
-            echo "✓ Notification sent to ntfy.sh"
+              "https://ntfy.sh/$NTFY_TOPIC" > /dev/null; then
+              echo "✓ Notification sent to ntfy.sh"
+            else
+              echo "✗ ntfy.sh notification failed (topic redacted)" >&2
+            fi
           fi
 
       # Lineups are nice-to-have: a 404 / shape change at Rugby Xplorer should
@@ -95,10 +101,11 @@ jobs:
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC_NSM_SUNDAY }}
         run: |
-          curl -s \
+          curl --fail --silent --show-error \
             -H "Title: NSM Sunday fetch failed" \
             -H "Priority: high" \
             -H "Tags: warning,x" \
             -H "Content-Type: text/plain; charset=utf-8" \
             --data "Fixture refresh failed. Check https://github.com/${{ github.repository }}/actions" \
-            "https://ntfy.sh/$NTFY_TOPIC"
+            "https://ntfy.sh/$NTFY_TOPIC" > /dev/null \
+            || echo "✗ failure-notification ntfy.sh post failed (topic redacted)" >&2
