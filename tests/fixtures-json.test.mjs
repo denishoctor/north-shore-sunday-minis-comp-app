@@ -7,10 +7,27 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FIXTURES_PATH = join(ROOT, 'docs', 'fixtures.json');
 
+// Don't silently skip when the file is missing — that turned a setup mistake
+// (forgot to run `npm run fetch` once before pushing) into a green CI run.
+// Surface it as a real failure with the remediation in the message. The
+// `ALLOW_MISSING_FIXTURES=1` escape hatch covers the genuine first-deploy
+// case where CI hasn't populated the file yet.
 if (!existsSync(FIXTURES_PATH)) {
-  describe('fixtures.json', () => {
-    test.skip('fixtures.json not present yet — first CI run will populate', () => {});
-  });
+  if (process.env.ALLOW_MISSING_FIXTURES) {
+    describe('fixtures.json', () => {
+      test.skip('fixtures.json absent — ALLOW_MISSING_FIXTURES set, skipping', () => {});
+    });
+  } else {
+    describe('fixtures.json', () => {
+      test('fixtures.json must exist before running tests', () => {
+        assert.fail(
+          `docs/fixtures.json is missing.\n` +
+          `Run \`node scripts/fetch-fixtures.mjs\` to populate it, or set\n` +
+          `ALLOW_MISSING_FIXTURES=1 if you're running before the first CI fetch.`,
+        );
+      });
+    });
+  }
 } else {
   const data = JSON.parse(readFileSync(FIXTURES_PATH, 'utf8'));
 
