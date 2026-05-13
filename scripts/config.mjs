@@ -190,7 +190,7 @@ export const VENUES = {
   'Tunks Park':                      { suburb: 'Cammeray',        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tunks+Park+Brothers+Ave%2C+Cammeray+NSW+2062%2C+Australia',
     details: {
       map:     { src: 'assets/venues/tunks-park.jpg', caption: 'Pitch layout — TT1–TT6, M1–M2, plus Sports Field 5', asOf: '2026-03' },
-      parking: 'Spacious carpark right across the road from the fields; street parking down Brothers Ave when the carpark is full.',
+      parking: 'Atrocious — consider travelling by boat. Realistically: the Brothers Ave carpark fills before kickoff. Alternates: The Boulevarde (north, walk down past Flat Rock Creek) or Pine St E / Currawang St (south, take the stairs down to the playground). Limited street parking on Brothers Ave itself.',
       coffee:  { onsite: 'Coffee cart at the entrance on game days.', nearby: 'Cafe Carino — short walk.' },
       notes:   'Home of Norths Pirates Junior Rugby (western end). Under the Cammeray Suspension Bridge — allow 5 min to walk in.',
     },

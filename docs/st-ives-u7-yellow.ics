@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-74537e4b47736fac6-st-ives-u7-yellow@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:St Ives Yellow 7 vs Lane Cove Blue 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-66f23dfa474c363d0-st-ives-u7-yellow@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:St Ives Yellow 7 vs Killara-West Pymble Blue 7 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-671af33e2ce058f96-st-ives-u7-yellow@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T092000
 DTEND;TZID=Australia/Sydney:20260517T102000
 SUMMARY:St Ives Yellow 7 vs Lane Cove Blue 7 | RND 3
@@ -83,32 +83,14 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-6fe1b21c65336fbcc-st-ives-u7-yellow@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260524T102000
 DTEND;TZID=Australia/Sydney:20260524T112000
 SUMMARY:St Ives Yellow 7 vs Wakehurst Wildcats 7 | RND 4
-LOCATION:Lofberg Oval TT3\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 St Ives Yellow 7 vs Wakehurst Wildcats 7\n📍 Lofberg Ova
- l TT3\, West Pymble\n📅 Round 4 · Sun\, 24 May · 10:20am AEST\n🏆 SJ
- RU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
- lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#st-ives-u7-yellow
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-yellow
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-9845bb8f9ce29c9c8-st-ives-u7-yellow@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
-DTSTART;TZID=Australia/Sydney:20260531T100000
-DTEND;TZID=Australia/Sydney:20260531T110000
-SUMMARY:St Ives Yellow 7 vs Norths Pirates White 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 St Ives Yellow 7 vs Norths Pirates White 7\n📍 Wakehurst
-  Rugby Park TT3\, Belrose\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n
+LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 7 vs Wakehurst Wildcats 7\n📍 Tantallon O
+ val TT3\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 10:20am AEST\n
  🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
  e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
@@ -117,20 +99,38 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
  s-u7-yellow
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-9845bb8f9ce29c9c8-st-ives-u7-yellow@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260531T100000
+DTEND;TZID=Australia/Sydney:20260531T110000
+SUMMARY:St Ives Yellow 7 vs Norths Pirates White 7 | RND 5
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 7 vs Norths Pirates White 7\n📍 Beauchamp
+  Park TT3\, Chatswood\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n🏆 
+ SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#st-ives-u7-yellow
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
+ s-u7-yellow
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-50cff2dba77df8459-st-ives-u7-yellow@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260531T110000
 DTEND;TZID=Australia/Sydney:20260531T120000
 SUMMARY:St Ives Yellow 7 vs Killara-West Pymble Gold 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT1\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 St Ives Yellow 7 vs Killara-West Pymble Gold 7\n📍 Wakeh
- urst Rugby Park TT1\, Belrose\n📅 Round 5 · Sun\, 31 May · 11:00am AES
- T\n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may chang
- e. This calendar updates automatically\n(Apple Calendar: ~every hour · Go
- ogle Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gi
- thub.io/north-shore-sunday-minis-comp-app/#st-ives-u7-yellow
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 St Ives Yellow 7 vs Killara-West Pymble Gold 7\n📍 Beauc
+ hamp Park TT1\, Chatswood\n📅 Round 5 · Sun\, 31 May · 11:00am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#st-ives-u7-yellow
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
  s-u7-yellow
 END:VEVENT

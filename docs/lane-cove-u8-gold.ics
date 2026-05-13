@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-a64050181839884a0-lane-cove-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Lane Cove Gold 8 vs Hornsby Red 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5084cf18e3531c0fa-lane-cove-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Lane Cove Gold 8 vs Chatswood Black 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-44d3b735df662b2c3-lane-cove-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Lane Cove Gold 8 vs Norths Pirates Black 8 | RND 3
@@ -83,14 +83,14 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-7d4d4c1b9cdf3f104-lane-cove-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
-DTSTART;TZID=Australia/Sydney:20260524T080000
-DTEND;TZID=Australia/Sydney:20260524T090000
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
+DTSTART;TZID=Australia/Sydney:20260524T084000
+DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Lane Cove Gold 8 vs St Ives 8 | RND 4
-LOCATION:Hassall Park TT5\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 8 vs St Ives 8\n📍 Hassall Park TT5\, St 
- Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U8 Sund
+LOCATION:Hassall Park TT2\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 8 vs St Ives 8\n📍 Hassall Park TT2\, St 
+ Ives\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJRU Minis U8 Sund
  ay\n\nℹ️ Venues and times may change. This calendar updates automatica
  lly\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after a
   change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-co
@@ -101,14 +101,14 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-b0a468b8c5d094c7f-lane-cove-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Lane Cove Gold 8 vs Wakehurst Krakens 8 | RND 5
-LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 8 vs Wakehurst Krakens 8\n📍 Beauchamp Pa
- rk TT1\, Chatswood\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 SJRU
+LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 8 vs Wakehurst Krakens 8\n📍 Lofberg Oval
+  TT1\, West Pymble\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 SJRU
   Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upda
  tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s

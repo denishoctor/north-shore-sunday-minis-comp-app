@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-2b718fcce91a58cd3-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Norths Pirates Gold 7 vs Wakehurst Wildcats 7 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-811791f65a7375fed-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Norths Pirates Gold 7 vs Lane Cove Blue 7 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-ebfa2fc242d1d6437-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Norths Pirates Gold 7 vs Killara-West Pymble Gold 7 | RND 2
@@ -87,8 +87,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-a2c56e432d7d2ab9f-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T092000
 DTEND;TZID=Australia/Sydney:20260517T102000
 SUMMARY:Norths Pirates Gold 7 vs Killara-West Pymble Blue 7 | RND 3
@@ -106,18 +106,18 @@ BEGIN:VEVENT
 UID:nsm-sunday-dafacbf0dbcb78f02-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260524T100000
 DTEND;TZID=Australia/Sydney:20260524T110000
 SUMMARY:Norths Pirates Gold 7 vs Chatswood Green 7 | RND 4
-LOCATION:Lofberg Oval TT4\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Gold 7 vs Chatswood Green 7\n📍 Lofberg O
- val TT4\, West Pymble\n📅 Round 4 · Sun\, 24 May · 10:00am AEST\n🏆 
- SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
- calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#norths-pirates-u7-gold
+LOCATION:Tantallon Oval TT4\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Gold 7 vs Chatswood Green 7\n📍 Tantallon
+  Oval TT4\, Lane Cove North\n📅 Round 4 · Sun\, 24 May · 10:00am AEST\
+ n🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change.
+  This calendar updates automatically\n(Apple Calendar: ~every hour · Goog
+ le Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gith
+ ub.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-gold
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-gold
 END:VEVENT
@@ -125,18 +125,18 @@ BEGIN:VEVENT
 UID:nsm-sunday-9a27f04891ce42f2b-norths-pirates-u7-gold@denishoctor.github.
  io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260531T102000
 DTEND;TZID=Australia/Sydney:20260531T112000
 SUMMARY:Norths Pirates Gold 7 vs Wakehurst Wasps 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Norths Pirates Gold 7 vs Wakehurst Wasps 7\n📍 Wakehurst
-  Rugby Park TT3\, Belrose\n📅 Round 5 · Sun\, 31 May · 10:20am AEST\n
- 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-gold
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Gold 7 vs Wakehurst Wasps 7\n📍 Beauchamp
+  Park TT3\, Chatswood\n📅 Round 5 · Sun\, 31 May · 10:20am AEST\n🏆 
+ SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#norths-pirates-u7-gold
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-gold
 END:VEVENT

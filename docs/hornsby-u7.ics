@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-16b9713ca4fb361de-hornsby-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Hornsby 7 vs Norths Pirates Black 7 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-62b9c438fe9b72901-hornsby-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260510T104000
 DTEND;TZID=Australia/Sydney:20260510T114000
 SUMMARY:Hornsby 7 vs Forest Black 7 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-f55b07f3c95343fec-hornsby-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:Hornsby 7 vs Norths Pirates Red 7 | RND 3
@@ -83,36 +83,36 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-baeec0dfddd522409-hornsby-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260524T104000
 DTEND;TZID=Australia/Sydney:20260524T114000
 SUMMARY:Hornsby 7 vs St Ives Blue 7 | RND 4
-LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
-DESCRIPTION:🏉 Hornsby 7 vs St Ives Blue 7\n📍 Lofberg Oval TT1\, West 
- Pymble\n📅 Round 4 · Sun\, 24 May · 10:40am AEST\n🏆 SJRU Minis U7 T
- ri Time Sunday\n\nℹ️ Venues and times may change. This calendar update
- s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
-  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
- day-minis-comp-app/#hornsby-u7
+LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs St Ives Blue 7\n📍 Tantallon Oval TT1\, Lan
+ e Cove North\n📅 Round 4 · Sun\, 24 May · 10:40am AEST\n🏆 SJRU Mini
+ s U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#hornsby-u7
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u7
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-0d8ea7bdc437bae24-hornsby-u7@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260512T182821Z
-LAST-MODIFIED:20260512T182821Z
+DTSTAMP:20260513T042819Z
+LAST-MODIFIED:20260513T042819Z
 DTSTART;TZID=Australia/Sydney:20260531T100000
 DTEND;TZID=Australia/Sydney:20260531T110000
 SUMMARY:Hornsby 7 vs Lindfield 7 | RND 5
-LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Hornsby 7 vs Lindfield 7\n📍 Wakehurst Rugby Park TT4\, 
- Belrose\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n🏆 SJRU Minis U7 
- Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar updat
- es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
- 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
- nday-minis-comp-app/#hornsby-u7
+LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Hornsby 7 vs Lindfield 7\n📍 Beauchamp Park TT4\, Chatsw
+ ood\n📅 Round 5 · Sun\, 31 May · 10:00am AEST\n🏆 SJRU Minis U7 Tri 
+ Time Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#hornsby-u7
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u7
 END:VEVENT
