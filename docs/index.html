@@ -173,7 +173,12 @@
     padding-top: 6px;        /* align baseline with chip text */
     white-space: nowrap;
   }
-  .team-area { display: flex; flex-direction: column; gap: 6px; }
+  /* Team block needs a wider left column for the accordion toggle that
+     sits under the label. */
+  .filter-block-team { grid-template-columns: 84px 1fr; }
+  @media (max-width: 480px) {
+    .filter-block-team { grid-template-columns: 70px 1fr; }
+  }
   /* Round chips — compact numeric pills. Gala stands out via the maroon tint. */
   .round-row { display: flex; flex-wrap: wrap; gap: 5px; }
   .round-chip {
@@ -232,26 +237,39 @@
     border: 1.5px solid var(--cream-edge);
     padding: 4px 12px; border-radius: 999px;
     line-height: 1; white-space: nowrap; letter-spacing: .5px;
+    transition: background .12s, color .12s, border-color .12s, opacity .12s;
   }
   .age-chip:hover { border-color: var(--navy); }
   .age-chip.active { background: var(--gold); color: var(--ink-on-gold); border-color: var(--gold); }
+  /* Age band with no teams in the active club set: dimmed, still clickable
+     (toggling clears the implied club constraint). */
+  .age-chip.empty { color: var(--muted); opacity: .55; }
+  .age-chip.empty:hover { border-color: var(--cream-edge); }
 
-  /* Venue chips — distinct grounds, styled with a leaf-green accent so the
-     row reads as a separate axis from clubs (navy) and ages (gold). */
+  /* Venue chips — chips inherit their host club's colour via --club-color so
+     the row reads as "where each club is playing this weekend" rather than a
+     flat list. Default falls back to a leaf-green accent for venues that
+     don't map to a configured club (joint grounds, away venues, etc.). */
   .venue-row { display: flex; flex-wrap: wrap; gap: 5px; }
   .venue-row[hidden] { display: none; }
   .venue-chip {
+    --club-color:  #4a7a4a;
+    --club-accent: #2f5a2f;
     appearance: none; cursor: pointer;
     font-family: inherit; font-size: 11px; font-weight: 700;
     color: var(--navy); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    border-left: 3px solid #4a7a4a;
+    border-left: 3px solid var(--club-color);
     padding: 4px 11px 4px 9px; border-radius: 999px;
     line-height: 1; white-space: nowrap;
-    transition: background .12s, border-color .12s, color .12s;
+    transition: background .12s, border-color .12s, color .12s, box-shadow .12s;
   }
-  .venue-chip:hover { border-color: #4a7a4a; color: #2f5a2f; }
-  .venue-chip.active { background: #4a7a4a; color: #fff; border-color: #4a7a4a; }
+  .venue-chip:hover { border-color: var(--club-color); color: var(--club-color); }
+  .venue-chip.active {
+    background: var(--club-color); color: #fff;
+    border-color: var(--club-color);
+    box-shadow: inset 0 -2px 0 var(--club-accent);
+  }
 
   /* Active-filter pill bar — sticky summary of every active filter, with
      × on each pill and a Clear button. Sits below the toolbar so it stays
@@ -321,18 +339,19 @@
     white-space: nowrap;
   }
 
-  .token-grid {
+  /* Team-card grid — leaf-pick of a specific team. Cards inherit --club-color
+     from inline style; defaults cover cards whose club can't be resolved.
+     The grid lives inside an accordion (collapsed state hides it). */
+  .team-card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
   }
-  @media (min-width: 480px) { .token-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (min-width: 720px) { .token-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-  @media (min-width: 960px) { .token-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-  .token-grid[hidden] { display: none; }
-  /* Tokens inherit --club-color from inline style. Default fallback covers the
-     case where a token's club isn't determinable. */
-  .token {
+  @media (min-width: 480px) { .team-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 720px) { .team-card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 960px) { .team-card-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  .team-card-grid.collapsed { display: none; }
+  .team-card {
     --club-color:  var(--navy);
     --club-accent: var(--gold);
     appearance: none; cursor: pointer;
@@ -346,17 +365,42 @@
     min-width: 0;
     transition: border-color .12s, box-shadow .12s;
   }
-  .token:hover { border-color: var(--club-color); box-shadow: 0 1px 4px rgba(10,32,89,.08); }
-  .token.active {
+  .team-card:hover { border-color: var(--club-color); box-shadow: 0 1px 4px rgba(10,32,89,.08); }
+  .team-card.active {
     background: var(--club-color); color: #fff;
     border-color: var(--club-accent);
     box-shadow: 0 0 0 2px var(--club-accent) inset, 0 2px 6px rgba(10,32,89,.25);
   }
-  .token-age { font-size: 10px; font-weight: 800; color: var(--club-accent); text-transform: uppercase; letter-spacing: .5px; }
-  .token.active .token-age { color: var(--gold-soft); }
-  .token-name { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .token-club { font-size: 10px; font-weight: 600; opacity: .7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .token.active .token-club { opacity: .85; }
+  .team-card-age { font-size: 10px; font-weight: 800; color: var(--club-accent); text-transform: uppercase; letter-spacing: .5px; }
+  .team-card.active .team-card-age { color: var(--gold-soft); }
+  .team-card-name { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .team-card-club { font-size: 10px; font-weight: 600; opacity: .7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .team-card.active .team-card-club { opacity: .85; }
+  .team-card-empty {
+    grid-column: 1 / -1;
+    font-size: 12px; color: var(--muted);
+    padding: 10px 4px; margin: 0;
+    font-style: italic;
+  }
+
+  /* Label + accordion stack — keeps the "Team:" label aligned with the other
+     filter labels while making room for the show/hide toggle directly underneath. */
+  .filter-label-stack { display: flex; flex-direction: column; gap: 4px; }
+  .filter-label-stack .filter-label { margin: 0; }
+  .team-accordion-toggle {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 10px; font-weight: 700;
+    color: var(--navy); background: #fff;
+    border: 1.5px solid var(--cream-edge);
+    padding: 3px 8px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 4px;
+    transition: background .12s, border-color .12s, color .12s;
+    align-self: start;
+  }
+  .team-accordion-toggle:hover { border-color: var(--navy); background: var(--cream); }
+  .team-accordion-toggle[aria-expanded="false"] { color: var(--muted); }
+  .tat-chevron { font-size: 10px; }
 
   /* ACTION BAR — team selected only */
   .action-bar {
@@ -800,15 +844,27 @@
       <span class="filter-label">Venue:</span>
       <div class="venue-row" id="venue-row" role="group" aria-label="Filter by venue" hidden></div>
     </div>
-    <!-- Age-group filter + team token grid. Age + colour = team, so age is
-         the meaningful filter dimension; the token grid below picks a specific
-         team once clubs/ages are narrowed. -->
-    <div class="filter-block filter-block-team">
+    <!-- Age-group filter — always visible. U6 / U7 / U8 / U9 are the four
+         meaningful age bands in Sunday Minis and a parent typically lands
+         knowing their kid's age before they pick a club, so this row is
+         shown unconditionally rather than only after a club is picked. -->
+    <div class="filter-block">
       <span class="filter-label">Age:</span>
-      <div class="team-area">
-        <div class="age-row" id="age-row" role="group" aria-label="Filter by age band" hidden></div>
-        <div class="token-grid" id="team-tokens"></div>
+      <div class="age-row" id="age-row" role="group" aria-label="Filter by age band"></div>
+    </div>
+    <!-- Team picker — leaf-pick. Cards collapse into an accordion since
+         there can be 60+ teams. Toggle button sits under the label, keeping
+         the cards column the full width of the toolbar. Multi-select: tap
+         additional cards to compare timelines. -->
+    <div class="filter-block filter-block-team">
+      <div class="filter-label-stack">
+        <span class="filter-label">Team:</span>
+        <button class="team-accordion-toggle" id="team-accordion-toggle" type="button" aria-expanded="true" aria-controls="team-cards">
+          <span class="tat-chevron" aria-hidden="true">▾</span>
+          <span class="tat-label">Hide</span>
+        </button>
       </div>
+      <div class="team-card-grid" id="team-cards" aria-label="Team picker"></div>
     </div>
 
     <!-- Share + Calendar moved to header-nav; this div remains so legacy JS
@@ -864,19 +920,25 @@ const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEA
 const SLUG_BY_ID  = Object.fromEntries(Object.entries(TEAM_SLUGS || {}).map(([s, id]) => [id, s]));
 
 const STORAGE_PREFIX = 'nsm-sunday';
-const TEAM_KEY  = `${STORAGE_PREFIX}-team`;
-// Filter keys now store CSVs (e.g. "lane-cove,manly"). parseCsv() also accepts a
-// bare single value, so existing single-value localStorage entries from previous
-// builds migrate transparently.
-const CLUB_KEY  = `${STORAGE_PREFIX}-club`;
-const AGE_KEY   = `${STORAGE_PREFIX}-age`;
-const ROUND_KEY = `${STORAGE_PREFIX}-round`;
-const VENUE_KEY = `${STORAGE_PREFIX}-venue`;
+// Filter keys store CSVs (e.g. "lane-cove,manly"). parseCsv() also accepts a
+// bare single value, so single-value localStorage entries from older builds
+// migrate transparently.
+const TEAM_KEY            = `${STORAGE_PREFIX}-team`;     // CSV of team ids
+const CLUB_KEY            = `${STORAGE_PREFIX}-club`;
+const AGE_KEY             = `${STORAGE_PREFIX}-age`;
+const ROUND_KEY           = `${STORAGE_PREFIX}-round`;
+const VENUE_KEY           = `${STORAGE_PREFIX}-venue`;
+const TEAM_ACCORDION_KEY  = `${STORAGE_PREFIX}-team-accordion`;  // 'open' | 'closed'
 
 let fixturesData = null;
 let lineupsData  = null;
-let currentTeam   = null;          // single team-id or null (leaf selection)
-let currentClubs  = [];            // multi-select filter axes — empty == no filter
+// All filter axes are multi-select arrays. Team is multi-select too — clicking
+// additional team cards toggles them into the set. When exactly one team is
+// active the render dispatcher falls into the timeline view (with placeholders
+// for unpublished rounds, gala notices etc.); otherwise the cross-team
+// filtered-list view, narrowed by whichever combination of teams + filters is set.
+let currentTeams  = [];
+let currentClubs  = [];
 let currentAges   = [];
 let currentRounds = [];            // numbers (1…13)
 let currentVenues = [];            // venue slugs (venueSlug(parseVenue(...).base))
@@ -970,34 +1032,49 @@ function buildClubRow() {
   });
 }
 
-// Age-row: shown whenever ANY club is selected (or for a team's club when
-// a specific team is active). Lists only the age bands actually played by
-// the currently-selected clubs, so filtering Lane Cove → Manly doesn't
-// surface an empty U10 chip if neither has a U10 team.
+// Age-row: ALWAYS visible. The four age bands (U6, U7, U8, U9) are the
+// meaningful filter dimension for parents — most know their kid's age before
+// they pick a club, so it's the most useful entry point. When club filters
+// are active, age chips that have no team in the selected club set are dimmed
+// rather than hidden (keeps row width predictable).
 function buildAgeRow() {
   const row = document.getElementById('age-row');
   if (!row) return;
-  const haveClubFilter = currentClubs.length > 0;
-  if (!haveClubFilter) { row.setAttribute('hidden', ''); row.innerHTML = ''; return; }
+  const ages = (AGE_GROUPS || []).slice();
   const clubSet = new Set(currentClubs);
-  const ages = AGE_GROUPS.filter(age =>
-    Object.values(TEAM_META || {}).some(m => clubSet.has(m.clubKey) && m.age === age)
-  );
-  if (!ages.length) { row.setAttribute('hidden', ''); row.innerHTML = ''; return; }
-  row.removeAttribute('hidden');
-  row.innerHTML = ages.map(age =>
-    `<button class="age-chip" data-age="${esc(age)}" type="button">${esc(age)}</button>`
-  ).join('');
+  const ageHasTeams = (age) => {
+    if (!clubSet.size) return true;
+    return Object.values(TEAM_META || {}).some(m => clubSet.has(m.clubKey) && m.age === age);
+  };
+  row.innerHTML = ages.map(age => {
+    const empty = !ageHasTeams(age);
+    return `<button class="age-chip${empty ? ' empty' : ''}" data-age="${esc(age)}" type="button" aria-disabled="${empty ? 'true' : 'false'}">${esc(age)}</button>`;
+  }).join('');
   row.querySelectorAll('.age-chip').forEach(btn => {
     btn.addEventListener('click', () => toggleAge(btn.dataset.age));
   });
   syncAgeChips();
 }
 
+// Lookup: venue base name (e.g. "Tryon Oval") → host club key, by matching
+// against CLUBS[*].homeGround. Built once on demand and cached.
+let _venueClubCache = null;
+function clubKeyForVenue(base) {
+  if (!base) return null;
+  if (!_venueClubCache) {
+    _venueClubCache = new Map();
+    for (const [key, c] of Object.entries(CLUBS || {})) {
+      if (c.homeGround) _venueClubCache.set(c.homeGround, key);
+    }
+  }
+  return _venueClubCache.get(base) || null;
+}
+
 // Venue row: distinct grounds derived from live match venues (e.g.
 // "Tryon Oval TT2 (U6/U7)" → ground "Tryon Oval"). Each chip toggles the
-// venue slug in/out of the currentVenues filter array. Hidden until we
-// have live fixture data — pre-fetch the venue list is empty.
+// venue slug in/out of the currentVenues filter array. Chips inherit their
+// host club's colour so the venue row reads as "where each club is playing"
+// rather than a flat list. Hidden until live fixture data is available.
 function buildVenueRow() {
   const row = document.getElementById('venue-row');
   if (!row) return;
@@ -1017,9 +1094,14 @@ function buildVenueRow() {
   if (!venuesByKey.size) { row.setAttribute('hidden', ''); row.innerHTML = ''; return; }
   row.removeAttribute('hidden');
   const sorted = Array.from(venuesByKey.entries()).sort((a, b) => a[1].localeCompare(b[1]));
-  row.innerHTML = sorted.map(([slug, label]) =>
-    `<button class="venue-chip" data-venue="${esc(slug)}" type="button">${esc(label)}</button>`
-  ).join('');
+  row.innerHTML = sorted.map(([slug, label]) => {
+    const ck = clubKeyForVenue(label);
+    const club = ck ? CLUBS?.[ck] : null;
+    const styleAttr = club?.primary
+      ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
+      : '';
+    return `<button class="venue-chip" data-venue="${esc(slug)}" data-club="${esc(ck || '')}" type="button"${styleAttr}>${esc(label)}</button>`;
+  }).join('');
   row.querySelectorAll('.venue-chip').forEach(btn => {
     btn.addEventListener('click', () => toggleVenue(btn.dataset.venue));
   });
@@ -1028,7 +1110,7 @@ function buildVenueRow() {
 
 // Flip "Blue 7" → "7 Blue" — age digit moves to the front of the team
 // display name. Names without a trailing digit (e.g., joint teams already
-// stripped) pass through unchanged. Used by buildTokenGrid only; full team
+// stripped) pass through unchanged. Used by buildTeamCards only; full team
 // names elsewhere stay as Rugby Xplorer publishes them.
 function flipAgeFirst(displayName) {
   if (!displayName) return displayName;
@@ -1039,20 +1121,28 @@ function flipAgeFirst(displayName) {
   return prefix ? `${num} ${prefix}` : num;
 }
 
-function buildTokenGrid() {
-  const grid = document.getElementById('team-tokens');
+function buildTeamCards() {
+  const grid = document.getElementById('team-cards');
+  if (!grid) return;
   const all = Object.values(TEAM_META || {});
+  // Cards are narrowed by the active club AND age filters. With no filters,
+  // every team is listed (the accordion below keeps the toolbar tractable).
   const filtered = all.filter(m =>
     (!currentClubs.length || currentClubs.includes(m.clubKey)) &&
     (!currentAges.length  || currentAges.includes(m.age))
   );
   // Sort by age band first (U6 → U9), then alphabetically by display name.
-  // The age label at top-left of each token is now redundant with the leading
+  // The age label at top-left of each card is redundant with the leading
   // number in the name (e.g. "7 Blue"), but keep it as the visual anchor.
   filtered.sort((a, b) => {
     if ((a.age || '') !== (b.age || '')) return (a.age || '').localeCompare(b.age || '');
     return (a.name || '').localeCompare(b.name || '');
   });
+  if (!filtered.length) {
+    grid.innerHTML = `<p class="team-card-empty">No teams match the active club/age filter.</p>`;
+    syncTeamAccordionLabel();
+    return;
+  }
   grid.innerHTML = filtered.map(m => {
     const club = CLUBS?.[m.clubKey];
     const baseName = shortTeamName(m.name, m.clubKey, CLUBS) || m.name;
@@ -1060,20 +1150,21 @@ function buildTokenGrid() {
     const styleAttr = club?.primary
       ? ` style="--club-color: ${esc(club.primary)}; --club-accent: ${esc(club.accent || club.primary)};"`
       : '';
-    return `<button class="token" data-team="${esc(TEAM_SLUGS[m.slug] || '')}" data-slug="${esc(m.slug)}" type="button" aria-label="${esc(m.name)}"${styleAttr}>
-      <span class="token-age">${esc(m.age || '')}</span>
-      <span class="token-name">${esc(display)}</span>
-      ${club ? `<span class="token-club">${esc(club.shortPrefix || club.name)}</span>` : ''}
+    return `<button class="team-card" data-team="${esc(TEAM_SLUGS[m.slug] || '')}" data-slug="${esc(m.slug)}" type="button" aria-label="${esc(m.name)}"${styleAttr}>
+      <span class="team-card-age">${esc(m.age || '')}</span>
+      <span class="team-card-name">${esc(display)}</span>
+      ${club ? `<span class="team-card-club">${esc(club.shortPrefix || club.name)}</span>` : ''}
     </button>`;
   }).join('');
-  grid.querySelectorAll('.token').forEach(btn => {
+  grid.querySelectorAll('.team-card').forEach(btn => {
     btn.addEventListener('click', () => {
       const slug = btn.dataset.slug;
       const teamId = TEAM_SLUGS[slug];
-      selectTeam(teamId === currentTeam ? null : teamId, slug);
+      toggleTeam(teamId, slug);
     });
   });
-  syncTokens();
+  syncTeamCards();
+  syncTeamAccordionLabel();
 }
 
 function syncClubChips() {
@@ -1091,19 +1182,61 @@ function syncVenueChips() {
     c.classList.toggle('active', currentVenues.includes(c.dataset.venue))
   );
 }
-function syncTokens() {
-  document.querySelectorAll('.token').forEach(t =>
-    t.classList.toggle('active', t.dataset.team === currentTeam)
+function syncTeamCards() {
+  const teamSet = new Set(currentTeams);
+  document.querySelectorAll('.team-card').forEach(t =>
+    t.classList.toggle('active', teamSet.has(t.dataset.team))
   );
 }
 
+// Team-card accordion. There are 60+ teams when no filter is applied; the
+// accordion collapses the grid so the toolbar stays scannable. Toggle button
+// sits under the "Team:" label, leaving the grid the full width. Open/closed
+// state persists in localStorage so the accordion remembers the user's pref.
+// First-visit default: closed. With 60+ teams across all clubs the open
+// grid dominates the toolbar on mobile; the accordion toggle below the
+// Team label is unmistakable on landing so users can expand at will.
+function isTeamAccordionOpen() {
+  const v = lsGet(TEAM_ACCORDION_KEY);
+  return v === null ? false : v === 'open';
+}
+function setTeamAccordionOpen(open) {
+  lsSet(TEAM_ACCORDION_KEY, open ? 'open' : 'closed');
+  applyTeamAccordionState();
+}
+function applyTeamAccordionState() {
+  const grid = document.getElementById('team-cards');
+  const btn  = document.getElementById('team-accordion-toggle');
+  if (!grid || !btn) return;
+  const open = isTeamAccordionOpen();
+  grid.classList.toggle('collapsed', !open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  btn.querySelector('.tat-chevron').textContent = open ? '▾' : '▸';
+  syncTeamAccordionLabel();
+}
+function syncTeamAccordionLabel() {
+  const btn = document.getElementById('team-accordion-toggle');
+  if (!btn) return;
+  const grid = document.getElementById('team-cards');
+  const total = grid ? grid.querySelectorAll('.team-card').length : 0;
+  const open = isTeamAccordionOpen();
+  btn.querySelector('.tat-label').textContent = open
+    ? `Hide (${total})`
+    : `Show ${total}`;
+}
+function initTeamAccordion() {
+  const btn = document.getElementById('team-accordion-toggle');
+  if (!btn || btn.dataset.wired) return;
+  btn.addEventListener('click', () => setTeamAccordionOpen(!isTeamAccordionOpen()));
+  btn.dataset.wired = '1';
+  applyTeamAccordionState();
+}
+
 // ── selection actions ────────────────────────────────────────────────────────
-// All filter axes (club / age / round / venue) are multi-select toggles.
-// Team is still single-select — picking a team navigates away from filter
-// view into the team's full timeline.
+// Every axis (club / age / round / venue / team) is a multi-select toggle.
+// Clicking the same chip again removes it from the set.
 function toggleClub(key) {
   if (!key) return;
-  const had = currentClubs.includes(key);
   currentClubs = toggleInArray(currentClubs, key);
   lsSet(CLUB_KEY, currentClubs.length ? currentClubs.join(',') : null);
   // Drop any age chips that no longer have a matching team in the active club set.
@@ -1113,21 +1246,17 @@ function toggleClub(key) {
       Object.values(TEAM_META || {}).some(m => clubSet.has(m.clubKey) && m.age === age)
     );
     lsSet(AGE_KEY, currentAges.length ? currentAges.join(',') : null);
-  } else if (!currentClubs.length) {
-    // Removing the last club doesn't clear ages — the user may still want
-    // an age filter alone. Same for unrelated axes.
+  }
+  // Drop any teams that no longer belong to the active club set.
+  if (currentTeams.length && currentClubs.length) {
+    const clubSet = new Set(currentClubs);
+    currentTeams = currentTeams.filter(id => clubSet.has(TEAM_META?.[id]?.clubKey));
+    lsSet(TEAM_KEY, currentTeams.length ? currentTeams.join(',') : null);
   }
   syncClubChips();
   buildAgeRow();
   syncAgeChips();
-  buildTokenGrid();
-  // If the currently-active team is no longer in the filtered set, drop it.
-  if (currentTeam) {
-    const meta = TEAM_META?.[currentTeam];
-    if (had && currentClubs.length && meta && !currentClubs.includes(meta.clubKey)) {
-      selectTeam(null); return;
-    }
-  }
+  buildTeamCards();
   syncShareButton();
   syncActiveFilterBar();
   updateHash();
@@ -1136,17 +1265,16 @@ function toggleClub(key) {
 
 function toggleAge(age) {
   if (!age) return;
-  const had = currentAges.includes(age);
   currentAges = toggleInArray(currentAges, age);
   lsSet(AGE_KEY, currentAges.length ? currentAges.join(',') : null);
-  syncAgeChips();
-  buildTokenGrid();
-  if (currentTeam) {
-    const meta = TEAM_META?.[currentTeam];
-    if (had && currentAges.length && meta && !currentAges.includes(meta.age)) {
-      selectTeam(null); return;
-    }
+  // Drop any teams that no longer match the active age set.
+  if (currentTeams.length && currentAges.length) {
+    const ageSet = new Set(currentAges);
+    currentTeams = currentTeams.filter(id => ageSet.has(TEAM_META?.[id]?.age));
+    lsSet(TEAM_KEY, currentTeams.length ? currentTeams.join(',') : null);
   }
+  syncAgeChips();
+  buildTeamCards();
   syncShareButton();
   syncActiveFilterBar();
   updateHash();
@@ -1164,36 +1292,39 @@ function toggleVenue(slug) {
   render();
 }
 
-// Clears every filter axis but keeps the active team if one is selected.
+// Multi-select team toggle. Clicking the same card again deselects.
+// Push to history on the 0→1 transition so the browser back button returns
+// the user from a team timeline to their previous filter state — matches
+// the legacy single-select UX. Other transitions use replaceState so the
+// back-stack stays clean.
+function toggleTeam(teamId, slugFromCaller) {
+  if (!teamId) return;
+  const wasInSet = currentTeams.includes(teamId);
+  const goingToSingle = !wasInSet && currentTeams.length === 0;   // 0 → 1
+  currentTeams = toggleInArray(currentTeams, teamId);
+  lsSet(TEAM_KEY, currentTeams.length ? currentTeams.join(',') : null);
+  syncTeamCards();
+  syncShareButton();
+  syncActiveFilterBar();
+  updateHash({ push: goingToSingle });
+  render();
+}
+
+// Clears every filter axis AND the team selection. Single button = full reset.
 function clearAllFilters() {
+  currentTeams = [];
   currentClubs = [];
   currentAges = [];
   currentRounds = [];
   currentVenues = [];
-  lsSet(CLUB_KEY, null); lsSet(AGE_KEY, null); lsSet(ROUND_KEY, null); lsSet(VENUE_KEY, null);
+  lsSet(TEAM_KEY, null); lsSet(CLUB_KEY, null); lsSet(AGE_KEY, null);
+  lsSet(ROUND_KEY, null); lsSet(VENUE_KEY, null);
   syncClubChips(); syncAgeChips(); syncRoundChips(); syncVenueChips();
   buildAgeRow();
-  buildTokenGrid();
+  buildTeamCards();
   syncShareButton();
   syncActiveFilterBar();
   updateHash();
-  render();
-}
-
-function selectTeam(teamId, slugFromCaller) {
-  currentTeam = teamId || null;
-  lsSet(TEAM_KEY, currentTeam);
-  syncTokens();
-
-  // Share button visibility tracks ANY shareable state — team or any
-  // filter axis. Centralised so every toggle handler can call it too.
-  syncShareButton();
-  syncActiveFilterBar();
-
-  // Team selection is a deliberate nav action — push to the browser history
-  // so back returns to the previous team / filter state. Filter chip toggles
-  // (Rnd / Club / Age / Venue) replaceState instead so the back-stack stays clean.
-  updateHash({ push: true });
   render();
 }
 
@@ -1215,8 +1346,7 @@ function selectTeam(teamId, slugFromCaller) {
 function readHash() {
   const raw = location.hash.replace('#', '');
   const [path = '', query = ''] = raw.split('?');
-  const [slug, anchor] = path.split('/');
-  const teamId = slug && TEAM_SLUGS?.[slug] ? TEAM_SLUGS[slug] : null;
+  const [pathSlug, anchor] = path.split('/');
   const filters = {};
   if (query) {
     for (const part of query.split('&')) {
@@ -1225,21 +1355,44 @@ function readHash() {
       if (k) filters[k] = decodeURIComponent(v);
     }
   }
-  return { teamId, slug, anchor, filters };
+  // Team ids may arrive via the legacy `#slug` path (single team) OR the
+  // newer `?teams=slug1,slug2` query (one or many). Both produce a sorted,
+  // deduped teamIds array. The legacy path slug is still preserved when
+  // we write a 1-team hash, so old share links keep working.
+  const teamIds = new Set();
+  if (pathSlug && TEAM_SLUGS?.[pathSlug]) teamIds.add(TEAM_SLUGS[pathSlug]);
+  if (filters.teams) {
+    for (const s of filters.teams.split(',')) {
+      const id = s && TEAM_SLUGS?.[s];
+      if (id) teamIds.add(id);
+    }
+  }
+  return {
+    teamIds: Array.from(teamIds).sort(),
+    primarySlug: pathSlug || null,
+    anchor: anchor || null,
+    filters,
+  };
 }
 
 function buildHash() {
-  const slug = currentTeam ? (SLUG_BY_ID[currentTeam] || '') : '';
+  // Single-team selection uses the legacy `#slug` path form so external links
+  // and bookmarks remain shareable in their familiar shape. Multi-team
+  // selection switches to `?teams=slug1,slug2` (no path slug). Either way
+  // the other filter axes append as `?rnd=…&club=…&age=…&venue=…`.
+  const pathSlug = currentTeams.length === 1 ? (SLUG_BY_ID[currentTeams[0]] || '') : '';
   const parts = [];
-  // Each axis encodes its array as a comma-joined value so
-  // `#?rnd=5,6&venue=tunks-park,tantallon-oval` is the canonical form.
+  if (currentTeams.length > 1) {
+    const slugs = currentTeams.map(id => SLUG_BY_ID[id]).filter(Boolean);
+    if (slugs.length) parts.push('teams=' + encodeURIComponent(slugs.join(',')));
+  }
   if (currentRounds.length) parts.push('rnd='   + encodeURIComponent(currentRounds.join(',')));
   if (currentClubs.length)  parts.push('club='  + encodeURIComponent(currentClubs.join(',')));
   if (currentAges.length)   parts.push('age='   + encodeURIComponent(currentAges.join(',')));
   if (currentVenues.length) parts.push('venue=' + encodeURIComponent(currentVenues.join(',')));
   const qs = parts.length ? '?' + parts.join('&') : '';
-  if (!slug && !qs) return '';
-  return '#' + slug + qs;
+  if (!pathSlug && !qs) return '';
+  return '#' + pathSlug + qs;
 }
 
 function updateHash({ push = false } = {}) {
@@ -1251,11 +1404,11 @@ function updateHash({ push = false } = {}) {
 }
 
 // Share button is visible whenever there's something share-worthy to encode —
-// team, or any of the four filter axes. Called from every filter setter + at boot.
+// any team or any of the four filter axes. Called from every toggle + at boot.
 function syncShareButton() {
   const shareBtn = document.getElementById('copy-link-btn');
   if (!shareBtn) return;
-  const hasShareable = currentTeam
+  const hasShareable = currentTeams.length
     || currentRounds.length || currentClubs.length || currentAges.length || currentVenues.length;
   if (hasShareable) shareBtn.removeAttribute('hidden');
   else              shareBtn.setAttribute('hidden', '');
@@ -1294,6 +1447,12 @@ function syncActiveFilterBar() {
     pills.push(`<button class="afp" type="button" data-axis="venue" data-val="${esc(v)}"
       ><span class="afp-axis">Venue</span><span class="afp-val">${esc(label)}</span><span class="afp-x" aria-hidden="true">×</span></button>`);
   }
+  for (const id of currentTeams) {
+    const meta = TEAM_META?.[id];
+    const label = meta ? (shortTeamName(meta.name, meta.clubKey, CLUBS) || meta.name) : id;
+    pills.push(`<button class="afp" type="button" data-axis="team" data-val="${esc(id)}"
+      ><span class="afp-axis">Team</span><span class="afp-val">${esc(label)}</span><span class="afp-x" aria-hidden="true">×</span></button>`);
+  }
   if (!pills.length) {
     bar.setAttribute('hidden', '');
     bar.innerHTML = '';
@@ -1312,6 +1471,7 @@ function syncActiveFilterBar() {
       else if (axis === 'club')  toggleClub(val);
       else if (axis === 'age')   toggleAge(val);
       else if (axis === 'venue') toggleVenue(val);
+      else if (axis === 'team')  toggleTeam(val);
     });
   });
   bar.querySelector('#afp-clear')?.addEventListener('click', clearAllFilters);
@@ -1324,20 +1484,21 @@ function render() {
   if (!fixturesData) { cal.innerHTML = ''; home.setAttribute('hidden', ''); return; }
 
   // Routing:
-  //   - Team selected → renderTeamView (full timeline w/ placeholders).
-  //   - No team but any other filter (Rnd / Club / Age / Venue) →
-  //     renderFilteredList (cross-team match list narrowed by the combo).
+  //   - Exactly 1 team selected, no other filters that need a cross-team view
+  //     → renderTeamView (full timeline w/ placeholders for unpublished rounds).
+  //   - Multi-team OR (any filter + no team) → renderFilteredList (cross-team
+  //     match list narrowed by the active combination).
   //   - Nothing set → renderHome (round cards).
   const hasNonTeamFilter =
     currentRounds.length || currentClubs.length || currentAges.length || currentVenues.length;
-  if (!currentTeam && !hasNonTeamFilter) {
+  if (!currentTeams.length && !hasNonTeamFilter) {
     home.innerHTML = renderHome();
     home.removeAttribute('hidden');
     cal.innerHTML = '';
     wireHomeInteractions();
     return;
   }
-  if (!currentTeam) {
+  if (currentTeams.length !== 1) {
     home.setAttribute('hidden', '');
     home.innerHTML = '';
     cal.innerHTML = renderFilteredList();
@@ -1347,11 +1508,12 @@ function render() {
   home.setAttribute('hidden', '');
   home.innerHTML = '';
 
+  const singleTeam = currentTeams[0];
   const matches = fixturesData.matches.filter(m =>
-    m.home.id === currentTeam || m.away.id === currentTeam
+    m.home.id === singleTeam || m.away.id === singleTeam
   );
 
-  const meta = TEAM_META?.[currentTeam];
+  const meta = TEAM_META?.[singleTeam];
   const teamLabel = meta?.name || 'Team';
   const todaySyd  = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
 
@@ -1470,7 +1632,11 @@ function renderFilteredList() {
   const clubSet  = new Set(currentClubs);
   const ageSet   = new Set(currentAges);
   const venueSet = new Set(currentVenues);
+  const teamSet  = new Set(currentTeams);
   const passes = (m) => {
+    if (teamSet.size) {
+      if (!teamSet.has(m.home.id) && !teamSet.has(m.away.id)) return false;
+    }
     if (roundSet.size) {
       const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
       if (!roundSet.has(rn)) return false;
@@ -1492,13 +1658,17 @@ function renderFilteredList() {
   if (!matches.length) {
     return `<div class="welcome">
       <p class="welcome-sub">No matches match the current filter.
-      Try a different round, club, age or venue — or remove a filter using its × pill above.</p>
+      Try a different round, club, age, venue or team — or remove a filter using its × pill above.</p>
     </div>`;
   }
 
   // Section header captures the active filter so the user always sees
   // what they're looking at without scrolling back to the chip row.
   const filterDesc = [
+    currentTeams.length  ? currentTeams.map(id => {
+      const m = TEAM_META?.[id];
+      return m ? (shortTeamName(m.name, m.clubKey, CLUBS) || m.name) : id;
+    }).join(' / ') : null,
     currentRounds.length ? `Round ${currentRounds.join(', ')}` : null,
     currentClubs.length  ? currentClubs.map(k => CLUBS?.[k]?.shortPrefix || CLUBS?.[k]?.name || k).join(' / ') : null,
     currentAges.length   ? currentAges.join(' / ') : null,
@@ -1821,10 +1991,14 @@ document.getElementById('copy-link-btn').addEventListener('click', async () => {
   // what they're getting.
   const text = (() => {
     const parts = [];
-    if (currentTeam) parts.push(TEAM_META?.[currentTeam]?.name || '');
+    if (currentTeams.length) {
+      parts.push(currentTeams.map(id => TEAM_META?.[id]?.name || id).join(' / '));
+    }
     if (currentRounds.length) parts.push(`Round ${currentRounds.join(', ')}`);
-    if (!currentTeam && currentClubs.length) parts.push(currentClubs.map(k => CLUBS?.[k]?.shortPrefix || CLUBS?.[k]?.name || k).join(' / '));
-    if (!currentTeam && currentAges.length)  parts.push(currentAges.join(' / '));
+    // Club + age descriptors are redundant once a team is named, so suppress
+    // them when at least one team is in the share text.
+    if (!currentTeams.length && currentClubs.length) parts.push(currentClubs.map(k => CLUBS?.[k]?.shortPrefix || CLUBS?.[k]?.name || k).join(' / '));
+    if (!currentTeams.length && currentAges.length)  parts.push(currentAges.join(' / '));
     if (currentVenues.length) parts.push(currentVenues.map(v => {
       const m = (fixturesData?.matches || []).find(mm => venueSlug(parseVenue(mm.venue || '', VENUES || {}).base || '') === v);
       return m ? parseVenue(m.venue, VENUES || {}).base || v : v;
@@ -1853,9 +2027,9 @@ function sameArray(a, b) {
   return true;
 }
 function applyHashState() {
-  const { teamId, filters } = readHash();
+  const { teamIds, filters } = readHash();
   const want = {
-    team:    teamId || null,
+    teams:   teamIds.slice().sort(),
     rnds:    parseCsv(filters.rnd, { numeric: true }).sort((a, b) => a - b),
     clubs:   parseCsv(filters.club).sort(),
     ages:    parseCsv(filters.age).sort(),
@@ -1890,14 +2064,12 @@ function applyHashState() {
     syncVenueChips();
     changed = true;
   }
-  if (changed) buildTokenGrid();
+  if (changed) buildTeamCards();
 
-  if (want.team !== currentTeam) {
-    // selectTeam handles its own state + render + hash write. Skip the extra
-    // updateHash that selectTeam would do (we already came from the hash).
-    currentTeam = want.team;
-    lsSet(TEAM_KEY, currentTeam);
-    syncTokens();
+  if (!sameArray(want.teams, currentTeams)) {
+    currentTeams = want.teams;
+    lsSet(TEAM_KEY, currentTeams.length ? currentTeams.join(',') : null);
+    syncTeamCards();
     changed = true;
   }
   if (changed) {
@@ -1917,25 +2089,31 @@ window.addEventListener('hashchange', applyHashState);
   const hash = readHash();
   const f = hash.filters || {};
 
-  currentTeam  = hash.teamId
-    || (lsGet(TEAM_KEY) && SLUG_BY_ID?.[lsGet(TEAM_KEY)] ? lsGet(TEAM_KEY) : null);
+  // Teams: URL wins (legacy `#slug` path OR new `?teams=csv`), else localStorage.
+  // We only restore stored team ids that still resolve via SLUG_BY_ID so a stale
+  // team that's no longer in the draw quietly drops out instead of breaking state.
+  if (hash.teamIds.length) {
+    currentTeams = hash.teamIds.slice().sort();
+  } else {
+    currentTeams = parseCsv(lsGet(TEAM_KEY)).filter(id => SLUG_BY_ID?.[id]).sort();
+  }
 
-  // Each axis: URL value wins; else fall back to localStorage (also CSV).
-  // For club/age, also seed from the active team's meta if no other source has it,
+  // Each filter axis: URL value wins; else fall back to localStorage (also CSV).
+  // For club/age, also seed from the active team(s) if no other source has them,
   // so the toolbar visually anchors to the team you picked.
-  currentRounds = parseCsv(f.rnd,   { numeric: true }).sort((a, b) => a - b);
+  currentRounds = parseCsv(f.rnd, { numeric: true }).sort((a, b) => a - b);
   if (!currentRounds.length) currentRounds = parseCsv(lsGet(ROUND_KEY), { numeric: true });
 
   currentClubs = parseCsv(f.club).sort();
   if (!currentClubs.length) {
-    const seed = hash.teamId ? (TEAM_META?.[hash.teamId]?.clubKey || null) : null;
-    currentClubs = seed ? [seed] : parseCsv(lsGet(CLUB_KEY));
+    const seed = Array.from(new Set(currentTeams.map(id => TEAM_META?.[id]?.clubKey).filter(Boolean)));
+    currentClubs = seed.length ? seed.sort() : parseCsv(lsGet(CLUB_KEY)).sort();
   }
 
   currentAges = parseCsv(f.age).sort();
   if (!currentAges.length) {
-    const seed = hash.teamId ? (TEAM_META?.[hash.teamId]?.age || null) : null;
-    currentAges = seed ? [seed] : parseCsv(lsGet(AGE_KEY));
+    const seed = Array.from(new Set(currentTeams.map(id => TEAM_META?.[id]?.age).filter(Boolean)));
+    currentAges = seed.length ? seed.sort() : parseCsv(lsGet(AGE_KEY)).sort();
   }
 
   currentVenues = parseCsv(f.venue).sort();
@@ -1945,7 +2123,8 @@ window.addEventListener('hashchange', applyHashState);
   buildClubRow(); syncClubChips();
   buildAgeRow();
   buildVenueRow();
-  buildTokenGrid();
+  buildTeamCards();
+  initTeamAccordion();
 
   // Sticky-header compact mode: once the user has scrolled past the eyebrow
   // area, switch to a compact bar so the nav stays visible without eating
@@ -1990,15 +2169,16 @@ window.addEventListener('hashchange', applyHashState);
     stamp.textContent = 'No fixture data yet — CI will populate on first run.';
   }
 
-  // Sync the share-button visibility against whatever state we restored
-  // (selectTeam will redo this internally, but the no-team-but-filters-set
-  // path needs it too).
+  // Sync the share-button + active-filter bar against whatever state we
+  // restored. render() below will redo it for the team-selected path too,
+  // but the no-team-but-filters-set path needs it explicitly.
   syncShareButton();
   syncActiveFilterBar();
 
-  // Re-enter team if it's still in the toolbar
-  if (currentTeam) selectTeam(currentTeam, hash.slug);
-  else render();
+  // Rebuild team cards with live names now that fixtures have loaded,
+  // then render the appropriate view based on what we restored.
+  buildTeamCards();
+  render();
 })();
 
 // Service worker registration
