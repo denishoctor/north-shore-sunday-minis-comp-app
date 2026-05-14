@@ -85,9 +85,13 @@ export function parseLineupData(pageProps) {
     return { home: [], away: [], homeCoaches: [], awayCoaches: [], officials };
   }
 
+  // Tag each entry by the array it came from, so isSub doesn't rely on
+  // parseInt(position) — which silently mis-labelled non-numeric position
+  // codes (e.g. "B", "R", "—") as starters because parseInt → NaN, and
+  // NaN >= 16 is false.
   const allPlayers = [
-    ...(lineUp.players     ?? []),
-    ...(lineUp.substitutes ?? []),
+    ...(lineUp.players     ?? []).map(p => ({ ...p, _fromSubs: false })),
+    ...(lineUp.substitutes ?? []).map(p => ({ ...p, _fromSubs: true  })),
   ];
 
   const cleanName = s => (s ?? '').trim().replace(/\s+/g, ' ');
@@ -96,11 +100,17 @@ export function parseLineupData(pageProps) {
     name:     cleanName(p.name),
     position: p.position ?? '',
     captain:  p.captainType === 'captain',
-    isSub:    parseInt(p.position) >= 16,
+    isSub:    p._fromSubs,
   });
 
-  // Sort starters 1–15 then bench 16+ by position number
-  const sort = arr => arr.slice().sort((a, b) => parseInt(a.position) - parseInt(b.position));
+  // Sort by position, but keep non-numeric positions (NaN) stable at the end.
+  const sort = arr => arr.slice().sort((a, b) => {
+    const pa = parseInt(a.position), pb = parseInt(b.position);
+    if (Number.isNaN(pa) && Number.isNaN(pb)) return 0;
+    if (Number.isNaN(pa)) return 1;
+    if (Number.isNaN(pb)) return -1;
+    return pa - pb;
+  });
 
   const home = sort(allPlayers.filter(p => p.isHome  === true )).map(normalisePlayer);
   const away = sort(allPlayers.filter(p => p.isHome  === false)).map(normalisePlayer);
@@ -126,7 +136,13 @@ async function fetchLineupFromPattern(matchId, patternIdx) {
     const res = await fetch(url, {
       signal: ac.signal,
       headers: {
-        'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        // We hit a public Next.js page Rugby Xplorer is happy to render for
+        // browsers, so we keep a current Chrome fingerprint. The
+        // `nsm-sunday-fixtures` token + URL is appended so an admin
+        // investigating their access logs can find us and reach out instead
+        // of blanket-blocking; the `From` header gives them a direct contact.
+        'user-agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 nsm-sunday-fixtures/0.1 (+https://github.com/denishoctor/north-shore-sunday-minis-comp-app)',
+        'from':            'https://github.com/denishoctor/north-shore-sunday-minis-comp-app/issues',
         'accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'accept-language': 'en-AU,en;q=0.9',
         'origin':          'https://xplorer.rugby',

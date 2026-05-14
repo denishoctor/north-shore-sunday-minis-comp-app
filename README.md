@@ -72,7 +72,7 @@ like `lane-cove-u7-gold` / `kwp-u8-lindfield` from team names, and writes one
 | `docs/sw.js`                 | Service worker (offline + stale-while-revalidate) |
 | `tests/`                     | `node --test` unit tests; offline + one live API probe |
 | `.github/workflows/`         | Hourly refresh + manual lineup resync |
-| `UPSTREAM_PATCH.md`          | Diff to apply to `lcjru-fixtures` for the backwards-compatible fan-out refactor |
+| `docs-internal/`             | Design notes + staging upstream patches; not published to Pages |
 
 ## Local development
 
@@ -127,7 +127,7 @@ simple); icons are checked in.
 3. **Set the `NTFY_TOPIC_NSM_SUNDAY` repo secret** if you want fixture-change
    push notifications.
 4. **Land the upstream patch** in `denishoctor/lcjru-fixtures`
-   (see [UPSTREAM_PATCH.md](UPSTREAM_PATCH.md)) — this lets the aggregate site
+   (see [docs-internal/UPSTREAM_PATCH.md](docs-internal/UPSTREAM_PATCH.md)) — this lets the aggregate site
    re-derive from the same fetch shape upstream uses.
 5. **Enable GitHub Pages** — source: `main` branch, `/docs` folder.
 6. **Trigger the workflow once** manually (Actions → Refresh Fixtures →
@@ -161,4 +161,4 @@ simple); icons are checked in.
 ## Credits
 
 Forked from [`denishoctor/lcjru-fixtures`](https://github.com/denishoctor/lcjru-fixtures);
-see [UPSTREAM_PATCH.md](UPSTREAM_PATCH.md) for the divergence point.
+see [docs-internal/UPSTREAM_PATCH.md](docs-internal/UPSTREAM_PATCH.md) for the divergence point.

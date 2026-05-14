@@ -435,14 +435,16 @@
     max-width: min(280px, calc(100vw - 24px));
   }
   /* On narrow viewports, anchor popover to the viewport's right edge
-     (instead of the trigger's right edge) so wide content can't overflow. */
+     (instead of the trigger's right edge) so wide content can't overflow.
+     Respect safe-area insets so notched / Dynamic Island devices don't
+     clip the popover under the camera cutout. */
   @media (max-width: 600px) {
     .action-popover {
       position: fixed;
       top: auto;
-      bottom: 12px;
-      right: 12px;
-      left: 12px;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      right: max(12px, env(safe-area-inset-right));
+      left: max(12px, env(safe-area-inset-left));
       max-width: none;
       min-width: 0;
     }
@@ -918,6 +920,17 @@ import {
 const CFG = window.NSM_SUNDAY_CONFIG || {};
 const { SEASON, SITE_URL, SITE, CLUBS, COMPETITIONS, AGE_GROUPS, TEAM_SLUGS, TEAM_META, VENUES, ROUNDS } = CFG;
 const SLUG_BY_ID  = Object.fromEntries(Object.entries(TEAM_SLUGS || {}).map(([s, id]) => [id, s]));
+
+// Round numbers arrive from Xplorer as strings like "Round 1" / "Round 12";
+// the static schedule uses bare integers. Centralise the coercion + tolerate
+// "" / null / non-numeric (e.g. "Finals") by returning NaN so callers can
+// Number.isNaN-guard once and forget. Returning a number (not null) preserves
+// existing `Number.isNaN(rn)` guard idioms throughout the render path.
+function roundNumber(raw) {
+  if (raw == null) return NaN;
+  const m = String(raw).match(/(\d+)/);
+  return m ? parseInt(m[1], 10) : NaN;
+}
 
 const STORAGE_PREFIX = 'nsm-sunday';
 // Filter keys store CSVs (e.g. "lane-cove,manly"). parseCsv() also accepts a
@@ -1521,7 +1534,7 @@ function render() {
   // round schedule and fill in placeholders for unpublished future rounds.
   const matchesByRound = new Map();
   for (const m of matches) {
-    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    const rn = roundNumber(m.round);
     if (!Number.isNaN(rn)) matchesByRound.set(rn, m);
   }
 
@@ -1553,7 +1566,7 @@ function render() {
   // (finals, friendlies). Stable order: original date.
   const knownRoundNums = new Set([...matchesByRound.keys()]);
   const orphanMatches = matches.filter(m => {
-    const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+    const rn = roundNumber(m.round);
     return Number.isNaN(rn) || !knownRoundNums.has(rn) || !(ROUNDS || []).find(r => r.round === rn);
   });
   for (const m of orphanMatches) {
@@ -1564,7 +1577,7 @@ function render() {
   // When a Rnd filter is active, narrow the timeline to that round only.
   const roundSet = new Set(currentRounds);
   const filteredTimeline = currentRounds.length
-    ? timeline.filter(t => (t.round && roundSet.has(t.round.round)) || (t.match && roundSet.has(parseInt((t.match.round || '').replace(/^Round /, ''), 10))))
+    ? timeline.filter(t => (t.round && roundSet.has(t.round.round)) || (t.match && roundSet.has(roundNumber(t.match.round))))
     : timeline;
 
   const upcoming = filteredTimeline.filter(t => /^upcoming/.test(t.kind));
@@ -1586,7 +1599,10 @@ function render() {
     parts.push(past.map(renderTimelineEntry).join(''));
   }
   if (!upcoming.length && !past.length) {
-    parts.push('<div class="welcome"><p class="welcome-sub">No matches scheduled for this team yet.</p></div>');
+    const filterHint = currentRounds.length
+      ? ` for round ${currentRounds.join(', ')}`
+      : '';
+    parts.push(`<div class="welcome"><p class="welcome-sub">No matches scheduled for <strong>${esc(teamLabel)}</strong>${filterHint} yet. Check back closer to the round, or pick a different team from the toolbar above.</p></div>`);
   }
   cal.innerHTML = parts.join('');
 
@@ -1638,7 +1654,7 @@ function renderFilteredList() {
       if (!teamSet.has(m.home.id) && !teamSet.has(m.away.id)) return false;
     }
     if (roundSet.size) {
-      const rn = parseInt((m.round || '').replace(/^Round /, ''), 10);
+      const rn = roundNumber(m.round);
       if (!roundSet.has(rn)) return false;
     }
     if (clubSet.size) {
@@ -1702,7 +1718,7 @@ function renderMatch(match) {
   if (match.isBye) classes.push('is-bye');
 
   const round = (match.round || '').replace('Round ', 'R');
-  const roundNum = parseInt((match.round || '').replace(/^Round /, ''), 10);
+  const roundNum = roundNumber(match.round);
   const roundActive = !Number.isNaN(roundNum) && currentRounds.includes(roundNum);
   const venue = parseVenue(match.venue || '', VENUES || {});
   const sc    = scoreClass(match);
@@ -1732,7 +1748,7 @@ function renderMatch(match) {
             <span>${esc(match.competition)}</span>
             ${match.isLive ? '<span class="live-tag">● LIVE</span>' : ''}
             ${match.isBye ? '<span class="bye-tag">BYE</span>' : ''}
-            ${hasLineup ? '<span title="Team sheet available">📋 Lineup</span>' : ''}
+            ${hasLineup ? '<span class="lineup-badge" role="img" aria-label="Team sheet available"><span aria-hidden="true">📋</span> Lineup</span>' : ''}
           </div>
         </div>
         <div class="match-score ${sc}">
@@ -1894,7 +1910,7 @@ function renderHome() {
       <h2>${esc(SITE?.name || 'Fixtures')}</h2>
       <p class="welcome-sub">${awaiting
         ? 'Setting things up. The hourly workflow will populate club chips and teams shortly.'
-        : "Sunday Minis is centrally drawn — every club travels to the same host venue each weekend. Pick your club below for your team's full schedule."
+        : "Each Sunday, every club meets at the same host venue — picked centrally by the SJRU. Tap your club below for your team's full schedule."
       }</p>
       <div class="welcome-stats">
         <span><b>${clubCount}</b> clubs</span>
@@ -2147,15 +2163,13 @@ window.addEventListener('hashchange', applyHashState);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  const [fxRes, luRes] = await Promise.allSettled([
-    fetch('./fixtures.json').then(r => r.ok ? r.json() : null),
-    fetch('./lineups.json').then(r => r.ok ? r.json() : null),
-  ]);
-  fixturesData = fxRes.status === 'fulfilled' ? fxRes.value : null;
-  lineupsData  = luRes.status === 'fulfilled' ? luRes.value : null;
+  // Fixtures are critical-path (calendar can't render without them); lineups
+  // are nice-to-have (badge + roster modal). Await fixtures first so we can
+  // paint the calendar immediately, then hydrate lineups in the background
+  // — a slow or 404'd lineups.json must not block first render.
+  const fxRes = await fetch('./fixtures.json').then(r => r.ok ? r.json() : null).catch(() => null);
+  fixturesData = fxRes;
 
-  // Re-build axes that depend on live data — venues come from match records,
-  // clubs collapse to those actually playing now that we know who's on the draw.
   buildVenueRow();
   buildClubRow(); syncClubChips();
 
@@ -2169,23 +2183,27 @@ window.addEventListener('hashchange', applyHashState);
     stamp.textContent = 'No fixture data yet — CI will populate on first run.';
   }
 
-  // Sync the share-button + active-filter bar against whatever state we
-  // restored. render() below will redo it for the team-selected path too,
-  // but the no-team-but-filters-set path needs it explicitly.
   syncShareButton();
   syncActiveFilterBar();
-
-  // Rebuild team cards with live names now that fixtures have loaded,
-  // then render the appropriate view based on what we restored.
   buildTeamCards();
   render();
+
+  // Hydrate lineups asynchronously and re-render once they land. The lineup
+  // badge + roster modal degrade gracefully when lineupsData is null.
+  fetch('./lineups.json')
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null)
+    .then(data => {
+      lineupsData = data;
+      if (data) render();
+    });
 })();
 
-// Service worker registration
+// Service worker registration — kick off immediately rather than waiting on
+// the load event. Registration is async and doesn't block paint, so deferring
+// to window.load just costs us ~1 RTT of installation time on slow phones.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
-  });
+  navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
 }
 </script>
 </body>

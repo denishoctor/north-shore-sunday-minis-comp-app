@@ -197,9 +197,10 @@ export const VENUES = {
   },
   'Wakehurst Rugby Park':            { suburb: 'Belrose',         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Wakehurst+Rugby+Park+Forest+Way+%26+Waldon+Rd%2C+Belrose+NSW+2085%2C+Australia',
     details: {
-      parking: 'Onsite parking adjacent to the clubhouse.',
-      coffee:  { onsite: 'Canteen + BBQ + bar (the canteen is the club’s main fundraiser through the season).' },
-      notes:   'Home of Wakehurst Rugby. Clubhouse open to spectators; bathroom + change facilities. Off Waldon Rd, Belrose.',
+      map:     { src: 'assets/venues/wakehurst-rugby-park.jpg', caption: 'Pitch layout — TT1 (south-west), TT2 (north-west), TT3 (north-east), TT4 (south-east)', asOf: '2026-05' },
+      parking: 'Free open-access carpark next to the clubhouse, plus an overflow carpark on the east side. Drop-off / pick-up zone at the front concrete apron — NO PARKING in that strip on game days.',
+      coffee:  { onsite: 'Canteen opens 7:30am (the club’s main fundraiser through the season) + BBQ + bar on the clubhouse deck.' },
+      notes:   'Home of Wakehurst Rugby. Entry off Waldon Rd to the south; bushland to the north, Forest Way to the east, Dell St to the west. Clubhouse + bar are upstairs (take the stairs at the eastern end) and overlook the oval. Home/visitors change rooms, male/female/accessible WCs all on the ground floor.',
     },
   },
 };

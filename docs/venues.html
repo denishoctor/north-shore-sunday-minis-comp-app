@@ -146,9 +146,14 @@
   /* venue-panel styles mirrored from index.html so renderVenueDetails output looks the same. */
   .venue-map-link { display: block; line-height: 0; }
   .venue-map {
-    width: 100%; max-height: 70vh; object-fit: contain;
+    width: 100%; max-height: 70vh; aspect-ratio: 4 / 3; object-fit: contain;
     background: #000; border-radius: 4px;
     border: 1px solid var(--cream-edge);
+  }
+  /* On narrow viewports a 70vh map dominates the screen and pushes the
+     surrounding venue meta off-screen — cap it tighter. */
+  @media (max-width: 600px) {
+    .venue-map { max-height: 50vh; }
   }
   .venue-map-caption {
     font-size: 11px; color: var(--muted); padding: 6px 2px 12px;
@@ -246,7 +251,7 @@ function fmtRoundDate(iso) {
 function renderCard(name, v, hosting) {
   const slug = venueSlug(name);
   const details = renderVenueDetails(name, VENUES, { assetPrefix: VENUE_ASSET_PREFIX });
-  const stub = details ? '' : '<div class="venue-card-stub">Local intel for this ground hasn\'t been shared yet — got something to add? Drop us a note.</div>';
+  const stub = details ? '' : '<div class="venue-card-stub">Local intel for this ground hasn\'t been shared yet — got something to add? <a href="https://github.com/denishoctor/north-shore-sunday-minis-comp-app/issues/new?title=Venue+details:+&labels=venue-details" target="_blank" rel="noopener">Open an issue</a> with parking tips, coffee, or a pitch-layout photo.</div>';
   const hostingChips = (hosting || []).map(h =>
     `<span class="hosting-badge"><span class="ages">${esc(h.ages)}</span> R${esc(h.round)}${h.finalRound ? ' · Final' : ''} · ${esc(fmtRoundDate(h.date))}</span>`
   ).join('');

@@ -15,9 +15,18 @@
  * Run:  node scripts/fetch-fixtures.mjs
  */
 
-import { writeFileSync, readFileSync, existsSync, readdirSync, unlinkSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync, readdirSync, unlinkSync, renameSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
+
+// Atomic write: stage to a sibling temp file, then rename. POSIX rename is
+// atomic on the same filesystem, so a partial-write crash leaves the existing
+// file untouched rather than producing a half-written config.js or ICS feed.
+function writeFileAtomic(path, contents) {
+  const tmp = `${path}.tmp-${process.pid}-${Date.now()}`;
+  writeFileSync(tmp, contents);
+  renameSync(tmp, path);
+}
 import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
   FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES,
@@ -108,16 +117,32 @@ async function fetchAllForFeed(feed, type) {
 
 // Fan out across every FEEDS descriptor for the requested type, then dedup by
 // match id (a match between two whitelisted clubs appears in both feeds).
+// One feed failing must not poison the rest: we use Promise.allSettled and
+// continue with whatever succeeded. The run is only fatal if *every* feed
+// fails — otherwise we log the failures and emit best-effort output.
 async function fetchAll(type) {
+  const results = await Promise.allSettled(FEEDS.map(feed => fetchAllForFeed(feed, type)));
+  const failures = [];
   const seen = new Map();
-  for (const feed of FEEDS) {
-    const items = await fetchAllForFeed(feed, type);
-    for (const item of items) {
+  results.forEach((r, i) => {
+    const feed = FEEDS[i];
+    if (r.status === 'rejected') {
+      failures.push({ feed, reason: r.reason?.message ?? String(r.reason) });
+      return;
+    }
+    for (const item of r.value) {
       // Defensive: even though we set `comps` on each feed, a stray response
       // outside the Sunday Minis set would be a config bug.
       if (!COMP_IDS.includes(item.compId)) continue;
       if (!seen.has(item.id)) seen.set(item.id, item);
     }
+  });
+  if (failures.length) {
+    console.warn(`⚠️  ${failures.length}/${FEEDS.length} ${type} feed(s) failed:`);
+    for (const f of failures) console.warn(`   entityId=${f.feed.entityId} (${f.feed.entityType}): ${f.reason}`);
+  }
+  if (failures.length === FEEDS.length) {
+    throw new Error(`All ${FEEDS.length} ${type} feeds failed — aborting.`);
   }
   return [...seen.values()];
 }
@@ -125,7 +150,14 @@ async function fetchAll(type) {
 // ── normalise ─────────────────────────────────────────────────────────────────
 
 export function normalise(item) {
-  const type = item.status === 'Result' ? 'result' : 'fixture';
+  // Upstream occasionally returns status='Result' on matches that were
+  // cancelled / forfeited / never scored — both teams have score: null but
+  // the status flips. Treat those as fixtures so the renderer doesn't try
+  // to show "— vs —" and the data-integrity test stays useful.
+  const homeScore = item.homeTeam?.score !== '' ? item.homeTeam?.score : null;
+  const awayScore = item.awayTeam?.score !== '' ? item.awayTeam?.score : null;
+  const scoredResult = item.status === 'Result' && (homeScore != null || awayScore != null);
+  const type = scoredResult ? 'result' : 'fixture';
   return {
     id: item.id,
     type,
@@ -287,11 +319,11 @@ function icsNow() {
   return new Date().toISOString().replace(/[-:.]/g, '').slice(0, 15) + 'Z';
 }
 
-function icsEscape(str) {
+export function icsEscape(str) {
   return String(str ?? '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 }
 
-function icsFold(line) {
+export function icsFold(line) {
   const bytes = Buffer.from(line, 'utf8');
   if (bytes.length <= 75) return line;
   const out = [];
@@ -572,16 +604,16 @@ async function main() {
 
   const changes = detectChanges(oldData, output);
 
-  writeFileSync(OUT_PATH, JSON.stringify(output, null, 2));
+  writeFileAtomic(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`✓ Written ${combined.length} matches → docs/fixtures.json`);
 
   if (changes.length > 0) {
     const msg = formatChanges(changes);
-    writeFileSync(DIFF_PATH, msg);
+    writeFileAtomic(DIFF_PATH, msg);
     console.log(`\n⚠️  ${changes.length} change(s) detected:\n`);
     console.log(msg);
   } else {
-    writeFileSync(DIFF_PATH, '');
+    writeFileAtomic(DIFF_PATH, '');
     console.log('✓ No changes to upcoming fixtures');
   }
 
@@ -592,7 +624,7 @@ async function main() {
   }
   for (const [slug, teamId] of Object.entries(TEAM_SLUGS)) {
     const ics = generateICS(slug, teamId, TEAM_META[teamId], combined, output.updated);
-    writeFileSync(join(DOCS_DIR, `${slug}.ics`), ics);
+    writeFileAtomic(join(DOCS_DIR, `${slug}.ics`), ics);
   }
   console.log(`✓ Written ${Object.keys(TEAM_SLUGS).length} ICS feeds → docs/*.ics`);
 
@@ -617,7 +649,7 @@ async function main() {
     '};',
     '',
   ].join('\n');
-  writeFileSync(CFG_PATH, configJs);
+  writeFileAtomic(CFG_PATH, configJs);
   console.log('✓ Written docs/config.js');
 
   // Per-competition summary.

@@ -81,9 +81,37 @@ async function networkFirstNavigation(request) {
   } catch (err) {
     const cached = await cache.match(request) || await cache.match('index.html') || await cache.match('./');
     if (cached) return cached;
-    throw err;
+    return new Response(OFFLINE_HTML, {
+      status: 503,
+      headers: { 'content-type': 'text/html; charset=utf-8' },
+    });
   }
 }
+
+const OFFLINE_HTML = `<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offline — North Shore Minis Sunday Rugby</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: #0a2059; color: #f7f5ef; margin: 0;
+         min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+  .card { max-width: 32rem; text-align: center; }
+  h1 { margin: 0 0 12px; font-size: 1.5rem; }
+  p  { margin: 8px 0; opacity: .85; line-height: 1.4; }
+  button { margin-top: 18px; padding: 10px 18px; border-radius: 999px;
+           border: 1px solid #f7f5ef; background: transparent; color: inherit;
+           font: inherit; cursor: pointer; }
+</style>
+<div class="card">
+  <h1>Offline</h1>
+  <p>You're not connected, and we haven't cached this page yet.</p>
+  <p>If you've visited the site before, try opening the home page — the calendar and your subscribed team's fixtures will still be available.</p>
+  <button type="button" onclick="location.reload()">Try again</button>
+</div>
+`;
 
 async function networkFirstCrossOrigin(request) {
   const cache = await caches.open(DATA_CACHE);

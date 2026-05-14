@@ -1,6 +1,12 @@
 # Architecture Proposal — Xplorer feed monitor / approve / revert
 
-**Status:** Proposed (no implementation yet)
+> ⚠️ **Status: DESIGN PROPOSAL — NOT IMPLEMENTED.**
+> This file is a draft for discussion. Nothing here has shipped, and the
+> options below are not decided. Don't implement the proposed pipeline
+> without first opening an issue and getting sign-off — the change touches
+> the fetch + commit critical path on both this repo and the upstream
+> `lcjru-fixtures`.
+
 **Repos affected:** `denishoctor/north-shore-sunday-minis-comp-app` (this repo) and `denishoctor/lcjru-fixtures` (upstream). Same shape applies to both — they share the fetch + commit pipeline.
 **Date:** 2026-05-13
 
