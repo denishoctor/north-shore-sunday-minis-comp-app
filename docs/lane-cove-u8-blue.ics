@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-d3cd4a7ebf8ae20d8-lane-cove-u8-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Lane Cove Blue 8 vs Killara-West Pymble/Lindfield 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1878b66db5814a3af-lane-cove-u8-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Lane Cove Blue 8 vs Wakehurst Kings 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-8fdbf03100e88030f-lane-cove-u8-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Lane Cove Blue 8 vs Norths Pirates Red 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-34e751b6e328c9d5d-lane-cove-u8-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Lane Cove Blue 8 vs Norths Pirates Black 8 | RND 4
@@ -99,10 +99,46 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
  ove-u8-blue
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-b126aa2cb5fe21890-lane-cove-u8-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Lane Cove Blue 8 vs Wakehurst Kings 8 | RND 4
+LOCATION:Hassall Park TT4\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 8 vs Wakehurst Kings 8\n📍 Hassall Park T
+ T4\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#lane-cove-u8-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u8-blue
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-dc6c0752afb8e5100-lane-cove-u8-blue@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260531T080000
+DTEND;TZID=Australia/Sydney:20260531T090000
+SUMMARY:Lane Cove Blue 8 vs Chatswood Gold 8 | RND 5
+LOCATION:Lofberg Oval TT4\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Blue 8 vs Chatswood Gold 8\n📍 Lofberg Oval TT
+ 4\, West Pymble\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#lane-cove-u8-blue
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ ove-u8-blue
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-f5affa17b1f786f86-lane-cove-u8-blue@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Lane Cove Blue 8 vs Lane Cove Gold 8 | RND 5

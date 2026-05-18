@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fb5b243ba1973232e-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260503T100000
 DTEND;TZID=Australia/Sydney:20260503T110000
 SUMMARY:Wakehurst Kings 8 vs Chatswood Gold 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1878b66db5814a3af-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-26cb2fb97f20b3427-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Wakehurst Kings 8 vs Hornsby Red 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-40a620b21ad868550-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Wakehurst Kings 8 vs St Ives 8 | RND 4
@@ -99,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u8-kings
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-b126aa2cb5fe21890-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 4
+LOCATION:Hassall Park TT4\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Lane Cove Blue 8\n📍 Hassall Park T
+ T4\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-adade07820057d129-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Wakehurst Kings 8 vs Killara-West Pymble/Lindfield 8 | RND 5
@@ -113,6 +131,24 @@ DESCRIPTION:🏉 Wakehurst Kings 8 vs Killara-West Pymble/Lindfield 8\n📍
  calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
  endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
  north-shore-sunday-minis-comp-app/#wakehurst-u8-kings
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-kings
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9f8c0588e7b4392cd-wakehurst-u8-kings@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260531T084000
+DTEND;TZID=Australia/Sydney:20260531T094000
+SUMMARY:Wakehurst Kings 8 vs Norths Pirates Black 8 | RND 5
+LOCATION:Lofberg Oval TT1\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs Norths Pirates Black 8\n📍 Lofberg 
+ Oval TT1\, West Pymble\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
+ SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#wakehurst-u8-kings
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u8-kings
 END:VEVENT

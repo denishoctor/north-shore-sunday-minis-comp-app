@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fb5b243ba1973232e-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260503T100000
 DTEND;TZID=Australia/Sydney:20260503T110000
 SUMMARY:Chatswood Gold 8 vs Wakehurst Kings 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-f5a2945ddec8a5266-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Chatswood Gold 8 vs Dee Why 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1215bebecc97ee53d-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Chatswood Gold 8 vs Dee Why 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-15b75213173b6d106-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Chatswood Gold 8 vs Hornsby Black 8 | RND 4
@@ -99,10 +99,28 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u8-gold
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-7f0a5e1773586b20b-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260524T080000
+DTEND;TZID=Australia/Sydney:20260524T090000
+SUMMARY:Chatswood Gold 8 vs Hornsby Red 8 | RND 4
+LOCATION:Hassall Park TT3\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Hornsby Red 8\n📍 Hassall Park TT3\,
+  St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U8 
+ Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
+ tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
+ er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
+ s-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-6b17a7631f0620b49-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T142214Z
-LAST-MODIFIED:20260518T142214Z
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Chatswood Gold 8 vs Chatswood Black 8 | RND 5
@@ -113,6 +131,24 @@ DESCRIPTION:🏉 Chatswood Gold 8 vs Chatswood Black 8\n📍 Lofberg Oval T
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
   hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
  day-minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-dc6c0752afb8e5100-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260518T172240Z
+LAST-MODIFIED:20260518T172240Z
+DTSTART;TZID=Australia/Sydney:20260531T080000
+DTEND;TZID=Australia/Sydney:20260531T090000
+SUMMARY:Chatswood Gold 8 vs Lane Cove Blue 8 | RND 5
+LOCATION:Lofberg Oval TT4\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Lane Cove Blue 8\n📍 Lofberg Oval TT
+ 4\, West Pymble\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU Mi
+ nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
+  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
+ hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
+ ay-minis-comp-app/#chatswood-u8-gold
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u8-gold
 END:VEVENT
