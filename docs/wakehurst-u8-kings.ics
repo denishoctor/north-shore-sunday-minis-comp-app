@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fb5b243ba1973232e-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T235302Z
-LAST-MODIFIED:20260518T235302Z
+DTSTAMP:20260519T015518Z
+LAST-MODIFIED:20260519T015518Z
 DTSTART;TZID=Australia/Sydney:20260503T100000
 DTEND;TZID=Australia/Sydney:20260503T110000
 SUMMARY:Wakehurst Kings 8 vs Chatswood Gold 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1878b66db5814a3af-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T235302Z
-LAST-MODIFIED:20260518T235302Z
+DTSTAMP:20260519T015518Z
+LAST-MODIFIED:20260519T015518Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Wakehurst Kings 8 vs Lane Cove Blue 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-26cb2fb97f20b3427-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T235302Z
-LAST-MODIFIED:20260518T235302Z
+DTSTAMP:20260519T015518Z
+LAST-MODIFIED:20260519T015518Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Wakehurst Kings 8 vs Hornsby Red 8 | RND 3
@@ -83,26 +83,26 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-40a620b21ad868550-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T235302Z
-LAST-MODIFIED:20260518T235302Z
+DTSTAMP:20260519T015518Z
+LAST-MODIFIED:20260519T015518Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Wakehurst Kings 8 vs St Ives 8 | RND 4
-LOCATION:Tryon Oval TT1\, East Lindfield\, Sydney NSW
-DESCRIPTION:🏉 Wakehurst Kings 8 vs St Ives 8\n📍 Tryon Oval TT1\, East
-  Lindfield\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U
- 8 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
- matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
- fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
- nis-comp-app/#wakehurst-u8-kings
+LOCATION:Hassall Park TT1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Kings 8 vs St Ives 8\n📍 Hassall Park TT1\, St
+  Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU Minis U8 Sun
+ day\n\nℹ️ Venues and times may change. This calendar updates automatic
+ ally\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs after 
+ a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-minis-c
+ omp-app/#wakehurst-u8-kings
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u8-kings
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-adade07820057d129-wakehurst-u8-kings@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260518T235302Z
-LAST-MODIFIED:20260518T235302Z
+DTSTAMP:20260519T015518Z
+LAST-MODIFIED:20260519T015518Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Wakehurst Kings 8 vs Killara-West Pymble/Lindfield 8 | RND 5
