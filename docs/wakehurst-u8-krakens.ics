@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-512b1ad5b44cce88e-wakehurst-u8-krakens@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Wakehurst Krakens 8 vs Chatswood Black 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5eaed1a3163c71895-wakehurst-u8-krakens@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Wakehurst Krakens 8 vs Chatswood Green 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5f2fabec1d0bef061-wakehurst-u8-krakens@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Wakehurst Krakens 8 vs Chatswood Black 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-ec9b4827a367e0ae3-wakehurst-u8-krakens@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Wakehurst Krakens 8 vs Lane Cove Gold 8 | RND 4
@@ -101,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5480e1f82f339c6c1-wakehurst-u8-krakens@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Wakehurst Krakens 8 vs Hornsby Black 8 | RND 5
@@ -113,6 +113,132 @@ DESCRIPTION:🏉 Wakehurst Krakens 8 vs Hornsby Black 8\n📍 Lofberg Oval
  es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
  4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
  nday-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-6b90078be6a61ab90-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260614T084000
+DTEND;TZID=Australia/Sydney:20260614T094000
+SUMMARY:Wakehurst Krakens 8 vs Chatswood Green 8 | RND 6
+LOCATION:James Morgan Reserve TT4\, Cromer\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Chatswood Green 8\n📍 James Morga
+ n Reserve TT4\, Cromer\n📅 Round 6 · Sun\, 14 June · 8:40am AEST\n🏆
+  SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-f8e5d2a4e9cd33a88-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260726T080000
+DTEND;TZID=Australia/Sydney:20260726T090000
+SUMMARY:Wakehurst Krakens 8 vs Dee Why 8 | RND 8
+LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Dee Why 8\n📍 Beauchamp Park TT4\
+ , Chatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9d24326660dfef01d-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260802T080000
+DTEND;TZID=Australia/Sydney:20260802T090000
+SUMMARY:Wakehurst Krakens 8 vs Dee Why 8 | RND 9
+LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Dee Why 8\n📍 Tantallon Oval TT1\
+ , Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:00am AEST\n🏆 SJRU M
+ inis U8 Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-01980a90bba7cdbe1-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260809T084000
+DTEND;TZID=Australia/Sydney:20260809T094000
+SUMMARY:Wakehurst Krakens 8 vs Killara-West Pymble/Lindfield 8 | RND 10
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Killara-West Pymble/Lindfield 8\n
+ 📍 Wakehurst Rugby Park TT4\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8
+ :40am AEST\n🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may chang
+ e. This calendar updates automatically\n(Apple Calendar: ~every hour · Go
+ ogle Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.gi
+ thub.io/north-shore-sunday-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-defa8eb9e5937512f-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260816T084000
+DTEND;TZID=Australia/Sydney:20260816T094000
+SUMMARY:Wakehurst Krakens 8 vs Norths Pirates Black 8 | RND 11
+LOCATION:Mark Taylor Oval TT1\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Norths Pirates Black 8\n📍 Mark T
+ aylor Oval TT1\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:40am AEST\n
+ 🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-40e0bd526a58f46bf-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260823T084000
+DTEND;TZID=Australia/Sydney:20260823T094000
+SUMMARY:Wakehurst Krakens 8 vs Lane Cove Blue 8 | RND 12
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Lane Cove Blue 8\n📍 Beauchamp Pa
+ rk TT2\, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:40am AEST\n🏆 SJR
+ U Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upd
+ ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
+  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
+ sunday-minis-comp-app/#wakehurst-u8-krakens
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
+ rst-u8-krakens
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-d7fbc95a567cb9fb9-wakehurst-u8-krakens@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260830T092000
+DTEND;TZID=Australia/Sydney:20260830T102000
+SUMMARY:Wakehurst Krakens 8 vs Norths Pirates Black 8 | RND 13
+LOCATION:Hassall Park TT2\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Wakehurst Krakens 8 vs Norths Pirates Black 8\n📍 Hassal
+ l Park TT2\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 9:20am AEST\n🏆 S
+ JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#wakehurst-u8-krakens
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#wakehu
  rst-u8-krakens
 END:VEVENT

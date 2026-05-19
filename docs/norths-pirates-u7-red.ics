@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-af021b3d7589e971a-norths-pirates-u7-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Norths Pirates Red 7 vs Norths Pirates White 7 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-8ddcc57a1d0112c01-norths-pirates-u7-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260510T084000
 DTEND;TZID=Australia/Sydney:20260510T094000
 SUMMARY:Norths Pirates Red 7 vs Norths Pirates Black 7 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-f55b07f3c95343fec-norths-pirates-u7-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:Norths Pirates Red 7 vs Hornsby 7 | RND 3
@@ -87,8 +87,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-2838cb8f5369f40a0-norths-pirates-u7-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260524T092000
 DTEND;TZID=Australia/Sydney:20260524T102000
 SUMMARY:Norths Pirates Red 7 vs Wakehurst Warthogs 7 | RND 4
@@ -106,8 +106,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-09c11f1d1430642b0-norths-pirates-u7-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Norths Pirates Red 7 vs St Ives Blue 7 | RND 5
@@ -118,6 +118,139 @@ DESCRIPTION:🏉 Norths Pirates Red 7 vs St Ives Blue 7\n📍 Tantallon Ova
   calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
  lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
  /north-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-941ad20b8c3e98b92-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260614T084000
+DTEND;TZID=Australia/Sydney:20260614T094000
+SUMMARY:Norths Pirates Red 7 vs Norths Pirates White 7 | RND 6
+LOCATION:Hassall Park TT8\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Norths Pirates White 7\n📍 Hassa
+ ll Park TT8\, St Ives\n📅 Round 6 · Sun\, 14 June · 8:40am AEST\n🏆 
+ SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
+ calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
+ endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
+ north-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-3813a31ca691d43f5-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260726T092000
+DTEND;TZID=Australia/Sydney:20260726T102000
+SUMMARY:Norths Pirates Red 7 vs Lindfield 7 | RND 8
+LOCATION:Tunks Park TT3\, Cammeray\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Lindfield 7\n📍 Tunks Park TT3\,
+  Cammeray\n📅 Round 8 · Sun\, 26 July · 9:20am AEST\n🏆 SJRU Minis U
+ 7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar upd
+ ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
+  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
+ sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-d8a59317bd7779a5d-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260802T092000
+DTEND;TZID=Australia/Sydney:20260802T102000
+SUMMARY:Norths Pirates Red 7 vs Norths Pirates Gold 7 | RND 9
+LOCATION:Mark Taylor Oval TT2\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Norths Pirates Gold 7\n📍 Mark T
+ aylor Oval TT2\, Waitara\n📅 Round 9 · Sun\, 2 Aug · 9:20am AEST\n🏆
+  SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
+  calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
+ lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
+ /north-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-b1fedff47f6de63a3-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260809T104000
+DTEND;TZID=Australia/Sydney:20260809T114000
+SUMMARY:Norths Pirates Red 7 vs Wakehurst Warthogs 7 | RND 10
+LOCATION:Melwood Oval TT1\, Forestville\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Wakehurst Warthogs 7\n📍 Melwood
+  Oval TT1\, Forestville\n📅 Round 10 · Sun\, 9 Aug · 10:40am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-76e685d91b7c98891-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260816T092000
+DTEND;TZID=Australia/Sydney:20260816T102000
+SUMMARY:Norths Pirates Red 7 vs Killara-West Pymble Blue 7 | RND 11
+LOCATION:Hassall Park TT1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Killara-West Pymble Blue 7\n📍 H
+ assall Park TT1\, St Ives\n📅 Round 11 · Sun\, 16 Aug · 9:20am AEST\n
+ 🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-f9fef7e1bce615933-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260823T092000
+DTEND;TZID=Australia/Sydney:20260823T102000
+SUMMARY:Norths Pirates Red 7 vs Wakehurst Wasps 7 | RND 12
+LOCATION:Lofberg Oval TT2\, West Pymble\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Wakehurst Wasps 7\n📍 Lofberg Ov
+ al TT2\, West Pymble\n📅 Round 12 · Sun\, 23 Aug · 9:20am AEST\n🏆 S
+ JRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
+ alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
+ ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
+ orth-shore-sunday-minis-comp-app/#norths-pirates-u7-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u7-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-ecbfde3310869dde2-norths-pirates-u7-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260830T084000
+DTEND;TZID=Australia/Sydney:20260830T094000
+SUMMARY:Norths Pirates Red 7 vs Lane Cove Gold 7 | RND 13
+LOCATION:Hassall Park TT7\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 7 vs Lane Cove Gold 7\n📍 Hassall Par
+ k TT7\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 8:40am AEST\n🏆 SJRU M
+ inis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
+ ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
+  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
+ shore-sunday-minis-comp-app/#norths-pirates-u7-red
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u7-red
 END:VEVENT

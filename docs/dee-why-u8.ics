@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-f17960dc5d7c60b4e-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Dee Why 8 vs Norths Pirates Red 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-f5a2945ddec8a5266-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Dee Why 8 vs Chatswood Gold 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1215bebecc97ee53d-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Dee Why 8 vs Chatswood Gold 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-495f2d6a1b7676d8b-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Dee Why 8 vs Chatswood Black 8 | RND 4
@@ -101,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-92480bdfe5d7dad36-dee-why-u8@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Dee Why 8 vs Norths Pirates Black 8 | RND 5
@@ -113,6 +113,132 @@ DESCRIPTION:🏉 Dee Why 8 vs Norths Pirates Black 8\n📍 Lofberg Oval TT3
  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
  rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
  y-minis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-09fca372a0a29933e-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260614T084000
+DTEND;TZID=Australia/Sydney:20260614T094000
+SUMMARY:Dee Why 8 vs Lane Cove Gold 8 | RND 6
+LOCATION:James Morgan Reserve TT1\, Cromer\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Lane Cove Gold 8\n📍 James Morgan Reserve T
+ T1\, Cromer\n📅 Round 6 · Sun\, 14 June · 8:40am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-f8e5d2a4e9cd33a88-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260726T080000
+DTEND;TZID=Australia/Sydney:20260726T090000
+SUMMARY:Dee Why 8 vs Wakehurst Krakens 8 | RND 8
+LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Wakehurst Krakens 8\n📍 Beauchamp Park TT4\
+ , Chatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9d24326660dfef01d-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260802T080000
+DTEND;TZID=Australia/Sydney:20260802T090000
+SUMMARY:Dee Why 8 vs Wakehurst Krakens 8 | RND 9
+LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Wakehurst Krakens 8\n📍 Tantallon Oval TT1\
+ , Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:00am AEST\n🏆 SJRU M
+ inis U8 Sunday\n\nℹ️ Venues and times may change. This calendar update
+ s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
+  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
+ day-minis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-7359ee7e161d78e16-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260809T084000
+DTEND;TZID=Australia/Sydney:20260809T094000
+SUMMARY:Dee Why 8 vs Chatswood Gold 8 | RND 10
+LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Chatswood Gold 8\n📍 Wakehurst Rugby Park T
+ T2\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:40am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-2d1765b54119d759a-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260816T080000
+DTEND;TZID=Australia/Sydney:20260816T090000
+SUMMARY:Dee Why 8 vs Lane Cove Blue 8 | RND 11
+LOCATION:Mark Taylor Oval TT2\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Lane Cove Blue 8\n📍 Mark Taylor Oval TT2\,
+  Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:00am AEST\n🏆 SJRU Minis U8
+  Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
+ atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
+ ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
+ is-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-45c5dcca57ab239be-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260823T080000
+DTEND;TZID=Australia/Sydney:20260823T090000
+SUMMARY:Dee Why 8 vs Chatswood Green 8 | RND 12
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Chatswood Green 8\n📍 Beauchamp Park TT2\, 
+ Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 SJRU Minis U
+ 8 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
+ matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
+ fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
+ nis-comp-app/#dee-why-u8
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
+ y-u8
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-ec54b9110b5587cd5-dee-why-u8@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260830T100000
+DTEND;TZID=Australia/Sydney:20260830T110000
+SUMMARY:Dee Why 8 vs Killara-West Pymble/Lindfield 8 | RND 13
+LOCATION:Hassall Park TT6\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Dee Why 8 vs Killara-West Pymble/Lindfield 8\n📍 Hassall
+  Park TT6\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 10:00am AEST\n🏆 S
+ JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#dee-why-u8
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#dee-wh
  y-u8
 END:VEVENT

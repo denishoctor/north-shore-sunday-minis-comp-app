@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-fb5b243ba1973232e-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260503T100000
 DTEND;TZID=Australia/Sydney:20260503T110000
 SUMMARY:Chatswood Gold 8 vs Wakehurst Kings 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-f5a2945ddec8a5266-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Chatswood Gold 8 vs Dee Why 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1215bebecc97ee53d-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Chatswood Gold 8 vs Dee Why 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-15b75213173b6d106-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Chatswood Gold 8 vs Hornsby Black 8 | RND 4
@@ -101,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-6b17a7631f0620b49-chatswood-u8-gold@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T210910Z
-LAST-MODIFIED:20260519T210910Z
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Chatswood Gold 8 vs Chatswood Black 8 | RND 5
@@ -113,6 +113,114 @@ DESCRIPTION:🏉 Chatswood Gold 8 vs Chatswood Black 8\n📍 Lofberg Oval T
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
   hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
  day-minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9192704097a33a839-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260614T080000
+DTEND;TZID=Australia/Sydney:20260614T090000
+SUMMARY:Chatswood Gold 8 vs Norths Pirates Red 8 | RND 6
+LOCATION:James Morgan Reserve TT2\, Cromer\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Norths Pirates Red 8\n📍 James Morga
+ n Reserve TT2\, Cromer\n📅 Round 6 · Sun\, 14 June · 8:00am AEST\n🏆
+  SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-788896b6b628c79fd-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260726T080000
+DTEND;TZID=Australia/Sydney:20260726T090000
+SUMMARY:Chatswood Gold 8 vs St Ives 8 | RND 8
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs St Ives 8\n📍 Beauchamp Park TT1\, C
+ hatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆 SJRU Minis U8
+  Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
+ atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
+ ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
+ is-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-5c5bf9f589ab61c46-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260802T080000
+DTEND;TZID=Australia/Sydney:20260802T090000
+SUMMARY:Chatswood Gold 8 vs Killara-West Pymble/Lindfield 8 | RND 9
+LOCATION:Tantallon Oval TT4\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Killara-West Pymble/Lindfield 8\n📍 
+ Tantallon Oval TT4\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:00a
+ m AEST\n🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. T
+ his calendar updates automatically\n(Apple Calendar: ~every hour · Google
+  Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github
+ .io/north-shore-sunday-minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-7359ee7e161d78e16-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260809T084000
+DTEND;TZID=Australia/Sydney:20260809T094000
+SUMMARY:Chatswood Gold 8 vs Dee Why 8 | RND 10
+LOCATION:Wakehurst Rugby Park TT2\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Dee Why 8\n📍 Wakehurst Rugby Park T
+ T2\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:40am AEST\n🏆 SJRU Minis
+  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
+ tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
+  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
+ minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-a1d8fe327c1d2f47c-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260823T080000
+DTEND;TZID=Australia/Sydney:20260823T090000
+SUMMARY:Chatswood Gold 8 vs Hornsby Red 8 | RND 12
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Hornsby Red 8\n📍 Beauchamp Park TT3
+ \, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 SJRU Mini
+ s U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates a
+ utomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hr
+ s after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday
+ -minis-comp-app/#chatswood-u8-gold
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-gold
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-9971b3f57e3f3a419-chatswood-u8-gold@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260519T225432Z
+LAST-MODIFIED:20260519T225432Z
+DTSTART;TZID=Australia/Sydney:20260830T100000
+DTEND;TZID=Australia/Sydney:20260830T110000
+SUMMARY:Chatswood Gold 8 vs Wakehurst Kings 8 | RND 13
+LOCATION:Hassall Park TT3\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Gold 8 vs Wakehurst Kings 8\n📍 Hassall Park T
+ T3\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 10:00am AEST\n🏆 SJRU Min
+ is U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
+ automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
+ rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
+ y-minis-comp-app/#chatswood-u8-gold
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u8-gold
 END:VEVENT
