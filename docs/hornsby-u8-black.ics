@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-ac64059e051445cc2-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Hornsby Black 8 vs Norths Pirates Black 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e8fbe6b3838001c1b-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Hornsby Black 8 vs St Ives 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-7ca3e4e356afdce59-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-15b75213173b6d106-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Gold 8 | RND 4
@@ -101,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5480e1f82f339c6c1-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Hornsby Black 8 vs Wakehurst Krakens 8 | RND 5
@@ -117,28 +117,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-5de622935395b649b-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260614T084000
-DTEND;TZID=Australia/Sydney:20260614T094000
-SUMMARY:Hornsby Black 8 vs Killara-West Pymble/Lindfield 8 | RND 6
-LOCATION:James Morgan Reserve TT3\, Cromer\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Killara-West Pymble/Lindfield 8\n📍 J
- ames Morgan Reserve TT3\, Cromer\n📅 Round 6 · Sun\, 14 June · 8:40am 
- AEST\n🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. Thi
- s calendar updates automatically\n(Apple Calendar: ~every hour · Google C
- alendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.i
- o/north-shore-sunday-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-835447e8a8ceb6fcc-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260614T104000
 DTEND;TZID=Australia/Sydney:20260614T114000
 SUMMARY:Hornsby Black 8 vs Killara-West Pymble/Lindfield 8 | RND 6
@@ -153,28 +135,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-834d5c5dff14a39b2-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260726T084000
-DTEND;TZID=Australia/Sydney:20260726T094000
-SUMMARY:Hornsby Black 8 vs Lane Cove Gold 8 | RND 8
-LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Lane Cove Gold 8\n📍 Beauchamp Park T
- T2\, Chatswood\n📅 Round 8 · Sun\, 26 July · 8:40am AEST\n🏆 SJRU Mi
- nis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates
-  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
- hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
- ay-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-553f6e6565fe828db-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260726T084000
 DTEND;TZID=Australia/Sydney:20260726T094000
 SUMMARY:Hornsby Black 8 vs Lane Cove Gold 8 | RND 8
@@ -185,32 +149,14 @@ DESCRIPTION:🏉 Hornsby Black 8 vs Lane Cove Gold 8\n📍 Beauchamp Park T
   automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 
  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sund
  ay-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-78e9e774612c16714-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260802T080000
-DTEND;TZID=Australia/Sydney:20260802T090000
-SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 9
-LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Chatswood Green 8\n📍 Tantallon Oval 
- TT3\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:00am AEST\n🏆 SJ
- RU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar up
- dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
- o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
- -sunday-minis-comp-app/#hornsby-u8-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-57cf0be906750abf7-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260802T080000
 DTEND;TZID=Australia/Sydney:20260802T090000
 SUMMARY:Hornsby Black 8 vs Chatswood Green 8 | RND 9
@@ -225,28 +171,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-ab0bc15e6cdf25ec4-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260809T080000
-DTEND;TZID=Australia/Sydney:20260809T090000
-SUMMARY:Hornsby Black 8 vs Norths Pirates Red 8 | RND 10
-LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Red 8\n📍 Wakehurst Ru
- gby Park TT4\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:00am AEST\n🏆 
- SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar 
- updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-19752ffee19c35457-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260809T080000
 DTEND;TZID=Australia/Sydney:20260809T090000
 SUMMARY:Hornsby Black 8 vs Norths Pirates Red 8 | RND 10
@@ -257,32 +185,14 @@ DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Red 8\n📍 Wakehurst Ru
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
   to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
  re-sunday-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-4139670d0b52c55c7-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260816T080000
-DTEND;TZID=Australia/Sydney:20260816T090000
-SUMMARY:Hornsby Black 8 vs Hornsby Red 8 | RND 11
-LOCATION:Mark Taylor Oval TT4\, Waitara\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Hornsby Red 8\n📍 Mark Taylor Oval TT
- 4\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:00am AEST\n🏆 SJRU Minis
-  U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates au
- tomatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs
-  after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-
- minis-comp-app/#hornsby-u8-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-99f1b4b236be6b02c-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260816T080000
 DTEND;TZID=Australia/Sydney:20260816T090000
 SUMMARY:Hornsby Black 8 vs Hornsby Red 8 | RND 11
@@ -297,28 +207,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-692cb83fb80507aae-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260816T084000
-DTEND;TZID=Australia/Sydney:20260816T094000
-SUMMARY:Hornsby Black 8 vs Norths Pirates Red 8 | RND 11
-LOCATION:Mark Taylor Oval TT4\, Waitara\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Red 8\n📍 Mark Taylor 
- Oval TT4\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:40am AEST\n🏆 SJR
- U Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upd
- ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-eb7cd0069b6665769-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260816T084000
 DTEND;TZID=Australia/Sydney:20260816T094000
 SUMMARY:Hornsby Black 8 vs Norths Pirates Red 8 | RND 11
@@ -329,32 +221,14 @@ DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Red 8\n📍 Mark Taylor
  ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
   24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
  sunday-minis-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
-UID:nsm-sunday-b91af2e99f8a35964-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260823T080000
-DTEND;TZID=Australia/Sydney:20260823T090000
-SUMMARY:Hornsby Black 8 vs Norths Pirates Black 8 | RND 12
-LOCATION:Beauchamp Park TT4\, Chatswood\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Norths Pirates Black 8\n📍 Beauchamp 
- Park TT4\, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 S
- JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
- pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#hornsby-u8-black
 URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-e2356fd748457bd93-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260823T080000
 DTEND;TZID=Australia/Sydney:20260823T090000
 SUMMARY:Hornsby Black 8 vs Norths Pirates Black 8 | RND 12
@@ -369,28 +243,10 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
  y-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-17c8ec463a61b5151-hornsby-u8-black@denishoctor.github.io
-SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
-DTSTART;TZID=Australia/Sydney:20260830T100000
-DTEND;TZID=Australia/Sydney:20260830T110000
-SUMMARY:Hornsby Black 8 vs Hornsby Red 8 | RND 13
-LOCATION:Hassall Park TT7\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Hornsby Black 8 vs Hornsby Red 8\n📍 Hassall Park TT7\, 
- St Ives\n📅 Round 13 · Sun\, 30 Aug · 10:00am AEST\n🏆 SJRU Minis U8
-  Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
- atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
- ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
- is-comp-app/#hornsby-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#hornsb
- y-u8-black
-END:VEVENT
-BEGIN:VEVENT
 UID:nsm-sunday-c4cc38e54a8735d9b-hornsby-u8-black@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260520T015504Z
-LAST-MODIFIED:20260520T015504Z
+DTSTAMP:20260520T055502Z
+LAST-MODIFIED:20260520T055502Z
 DTSTART;TZID=Australia/Sydney:20260830T100000
 DTEND;TZID=Australia/Sydney:20260830T110000
 SUMMARY:Hornsby Black 8 vs Hornsby Red 8 | RND 13
