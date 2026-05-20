@@ -99,6 +99,20 @@
   }
   h1 { margin: 0; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
   .updated-stamp { font-size: 11px; color: rgba(255,255,255,.7); margin-top: 4px; }
+  /* Stale sync warning — appended to the updated stamp when the last refresh
+     is more than 4 hours old. Amber against the navy header. */
+  .updated-stamp .stale-tag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: rgba(212,169,60,.18);
+    color: var(--gold-soft);
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+  }
   .live-pill {
     display: inline-flex; align-items: center; gap: 4px;
     font-size: 9px; font-weight: 800; color: var(--ink-on-gold);
@@ -148,6 +162,47 @@
   }
   /* Home button removed: users deselect a team by clicking the active token
      again, or by clicking the active club chip. */
+
+  /* INSTALL HINT — dismissible bar promoting the PWA install.
+     Android/Chromium fires beforeinstallprompt → shows an "Install" CTA.
+     iOS Safari has no install API, so we show manual Share + Add-to-Home-Screen
+     instructions. Hidden by default; JS toggles `.visible` based on platform +
+     prior dismissal (localStorage). Sits between the header and the toolbar. */
+  .install-hint {
+    display: none;
+    align-items: center; gap: 10px;
+    padding: 9px 14px;
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+    background: var(--cream);
+    border-bottom: 1px solid var(--cream-edge);
+    font-size: 12px; color: var(--navy);
+  }
+  .install-hint.visible { display: flex; }
+  .install-hint-icon { font-size: 16px; flex-shrink: 0; }
+  .install-hint-text { flex: 1 1 auto; line-height: 1.35; }
+  .install-hint-text b { font-weight: 700; }
+  .install-hint-text kbd {
+    display: inline-block; padding: 0 4px;
+    font-family: inherit; font-size: 11px;
+    background: #fff; border: 1px solid var(--cream-edge); border-radius: 4px;
+  }
+  .install-hint-cta {
+    appearance: none; cursor: pointer;
+    border: 1.5px solid var(--navy); background: var(--navy);
+    color: #fff; font-weight: 700; font-size: 12px;
+    padding: 5px 11px; border-radius: 999px;
+    flex-shrink: 0;
+  }
+  .install-hint-cta:hover { background: #042266; }
+  .install-hint-dismiss {
+    appearance: none; cursor: pointer;
+    border: none; background: transparent;
+    color: var(--muted); font-size: 18px; line-height: 1;
+    padding: 2px 4px;
+    flex-shrink: 0;
+  }
+  .install-hint-dismiss:hover { color: var(--navy); }
 
   /* TOOLBAR — club filter row + team token grid */
   .toolbar {
@@ -781,6 +836,30 @@
   .footer-note a { color: var(--navy); text-decoration: none; }
   .footer-note a:hover { text-decoration: underline; }
   .footer-brand { display: block; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  /* SJRU attribution block — logo + unofficial-app disclaimer. Sits at the
+     top of the footer so the data-source provenance is the first thing the
+     reader sees once they scroll past the fixtures. */
+  .footer-sjru {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 8px; margin-bottom: 14px;
+  }
+  .footer-sjru img {
+    height: 56px; width: auto;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  .footer-sjru .footer-unofficial {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 12px; border-radius: 999px;
+    background: var(--cream); border: 1px solid var(--cream-edge);
+    color: var(--navy); font-size: 11px; font-weight: 700;
+    letter-spacing: .3px;
+  }
+  .footer-sjru .footer-unofficial b { color: var(--maroon); }
+  .footer-sjru .footer-sync-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 0 2px rgba(46,125,79,.18);
+  }
   .footer-tbc-note {
     display: block;
     margin: 14px auto 0;
@@ -820,6 +899,17 @@
            issue. The per-team .ics files are still generated and served at
            /<slug>.ics so users with the direct URL can keep subscribing. -->
     </nav>
+  </div>
+
+  <!-- Install-app hint — dismissible bar that surfaces the PWA install path.
+       Android/Chromium → "Install" CTA wired to beforeinstallprompt.
+       iOS Safari → manual "tap Share then Add to Home Screen" instructions.
+       Hidden by default; JS reveals when applicable + not previously dismissed. -->
+  <div class="install-hint" id="install-hint" role="region" aria-label="Install app">
+    <span class="install-hint-icon" aria-hidden="true">📱</span>
+    <span class="install-hint-text" id="install-hint-text"></span>
+    <button class="install-hint-cta" id="install-hint-cta" type="button" hidden>Install</button>
+    <button class="install-hint-dismiss" id="install-hint-dismiss" type="button" aria-label="Dismiss">×</button>
   </div>
 
   <!-- "What's on" round cards — only rendered when no team is selected. Hidden
@@ -883,7 +973,20 @@
   <div id="calendar"></div>
 
   <div class="footer-note">
-    <span class="footer-brand" id="footer-brand">North Shore Minis Sunday Rugby · 2026 season</span>
+    <!-- SJRU attribution: logo + plain-English "unofficial / live sync" pill.
+         Logo is hot-linked from sjru.rugby (CSP img-src:* permits it; sw.js
+         caches cross-origin images network-first so it persists offline). -->
+    <div class="footer-sjru">
+      <a href="https://sjru.rugby/" target="_blank" rel="noopener" aria-label="Sydney Junior Rugby Union (opens in new tab)">
+        <img src="https://sjru.rugby/wp-content/uploads/elementor/thumbs/SJRU-LOGO-qxb7jfmb4mqxoap7dggpwaxtzvwqqqvgbywjz9ni0w.webp"
+             alt="Sydney Junior Rugby Union" loading="lazy" referrerpolicy="no-referrer">
+      </a>
+      <span class="footer-unofficial">
+        <span class="footer-sync-dot" aria-hidden="true"></span>
+        <span><b>Unofficial</b> fan-made app · Live sync from SJRU via Rugby Xplorer</span>
+      </span>
+    </div>
+    <span class="footer-brand" id="footer-brand">North Shore Minis Sunday Rugby (Unofficial) · 2026 season</span>
     <span>
       <a href="clubs.html">Clubs</a>
       <span class="footer-sep">·</span>
@@ -895,6 +998,7 @@
     </span>
     <span style="display:block; margin-top:6px; font-size:11px;">
       Beta — multi-club aggregate sourced from <a href="https://xplorer.rugby/" target="_blank" rel="noopener">Rugby Xplorer</a> via SJRU Sunday Minis comps.
+      Not affiliated with or endorsed by SJRU or any club.
     </span>
     <span class="footer-tbc-note">
       <b>TBC</b> on a round card means the round is on the SJRU schedule
@@ -942,6 +1046,7 @@ const AGE_KEY             = `${STORAGE_PREFIX}-age`;
 const ROUND_KEY           = `${STORAGE_PREFIX}-round`;
 const VENUE_KEY           = `${STORAGE_PREFIX}-venue`;
 const TEAM_ACCORDION_KEY  = `${STORAGE_PREFIX}-team-accordion`;  // 'open' | 'closed'
+const INSTALL_DISMISSED_KEY = `${STORAGE_PREFIX}-install-hint-dismissed`;
 
 let fixturesData = null;
 let lineupsData  = null;
@@ -2173,12 +2278,18 @@ window.addEventListener('hashchange', applyHashState);
   buildVenueRow();
   buildClubRow(); syncClubChips();
 
-  // Update header stamp
+  // Update header stamp. If the upstream fetch is more than 4h old the
+  // bundled fixtures.json is potentially behind Rugby Xplorer (CI is hourly,
+  // so >4h means several missed runs) — surface that to the user as an amber
+  // "sync delayed" pill so they don't assume the page is live.
   const stamp = document.getElementById('updated-stamp');
   if (fixturesData?.updated) {
-    stamp.textContent = `Updated ${new Date(fixturesData.updated).toLocaleString('en-AU', {
+    const updatedAt = new Date(fixturesData.updated);
+    const label = updatedAt.toLocaleString('en-AU', {
       timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
-    }).replace(' am', 'am').replace(' pm', 'pm')}`;
+    }).replace(' am', 'am').replace(' pm', 'pm');
+    const stale = (Date.now() - updatedAt.getTime()) > 4 * 60 * 60 * 1000;
+    stamp.innerHTML = `Updated ${esc(label)}${stale ? ' <span class="stale-tag" title="Last refresh more than 4 hours ago — sync may be delayed">sync delayed</span>' : ''}`;
   } else {
     stamp.textContent = 'No fixture data yet — CI will populate on first run.';
   }
@@ -2205,6 +2316,69 @@ window.addEventListener('hashchange', applyHashState);
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(() => { /* ignore */ });
 }
+
+// ── install hint ─────────────────────────────────────────────────────────────
+// Promotes the PWA install. On Android/Chromium we hook beforeinstallprompt
+// and surface a one-tap CTA; on iOS Safari (no API) we render manual Share +
+// Add-to-Home-Screen instructions. Dismissal is sticky per-browser.
+function isStandalone() {
+  return window.matchMedia?.('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+}
+function isIOSSafari() {
+  const ua = navigator.userAgent;
+  const iOS = /iPad|iPhone|iPod/.test(ua)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const webkit = /WebKit/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+  return iOS && webkit;
+}
+function setupInstallHint() {
+  const hint = document.getElementById('install-hint');
+  const text = document.getElementById('install-hint-text');
+  const cta  = document.getElementById('install-hint-cta');
+  const dismiss = document.getElementById('install-hint-dismiss');
+  if (!hint || !text || !cta || !dismiss) return;
+  if (isStandalone()) return;
+
+  let dismissed = false;
+  try { dismissed = localStorage.getItem(INSTALL_DISMISSED_KEY) === '1'; } catch { /* ignore */ }
+  if (dismissed) return;
+
+  let deferredPrompt = null;
+
+  dismiss.addEventListener('click', () => {
+    hint.classList.remove('visible');
+    try { localStorage.setItem(INSTALL_DISMISSED_KEY, '1'); } catch { /* private mode */ }
+  });
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    text.innerHTML = 'Install <b>NSM Sunday</b> for one-tap home-screen access.';
+    cta.hidden = false;
+    hint.classList.add('visible');
+  });
+
+  cta.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    try { await deferredPrompt.userChoice; } catch { /* dismissed */ }
+    deferredPrompt = null;
+    hint.classList.remove('visible');
+  });
+
+  window.addEventListener('appinstalled', () => {
+    hint.classList.remove('visible');
+    deferredPrompt = null;
+  });
+
+  if (isIOSSafari()) {
+    text.innerHTML = 'Install: tap <kbd>Share</kbd> then <b>Add to Home Screen</b>.';
+    cta.hidden = true;
+    hint.classList.add('visible');
+  }
+}
+setupInstallHint();
 </script>
 </body>
 </html>

@@ -177,6 +177,22 @@
   }
   .footer-note a { color: var(--navy); text-decoration: none; }
   .footer-note a:hover { text-decoration: underline; }
+  .footer-sjru {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 8px; margin-bottom: 14px;
+  }
+  .footer-sjru img { height: 56px; width: auto; max-width: 200px; object-fit: contain; }
+  .footer-unofficial {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 12px; border-radius: 999px;
+    background: var(--cream, #f4ecd1); border: 1px solid var(--cream-edge, #d8c891);
+    color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: .3px;
+  }
+  .footer-unofficial b { color: var(--maroon, #7E1A2B); }
+  .footer-sync-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: #2E7D4F; box-shadow: 0 0 0 2px rgba(46,125,79,.18);
+  }
 </style>
 </head>
 <body>
@@ -201,9 +217,20 @@
   <div id="venues-list"></div>
 
   <div class="footer-note">
-    North Shore Minis Sunday Rugby · 2026 · Beta — under active development. <br>
+    <div class="footer-sjru">
+      <a href="https://sjru.rugby/" target="_blank" rel="noopener" aria-label="Sydney Junior Rugby Union (opens in new tab)">
+        <img src="https://sjru.rugby/wp-content/uploads/elementor/thumbs/SJRU-LOGO-qxb7jfmb4mqxoap7dggpwaxtzvwqqqvgbywjz9ni0w.webp"
+             alt="Sydney Junior Rugby Union" loading="lazy" referrerpolicy="no-referrer">
+      </a>
+      <span class="footer-unofficial">
+        <span class="footer-sync-dot" aria-hidden="true"></span>
+        <span><b>Unofficial</b> fan-made app · Live sync from SJRU via Rugby Xplorer</span>
+      </span>
+    </div>
+    North Shore Minis Sunday Rugby (Unofficial) · 2026 · Beta — under active development. <br>
     Got something to add (parking, coffee, pitch map)? Edit <code>scripts/config.mjs</code> and open a PR. ·
-    <a href="index.html">Fixtures</a> · <a href="clubs.html">Clubs</a>
+    <a href="index.html">Fixtures</a> · <a href="clubs.html">Clubs</a><br>
+    <span style="font-size:11px;">Not affiliated with or endorsed by SJRU or any club.</span>
   </div>
 </div>
 
