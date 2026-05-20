@@ -29,8 +29,8 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:nsm-sunday-92486679704032ae6-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Chatswood Green 8 vs St Ives 8 | RND 1
@@ -47,8 +47,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-5eaed1a3163c71895-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Chatswood Green 8 vs Wakehurst Krakens 8 | RND 2
@@ -65,8 +65,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-7ca3e4e356afdce59-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Chatswood Green 8 vs Hornsby Black 8 | RND 3
@@ -83,8 +83,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-1144ebab736ec2274-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Chatswood Green 8 vs Hornsby Red 8 | RND 4
@@ -101,8 +101,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-40b6e7265d55cbf12-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Chatswood Green 8 vs St Ives 8 | RND 5
@@ -119,8 +119,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-6b90078be6a61ab90-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260614T084000
 DTEND;TZID=Australia/Sydney:20260614T094000
 SUMMARY:Chatswood Green 8 vs Wakehurst Krakens 8 | RND 6
@@ -135,10 +135,46 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
  ood-u8-green
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-da573b7ec9974901f-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260614T104000
+DTEND;TZID=Australia/Sydney:20260614T114000
+SUMMARY:Chatswood Green 8 vs Wakehurst Krakens 8 | RND 6
+LOCATION:James Morgan Reserve TT4\, Cromer\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Wakehurst Krakens 8\n📍 James Morga
+ n Reserve TT4\, Cromer\n📅 Round 6 · Sun\, 14 June · 10:40am AEST\n
+ 🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-67c74b282639fafdc-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260726T080000
+DTEND;TZID=Australia/Sydney:20260726T090000
+SUMMARY:Chatswood Green 8 vs Norths Pirates Black 8 | RND 8
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Norths Pirates Black 8\n📍 Beaucham
+ p Park TT2\, Chatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆
+  SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar
+  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
+ p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
+ ore-sunday-minis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-df6026b45d4e78711-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260726T080000
 DTEND;TZID=Australia/Sydney:20260726T090000
 SUMMARY:Chatswood Green 8 vs Norths Pirates Black 8 | RND 8
@@ -155,8 +191,26 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-78e9e774612c16714-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260802T080000
+DTEND;TZID=Australia/Sydney:20260802T090000
+SUMMARY:Chatswood Green 8 vs Hornsby Black 8 | RND 9
+LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Hornsby Black 8\n📍 Tantallon Oval 
+ TT3\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:00am AEST\n🏆 SJ
+ RU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar up
+ dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
+ o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
+ -sunday-minis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-57cf0be906750abf7-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260802T080000
 DTEND;TZID=Australia/Sydney:20260802T090000
 SUMMARY:Chatswood Green 8 vs Hornsby Black 8 | RND 9
@@ -173,8 +227,26 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-67e586754df7b6167-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260809T084000
+DTEND;TZID=Australia/Sydney:20260809T094000
+SUMMARY:Chatswood Green 8 vs Chatswood Black 8 | RND 10
+LOCATION:Wakehurst Rugby Park TT3\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Chatswood Black 8\n📍 Wakehurst Rug
+ by Park TT3\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:40am AEST\n🏆 S
+ JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-e90cfb56007d6b9d4-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260809T084000
 DTEND;TZID=Australia/Sydney:20260809T094000
 SUMMARY:Chatswood Green 8 vs Chatswood Black 8 | RND 10
@@ -191,8 +263,26 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-45c5dcca57ab239be-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260823T080000
+DTEND;TZID=Australia/Sydney:20260823T090000
+SUMMARY:Chatswood Green 8 vs Dee Why 8 | RND 12
+LOCATION:Beauchamp Park TT2\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Dee Why 8\n📍 Beauchamp Park TT2\, 
+ Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 SJRU Minis U
+ 8 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
+ matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
+ fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
+ nis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4c71065664fc8fcae-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260823T080000
 DTEND;TZID=Australia/Sydney:20260823T090000
 SUMMARY:Chatswood Green 8 vs Dee Why 8 | RND 12
@@ -209,8 +299,26 @@ END:VEVENT
 BEGIN:VEVENT
 UID:nsm-sunday-81db80dfa76238b78-chatswood-u8-green@denishoctor.github.io
 SEQUENCE:0
-DTSTAMP:20260519T235103Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260830T100000
+DTEND;TZID=Australia/Sydney:20260830T110000
+SUMMARY:Chatswood Green 8 vs Lane Cove Gold 8 | RND 13
+LOCATION:Hassall Park TT4\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Chatswood Green 8 vs Lane Cove Gold 8\n📍 Hassall Park T
+ T4\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 10:00am AEST\n🏆 SJRU Min
+ is U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
+ automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
+ rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
+ y-minis-comp-app/#chatswood-u8-green
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
+ ood-u8-green
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4dca4ea855eebc8e8-chatswood-u8-green@denishoctor.github.io
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260830T100000
 DTEND;TZID=Australia/Sydney:20260830T110000
 SUMMARY:Chatswood Green 8 vs Lane Cove Gold 8 | RND 13

@@ -30,8 +30,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-f17960dc5d7c60b4e-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Norths Pirates Red 8 vs Dee Why 8 | RND 1
@@ -49,8 +49,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-8e8e5be8592849805-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260510T100000
 DTEND;TZID=Australia/Sydney:20260510T110000
 SUMMARY:Norths Pirates Red 8 vs Hornsby Red 8 | RND 2
@@ -68,8 +68,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-8fdbf03100e88030f-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Norths Pirates Red 8 vs Lane Cove Blue 8 | RND 3
@@ -87,8 +87,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-7ebd91bedb506cd67-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Norths Pirates Red 8 vs Killara-West Pymble/Lindfield 8 | RND 4
@@ -106,8 +106,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-5d8567d235201ce8c-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Norths Pirates Red 8 vs Hornsby Red 8 | RND 5
@@ -125,8 +125,8 @@ BEGIN:VEVENT
 UID:nsm-sunday-9192704097a33a839-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260614T080000
 DTEND;TZID=Australia/Sydney:20260614T090000
 SUMMARY:Norths Pirates Red 8 vs Chatswood Gold 8 | RND 6
@@ -141,11 +141,49 @@ URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
  -pirates-u8-red
 END:VEVENT
 BEGIN:VEVENT
+UID:nsm-sunday-a06bc7cc5b0660575-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260614T100000
+DTEND;TZID=Australia/Sydney:20260614T110000
+SUMMARY:Norths Pirates Red 8 vs Chatswood Gold 8 | RND 6
+LOCATION:James Morgan Reserve TT2\, Cromer\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Chatswood Gold 8\n📍 James Morga
+ n Reserve TT2\, Cromer\n📅 Round 6 · Sun\, 14 June · 10:00am AEST\n
+ 🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
 UID:nsm-sunday-d10747a24a4591c01-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260726T080000
+DTEND;TZID=Australia/Sydney:20260726T090000
+SUMMARY:Norths Pirates Red 8 vs Chatswood Black 8 | RND 8
+LOCATION:Beauchamp Park TT3\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Chatswood Black 8\n📍 Beauchamp 
+ Park TT3\, Chatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆 S
+ JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
+ pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
+ to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
+ e-sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-f523d9317370023ff-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260726T080000
 DTEND;TZID=Australia/Sydney:20260726T090000
 SUMMARY:Norths Pirates Red 8 vs Chatswood Black 8 | RND 8
@@ -163,8 +201,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-ea02ec9ab3c184afb-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260802T084000
+DTEND;TZID=Australia/Sydney:20260802T094000
+SUMMARY:Norths Pirates Red 8 vs Lane Cove Gold 8 | RND 9
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Lane Cove Gold 8\n📍 Tantallon O
+ val TT2\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:40am AEST\n
+ 🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
+ ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
+ r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
+ h-shore-sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4ce7251536e9f8789-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260802T084000
 DTEND;TZID=Australia/Sydney:20260802T094000
 SUMMARY:Norths Pirates Red 8 vs Lane Cove Gold 8 | RND 9
@@ -182,8 +239,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-ab0bc15e6cdf25ec4-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260809T080000
+DTEND;TZID=Australia/Sydney:20260809T090000
+SUMMARY:Norths Pirates Red 8 vs Hornsby Black 8 | RND 10
+LOCATION:Wakehurst Rugby Park TT4\, Belrose\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Hornsby Black 8\n📍 Wakehurst Ru
+ gby Park TT4\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:00am AEST\n🏆 
+ SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar 
+ updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
+  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
+ re-sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-19752ffee19c35457-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260809T080000
 DTEND;TZID=Australia/Sydney:20260809T090000
 SUMMARY:Norths Pirates Red 8 vs Hornsby Black 8 | RND 10
@@ -201,8 +277,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-47fed07464c6afff5-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260816T082000
+DTEND;TZID=Australia/Sydney:20260816T092000
+SUMMARY:Norths Pirates Red 8 vs Hornsby Red 8 | RND 11
+LOCATION:Mark Taylor Oval TT4\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Hornsby Red 8\n📍 Mark Taylor Ov
+ al TT4\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:20am AEST\n🏆 SJRU 
+ Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updat
+ es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
+ 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
+ nday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-4868e6c3f218122e1-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260816T082000
 DTEND;TZID=Australia/Sydney:20260816T092000
 SUMMARY:Norths Pirates Red 8 vs Hornsby Red 8 | RND 11
@@ -220,8 +315,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-692cb83fb80507aae-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260816T084000
+DTEND;TZID=Australia/Sydney:20260816T094000
+SUMMARY:Norths Pirates Red 8 vs Hornsby Black 8 | RND 11
+LOCATION:Mark Taylor Oval TT4\, Waitara\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Hornsby Black 8\n📍 Mark Taylor 
+ Oval TT4\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:40am AEST\n🏆 SJR
+ U Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upd
+ ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
+  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
+ sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-eb7cd0069b6665769-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260816T084000
 DTEND;TZID=Australia/Sydney:20260816T094000
 SUMMARY:Norths Pirates Red 8 vs Hornsby Black 8 | RND 11
@@ -239,8 +353,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-8179834ac0afca821-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260823T084000
+DTEND;TZID=Australia/Sydney:20260823T094000
+SUMMARY:Norths Pirates Red 8 vs Killara-West Pymble/Lindfield 8 | RND 12
+LOCATION:Beauchamp Park TT1\, Chatswood\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs Killara-West Pymble/Lindfield 8\n
+ 📍 Beauchamp Park TT1\, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:40
+ am AEST\n🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
+ b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-2c431f173f45e7cbe-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260823T084000
 DTEND;TZID=Australia/Sydney:20260823T094000
 SUMMARY:Norths Pirates Red 8 vs Killara-West Pymble/Lindfield 8 | RND 12
@@ -258,8 +391,27 @@ BEGIN:VEVENT
 UID:nsm-sunday-b4784c991bef2b25b-norths-pirates-u8-red@denishoctor.github.i
  o
 SEQUENCE:0
-DTSTAMP:20260519T235104Z
-LAST-MODIFIED:20260519T235103Z
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
+DTSTART;TZID=Australia/Sydney:20260830T100000
+DTEND;TZID=Australia/Sydney:20260830T110000
+SUMMARY:Norths Pirates Red 8 vs St Ives 8 | RND 13
+LOCATION:Hassall Park TT1\, St Ives\, Sydney NSW
+DESCRIPTION:🏉 Norths Pirates Red 8 vs St Ives 8\n📍 Hassall Park TT1\,
+  St Ives\n📅 Round 13 · Sun\, 30 Aug · 10:00am AEST\n🏆 SJRU Minis U
+ 8 Sunday\n\nℹ️ Venues and times may change. This calendar updates auto
+ matically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs a
+ fter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mi
+ nis-comp-app/#norths-pirates-u8-red
+URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ -pirates-u8-red
+END:VEVENT
+BEGIN:VEVENT
+UID:nsm-sunday-a6a6fa977d1d95858-norths-pirates-u8-red@denishoctor.github.i
+ o
+SEQUENCE:0
+DTSTAMP:20260520T015504Z
+LAST-MODIFIED:20260520T015504Z
 DTSTART;TZID=Australia/Sydney:20260830T100000
 DTEND;TZID=Australia/Sydney:20260830T110000
 SUMMARY:Norths Pirates Red 8 vs St Ives 8 | RND 13
