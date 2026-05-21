@@ -15,8 +15,8 @@
  * doesn't match the current pair.
  */
 
-const SHELL_CACHE = 'nsm-sunday-shell-v8';
-const DATA_CACHE  = 'nsm-sunday-data-v8';
+const SHELL_CACHE = 'nsm-sunday-shell-v9';
+const DATA_CACHE  = 'nsm-sunday-data-v9';
 
 const SHELL_FILES = [
   './',
