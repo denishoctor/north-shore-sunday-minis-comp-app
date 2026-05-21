@@ -8,7 +8,7 @@ import {
 // Import the real CLUBS map rather than maintaining a parallel copy in the
 // test file — the old hardcoded shape silently drifted from config.mjs when
 // a new club was added.
-import { CLUBS } from '../scripts/config.mjs';
+import { CLUBS, VENUES } from '../scripts/config.mjs';
 
 describe('esc', () => {
   test('escapes the five XSS-relevant chars', () => {
@@ -206,5 +206,55 @@ describe('renderVenueDetails', () => {
     const html = renderVenueDetails('Tantallon Oval', venues);
     assert.match(html, /Parking.*At the club/);
     assert.match(html, /Notes.*BBQ on game days/);
+  });
+  test('renders coffee onsite + nearby', () => {
+    const venues = {
+      'Test Park': { details: { coffee: { onsite: 'Canteen open', nearby: 'Cafe across the road' } } },
+    };
+    const html = renderVenueDetails('Test Park', venues);
+    assert.match(html, /Coffee/);
+    assert.match(html, /Canteen open/);
+    assert.match(html, /Nearby: Cafe across the road/);
+  });
+  test('renders map link + caption when configured', () => {
+    const venues = {
+      'Map Park': {
+        details: {
+          map: { src: 'assets/venues/map-park.jpg', caption: 'Pitch layout — TT1/TT2', asOf: '2026-05' },
+        },
+      },
+    };
+    const html = renderVenueDetails('Map Park', venues);
+    assert.match(html, /class="venue-map-link"/);
+    assert.match(html, /href="assets\/venues\/map-park\.jpg"/);
+    assert.match(html, /alt="Pitch layout — TT1\/TT2"/);
+    assert.match(html, /Pitch layout — TT1\/TT2.*Layout as of May 2026/);
+  });
+});
+
+// Lock in the trigger gate that drives the new in-context venue chip on
+// fixture cards: parseVenue must report hasDetails iff VENUES has details.
+describe('parseVenue hasDetails (drives the in-context venue chip)', () => {
+  test('hasDetails=true for a venue with details + pitch suffix', () => {
+    // Beauchamp Park has parking/coffee/notes/map in config.mjs.
+    const v = parseVenue('Beauchamp Park TT1 (U6/U7)', VENUES);
+    assert.equal(v.hasDetails, true);
+    assert.equal(v.base, 'Beauchamp Park');
+    assert.equal(v.pitch, 'TT1');
+  });
+  test('hasDetails=false for a known venue without details', () => {
+    // Bantry Bay Oval is in VENUES but intentionally has no details.
+    const v = parseVenue('Bantry Bay Oval', VENUES);
+    assert.equal(v.hasDetails, false);
+    assert.equal(v.base, 'Bantry Bay Oval');
+  });
+  test('hasDetails=false for an unknown venue', () => {
+    const v = parseVenue('Nowhere Field', VENUES);
+    assert.equal(v.hasDetails, false);
+    assert.equal(v.base, null);
+  });
+  test('at least one configured venue exposes a map (so the chip has something to surface live)', () => {
+    const withMap = Object.entries(VENUES).filter(([, v]) => v?.details?.map?.src);
+    assert.ok(withMap.length >= 1, 'expected at least one VENUES entry with details.map.src');
   });
 });

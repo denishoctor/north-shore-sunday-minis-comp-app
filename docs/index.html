@@ -770,13 +770,159 @@
   .match-venue {
     padding: 0 14px 12px;
     font-size: 12px; color: var(--muted); line-height: 1.4;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
   }
   .match-venue a { color: var(--navy); text-decoration: none; }
   .match-venue a:hover { text-decoration: underline; }
   .match-venue .pitch-badge {
     background: var(--cream); color: var(--navy);
     padding: 1px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;
-    margin-left: 6px;
+  }
+
+  /* In-context venue chip — the loud "open the bottom sheet" affordance.
+     Rendered on a fixture card whenever VENUES[base].details exists. Filled
+     accent + shadow makes it read as a primary action, one tier louder than
+     the outlined chips (.round-badge, .lineup-badge) which read as labels. */
+  .venue-info-chip {
+    appearance: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; font-size: 11.5px; font-weight: 700;
+    color: #fffaf0; background: var(--navy);
+    border: 1.5px solid var(--navy);
+    padding: 6px 12px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(10,32,89,.22);
+    transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+    min-height: 28px;
+    flex-basis: max-content;
+  }
+  .venue-info-chip:hover { background: #14306f; box-shadow: 0 2px 8px rgba(10,32,89,.30); }
+  .venue-info-chip:active { transform: translateY(1px); box-shadow: 0 1px 2px rgba(10,32,89,.22); }
+  .venue-info-chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .venue-info-chip[aria-expanded="true"] { background: var(--gold); color: var(--ink-on-gold); border-color: var(--gold); }
+  .venue-info-chip-icon { font-size: 13px; }
+  @media (max-width: 360px) {
+    .venue-info-chip-label { display: none; }
+  }
+  /* First-paint nudge so the chip pulls the eye on cards that have just
+     come back from the cache. Stops after a couple of beats so it doesn't
+     keep distracting. Honours prefers-reduced-motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    .match-card:not(:hover) .venue-info-chip { animation: nudgeChip 6s ease-in-out 1; }
+  }
+  @keyframes nudgeChip {
+    0%, 84%, 100% { transform: translateY(0); box-shadow: 0 1px 2px rgba(10,32,89,.22); }
+    88%, 96%      { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(10,32,89,.32); }
+  }
+
+  /* Venue panel innards — mirrored from venues.html so renderVenueDetails
+     output looks the same inside the bottom sheet. */
+  .venue-map-link { display: block; line-height: 0; }
+  .venue-map {
+    width: 100%; max-height: 50vh; aspect-ratio: 4 / 3; object-fit: contain;
+    background: #000; border-radius: 4px;
+    border: 1px solid var(--cream-edge);
+  }
+  .venue-map-caption {
+    font-size: 11px; color: var(--muted); padding: 6px 2px 12px;
+    letter-spacing: .3px;
+  }
+  .venue-meta {
+    margin: 0 0 14px; font-size: 13px; line-height: 1.45; color: var(--ink);
+  }
+  .venue-meta-row { margin: 0 0 6px; }
+  .venue-meta-row:last-child { margin-bottom: 0; }
+  .venue-meta-label {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--muted); margin-right: 6px;
+  }
+
+  /* Venue sheet — popover on desktop (JS-positioned), bottom sheet on mobile.
+     Mounted on <body> so a future re-render of #calendar can't destroy it
+     while open. */
+  .venue-sheet-backdrop {
+    position: fixed; inset: 0; z-index: 49;
+    background: rgba(10,32,89,.40);
+  }
+  .venue-sheet-backdrop[hidden] { display: none; }
+  .venue-sheet {
+    position: fixed;
+    z-index: 50;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.22);
+    display: flex; flex-direction: column;
+    max-width: min(420px, calc(100vw - 24px));
+    max-height: min(85vh, 640px);
+  }
+  .venue-sheet[hidden] { display: none; }
+  .venue-sheet-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .venue-sheet-title {
+    margin: 0; font-size: 15px; font-weight: 800; color: var(--navy);
+    line-height: 1.25;
+  }
+  .venue-sheet-title:focus { outline: none; }
+  .venue-sheet-close {
+    appearance: none; cursor: pointer;
+    width: 32px; height: 32px; border-radius: 999px;
+    border: 1px solid var(--cream-edge); background: var(--cream); color: var(--navy);
+    font-size: 18px; line-height: 1; padding: 0;
+    flex: 0 0 auto;
+  }
+  .venue-sheet-close:hover { background: #fff; border-color: var(--navy); }
+  .venue-sheet-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .venue-sheet-body {
+    padding: 14px 16px 4px;
+    overflow: auto;
+    flex: 1 1 auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .venue-sheet-footer {
+    padding: 10px 16px 14px;
+    border-top: 1px solid var(--rule);
+    display: flex; justify-content: flex-end;
+  }
+  .venue-sheet-maps {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; font-size: 12px; font-weight: 700;
+    color: var(--navy); background: var(--cream); text-decoration: none;
+    border: 1.5px solid var(--cream-edge);
+    padding: 8px 14px; border-radius: 999px;
+  }
+  .venue-sheet-maps:hover { border-color: var(--navy); }
+  .venue-sheet-maps:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* Mobile: bottom sheet, full-width, safe-area aware, drag-handle visual. */
+  @media (max-width: 599px) {
+    .venue-sheet {
+      left: 0; right: 0; bottom: 0; top: auto;
+      max-width: none;
+      border-radius: 16px 16px 0 0;
+      padding-bottom: env(safe-area-inset-bottom);
+      max-height: 85vh;
+    }
+    .venue-sheet::before {
+      content: ''; display: block;
+      width: 36px; height: 4px;
+      background: var(--cream-edge);
+      border-radius: 999px;
+      margin: 8px auto 0;
+      flex: 0 0 auto;
+    }
+  }
+  /* Desktop: backdrop is non-modal (transient popover), so don't dim. */
+  @media (min-width: 600px) {
+    .venue-sheet-backdrop { background: transparent; }
+  }
+
+  @media print {
+    .venue-info-chip, .venue-sheet, .venue-sheet-backdrop { display: none !important; }
   }
 
   /* LINEUP PANEL */
@@ -1725,6 +1871,148 @@ function render() {
   }
 }
 
+// ── Venue sheet (in-context pitch map / parking / coffee / notes) ──────────
+// One global sheet mounted on <body> on first open, reused thereafter. Lives
+// outside #calendar so a re-render of the fixtures list can't tear it out.
+let venueSheetEls = null;     // { sheet, backdrop, title, body, footer, close, maps }
+let venueSheetTrigger = null; // the .venue-info-chip that opened the sheet, for focus restore
+let venueSheetKeyHandler = null;
+let venueSheetOutsideHandler = null;
+
+function mountVenueSheet() {
+  if (venueSheetEls) return venueSheetEls;
+  const backdrop = document.createElement('div');
+  backdrop.className = 'venue-sheet-backdrop';
+  backdrop.hidden = true;
+  backdrop.addEventListener('click', closeVenueSheet);
+
+  const sheet = document.createElement('div');
+  sheet.className = 'venue-sheet';
+  sheet.id = 'venue-sheet';
+  sheet.setAttribute('role', 'dialog');
+  sheet.setAttribute('aria-labelledby', 'venue-sheet-title');
+  sheet.hidden = true;
+  sheet.innerHTML = `
+    <div class="venue-sheet-header">
+      <h2 id="venue-sheet-title" class="venue-sheet-title" tabindex="-1"></h2>
+      <button class="venue-sheet-close" type="button" aria-label="Close venue details">×</button>
+    </div>
+    <div class="venue-sheet-body"></div>
+    <div class="venue-sheet-footer">
+      <a class="venue-sheet-maps" target="_blank" rel="noopener" href="#">Open in Google Maps ↗</a>
+    </div>`;
+
+  document.body.appendChild(backdrop);
+  document.body.appendChild(sheet);
+
+  const close = sheet.querySelector('.venue-sheet-close');
+  close.addEventListener('click', closeVenueSheet);
+
+  venueSheetEls = {
+    sheet, backdrop, close,
+    title:  sheet.querySelector('.venue-sheet-title'),
+    body:   sheet.querySelector('.venue-sheet-body'),
+    footer: sheet.querySelector('.venue-sheet-footer'),
+    maps:   sheet.querySelector('.venue-sheet-maps'),
+  };
+  return venueSheetEls;
+}
+
+function isMobileViewport() {
+  return window.matchMedia('(max-width: 599px)').matches;
+}
+
+function positionVenueSheetForDesktop(trigger) {
+  const { sheet } = venueSheetEls;
+  const rect = trigger.getBoundingClientRect();
+  // Measure after un-hiding so dimensions are real.
+  const sw = sheet.offsetWidth;
+  const sh = sheet.offsetHeight;
+  const margin = 12;
+  let left = Math.min(Math.max(margin, rect.left), window.innerWidth - sw - margin);
+  let top = rect.bottom + 8;
+  // Flip above the trigger if there's no room below.
+  if (top + sh > window.innerHeight - margin && rect.top - sh - 8 > margin) {
+    top = rect.top - sh - 8;
+  }
+  sheet.style.top = `${top}px`;
+  sheet.style.left = `${left}px`;
+  sheet.style.right = 'auto';
+  sheet.style.bottom = 'auto';
+}
+
+function openVenueSheet(trigger) {
+  const base = trigger.dataset.venueBase;
+  const venue = base ? VENUES?.[base] : null;
+  if (!venue) return;
+  const els = mountVenueSheet();
+  const display = venue.suburb ? `${base}, ${venue.suburb}` : base;
+  const mobile = isMobileViewport();
+
+  els.title.textContent = display;
+  els.body.innerHTML = renderVenueDetails(base, VENUES, { assetPrefix: '' });
+  els.maps.href = venue.mapsUrl || `https://maps.google.com/?q=${encodeURIComponent(display + ', Sydney NSW')}`;
+
+  els.sheet.setAttribute('aria-modal', mobile ? 'true' : 'false');
+  // Clear any inline desktop coords before measuring/mobile rules apply.
+  els.sheet.style.top = '';
+  els.sheet.style.left = '';
+  els.sheet.style.right = '';
+  els.sheet.style.bottom = '';
+  els.sheet.hidden = false;
+  els.backdrop.hidden = false;
+
+  trigger.setAttribute('aria-expanded', 'true');
+  venueSheetTrigger = trigger;
+
+  if (!mobile) {
+    positionVenueSheetForDesktop(trigger);
+  } else {
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  // Move focus to the title so screen readers announce the venue first; the
+  // close button is one Tab away.
+  els.title.focus({ preventScroll: true });
+
+  venueSheetKeyHandler = (e) => { if (e.key === 'Escape') closeVenueSheet(); };
+  document.addEventListener('keydown', venueSheetKeyHandler);
+
+  // Desktop: click outside to dismiss. Defer attaching so the originating
+  // click doesn't immediately close it.
+  if (!mobile) {
+    venueSheetOutsideHandler = (e) => {
+      if (els.sheet.contains(e.target) || trigger.contains(e.target)) return;
+      closeVenueSheet();
+    };
+    setTimeout(() => document.addEventListener('click', venueSheetOutsideHandler), 0);
+  }
+}
+
+function closeVenueSheet() {
+  if (!venueSheetEls || venueSheetEls.sheet.hidden) return;
+  venueSheetEls.sheet.hidden = true;
+  venueSheetEls.backdrop.hidden = true;
+  document.documentElement.style.overflow = '';
+  if (venueSheetKeyHandler) document.removeEventListener('keydown', venueSheetKeyHandler);
+  if (venueSheetOutsideHandler) document.removeEventListener('click', venueSheetOutsideHandler);
+  venueSheetKeyHandler = null;
+  venueSheetOutsideHandler = null;
+  if (venueSheetTrigger && document.contains(venueSheetTrigger)) {
+    venueSheetTrigger.setAttribute('aria-expanded', 'false');
+    venueSheetTrigger.focus({ preventScroll: true });
+  }
+  venueSheetTrigger = null;
+}
+
+// Re-anchor on resize (desktop only) and close on orientation change to avoid
+// stale positioning.
+window.addEventListener('resize', () => {
+  if (!venueSheetEls || venueSheetEls.sheet.hidden) return;
+  if (isMobileViewport()) { closeVenueSheet(); return; }
+  if (venueSheetTrigger) positionVenueSheetForDesktop(venueSheetTrigger);
+});
+
 // Reusable click + filter wiring for any container that holds .match-card
 // elements. Extracted so renderTeamView and renderFilteredList share it.
 function wireMatchCardInteractions(container) {
@@ -1738,6 +2026,12 @@ function wireMatchCardInteractions(container) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleRound(Number(btn.dataset.roundFilter));
+    });
+  });
+  container.querySelectorAll('.venue-info-chip').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openVenueSheet(btn);
     });
   });
 }
@@ -1863,6 +2157,7 @@ function renderMatch(match) {
       ${venue.display ? `<div class="match-venue">
         <a href="${esc(venue.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(venue.display)}</a>
         ${venue.pitch ? `<span class="pitch-badge">${esc(venue.pitch)}</span>` : ''}
+        ${venue.hasDetails ? `<button class="venue-info-chip" type="button" data-venue-base="${esc(venue.base)}" aria-haspopup="dialog" aria-expanded="false" aria-controls="venue-sheet" aria-label="Pitch map and parking for ${esc(venue.display)}"><span class="venue-info-chip-icon" aria-hidden="true">🗺️</span><span class="venue-info-chip-label">Pitch map · Parking</span></button>` : ''}
       </div>` : ''}
       ${hasLineup ? renderLineupPanel(match.id) : ''}
     </div>`;
