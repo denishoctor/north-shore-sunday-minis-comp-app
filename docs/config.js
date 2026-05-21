@@ -601,11 +601,16 @@ window.NSM_SUNDAY_CONFIG = {
       "suburb": "Chatswood",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beauchamp+Park+Nicholson+St%2C+Chatswood+NSW+2067%2C+Australia",
       "details": {
-        "parking": "Upper carpark off Nicholson St (~15–18 spots) closest to the sportsground. Free 2-hour street parking along Beauchamp Ave, Darling St and Nicholson St rings the park if the carpark is full.",
-        "coffee": {
-          "onsite": "Clubhouse canteen open on game days."
+        "map": {
+          "src": "assets/venues/beauchamp-park.jpg",
+          "caption": "Pitch layout — TT3/TT4 North, TT1/TT2 South. Spectators on east & west sides only",
+          "asOf": "2026-05"
         },
-        "notes": "Home of Chatswood Junior Rugby. Council-managed (Willoughby)."
+        "parking": "Best on the street — try Beauchamp Ave / Rose St (north) or Nicholson St (south, but watch the No Parking zone).",
+        "coffee": {
+          "onsite": "Coffee van, canteen, and BBQ all operating on game day."
+        },
+        "notes": "Hosted by Chatswood Junior Rugby Club. No spectators in the middle of the oval or on the cricket pitch — officials only (GM table + first aid in the centre). Toilets and change rooms in and adjacent to the main pavilion."
       }
     },
     "Boronia Park": {
