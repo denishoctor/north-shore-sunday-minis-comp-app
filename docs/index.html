@@ -243,36 +243,37 @@
   .toolbar.collapsed { display: none; }
 
   /* Section-toggle bar — sits at the top of the toolbar, shown first when
-     Filters opens. Each chip shows/hides one filter axis below it. */
+     Filters opens. Each chip shows/hides one filter axis below it. Kept to a
+     single row (no wrap); scrolls horizontally on very narrow screens rather
+     than wrapping onto a second line. */
   .filter-sections {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    display: flex; flex-wrap: nowrap; align-items: center; gap: 6px;
     padding-bottom: 10px; margin-bottom: 10px;
     border-bottom: 1px dashed var(--cream-edge);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .filter-sections::-webkit-scrollbar { display: none; }
   .filter-sections::before {
-    content: 'Show'; font-size: 10px; font-weight: 800; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 1px; margin-right: 2px;
+    content: 'Show'; flex: 0 0 auto;
+    font-size: 10px; font-weight: 800; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1px; margin-right: 1px;
   }
+  /* Pressed = axis visible (filled navy); unpressed = hidden (outlined muted).
+     No status dot — keeps each chip narrow so all five fit on one row. */
   .section-chip {
-    appearance: none; cursor: pointer;
+    appearance: none; cursor: pointer; flex: 0 0 auto;
     font-family: inherit; font-size: 11px; font-weight: 700;
     color: var(--muted); background: #fff;
     border: 1.5px solid var(--cream-edge);
-    padding: 5px 12px; border-radius: 999px;
+    padding: 5px 11px; border-radius: 999px;
     line-height: 1; white-space: nowrap;
-    display: inline-flex; align-items: center; gap: 5px;
     transition: background .12s, color .12s, border-color .12s;
-  }
-  .section-chip::before {
-    content: ''; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--cream-edge); transition: background .12s;
   }
   .section-chip:hover { border-color: var(--navy); color: var(--navy); }
   .section-chip[aria-pressed="true"] {
-    color: var(--navy); border-color: var(--navy);
-    background: color-mix(in srgb, var(--navy) 6%, #fff);
+    color: #fff; background: var(--navy); border-color: var(--navy);
   }
-  .section-chip[aria-pressed="true"]::before { background: var(--green); }
   /* A filter axis the user has toggled off via the section bar. */
   .filter-block[data-section].section-off { display: none; }
   /* Each filter block: label + chip row laid out as two columns so the label
@@ -1140,8 +1141,8 @@
          dimensions they care about on screen. State persists per-device. -->
     <div class="filter-sections" id="filter-sections" role="group" aria-label="Choose which filters to show">
       <button class="section-chip" type="button" data-section="round" aria-pressed="true">Round</button>
-      <button class="section-chip" type="button" data-section="club"  aria-pressed="true">Club</button>
-      <button class="section-chip" type="button" data-section="venue" aria-pressed="true">Venue</button>
+      <button class="section-chip" type="button" data-section="club"  aria-pressed="false">Club</button>
+      <button class="section-chip" type="button" data-section="venue" aria-pressed="false">Venue</button>
       <button class="section-chip" type="button" data-section="age"   aria-pressed="true">Age</button>
       <button class="section-chip" type="button" data-section="team"  aria-pressed="true">Team</button>
     </div>
@@ -1586,6 +1587,9 @@ function initTeamAccordion() {
 // Default landing is closed so the welcome / match list isn't buried under the
 // full filter stack — the active-filter bar still surfaces live filters.
 const ALL_SECTIONS = ['round', 'club', 'venue', 'age', 'team'];
+// Club + Venue start hidden — most parents filter by round / age / team; club
+// and venue are power-user axes. The chips in the section bar reveal them.
+const DEFAULT_HIDDEN_SECTIONS = ['club', 'venue'];
 
 function isFiltersOpen() { return lsGet(FILTERS_OPEN_KEY) === 'open'; }
 function setFiltersOpen(open) {
@@ -1601,15 +1605,22 @@ function applyFiltersOpen() {
   btn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 
-// Hidden sections stored as a CSV; everything not listed is visible (default-on).
+// Hidden sections stored as a CSV. Sentinel handling so the default
+// (Club+Venue hidden) only applies when the user has never chosen:
+//   null → never set → DEFAULT_HIDDEN_SECTIONS
+//   '-'  → user has explicitly shown everything (nothing hidden)
+//   else → explicit CSV of hidden section keys
 function hiddenSections() {
-  return new Set((lsGet(FILTER_SECTIONS_KEY) || '').split(',').filter(Boolean));
+  const raw = lsGet(FILTER_SECTIONS_KEY);
+  if (raw === null) return new Set(DEFAULT_HIDDEN_SECTIONS);
+  if (raw === '-')  return new Set();
+  return new Set(raw.split(',').filter(Boolean));
 }
 function isSectionOn(name) { return !hiddenSections().has(name); }
 function toggleSection(name) {
   const hidden = hiddenSections();
   if (hidden.has(name)) hidden.delete(name); else hidden.add(name);
-  lsSet(FILTER_SECTIONS_KEY, hidden.size ? Array.from(hidden).join(',') : null);
+  lsSet(FILTER_SECTIONS_KEY, hidden.size ? Array.from(hidden).join(',') : '-');
   applySectionVisibility();
 }
 function applySectionVisibility() {
