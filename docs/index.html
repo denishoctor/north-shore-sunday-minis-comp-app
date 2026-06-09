@@ -141,6 +141,29 @@
   .header-nav-link[hidden] { display: none; }
   .header-nav-action { display: inline-flex; align-items: center; }
   .header-nav-action[hidden] { display: none; }
+  /* Let the nav claim leftover header width so the Filters toggle can sit hard
+     left (margin-right:auto) while Clubs / Venues / Share stay right. */
+  .header-nav { flex: 1 1 auto; min-width: 0; }
+  /* Filters toggle — primary control, so filled-gold instead of gold-outline.
+     margin-right:auto pushes it to the left edge of the nav group. */
+  .filters-toggle {
+    margin-right: auto;
+    background: var(--gold); color: var(--ink-on-gold);
+    border-color: var(--gold-soft); font-weight: 800;
+  }
+  .filters-toggle:hover, .filters-toggle[aria-expanded="true"] {
+    background: var(--gold-soft); color: var(--ink-on-gold);
+    border-color: #fff;
+  }
+  .filters-toggle[aria-expanded="true"] { box-shadow: inset 0 -2px 0 var(--navy); }
+  .filters-toggle-icon { font-size: 12px; transform: translateY(.5px); }
+  .filters-count {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 16px; height: 16px; padding: 0 4px; margin-left: 1px;
+    border-radius: 999px; background: var(--navy); color: #fff;
+    font-size: 10px; font-weight: 800; line-height: 1;
+  }
+  .filters-count[hidden] { display: none; }
   /* On narrow screens (≤600px) the right-side nav + Home button compete with
      the title-block for room and the eyebrow ends up wrapping line-by-line.
      Drop the nav to its own row beneath title+home, shrink the crest, and
@@ -155,7 +178,9 @@
     .eyebrow { letter-spacing: 1px; }
     .header-nav {
       order: 4;
-      margin-left: auto;
+      width: 100%;          /* span the row so Filters (margin-right:auto) sits
+                               hard-left and Clubs/Venues/Share stay right */
+      margin-left: 0;
       gap: 6px;
     }
     .header-nav-link { padding: 5px 10px; font-size: 11px; }
@@ -212,6 +237,44 @@
     background: #fff;
     border-bottom: 1px solid var(--cream-edge);
   }
+  /* Collapsed = whole filter toolbar hidden; toggled by the header Filters
+     button. Keeps the default landing uncluttered — the active-filter bar below
+     still surfaces any live filters even while this is closed. */
+  .toolbar.collapsed { display: none; }
+
+  /* Section-toggle bar — sits at the top of the toolbar, shown first when
+     Filters opens. Each chip shows/hides one filter axis below it. */
+  .filter-sections {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    padding-bottom: 10px; margin-bottom: 10px;
+    border-bottom: 1px dashed var(--cream-edge);
+  }
+  .filter-sections::before {
+    content: 'Show'; font-size: 10px; font-weight: 800; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1px; margin-right: 2px;
+  }
+  .section-chip {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 11px; font-weight: 700;
+    color: var(--muted); background: #fff;
+    border: 1.5px solid var(--cream-edge);
+    padding: 5px 12px; border-radius: 999px;
+    line-height: 1; white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 5px;
+    transition: background .12s, color .12s, border-color .12s;
+  }
+  .section-chip::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--cream-edge); transition: background .12s;
+  }
+  .section-chip:hover { border-color: var(--navy); color: var(--navy); }
+  .section-chip[aria-pressed="true"] {
+    color: var(--navy); border-color: var(--navy);
+    background: color-mix(in srgb, var(--navy) 6%, #fff);
+  }
+  .section-chip[aria-pressed="true"]::before { background: var(--green); }
+  /* A filter axis the user has toggled off via the section bar. */
+  .filter-block[data-section].section-off { display: none; }
   /* Each filter block: label + chip row laid out as two columns so the label
      sits in a stable gutter and the chips wrap freely on the right. */
   .filter-block {
@@ -1033,6 +1096,15 @@
       <div id="updated-stamp" class="updated-stamp">Loading…</div>
     </div>
     <nav class="header-nav" aria-label="Section navigation">
+      <!-- Filters toggle — left-anchored (margin-right:auto) and filled-gold so
+           it reads as the primary control, distinct from the outlined links.
+           Opens/closes the whole filter toolbar. -->
+      <button class="header-nav-link filters-toggle" id="filters-toggle" type="button"
+              aria-expanded="false" aria-controls="toolbar">
+        <span class="filters-toggle-icon" aria-hidden="true">⛃</span>
+        <span class="filters-toggle-label">Filters</span>
+        <span class="filters-count" id="filters-count" hidden></span>
+      </button>
       <a class="header-nav-link" href="clubs.html">Clubs</a>
       <a class="header-nav-link" href="venues.html">Venues</a>
       <!-- Share + Calendar appear only when a team is selected (JS toggles the
@@ -1062,23 +1134,33 @@
        once the user picks a team so the toolbar + match list claim the viewport. -->
   <div id="home-content" hidden></div>
 
-  <div class="toolbar">
+  <div class="toolbar collapsed" id="toolbar">
+    <!-- Section toggle bar — the first thing shown when Filters opens. Each
+         chip shows/hides one filter axis below, so a parent can keep only the
+         dimensions they care about on screen. State persists per-device. -->
+    <div class="filter-sections" id="filter-sections" role="group" aria-label="Choose which filters to show">
+      <button class="section-chip" type="button" data-section="round" aria-pressed="true">Round</button>
+      <button class="section-chip" type="button" data-section="club"  aria-pressed="true">Club</button>
+      <button class="section-chip" type="button" data-section="venue" aria-pressed="true">Venue</button>
+      <button class="section-chip" type="button" data-section="age"   aria-pressed="true">Age</button>
+      <button class="section-chip" type="button" data-section="team"  aria-pressed="true">Team</button>
+    </div>
     <!-- Round filter — chips 1…13 driven from ROUNDS. Each row gets an
          inline label so the user can scan the filter axes at a glance.
          All axes are multi-select: clicking a chip toggles it in/out of
          the active set. -->
-    <div class="filter-block">
+    <div class="filter-block" data-section="round">
       <span class="filter-label">Rnd:</span>
       <div class="round-row" id="round-row" role="group" aria-label="Filter by round"></div>
     </div>
     <!-- Club filter row — narrows the team-token grid to the selected clubs' teams. -->
-    <div class="filter-block">
+    <div class="filter-block" data-section="club">
       <span class="filter-label">Club:</span>
       <div class="club-row" id="club-row" role="group" aria-label="Filter by club"></div>
     </div>
     <!-- Venue filter row — hosting grounds derived from live match data.
          Hidden until first fetch populates the list. -->
-    <div class="filter-block">
+    <div class="filter-block" data-section="venue">
       <span class="filter-label">Venue:</span>
       <div class="venue-row" id="venue-row" role="group" aria-label="Filter by venue" hidden></div>
     </div>
@@ -1086,7 +1168,7 @@
          meaningful age bands in Sunday Minis and a parent typically lands
          knowing their kid's age before they pick a club, so this row is
          shown unconditionally rather than only after a club is picked. -->
-    <div class="filter-block">
+    <div class="filter-block" data-section="age">
       <span class="filter-label">Age:</span>
       <div class="age-row" id="age-row" role="group" aria-label="Filter by age band"></div>
     </div>
@@ -1094,7 +1176,7 @@
          there can be 60+ teams. Toggle button sits under the label, keeping
          the cards column the full width of the toolbar. Multi-select: tap
          additional cards to compare timelines. -->
-    <div class="filter-block filter-block-team">
+    <div class="filter-block filter-block-team" data-section="team">
       <div class="filter-label-stack">
         <span class="filter-label">Team:</span>
         <button class="team-accordion-toggle" id="team-accordion-toggle" type="button" aria-expanded="true" aria-controls="team-cards">
@@ -1192,6 +1274,8 @@ const AGE_KEY             = `${STORAGE_PREFIX}-age`;
 const ROUND_KEY           = `${STORAGE_PREFIX}-round`;
 const VENUE_KEY           = `${STORAGE_PREFIX}-venue`;
 const TEAM_ACCORDION_KEY  = `${STORAGE_PREFIX}-team-accordion`;  // 'open' | 'closed'
+const FILTERS_OPEN_KEY    = `${STORAGE_PREFIX}-filters-open`;    // 'open' | 'closed'
+const FILTER_SECTIONS_KEY = `${STORAGE_PREFIX}-filter-sections`; // CSV of hidden section keys
 const INSTALL_DISMISSED_KEY = `${STORAGE_PREFIX}-install-hint-dismissed`;
 
 let fixturesData = null;
@@ -1496,6 +1580,78 @@ function initTeamAccordion() {
   applyTeamAccordionState();
 }
 
+// ── filter toolbar open/close + per-section visibility ───────────────────────
+// The header "Filters" button shows/hides the whole toolbar; the section-toggle
+// bar inside it shows/hides each individual axis. Both persist per-device.
+// Default landing is closed so the welcome / match list isn't buried under the
+// full filter stack — the active-filter bar still surfaces live filters.
+const ALL_SECTIONS = ['round', 'club', 'venue', 'age', 'team'];
+
+function isFiltersOpen() { return lsGet(FILTERS_OPEN_KEY) === 'open'; }
+function setFiltersOpen(open) {
+  lsSet(FILTERS_OPEN_KEY, open ? 'open' : 'closed');
+  applyFiltersOpen();
+}
+function applyFiltersOpen() {
+  const bar = document.getElementById('toolbar');
+  const btn = document.getElementById('filters-toggle');
+  if (!bar || !btn) return;
+  const open = isFiltersOpen();
+  bar.classList.toggle('collapsed', !open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+// Hidden sections stored as a CSV; everything not listed is visible (default-on).
+function hiddenSections() {
+  return new Set((lsGet(FILTER_SECTIONS_KEY) || '').split(',').filter(Boolean));
+}
+function isSectionOn(name) { return !hiddenSections().has(name); }
+function toggleSection(name) {
+  const hidden = hiddenSections();
+  if (hidden.has(name)) hidden.delete(name); else hidden.add(name);
+  lsSet(FILTER_SECTIONS_KEY, hidden.size ? Array.from(hidden).join(',') : null);
+  applySectionVisibility();
+}
+function applySectionVisibility() {
+  const hidden = hiddenSections();
+  document.querySelectorAll('.filter-block[data-section]').forEach(block => {
+    block.classList.toggle('section-off', hidden.has(block.dataset.section));
+  });
+  document.querySelectorAll('.section-chip[data-section]').forEach(chip => {
+    chip.setAttribute('aria-pressed', hidden.has(chip.dataset.section) ? 'false' : 'true');
+  });
+}
+
+// Count of active filter VALUES (not sections) — shown as a badge on the button
+// so users know filters are live even with the toolbar collapsed.
+function activeFilterCount() {
+  return currentRounds.length + currentClubs.length + currentVenues.length
+       + currentAges.length + currentTeams.length;
+}
+function syncFiltersCount() {
+  const badge = document.getElementById('filters-count');
+  if (!badge) return;
+  const n = activeFilterCount();
+  badge.textContent = n;
+  badge.hidden = n === 0;
+}
+
+function initFilters() {
+  const btn = document.getElementById('filters-toggle');
+  if (btn && !btn.dataset.wired) {
+    btn.addEventListener('click', () => setFiltersOpen(!isFiltersOpen()));
+    btn.dataset.wired = '1';
+  }
+  document.querySelectorAll('.section-chip[data-section]').forEach(chip => {
+    if (chip.dataset.wired) return;
+    chip.addEventListener('click', () => toggleSection(chip.dataset.section));
+    chip.dataset.wired = '1';
+  });
+  applyFiltersOpen();
+  applySectionVisibility();
+  syncFiltersCount();
+}
+
 // ── selection actions ────────────────────────────────────────────────────────
 // Every axis (club / age / round / venue / team) is a multi-select toggle.
 // Clicking the same chip again removes it from the set.
@@ -1685,6 +1841,7 @@ function syncShareButton() {
 // stay ≥ 32px, and the bar sticks to the top of the scroll container so users
 // always know they're looking at a filtered view even when they've scrolled.
 function syncActiveFilterBar() {
+  syncFiltersCount();   // keep the header Filters badge in step with every change
   const bar = document.getElementById('active-filter-bar');
   if (!bar) return;
   const pills = [];
@@ -2541,6 +2698,7 @@ window.addEventListener('hashchange', applyHashState);
   buildVenueRow();
   buildTeamCards();
   initTeamAccordion();
+  initFilters();
 
   // Sticky-header compact mode: once the user has scrolled past the eyebrow
   // area, switch to a compact bar so the nav stays visible without eating
