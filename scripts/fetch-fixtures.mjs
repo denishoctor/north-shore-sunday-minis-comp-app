@@ -29,7 +29,7 @@ function writeFileAtomic(path, contents) {
 }
 import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
-  FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES,
+  FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES, MATCH_OVERRIDES,
 } from './config.mjs';
 import { ROUNDS } from './rounds.mjs';
 import { parseVenue, slugifyTeam, clubFromCrest } from '../docs/render.mjs';
@@ -186,6 +186,35 @@ function normaliseTeam(t) {
     crest:   t.crest,
     clubKey: clubFromCrest(t.crest, CLUBS),
   };
+}
+
+// ── overrides ──────────────────────────────────────────────────────────────
+//
+// Apply the manual MATCH_OVERRIDES corrections (scripts/config.mjs) over the
+// live feed in place. Keyed by Xplorer match id; only the listed fields
+// (venue / dateTime) are replaced. As a safety guard an override is applied
+// only when the live match for that id still has the expected home/away teams
+// — a recycled id (Xplorer reusing the id for a different game) is logged and
+// skipped rather than mislabelled. Runs before the sort so dateTime changes
+// re-order correctly, and before every downstream artifact is built.
+export function applyOverrides(matches, overrides = MATCH_OVERRIDES) {
+  if (!overrides) return matches;
+  const applied = new Set();
+  for (const m of matches) {
+    const ov = overrides[m.id];
+    if (!ov) continue;
+    if ((ov.home && m.home.name !== ov.home) || (ov.away && m.away.name !== ov.away)) {
+      console.warn(`⚠️  override ${m.id} skipped — live match is "${m.home.name} vs ${m.away.name}", expected "${ov.home} vs ${ov.away}"`);
+      continue;
+    }
+    if (ov.venue != null)    m.venue = ov.venue;
+    if (ov.dateTime != null) m.dateTime = ov.dateTime;
+    applied.add(m.id);
+  }
+  const missing = Object.keys(overrides).filter(id => !applied.has(id));
+  if (missing.length) console.warn(`⚠️  ${missing.length} override(s) had no matching fixture (already passed / id changed?): ${missing.join(', ')}`);
+  if (applied.size)   console.log(`✓ Applied ${applied.size} match override(s)`);
+  return matches;
 }
 
 // ── slug derivation ──────────────────────────────────────────────────────────
@@ -546,27 +575,52 @@ function buildRoundsSummary(matches) {
 async function main() {
   const oldData = existsSync(OUT_PATH) ? JSON.parse(readFileSync(OUT_PATH, 'utf8')) : null;
 
-  console.log(`Fetching ${SITE.name} ${SEASON} fixtures and results across ${FEEDS.length} club feeds…`);
+  // --from-cache: skip the live fetch and rebuild every derived artifact
+  // (fixtures.json, config.js, *.ics) from the matches already in
+  // docs/fixtures.json, re-applying MATCH_OVERRIDES. Lets us land an override
+  // correction without network access to Rugby Xplorer — overrides are
+  // idempotent, so re-applying them over cached data is safe.
+  const fromCache = process.argv.includes('--from-cache');
 
-  const [fixtures, results] = await Promise.all([
-    fetchAll('fixtures'),
-    fetchAll('results'),
-  ]);
+  let combined;
+  if (fromCache) {
+    if (!oldData?.matches?.length) throw new Error('--from-cache: no docs/fixtures.json to rebuild from.');
+    console.log(`Rebuilding from cached docs/fixtures.json (${oldData.matches.length} matches) — no live fetch…`);
+    combined = oldData.matches.map(m => ({ ...m, home: { ...m.home }, away: { ...m.away } }));
+  } else {
+    console.log(`Fetching ${SITE.name} ${SEASON} fixtures and results across ${FEEDS.length} club feeds…`);
 
-  console.log(`  fixtures: ${fixtures.length}`);
-  console.log(`  results:  ${results.length}`);
+    const [fixtures, results] = await Promise.all([
+      fetchAll('fixtures'),
+      fetchAll('results'),
+    ]);
 
-  // Results take priority over fixtures at the round-completion transition.
-  const seen = new Set();
-  const combined = [];
-  for (const item of [...results, ...fixtures]) {
-    if (!seen.has(item.id)) {
-      seen.add(item.id);
-      combined.push(normalise(item));
+    console.log(`  fixtures: ${fixtures.length}`);
+    console.log(`  results:  ${results.length}`);
+
+    // Results take priority over fixtures at the round-completion transition.
+    const seen = new Set();
+    combined = [];
+    for (const item of [...results, ...fixtures]) {
+      if (!seen.has(item.id)) {
+        seen.add(item.id);
+        combined.push(normalise(item));
+      }
     }
   }
+
+  // Layer manual corrections over the feed, then (re-)sort: an override can
+  // change a kick-off time, which changes chronological order.
+  applyOverrides(combined);
   combined.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
 
+  buildAndWrite(combined, oldData);
+}
+
+// Build and write every output artifact from the final, override-applied match
+// list: docs/fixtures.json, changes.txt, the per-team ICS feeds, docs/config.js,
+// and the console roll-up.
+function buildAndWrite(combined, oldData) {
   const { slugs: TEAM_SLUGS, meta: TEAM_META } = buildTeamSlugs(combined);
 
   const byComp = {};

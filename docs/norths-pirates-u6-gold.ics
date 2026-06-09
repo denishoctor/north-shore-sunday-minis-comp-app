@@ -27,11 +27,11 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-82ba80cf7b52c7e27-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-82ba80cf7b52c7e27-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Norths Pirates Gold 6 vs Chatswood Green 6 | RND 1
@@ -40,17 +40,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Chatswood Green 6\n📍 Tryon Ova
  l TT7\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:00am AEST\n🏆 S
  JRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
  alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
- ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
- orth-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ ndar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#
+ norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-c9c8cc1d4c80f95c6-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-c9c8cc1d4c80f95c6-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Norths Pirates Gold 6 vs Lane Cove Gold 6 | RND 2
@@ -59,17 +58,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Lane Cove Gold 6\n📍 Tunks Park
   TT6\, Cammeray\n📅 Round 2 · Sun\, 10 May · 8:00am AEST\n🏆 SJRU Mi
  nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
  r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
+ up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths
  -pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-bf45444ea2a1d4d62-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-bf45444ea2a1d4d62-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260517T080000
 DTEND;TZID=Australia/Sydney:20260517T090000
 SUMMARY:Norths Pirates Gold 6 vs Forest 6 | RND 3
@@ -78,17 +76,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Forest 6\n📍 Wakehurst Rugby Pa
  rk TT3\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:00am AEST\n🏆 SJRU M
  inis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
  ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
-  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
- shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+  up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#north
+ s-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6a5fc765bbc611b04-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-6a5fc765bbc611b04-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Norths Pirates Gold 6 vs Chatswood Green 6 | RND 4
@@ -97,17 +94,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Chatswood Green 6\n📍 Beauchamp
   Park TT3\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 S
  JRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
  alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
- ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
- orth-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ ndar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#
+ norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-c08d8993155234f53-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-c08d8993155234f53-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Norths Pirates Gold 6 vs Chatswood Gold 6 | RND 5
@@ -116,36 +112,34 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Chatswood Gold 6\n📍 Tantallon
  Oval TT2\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n
  🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel
+ .app/#norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-abe210ffee261eb19-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-abe210ffee261eb19-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
-DTSTART;TZID=Australia/Sydney:20260614T080000
-DTEND;TZID=Australia/Sydney:20260614T090000
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
+DTSTART;TZID=Australia/Sydney:20260614T084000
+DTEND;TZID=Australia/Sydney:20260614T094000
 SUMMARY:Norths Pirates Gold 6 vs Killara-West Pymble Blue 6 | RND 6
-LOCATION:Hassall Park TT5\, St Ives\, Sydney NSW
+LOCATION:Tantallon Oval TT1\, Lane Cove North\, Sydney NSW
 DESCRIPTION:🏉 Norths Pirates Gold 6 vs Killara-West Pymble Blue 6\n📍 
- Hassall Park TT5\, St Ives\n📅 Round 6 · Sun\, 14 June · 8:00am AEST\n
- 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
- This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ Tantallon Oval TT1\, Lane Cove North\n📅 Round 6 · Sun\, 14 June · 8:4
+ 0am AEST\n🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times ma
+ y change. This calendar updates automatically\n(Apple Calendar: ~every hou
+ r · Google Calendar: up to 24 hrs after a change)\n\n🔗 https://nssm-ru
+ gby.vercel.app/#norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-084f6a68e64378648-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-084f6a68e64378648-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T084000
 DTEND;TZID=Australia/Sydney:20260726T094000
 SUMMARY:Norths Pirates Gold 6 vs Wakehurst Wombats 6 | RND 8
@@ -154,17 +148,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Wakehurst Wombats 6\n📍 Tunks P
  ark TT3\, Cammeray\n📅 Round 8 · Sun\, 26 July · 8:40am AEST\n🏆 SJR
  U Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
  endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
- ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
- th-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ ar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#no
+ rths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e62dab2a9959d79fa-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-e62dab2a9959d79fa-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260802T084000
 DTEND;TZID=Australia/Sydney:20260802T094000
 SUMMARY:Norths Pirates Gold 6 vs Chatswood Green 6 | RND 9
@@ -173,17 +166,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Chatswood Green 6\n📍 Mark Tayl
  or Oval TT3\, Waitara\n📅 Round 9 · Sun\, 2 Aug · 8:40am AEST\n🏆 SJ
  RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
  lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ dar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#n
+ orths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-ae531e23a62ade75a-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-ae531e23a62ade75a-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260809T084000
 DTEND;TZID=Australia/Sydney:20260809T094000
 SUMMARY:Norths Pirates Gold 6 vs St Ives Blue 6 | RND 10
@@ -192,17 +184,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs St Ives Blue 6\n📍 Melwood Oval
   TT2\, Forestville\n📅 Round 10 · Sun\, 9 Aug · 8:40am AEST\n🏆 SJRU
   Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#nor
+ ths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-211fb2b5e45b4ab5b-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-211fb2b5e45b4ab5b-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260816T080000
 DTEND;TZID=Australia/Sydney:20260816T090000
 SUMMARY:Norths Pirates Gold 6 vs Forest 6 | RND 11
@@ -211,17 +202,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Forest 6\n📍 Hassall Park TT3\,
   St Ives\n📅 Round 11 · Sun\, 16 Aug · 8:00am AEST\n🏆 SJRU Minis U6
   Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar upda
  tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
- 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
- unday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pirat
+ es-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-fdfc64a7d3f87ecb5-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-fdfc64a7d3f87ecb5-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260823T080000
 DTEND;TZID=Australia/Sydney:20260823T090000
 SUMMARY:Norths Pirates Gold 6 vs Chatswood Black 6 | RND 12
@@ -230,17 +220,16 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Chatswood Black 6\n📍 Lofberg O
  val TT3\, West Pymble\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 
  SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
  calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ endar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/
+ #norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-22b0675eaefcff67a-norths-pirates-u6-gold@denishoctor.github.
- io
+UID:nsm-sunday-22b0675eaefcff67a-norths-pirates-u6-gold@nssm-rugby.vercel.a
+ pp
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260830T080000
 DTEND;TZID=Australia/Sydney:20260830T090000
 SUMMARY:Norths Pirates Gold 6 vs Norths Pirates Red 6 | RND 13
@@ -249,9 +238,8 @@ DESCRIPTION:🏉 Norths Pirates Gold 6 vs Norths Pirates Red 6\n📍 Hassal
  l Park TT2\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 8:00am AEST\n🏆 S
  JRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This c
  alendar updates automatically\n(Apple Calendar: ~every hour · Google Cale
- ndar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/n
- orth-shore-sunday-minis-comp-app/#norths-pirates-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u6-gold
+ ndar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#
+ norths-pirates-u6-gold
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u6-gold
 END:VEVENT
 END:VCALENDAR

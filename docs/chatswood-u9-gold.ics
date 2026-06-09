@@ -27,10 +27,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-e6133e61c023d6ec2-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-e6133e61c023d6ec2-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T110000
 DTEND;TZID=Australia/Sydney:20260503T120000
 SUMMARY:Chatswood Gold 9 vs Norths Pirates Black 9 | RND 1
@@ -39,16 +39,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Norths Pirates Black 9\n📍 Tryon Ova
  l M3\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 11:00am AEST\n🏆 S
  JRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood
+ -u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-0f88bc34b2d220c65-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-0f88bc34b2d220c65-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260510T101000
 DTEND;TZID=Australia/Sydney:20260510T111000
 SUMMARY:Chatswood Gold 9 vs Dee Why Black 9 | RND 2
@@ -57,16 +56,14 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Dee Why Black 9\n📍 Tunks Park M1\,
  Cammeray\n📅 Round 2 · Sun\, 10 May · 10:10am AEST\n🏆 SJRU Minis U9
   Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
  atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
- ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
- is-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ ter a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e66dd55d5545cf8d4-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-e66dd55d5545cf8d4-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260517T093000
 DTEND;TZID=Australia/Sydney:20260517T103000
 SUMMARY:Chatswood Gold 9 vs Killara-West Pymble Blue 9 | RND 3
@@ -75,16 +72,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Killara-West Pymble Blue 9\n📍 Melwo
  od Oval M2\, Forestville\n📅 Round 3 · Sun\, 17 May · 9:30am AEST\n
  🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#cha
+ tswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-195eb7a48af2b8fc6-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-195eb7a48af2b8fc6-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260524T094000
 DTEND;TZID=Australia/Sydney:20260524T104000
 SUMMARY:Chatswood Gold 9 vs Dee Why White 9 | RND 4
@@ -93,16 +89,14 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Dee Why White 9\n📍 Hassall Park M1\
  , St Ives\n📅 Round 4 · Sun\, 24 May · 9:40am AEST\n🏆 SJRU Minis U9
   Sunday\n\nℹ️ Venues and times may change. This calendar updates autom
  atically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs af
- ter a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-min
- is-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ ter a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-438a35fff596266e5-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-438a35fff596266e5-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:Chatswood Gold 9 vs Lane Cove Blue 9 | RND 5
@@ -111,16 +105,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Lane Cove Blue 9\n📍 Lofberg Oval M1
  \, West Pymble\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆 SJRU Min
  is U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
- rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
- y-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ rs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-gol
+ d
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-30f749c5bebd0c4d9-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-30f749c5bebd0c4d9-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T102000
 DTEND;TZID=Australia/Sydney:20260531T112000
 SUMMARY:Chatswood Gold 9 vs St Ives 9 | RND 5
@@ -129,16 +122,14 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs St Ives 9\n📍 Lofberg Oval M1\, West
   Pymble\n📅 Round 5 · Sun\, 31 May · 10:20am AEST\n🏆 SJRU Minis U9 
  Sunday\n\nℹ️ Venues and times may change. This calendar updates automa
  tically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 hrs aft
- er a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunday-mini
- s-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ er a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-3ebe2e6419a33ad61-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-3ebe2e6419a33ad61-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260614T122000
 DTEND;TZID=Australia/Sydney:20260614T132000
 SUMMARY:Chatswood Gold 9 vs Lane Cove Gold 9 | RND 6
@@ -147,16 +138,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Lane Cove Gold 9\n📍 James Morgan Re
  serve M3\, Cromer\n📅 Round 6 · Sun\, 14 June · 12:20pm AEST\n🏆 SJR
  U Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upd
  ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+  24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u
+ 9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-275a7f74fbd907dd3-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-275a7f74fbd907dd3-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T093000
 DTEND;TZID=Australia/Sydney:20260726T103000
 SUMMARY:Chatswood Gold 9 vs Norths Pirates Red 9 | RND 8
@@ -165,16 +155,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Norths Pirates Red 9\n📍 Beauchamp P
  ark M1\, Chatswood\n📅 Round 8 · Sun\, 26 July · 9:30am AEST\n🏆 SJR
  U Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar upd
  ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+  24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u
+ 9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-8b19c0024556af502-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-8b19c0024556af502-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T095500
 DTEND;TZID=Australia/Sydney:20260726T105500
 SUMMARY:Chatswood Gold 9 vs Killara-West Pymble Blue 9 | RND 8
@@ -183,16 +172,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Killara-West Pymble Blue 9\n📍 Beauc
  hamp Park M1\, Chatswood\n📅 Round 8 · Sun\, 26 July · 9:55am AEST\n
  🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#cha
+ tswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-371b4a36ac9741a53-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-371b4a36ac9741a53-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260802T113500
 DTEND;TZID=Australia/Sydney:20260802T123500
 SUMMARY:Chatswood Gold 9 vs Wakehurst Warriors 9 | RND 9
@@ -201,16 +189,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Wakehurst Warriors 9\n📍 Tantallon O
  val M1\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 11:35am AEST\n
  🏆 SJRU Minis U9 Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#cha
+ tswood-u9-gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-2535961e987e92f06-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-2535961e987e92f06-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260809T102000
 DTEND;TZID=Australia/Sydney:20260809T112000
 SUMMARY:Chatswood Gold 9 vs Forest White 9 | RND 10
@@ -219,16 +206,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Forest White 9\n📍 Wakehurst Rugby P
  ark M2\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 10:20am AEST\n🏆 SJRU 
  Minis U9 Sunday\n\nℹ️ Venues and times may change. This calendar updat
  es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
- 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
- nday-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ 4 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-
+ gold
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-7f7060479111e8691-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-7f7060479111e8691-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260823T120000
 DTEND;TZID=Australia/Sydney:20260823T130000
 SUMMARY:Chatswood Gold 9 vs Forest Green 9 | RND 12
@@ -237,16 +223,15 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Forest Green 9\n📍 Beauchamp Park M2
  \, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 12:00pm AEST\n🏆 SJRU Min
  is U9 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
- rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
- y-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+ rs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-gol
+ d
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-f15837de8e970b066-chatswood-u9-gold@denishoctor.github.io
+UID:nsm-sunday-f15837de8e970b066-chatswood-u9-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260830T113000
 DTEND;TZID=Australia/Sydney:20260830T123000
 SUMMARY:Chatswood Gold 9 vs Norths Pirates Red 9 | RND 13
@@ -255,9 +240,8 @@ DESCRIPTION:🏉 Chatswood Gold 9 vs Norths Pirates Red 9\n📍 Hassall Par
  k M2\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 11:30am AEST\n🏆 SJRU M
  inis U9 Sunday\n\nℹ️ Venues and times may change. This calendar update
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
-  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
- day-minis-comp-app/#chatswood-u9-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#chatsw
- ood-u9-gold
+  hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#chatswood-u9-g
+ old
+URL:https://nssm-rugby.vercel.app/#chatswood-u9-gold
 END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T05:56:36.236Z",
+  "updated": "2026-06-09T07:17:15.028Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -1699,7 +1699,7 @@
           "round": "Round 6",
           "roundLabel": "Round 6",
           "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT2 (U6/U7)",
+          "venue": "Tantallon Oval TT2 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -1728,7 +1728,7 @@
           "round": "Round 6",
           "roundLabel": "Round 6",
           "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT1 (U6/U7)",
+          "venue": "Tantallon Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -1749,64 +1749,6 @@
           }
         },
         {
-          "id": "abe210ffee261eb19",
-          "type": "fixture",
-          "competition": "SJRU Minis U6 Tri Time Sunday",
-          "compId": "k4rCbcW4BBmPg5qbM",
-          "age": "U6",
-          "round": "Round 6",
-          "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT5 (U6/U7)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "Ku2vor6ak4pXw7FA9",
-            "name": "Norths Pirates Gold 6",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-            "clubKey": "norths-pirates"
-          },
-          "away": {
-            "id": "PkDXPoiwLttEqBXqb",
-            "name": "Killara-West Pymble Blue 6",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
-            "clubKey": "kwp"
-          }
-        },
-        {
-          "id": "1acf300dcaeaafd2a",
-          "type": "fixture",
-          "competition": "SJRU Minis U6 Tri Time Sunday",
-          "compId": "k4rCbcW4BBmPg5qbM",
-          "age": "U6",
-          "round": "Round 6",
-          "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT8 (U6/U7)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "EskZaBDQLgvAENsfe",
-            "name": "Chatswood Green 6",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-            "clubKey": "chatswood"
-          },
-          "away": {
-            "id": "CYgNhNBFBQCMPyjFs",
-            "name": "Chatswood Black 6",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-            "clubKey": "chatswood"
-          }
-        },
-        {
           "id": "b439cf2ec74fafdf5",
           "type": "fixture",
           "competition": "SJRU Minis U6 Tri Time Sunday",
@@ -1815,7 +1757,7 @@
           "round": "Round 6",
           "roundLabel": "Round 6",
           "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT4 (U6/U7)",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -1844,7 +1786,7 @@
           "round": "Round 6",
           "roundLabel": "Round 6",
           "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT3 (U6/U7)",
+          "venue": "Tantallon Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -1865,6 +1807,64 @@
           }
         },
         {
+          "id": "abe210ffee261eb19",
+          "type": "fixture",
+          "competition": "SJRU Minis U6 Tri Time Sunday",
+          "compId": "k4rCbcW4BBmPg5qbM",
+          "age": "U6",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-13T22:40:00Z",
+          "venue": "Tantallon Oval TT1 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "Ku2vor6ak4pXw7FA9",
+            "name": "Norths Pirates Gold 6",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "PkDXPoiwLttEqBXqb",
+            "name": "Killara-West Pymble Blue 6",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
+          }
+        },
+        {
+          "id": "1acf300dcaeaafd2a",
+          "type": "fixture",
+          "competition": "SJRU Minis U6 Tri Time Sunday",
+          "compId": "k4rCbcW4BBmPg5qbM",
+          "age": "U6",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-13T22:40:00Z",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "EskZaBDQLgvAENsfe",
+            "name": "Chatswood Green 6",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+            "clubKey": "chatswood"
+          },
+          "away": {
+            "id": "CYgNhNBFBQCMPyjFs",
+            "name": "Chatswood Black 6",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+            "clubKey": "chatswood"
+          }
+        },
+        {
           "id": "426b7a7f9219467e0",
           "type": "fixture",
           "competition": "SJRU Minis U6 Tri Time Sunday",
@@ -1872,8 +1872,8 @@
           "age": "U6",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT7 (U6/U7)",
+          "dateTime": "2026-06-13T22:40:00Z",
+          "venue": "Tantallon Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -1901,8 +1901,8 @@
           "age": "U6",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:00:00Z",
-          "venue": "Hassall Park TT6 (U6/U7)",
+          "dateTime": "2026-06-13T22:40:00Z",
+          "venue": "Tantallon Oval TT2 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -4836,8 +4836,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT3 (U6/U7)",
+          "dateTime": "2026-06-13T23:20:00Z",
+          "venue": "Tantallon Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -4865,8 +4865,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT4 (U6/U7)",
+          "dateTime": "2026-06-13T23:20:00Z",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -4887,35 +4887,6 @@
           }
         },
         {
-          "id": "b76a9883894dd80b9",
-          "type": "fixture",
-          "competition": "SJRU Minis U7 Tri Time Sunday",
-          "compId": "TvJJeqzzeGJYzMJpw",
-          "age": "U7",
-          "round": "Round 6",
-          "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT6 (U6/U7)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "oFRNkNkZX8jap2wJw",
-            "name": "Wakehurst Wasps 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-            "clubKey": "wakehurst"
-          },
-          "away": {
-            "id": "zuXwJ9BmQHnz36gfH",
-            "name": "Chatswood Green 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-            "clubKey": "chatswood"
-          }
-        },
-        {
           "id": "82fca6f7fb47ef3af",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -4923,8 +4894,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT2 (U6/U7)",
+          "dateTime": "2026-06-13T23:20:00Z",
+          "venue": "Tantallon Oval TT2 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -4945,35 +4916,6 @@
           }
         },
         {
-          "id": "941ad20b8c3e98b92",
-          "type": "fixture",
-          "competition": "SJRU Minis U7 Tri Time Sunday",
-          "compId": "TvJJeqzzeGJYzMJpw",
-          "age": "U7",
-          "round": "Round 6",
-          "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT8 (U6/U7)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "Z7CTp2o6AWcLiY7AP",
-            "name": "Norths Pirates Red 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-            "clubKey": "norths-pirates"
-          },
-          "away": {
-            "id": "eXBshKqYwo7kiLhRx",
-            "name": "Norths Pirates White 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-            "clubKey": "norths-pirates"
-          }
-        },
-        {
           "id": "2ff3672ec69cdf61e",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -4981,8 +4923,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT1 (U6/U7)",
+          "dateTime": "2026-06-13T23:20:00Z",
+          "venue": "Tantallon Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -5003,6 +4945,64 @@
           }
         },
         {
+          "id": "b76a9883894dd80b9",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-14T00:00:00Z",
+          "venue": "Tantallon Oval TT2 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "oFRNkNkZX8jap2wJw",
+            "name": "Wakehurst Wasps 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+            "clubKey": "wakehurst"
+          },
+          "away": {
+            "id": "zuXwJ9BmQHnz36gfH",
+            "name": "Chatswood Green 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+            "clubKey": "chatswood"
+          }
+        },
+        {
+          "id": "941ad20b8c3e98b92",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-14T00:00:00Z",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "Z7CTp2o6AWcLiY7AP",
+            "name": "Norths Pirates Red 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "eXBshKqYwo7kiLhRx",
+            "name": "Norths Pirates White 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          }
+        },
+        {
           "id": "f11272bbb3071544b",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -5010,8 +5010,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT5 (U6/U7)",
+          "dateTime": "2026-06-14T00:00:00Z",
+          "venue": "Tantallon Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -5039,8 +5039,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T22:40:00Z",
-          "venue": "Hassall Park TT7 (U6/U7)",
+          "dateTime": "2026-06-14T00:00:00Z",
+          "venue": "Tantallon Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -5068,8 +5068,8 @@
           "age": "U7",
           "round": "Round 6",
           "roundLabel": "Round 6",
-          "dateTime": "2026-06-13T23:20:00Z",
-          "venue": "Hassall Park TT1 (U6/U7)",
+          "dateTime": "2026-06-14T00:40:00Z",
+          "venue": "Tantallon Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -12199,7 +12199,7 @@
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Hassall Park",
+        "u6u7": "Tantallon Oval",
         "u8u9": "James Morgan Reserve"
       },
       "matches": {
@@ -17276,7 +17276,7 @@
       "round": "Round 6",
       "roundLabel": "Round 6",
       "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT2 (U6/U7)",
+      "venue": "Tantallon Oval TT2 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17305,7 +17305,7 @@
       "round": "Round 6",
       "roundLabel": "Round 6",
       "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT1 (U6/U7)",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17326,64 +17326,6 @@
       }
     },
     {
-      "id": "abe210ffee261eb19",
-      "type": "fixture",
-      "competition": "SJRU Minis U6 Tri Time Sunday",
-      "compId": "k4rCbcW4BBmPg5qbM",
-      "age": "U6",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT5 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "Ku2vor6ak4pXw7FA9",
-        "name": "Norths Pirates Gold 6",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      },
-      "away": {
-        "id": "PkDXPoiwLttEqBXqb",
-        "name": "Killara-West Pymble Blue 6",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
-        "clubKey": "kwp"
-      }
-    },
-    {
-      "id": "1acf300dcaeaafd2a",
-      "type": "fixture",
-      "competition": "SJRU Minis U6 Tri Time Sunday",
-      "compId": "k4rCbcW4BBmPg5qbM",
-      "age": "U6",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT8 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "EskZaBDQLgvAENsfe",
-        "name": "Chatswood Green 6",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      },
-      "away": {
-        "id": "CYgNhNBFBQCMPyjFs",
-        "name": "Chatswood Black 6",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      }
-    },
-    {
       "id": "b439cf2ec74fafdf5",
       "type": "fixture",
       "competition": "SJRU Minis U6 Tri Time Sunday",
@@ -17392,7 +17334,7 @@
       "round": "Round 6",
       "roundLabel": "Round 6",
       "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT4 (U6/U7)",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17421,7 +17363,7 @@
       "round": "Round 6",
       "roundLabel": "Round 6",
       "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT3 (U6/U7)",
+      "venue": "Tantallon Oval TT3 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17442,6 +17384,64 @@
       }
     },
     {
+      "id": "abe210ffee261eb19",
+      "type": "fixture",
+      "competition": "SJRU Minis U6 Tri Time Sunday",
+      "compId": "k4rCbcW4BBmPg5qbM",
+      "age": "U6",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-13T22:40:00Z",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "Ku2vor6ak4pXw7FA9",
+        "name": "Norths Pirates Gold 6",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "PkDXPoiwLttEqBXqb",
+        "name": "Killara-West Pymble Blue 6",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
+      }
+    },
+    {
+      "id": "1acf300dcaeaafd2a",
+      "type": "fixture",
+      "competition": "SJRU Minis U6 Tri Time Sunday",
+      "compId": "k4rCbcW4BBmPg5qbM",
+      "age": "U6",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-13T22:40:00Z",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "EskZaBDQLgvAENsfe",
+        "name": "Chatswood Green 6",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      },
+      "away": {
+        "id": "CYgNhNBFBQCMPyjFs",
+        "name": "Chatswood Black 6",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      }
+    },
+    {
       "id": "426b7a7f9219467e0",
       "type": "fixture",
       "competition": "SJRU Minis U6 Tri Time Sunday",
@@ -17449,8 +17449,8 @@
       "age": "U6",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT7 (U6/U7)",
+      "dateTime": "2026-06-13T22:40:00Z",
+      "venue": "Tantallon Oval TT3 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17478,8 +17478,8 @@
       "age": "U6",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:00:00Z",
-      "venue": "Hassall Park TT6 (U6/U7)",
+      "dateTime": "2026-06-13T22:40:00Z",
+      "venue": "Tantallon Oval TT2 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17507,8 +17507,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT3 (U6/U7)",
+      "dateTime": "2026-06-13T23:20:00Z",
+      "venue": "Tantallon Oval TT3 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17536,8 +17536,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT4 (U6/U7)",
+      "dateTime": "2026-06-13T23:20:00Z",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17558,35 +17558,6 @@
       }
     },
     {
-      "id": "b76a9883894dd80b9",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT6 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "oFRNkNkZX8jap2wJw",
-        "name": "Wakehurst Wasps 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      },
-      "away": {
-        "id": "zuXwJ9BmQHnz36gfH",
-        "name": "Chatswood Green 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      }
-    },
-    {
       "id": "82fca6f7fb47ef3af",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -17594,8 +17565,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT2 (U6/U7)",
+      "dateTime": "2026-06-13T23:20:00Z",
+      "venue": "Tantallon Oval TT2 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17616,35 +17587,6 @@
       }
     },
     {
-      "id": "941ad20b8c3e98b92",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT8 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "Z7CTp2o6AWcLiY7AP",
-        "name": "Norths Pirates Red 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      },
-      "away": {
-        "id": "eXBshKqYwo7kiLhRx",
-        "name": "Norths Pirates White 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      }
-    },
-    {
       "id": "2ff3672ec69cdf61e",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -17652,8 +17594,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT1 (U6/U7)",
+      "dateTime": "2026-06-13T23:20:00Z",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17674,6 +17616,64 @@
       }
     },
     {
+      "id": "b76a9883894dd80b9",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "Tantallon Oval TT2 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "oFRNkNkZX8jap2wJw",
+        "name": "Wakehurst Wasps 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      },
+      "away": {
+        "id": "zuXwJ9BmQHnz36gfH",
+        "name": "Chatswood Green 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      }
+    },
+    {
+      "id": "941ad20b8c3e98b92",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "Z7CTp2o6AWcLiY7AP",
+        "name": "Norths Pirates Red 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "eXBshKqYwo7kiLhRx",
+        "name": "Norths Pirates White 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      }
+    },
+    {
       "id": "f11272bbb3071544b",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -17681,8 +17681,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT5 (U6/U7)",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17710,8 +17710,8 @@
       "age": "U7",
       "round": "Round 6",
       "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T22:40:00Z",
-      "venue": "Hassall Park TT7 (U6/U7)",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "Tantallon Oval TT3 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -17729,35 +17729,6 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
-      }
-    },
-    {
-      "id": "86fa2a08f3f9eaafb",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-13T23:20:00Z",
-      "venue": "Hassall Park TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "Tc3RzjML5PEatcEWC",
-        "name": "Norths Pirates Black 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      },
-      "away": {
-        "id": "c5MgknZYXfnEi8dye",
-        "name": "Norths Pirates Gold 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
       }
     },
     {
@@ -17842,6 +17813,35 @@
       "away": {
         "id": "7bGNHP8djsGgvYMZY",
         "name": "Norths Pirates Black 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      }
+    },
+    {
+      "id": "86fa2a08f3f9eaafb",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:40:00Z",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "Tc3RzjML5PEatcEWC",
+        "name": "Norths Pirates Black 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "c5MgknZYXfnEi8dye",
+        "name": "Norths Pirates Gold 7",
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
         "clubKey": "norths-pirates"

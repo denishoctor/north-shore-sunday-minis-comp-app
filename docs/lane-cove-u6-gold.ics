@@ -27,10 +27,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-f62f774d236cd097b-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-f62f774d236cd097b-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T080000
 DTEND;TZID=Australia/Sydney:20260503T090000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Gold 6 | RND 1
@@ -39,16 +39,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Gold 6\n📍 Tryon Oval TT5\
  , East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:00am AEST\n🏆 SJRU Mi
  nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
  r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-c
  ove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-c9c8cc1d4c80f95c6-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-c9c8cc1d4c80f95c6-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260510T080000
 DTEND;TZID=Australia/Sydney:20260510T090000
 SUMMARY:Lane Cove Gold 6 vs Norths Pirates Gold 6 | RND 2
@@ -57,16 +56,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Norths Pirates Gold 6\n📍 Tunks Park
   TT6\, Cammeray\n📅 Round 2 · Sun\, 10 May · 8:00am AEST\n🏆 SJRU Mi
  nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
  r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
+ up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-c
  ove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-3d8fc87ca9c8201b1-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-3d8fc87ca9c8201b1-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Lane Cove Gold 6 vs St Ives Yellow 6 | RND 3
@@ -75,16 +73,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs St Ives Yellow 6\n📍 Wakehurst Rugby
   Park TT1\, Belrose\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 SJR
  U Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This cal
  endar updates automatically\n(Apple Calendar: ~every hour · Google Calend
- ar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nor
- th-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ ar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#la
+ ne-cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-aaa9e3cf9d2a66386-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-aaa9e3cf9d2a66386-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260524T084000
 DTEND;TZID=Australia/Sydney:20260524T094000
 SUMMARY:Lane Cove Gold 6 vs Wakehurst Wallabies 6 | RND 4
@@ -93,16 +90,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Wakehurst Wallabies 6\n📍 Beauchamp
  Park TT1\, Chatswood\n📅 Round 4 · Sun\, 24 May · 8:40am AEST\n🏆 SJ
  RU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
  lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
- dar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/no
- rth-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ dar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#l
+ ane-cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-86933b3e18f2cb807-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-86933b3e18f2cb807-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T084000
 DTEND;TZID=Australia/Sydney:20260531T094000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Black 6 | RND 5
@@ -111,34 +107,32 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Black 6\n📍 Tantallon Oval
   TT3\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 8:40am AEST\n🏆 
  SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This 
  calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ endar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/
+ #lane-cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e43cd72e0dd9e092b-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-e43cd72e0dd9e092b-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260614T080000
 DTEND;TZID=Australia/Sydney:20260614T090000
 SUMMARY:Lane Cove Gold 6 vs Wakehurst Wombats 6 | RND 6
-LOCATION:Hassall Park TT2\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 Lane Cove Gold 6 vs Wakehurst Wombats 6\n📍 Hassall Park
-  TT2\, St Ives\n📅 Round 6 · Sun\, 14 June · 8:00am AEST\n🏆 SJRU Mi
- nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
- r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+LOCATION:Tantallon Oval TT2\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 Lane Cove Gold 6 vs Wakehurst Wombats 6\n📍 Tantallon Ov
+ al TT2\, Lane Cove North\n📅 Round 6 · Sun\, 14 June · 8:00am AEST\n
+ 🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
+ This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel
+ .app/#lane-cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-01dbc924b7cb1034f-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-01dbc924b7cb1034f-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T084000
 DTEND;TZID=Australia/Sydney:20260726T094000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Gold 6 | RND 8
@@ -147,16 +141,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Gold 6\n📍 Tunks Park TT1\
  , Cammeray\n📅 Round 8 · Sun\, 26 July · 8:40am AEST\n🏆 SJRU Minis 
  U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar up
  dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
- o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
- -sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ o 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-cove-
+ u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-02e0465816c752f27-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-02e0465816c752f27-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260802T080000
 DTEND;TZID=Australia/Sydney:20260802T090000
 SUMMARY:Lane Cove Gold 6 vs Killara-West Pymble Gold 6 | RND 9
@@ -165,16 +158,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Killara-West Pymble Gold 6\n📍 Mark
  Taylor Oval TT2\, Waitara\n📅 Round 9 · Sun\, 2 Aug · 8:00am AEST\n
  🏆 SJRU Minis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel
+ .app/#lane-cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-0373d86199412e24d-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-0373d86199412e24d-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260809T080000
 DTEND;TZID=Australia/Sydney:20260809T090000
 SUMMARY:Lane Cove Gold 6 vs Forest 6 | RND 10
@@ -183,16 +175,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Forest 6\n📍 Melwood Oval TT1\, Fore
  stville\n📅 Round 10 · Sun\, 9 Aug · 8:00am AEST\n🏆 SJRU Minis U6 T
  ri Time Sunday\n\nℹ️ Venues and times may change. This calendar update
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
-  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
- day-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+  hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-cove-u6-g
+ old
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-fdd9a984d0968bd7a-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-fdd9a984d0968bd7a-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260816T082000
 DTEND;TZID=Australia/Sydney:20260816T092000
 SUMMARY:Lane Cove Gold 6 vs Lane Cove Blue 6 | RND 11
@@ -201,16 +192,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Lane Cove Blue 6\n📍 Hassall Park TT
  1\, St Ives\n📅 Round 11 · Sun\, 16 Aug · 8:20am AEST\n🏆 SJRU Minis
   U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-cove
+ -u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-8090954402474c7a4-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-8090954402474c7a4-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260816T084000
 DTEND;TZID=Australia/Sydney:20260816T094000
 SUMMARY:Lane Cove Gold 6 vs St Ives Yellow 6 | RND 11
@@ -219,16 +209,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs St Ives Yellow 6\n📍 Hassall Park TT
  1\, St Ives\n📅 Round 11 · Sun\, 16 Aug · 8:40am AEST\n🏆 SJRU Minis
   U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-cove
+ -u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-9ee4a3696ff3167bb-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-9ee4a3696ff3167bb-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260823T084000
 DTEND;TZID=Australia/Sydney:20260823T094000
 SUMMARY:Lane Cove Gold 6 vs Lane Cove Blue 6 | RND 12
@@ -237,16 +226,15 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Lane Cove Blue 6\n📍 Lofberg Oval TT
  4\, West Pymble\n📅 Round 12 · Sun\, 23 Aug · 8:40am AEST\n🏆 SJRU M
  inis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calend
  ar updates automatically\n(Apple Calendar: ~every hour · Google Calendar:
-  up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-
- shore-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+  up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-
+ cove-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-4988e373ec6a1adb3-lane-cove-u6-gold@denishoctor.github.io
+UID:nsm-sunday-4988e373ec6a1adb3-lane-cove-u6-gold@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260830T080000
 DTEND;TZID=Australia/Sydney:20260830T090000
 SUMMARY:Lane Cove Gold 6 vs Chatswood Green 6 | RND 13
@@ -255,9 +243,8 @@ DESCRIPTION:🏉 Lane Cove Gold 6 vs Chatswood Green 6\n📍 Hassall Park T
  T5\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 8:00am AEST\n🏆 SJRU Mini
  s U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#lane-cove-u6-gold
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lane-c
- ove-u6-gold
+  to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lane-cov
+ e-u6-gold
+URL:https://nssm-rugby.vercel.app/#lane-cove-u6-gold
 END:VEVENT
 END:VCALENDAR

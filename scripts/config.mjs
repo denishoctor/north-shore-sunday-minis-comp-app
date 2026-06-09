@@ -213,3 +213,58 @@ export const SITE = {
   themeColor:  '#0a2059',
   crestUrl:    'assets/sunday-minis-logo-w-bg.png',
 };
+
+// ── Match overrides ────────────────────────────────────────────────────────
+// Manual corrections layered on top of the live Rugby Xplorer feed. Xplorer is
+// the source of truth for almost everything, but occasionally a venue or time
+// is wrong or stale — most often when SJRU moves a host ground after the draw
+// is published and never updates Xplorer. Each entry is keyed by the Xplorer
+// match `id` (stable across fetches) and overrides only the fields it lists
+// (`venue` and/or `dateTime`, dateTime in ISO 8601 / UTC).
+//
+// The `round`, `home`, and `away` fields are documentation *and* a safety
+// guard: applyOverrides() (scripts/fetch-fixtures.mjs) only applies an entry
+// when the live match for that id still has the expected teams, otherwise it
+// logs a warning and skips it — so a recycled id can't silently mislabel a
+// different game. Overrides run before the rounds summary, ICS feeds, and
+// change-diff are built, so every downstream artifact (fixtures.json,
+// config.js, *.ics) reflects the corrected value.
+//
+// When an override is no longer needed (the round has passed, or Xplorer has
+// been corrected upstream), delete the entry.
+export const MATCH_OVERRIDES = {
+  // Round 6 (Sun 2026-06-14) — SJRU moved the U6/U7 host from Hassall Park
+  // (8 fields) to Tantallon Oval (4 fields, TT1–TT4) after the draw was
+  // published; Rugby Xplorer still lists Hassall. With only 4 pitches the
+  // draw was re-gridded across staggered kick-offs (U6 8:00 & 8:40, U7 9:20,
+  // 10:00 & 10:40 AEST). Matchups are unchanged from Xplorer — only venue,
+  // pitch and kick-off time move. Source: SJRU draw circulated to clubs,
+  // applied 2026-06-09. Remove after Round 6.
+
+  // 8:00am U6 (22:00 UTC Sat)
+  'd28155df222e4db27': { round: 'Round 6', home: 'Forest 6',                away: 'Wakehurst Wallabies 6',     venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-13T22:00:00Z' },
+  'e43cd72e0dd9e092b': { round: 'Round 6', home: 'Wakehurst Wombats 6',     away: 'Lane Cove Gold 6',          venue: 'Tantallon Oval TT2 (U6/U7)', dateTime: '2026-06-13T22:00:00Z' },
+  'e12b40381944afc87': { round: 'Round 6', home: 'Norths Pirates Red 6',    away: 'Lane Cove Blue 6',          venue: 'Tantallon Oval TT3 (U6/U7)', dateTime: '2026-06-13T22:00:00Z' },
+  'b439cf2ec74fafdf5': { round: 'Round 6', home: 'Norths Pirates Black 6',  away: 'Killara-West Pymble Gold 6', venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-13T22:00:00Z' },
+
+  // 8:40am U6 (22:40 UTC Sat)
+  'abe210ffee261eb19': { round: 'Round 6', home: 'Norths Pirates Gold 6',   away: 'Killara-West Pymble Blue 6', venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-13T22:40:00Z' },
+  'c7e84830b10300c39': { round: 'Round 6', home: 'Norths Pirates White 6',  away: 'St Ives Yellow 6',          venue: 'Tantallon Oval TT2 (U6/U7)', dateTime: '2026-06-13T22:40:00Z' },
+  '426b7a7f9219467e0': { round: 'Round 6', home: 'Chatswood Gold 6',        away: 'St Ives Blue 6',            venue: 'Tantallon Oval TT3 (U6/U7)', dateTime: '2026-06-13T22:40:00Z' },
+  '1acf300dcaeaafd2a': { round: 'Round 6', home: 'Chatswood Green 6',       away: 'Chatswood Black 6',         venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-13T22:40:00Z' },
+
+  // 9:20am U7 (23:20 UTC Sat)
+  '2ff3672ec69cdf61e': { round: 'Round 6', home: 'St Ives Yellow 7',        away: 'Killara-West Pymble Blue 7', venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-13T23:20:00Z' },
+  '82fca6f7fb47ef3af': { round: 'Round 6', home: 'Lane Cove Blue 7',        away: 'Hornsby 7',                 venue: 'Tantallon Oval TT2 (U6/U7)', dateTime: '2026-06-13T23:20:00Z' },
+  'a292912e72dd99fec': { round: 'Round 6', home: 'Lane Cove Gold 7',        away: 'St Ives Blue 7',            venue: 'Tantallon Oval TT3 (U6/U7)', dateTime: '2026-06-13T23:20:00Z' },
+  'c983ccac6e99b144d': { round: 'Round 6', home: 'Lindfield 7',             away: 'Forest Black 7',            venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-13T23:20:00Z' },
+
+  // 10:00am U7 (00:00 UTC Sun)
+  'f11272bbb3071544b': { round: 'Round 6', home: 'Wakehurst Wildcats 7',    away: 'Forest Green 7',            venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-14T00:00:00Z' },
+  'b76a9883894dd80b9': { round: 'Round 6', home: 'Wakehurst Wasps 7',       away: 'Chatswood Green 7',         venue: 'Tantallon Oval TT2 (U6/U7)', dateTime: '2026-06-14T00:00:00Z' },
+  'e5cb3c183d4465bf7': { round: 'Round 6', home: 'Wakehurst Warthogs 7',    away: 'Chatswood Gold 7',          venue: 'Tantallon Oval TT3 (U6/U7)', dateTime: '2026-06-14T00:00:00Z' },
+  '941ad20b8c3e98b92': { round: 'Round 6', home: 'Norths Pirates Red 7',    away: 'Norths Pirates White 7',    venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-14T00:00:00Z' },
+
+  // 10:40am U7 (00:40 UTC Sun)
+  '86fa2a08f3f9eaafb': { round: 'Round 6', home: 'Norths Pirates Black 7',  away: 'Norths Pirates Gold 7',     venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-14T00:40:00Z' },
+};

@@ -27,10 +27,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-495401a195a6ea4e6-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-495401a195a6ea4e6-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:St Ives Blue 7 vs Wakehurst Wasps 7 | RND 1
@@ -39,16 +39,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Wakehurst Wasps 7\n📍 Tryon Oval TT8\,
   East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:40am AEST\n🏆 SJRU Min
  is U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar
   updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
- p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
- ore-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ p to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives
+ -u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-bf4d4323b8b9b2c16-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-bf4d4323b8b9b2c16-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:St Ives Blue 7 vs Norths Pirates White 7 | RND 2
@@ -57,16 +56,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Norths Pirates White 7\n📍 Tunks Park
  TT3\, Cammeray\n📅 Round 2 · Sun\, 10 May · 9:20am AEST\n🏆 SJRU Min
  is U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar
   updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
- p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
- ore-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ p to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives
+ -u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-8e85d9bd670e66752-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-8e85d9bd670e66752-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260517T100000
 DTEND;TZID=Australia/Sydney:20260517T110000
 SUMMARY:St Ives Blue 7 vs Norths Pirates Black 7 | RND 3
@@ -75,16 +73,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Norths Pirates Black 7\n📍 Wakehurst R
  ugby Park TT4\, Belrose\n📅 Round 3 · Sun\, 17 May · 10:00am AEST\n
  🏆 SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. 
  This calendar updates automatically\n(Apple Calendar: ~every hour · Googl
- e Calendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.githu
- b.io/north-shore-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ e Calendar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel
+ .app/#st-ives-u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-baeec0dfddd522409-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-baeec0dfddd522409-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260524T100000
 DTEND;TZID=Australia/Sydney:20260524T110000
 SUMMARY:St Ives Blue 7 vs Hornsby 7 | RND 4
@@ -93,16 +90,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Hornsby 7\n📍 Beauchamp Park TT1\, Cha
  tswood\n📅 Round 4 · Sun\, 24 May · 10:00am AEST\n🏆 SJRU Minis U7 T
  ri Time Sunday\n\nℹ️ Venues and times may change. This calendar update
  s automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24
-  hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sun
- day-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+  hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-u7-blu
+ e
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-09c11f1d1430642b0-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-09c11f1d1430642b0-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T092000
 DTEND;TZID=Australia/Sydney:20260531T102000
 SUMMARY:St Ives Blue 7 vs Norths Pirates Red 7 | RND 5
@@ -111,34 +107,32 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Norths Pirates Red 7\n📍 Tantallon Ova
  l TT2\, Lane Cove North\n📅 Round 5 · Sun\, 31 May · 9:20am AEST\n🏆
   SJRU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This
   calendar updates automatically\n(Apple Calendar: ~every hour · Google Ca
- lendar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io
- /north-shore-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ lendar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app
+ /#st-ives-u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-a292912e72dd99fec-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-a292912e72dd99fec-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
-DTSTART;TZID=Australia/Sydney:20260614T084000
-DTEND;TZID=Australia/Sydney:20260614T094000
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
+DTSTART;TZID=Australia/Sydney:20260614T092000
+DTEND;TZID=Australia/Sydney:20260614T102000
 SUMMARY:St Ives Blue 7 vs Lane Cove Gold 7 | RND 6
-LOCATION:Hassall Park TT3\, St Ives\, Sydney NSW
-DESCRIPTION:🏉 St Ives Blue 7 vs Lane Cove Gold 7\n📍 Hassall Park TT3\
- , St Ives\n📅 Round 6 · Sun\, 14 June · 8:40am AEST\n🏆 SJRU Minis U
- 7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar upd
- ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+LOCATION:Tantallon Oval TT3\, Lane Cove North\, Sydney NSW
+DESCRIPTION:🏉 St Ives Blue 7 vs Lane Cove Gold 7\n📍 Tantallon Oval TT
+ 3\, Lane Cove North\n📅 Round 6 · Sun\, 14 June · 9:20am AEST\n🏆 SJ
+ RU Minis U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This ca
+ lendar updates automatically\n(Apple Calendar: ~every hour · Google Calen
+ dar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#s
+ t-ives-u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-9dbc506f7d741ed94-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-9dbc506f7d741ed94-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T100000
 DTEND;TZID=Australia/Sydney:20260726T110000
 SUMMARY:St Ives Blue 7 vs Chatswood Green 7 | RND 8
@@ -147,16 +141,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Chatswood Green 7\n📍 Tunks Park TT4\,
   Cammeray\n📅 Round 8 · Sun\, 26 July · 10:00am AEST\n🏆 SJRU Minis 
  U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar up
  dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
- o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
- -sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ o 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-u7
+ -blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-1c22189da7d05b9a8-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-1c22189da7d05b9a8-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260802T100000
 DTEND;TZID=Australia/Sydney:20260802T110000
 SUMMARY:St Ives Blue 7 vs Lane Cove Blue 7 | RND 9
@@ -165,16 +158,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Lane Cove Blue 7\n📍 Mark Taylor Oval
  TT4\, Waitara\n📅 Round 9 · Sun\, 2 Aug · 10:00am AEST\n🏆 SJRU Mini
  s U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+  to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-
+ u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6f964e4ac5e7c7421-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-6f964e4ac5e7c7421-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260809T092000
 DTEND;TZID=Australia/Sydney:20260809T102000
 SUMMARY:St Ives Blue 7 vs St Ives Yellow 7 | RND 10
@@ -183,16 +175,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs St Ives Yellow 7\n📍 Melwood Oval TT1\
  , Forestville\n📅 Round 10 · Sun\, 9 Aug · 9:20am AEST\n🏆 SJRU Mini
  s U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+  to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-
+ u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-6ee8954a36319d986-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-6ee8954a36319d986-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260816T100000
 DTEND;TZID=Australia/Sydney:20260816T110000
 SUMMARY:St Ives Blue 7 vs Forest Green 7 | RND 11
@@ -201,16 +192,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Forest Green 7\n📍 Hassall Park TT1\,
  St Ives\n📅 Round 11 · Sun\, 16 Aug · 10:00am AEST\n🏆 SJRU Minis U7
   Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar upda
  tes automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 
- 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-s
- unday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+ 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-u7-b
+ lue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-707a03950484df233-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-707a03950484df233-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260823T104000
 DTEND;TZID=Australia/Sydney:20260823T114000
 SUMMARY:St Ives Blue 7 vs Forest Black 7 | RND 12
@@ -219,16 +209,15 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Forest Black 7\n📍 Lofberg Oval TT1\,
  West Pymble\n📅 Round 12 · Sun\, 23 Aug · 10:40am AEST\n🏆 SJRU Mini
  s U7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+  to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-
+ u7-blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-669a0874ce2c64332-st-ives-u7-blue@denishoctor.github.io
+UID:nsm-sunday-669a0874ce2c64332-st-ives-u7-blue@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260830T084000
 DTEND;TZID=Australia/Sydney:20260830T094000
 SUMMARY:St Ives Blue 7 vs Chatswood Gold 7 | RND 13
@@ -237,9 +226,8 @@ DESCRIPTION:🏉 St Ives Blue 7 vs Chatswood Gold 7\n📍 Hassall Park TT3\
  , St Ives\n📅 Round 13 · Sun\, 30 Aug · 8:40am AEST\n🏆 SJRU Minis U
  7 Tri Time Sunday\n\nℹ️ Venues and times may change. This calendar upd
  ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#st-ives-u7-blue
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#st-ive
- s-u7-blue
+  24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#st-ives-u7-
+ blue
+URL:https://nssm-rugby.vercel.app/#st-ives-u7-blue
 END:VEVENT
 END:VCALENDAR

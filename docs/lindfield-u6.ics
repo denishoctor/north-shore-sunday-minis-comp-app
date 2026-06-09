@@ -27,10 +27,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-038b29d4380cc4d22-lindfield-u6@denishoctor.github.io
+UID:nsm-sunday-038b29d4380cc4d22-lindfield-u6@nssm-rugby.vercel.app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T084000
 DTEND;TZID=Australia/Sydney:20260503T094000
 SUMMARY:Lindfield 6 vs Wakehurst Wallabies 6 | RND 1
@@ -39,9 +39,8 @@ DESCRIPTION:🏉 Lindfield 6 vs Wakehurst Wallabies 6\n📍 Tryon Oval TT3\
  , East Lindfield\n📅 Round 1 · Sun\, 3 May · 8:40am AEST\n🏆 SJRU Mi
  nis U6 Tri Time Sunday\n\nℹ️ Venues and times may change. This calenda
  r updates automatically\n(Apple Calendar: ~every hour · Google Calendar: 
- up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-s
- hore-sunday-minis-comp-app/#lindfield-u6
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#lindfi
+ up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#lindfi
  eld-u6
+URL:https://nssm-rugby.vercel.app/#lindfield-u6
 END:VEVENT
 END:VCALENDAR

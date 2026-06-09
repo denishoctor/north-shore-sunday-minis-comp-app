@@ -27,11 +27,11 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:nsm-sunday-ac64059e051445cc2-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-ac64059e051445cc2-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260503T092000
 DTEND;TZID=Australia/Sydney:20260503T102000
 SUMMARY:Norths Pirates Black 8 vs Hornsby Black 8 | RND 1
@@ -40,17 +40,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Hornsby Black 8\n📍 Tryon Oval
   TT7\, East Lindfield\n📅 Round 1 · Sun\, 3 May · 9:20am AEST\n🏆 SJ
  RU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar up
  dates automatically\n(Apple Calendar: ~every hour · Google Calendar: up t
- o 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore
- -sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ o 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pir
+ ates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-45447566327ae7730-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-45447566327ae7730-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260510T092000
 DTEND;TZID=Australia/Sydney:20260510T102000
 SUMMARY:Norths Pirates Black 8 vs Killara-West Pymble/Lindfield 8 | RND 2
@@ -59,17 +58,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Killara-West Pymble/Lindfield 8\
  n📍 Tunks Park TT4\, Cammeray\n📅 Round 2 · Sun\, 10 May · 9:20am AE
  ST\n🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This 
  calendar updates automatically\n(Apple Calendar: ~every hour · Google Cal
- endar: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/
- north-shore-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ endar: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/
+ #norths-pirates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-44d3b735df662b2c3-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-44d3b735df662b2c3-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260517T084000
 DTEND;TZID=Australia/Sydney:20260517T094000
 SUMMARY:Norths Pirates Black 8 vs Lane Cove Gold 8 | RND 3
@@ -78,17 +76,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Lane Cove Gold 8\n📍 Melwood O
  val TT3\, Forestville\n📅 Round 3 · Sun\, 17 May · 8:40am AEST\n🏆 S
  JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pi
+ rates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-34e751b6e328c9d5d-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-34e751b6e328c9d5d-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260524T080000
 DTEND;TZID=Australia/Sydney:20260524T090000
 SUMMARY:Norths Pirates Black 8 vs Lane Cove Blue 8 | RND 4
@@ -97,17 +94,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Lane Cove Blue 8\n📍 Hassall P
  ark TT2\, St Ives\n📅 Round 4 · Sun\, 24 May · 8:00am AEST\n🏆 SJRU 
  Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar updat
  es automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 2
- 4 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-su
- nday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ 4 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pirate
+ s-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-92480bdfe5d7dad36-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-92480bdfe5d7dad36-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260531T080000
 DTEND;TZID=Australia/Sydney:20260531T090000
 SUMMARY:Norths Pirates Black 8 vs Dee Why 8 | RND 5
@@ -116,17 +112,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Dee Why 8\n📍 Lofberg Oval TT3
  \, West Pymble\n📅 Round 5 · Sun\, 31 May · 8:00am AEST\n🏆 SJRU Min
  is U8 Sunday\n\nℹ️ Venues and times may change. This calendar updates 
  automatically\n(Apple Calendar: ~every hour · Google Calendar: up to 24 h
- rs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-sunda
- y-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ rs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pirates-u
+ 8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-46f6609ab18797987-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-46f6609ab18797987-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260614T100000
 DTEND;TZID=Australia/Sydney:20260614T110000
 SUMMARY:Norths Pirates Black 8 vs St Ives 8 | RND 6
@@ -135,17 +130,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs St Ives 8\n📍 James Morgan Res
  erve TT1\, Cromer\n📅 Round 6 · Sun\, 14 June · 10:00am AEST\n🏆 SJR
  U Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar upd
  ates automatically\n(Apple Calendar: ~every hour · Google Calendar: up to
-  24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shore-
- sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+  24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pira
+ tes-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-df6026b45d4e78711-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-df6026b45d4e78711-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260726T080000
 DTEND;TZID=Australia/Sydney:20260726T090000
 SUMMARY:Norths Pirates Black 8 vs Chatswood Green 8 | RND 8
@@ -154,17 +148,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Chatswood Green 8\n📍 Beaucham
  p Park TT2\, Chatswood\n📅 Round 8 · Sun\, 26 July · 8:00am AEST\n🏆
   SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar
   updates automatically\n(Apple Calendar: ~every hour · Google Calendar: u
- p to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sh
- ore-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ p to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-
+ pirates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-aaf7349956611066f-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-aaf7349956611066f-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260802T084000
 DTEND;TZID=Australia/Sydney:20260802T094000
 SUMMARY:Norths Pirates Black 8 vs Lane Cove Blue 8 | RND 9
@@ -173,17 +166,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Lane Cove Blue 8\n📍 Tantallon
   Oval TT1\, Lane Cove North\n📅 Round 9 · Sun\, 2 Aug · 8:40am AEST\n
  🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#nor
+ ths-pirates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e21fe4260d9ede1e7-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-e21fe4260d9ede1e7-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260809T084000
 DTEND;TZID=Australia/Sydney:20260809T094000
 SUMMARY:Norths Pirates Black 8 vs Hornsby Red 8 | RND 10
@@ -192,17 +184,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Hornsby Red 8\n📍 Wakehurst Ru
  gby Park TT1\, Belrose\n📅 Round 10 · Sun\, 9 Aug · 8:40am AEST\n🏆 
  SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar 
  updates automatically\n(Apple Calendar: ~every hour · Google Calendar: up
-  to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-sho
- re-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+  to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-p
+ irates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-a77fab685a060651a-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-a77fab685a060651a-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260816T084000
 DTEND;TZID=Australia/Sydney:20260816T094000
 SUMMARY:Norths Pirates Black 8 vs Wakehurst Krakens 8 | RND 11
@@ -211,17 +202,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Wakehurst Krakens 8\n📍 Mark T
  aylor Oval TT1\, Waitara\n📅 Round 11 · Sun\, 16 Aug · 8:40am AEST\n
  🏆 SJRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This cale
  ndar updates automatically\n(Apple Calendar: ~every hour · Google Calenda
- r: up to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/nort
- h-shore-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ r: up to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#nor
+ ths-pirates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-e2356fd748457bd93-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-e2356fd748457bd93-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260823T080000
 DTEND;TZID=Australia/Sydney:20260823T090000
 SUMMARY:Norths Pirates Black 8 vs Hornsby Black 8 | RND 12
@@ -230,17 +220,16 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Hornsby Black 8\n📍 Beauchamp
  Park TT4\, Chatswood\n📅 Round 12 · Sun\, 23 Aug · 8:00am AEST\n🏆 S
  JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pi
+ rates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 BEGIN:VEVENT
-UID:nsm-sunday-5fc7198ad4f07ed9a-norths-pirates-u8-black@denishoctor.github
- .io
+UID:nsm-sunday-5fc7198ad4f07ed9a-norths-pirates-u8-black@nssm-rugby.vercel.
+ app
 SEQUENCE:0
-DTSTAMP:20260609T055636Z
-LAST-MODIFIED:20260609T055636Z
+DTSTAMP:20260609T071715Z
+LAST-MODIFIED:20260609T071715Z
 DTSTART;TZID=Australia/Sydney:20260830T092000
 DTEND;TZID=Australia/Sydney:20260830T102000
 SUMMARY:Norths Pirates Black 8 vs Wakehurst Krakens 8 | RND 13
@@ -249,9 +238,8 @@ DESCRIPTION:🏉 Norths Pirates Black 8 vs Wakehurst Krakens 8\n📍 Hassal
  l Park TT2\, St Ives\n📅 Round 13 · Sun\, 30 Aug · 9:20am AEST\n🏆 S
  JRU Minis U8 Sunday\n\nℹ️ Venues and times may change. This calendar u
  pdates automatically\n(Apple Calendar: ~every hour · Google Calendar: up 
- to 24 hrs after a change)\n\n🔗 https://denishoctor.github.io/north-shor
- e-sunday-minis-comp-app/#norths-pirates-u8-black
-URL:https://denishoctor.github.io/north-shore-sunday-minis-comp-app/#norths
- -pirates-u8-black
+ to 24 hrs after a change)\n\n🔗 https://nssm-rugby.vercel.app/#norths-pi
+ rates-u8-black
+URL:https://nssm-rugby.vercel.app/#norths-pirates-u8-black
 END:VEVENT
 END:VCALENDAR

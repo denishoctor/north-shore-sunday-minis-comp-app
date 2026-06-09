@@ -827,7 +827,7 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Hassall Park",
+        "u6u7": "Tantallon Oval",
         "u8u9": "James Morgan Reserve"
       },
       "matches": {
