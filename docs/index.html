@@ -1595,6 +1595,36 @@ function isFiltersOpen() { return lsGet(FILTERS_OPEN_KEY) === 'open'; }
 function setFiltersOpen(open) {
   lsSet(FILTERS_OPEN_KEY, open ? 'open' : 'closed');
   applyFiltersOpen();
+  if (open) {
+    // Seed the current round when the user opens an empty filter set, so the
+    // match list isn't blank — there's always something to look at.
+    if (activeFilterCount() === 0) {
+      const n = currentRoundNumber();
+      if (n != null) toggleRound(n);   // selects round + persists + re-renders
+    }
+    scrollToFilters();
+  }
+}
+// The round in play right now: today's round if it's a match day, else the
+// next upcoming round, else the last one of the season. Mirrors renderHome().
+function currentRoundNumber() {
+  const todaySyd = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+  const dated = (ROUNDS || []).filter(r => r.status !== 'bye' && r.date)
+    .slice().sort((a, b) => a.date.localeCompare(b.date));
+  if (!dated.length) return null;
+  const next = dated.find(r => r.date >= todaySyd) || dated[dated.length - 1];
+  return next ? next.round : null;
+}
+// Bring the just-opened toolbar into view, clearing the sticky header.
+function scrollToFilters() {
+  const bar = document.getElementById('toolbar');
+  if (!bar) return;
+  requestAnimationFrame(() => {
+    const header = document.querySelector('.header');
+    const offset = (header ? header.getBoundingClientRect().height : 0) + 8;
+    const y = bar.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  });
 }
 function applyFiltersOpen() {
   const bar = document.getElementById('toolbar');
