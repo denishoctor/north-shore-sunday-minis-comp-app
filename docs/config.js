@@ -2,7 +2,7 @@
 // Edit scripts/config.mjs and re-run the fetch script.
 window.NSM_SUNDAY_CONFIG = {
   SEASON: "2026",
-  SITE_URL: "https://denishoctor.github.io/north-shore-sunday-minis-comp-app",
+  SITE_URL: "https://nssm.vercel.app",
   SITE: {
     "name": "North Shore Minis Sunday Rugby",
     "shortName": "NSM Sunday",
