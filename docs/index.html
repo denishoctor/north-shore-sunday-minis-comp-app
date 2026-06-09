@@ -769,6 +769,77 @@
      calendar is intentionally empty, so suppress the "no matches" placeholder
      (it implies a team is selected when none is). */
   #home-content:not([hidden]) ~ #calendar:empty::after { content: none; }
+
+  /* VIEW SWITCHER — List ↔ organiser Draw grid (segmented control). */
+  .view-switcher {
+    display: inline-flex; gap: 2px; margin: 14px 0 4px 14px;
+    margin-left: max(14px, env(safe-area-inset-left));
+    background: var(--cream); border: 1.5px solid var(--cream-edge);
+    border-radius: 999px; padding: 3px;
+  }
+  .vs-btn {
+    appearance: none; cursor: pointer; border: none; background: transparent;
+    font-family: inherit; font-size: 12px; font-weight: 700; color: var(--muted);
+    padding: 6px 14px; border-radius: 999px; line-height: 1;
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .vs-btn.active { background: var(--navy); color: #fff; box-shadow: var(--shadow-sm, 0 1px 3px rgba(10,32,89,.18)); }
+
+  /* DRAW GRID — organiser draw sheet: time rows × field columns. */
+  .draw-grid-wrap { margin: 8px 12px 18px;
+    margin-left: max(12px, env(safe-area-inset-left)); margin-right: max(12px, env(safe-area-inset-right)); }
+  .draw-grid-head {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 8px 2px 8px; font-size: 13px;
+  }
+  .draw-grid-head .dg-round {
+    font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px;
+    background: var(--navy); color: var(--gold); padding: 3px 10px; border-radius: 999px;
+  }
+  .draw-grid-head .dg-venue { font-weight: 700; color: var(--navy); text-decoration: none; }
+  .draw-grid-head .dg-venue:hover { text-decoration: underline; }
+  .draw-grid-head .dg-age {
+    font-size: 11px; font-weight: 800; color: var(--ink-on-gold);
+    background: var(--gold); padding: 2px 9px; border-radius: 999px; margin-left: auto;
+  }
+  /* Horizontal scroll wrapper so a 4–8 field grid never breaks the layout on
+     a phone. The header row stays put while scrolling sideways. */
+  .draw-grid-scroll {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--cream-edge); border-radius: 12px; background: #fff;
+  }
+  table.draw-grid { border-collapse: collapse; width: 100%; font-size: 12px; }
+  table.draw-grid th, table.draw-grid td {
+    border: 1px solid var(--rule); padding: 0; vertical-align: stretch;
+  }
+  table.draw-grid thead th {
+    background: #1273c2; color: #fff; font-weight: 800; font-size: 11px;
+    padding: 8px 6px; text-align: center; position: sticky; top: 0;
+    white-space: nowrap;
+  }
+  table.draw-grid thead th.dg-time-h { background: var(--navy); }
+  table.draw-grid th.dg-time {
+    background: #fff; color: var(--maroon); font-weight: 800; font-size: 12px;
+    padding: 8px 10px; text-align: right; white-space: nowrap; position: sticky; left: 0; z-index: 1;
+  }
+  .dg-empty { background: #fcfbf7; }
+  .dg-cell {
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 4px;
+    padding: 7px 8px; min-width: 230px; line-height: 1.2; font-weight: 600; color: var(--ink);
+  }
+  .dg-cell + .dg-cell { border-top: 1px dashed rgba(0,0,0,.12); }
+  .dg-cell .dg-team:first-child { text-align: right; }
+  .dg-cell .dg-v { font-size: 10px; font-weight: 800; color: var(--muted); text-transform: lowercase; }
+  /* Age colour bands — echo the organiser sheet (U6 yellow, U7 green) and
+     extend sensibly for U8/U9. */
+  .dg-cell.age-u6 { background: #fdf3b6; }
+  .dg-cell.age-u7 { background: #c9ecc2; }
+  .dg-cell.age-u8 { background: #c6e0f5; }
+  .dg-cell.age-u9 { background: #e3d4f3; }
+  @media (max-width: 599px) {
+    .dg-cell { min-width: 180px; font-size: 11px; }
+    .view-switcher { margin-top: 10px; }
+  }
   .section-header {
     padding: 14px 20px 6px;
     padding-left: max(20px, env(safe-area-inset-left));
@@ -1280,6 +1351,7 @@ const VENUE_KEY           = `${STORAGE_PREFIX}-venue`;
 const TEAM_ACCORDION_KEY  = `${STORAGE_PREFIX}-team-accordion`;  // 'open' | 'closed'
 const FILTERS_OPEN_KEY    = `${STORAGE_PREFIX}-filters-open`;    // 'open' | 'closed'
 const FILTER_SECTIONS_KEY = `${STORAGE_PREFIX}-filter-sections`; // CSV of hidden section keys
+const VIEW_KEY            = `${STORAGE_PREFIX}-view`;            // 'list' | 'grid'
 const INSTALL_DISMISSED_KEY = `${STORAGE_PREFIX}-install-hint-dismissed`;
 
 let fixturesData = null;
@@ -1294,6 +1366,7 @@ let currentClubs  = [];
 let currentAges   = [];
 let currentRounds = [];            // numbers (1…13)
 let currentVenues = [];            // venue slugs (venueSlug(parseVenue(...).base))
+let currentView   = 'list';        // 'list' | 'grid' (organiser draw) — restored in boot
 
 // ── persistence ──────────────────────────────────────────────────────────────
 function lsGet(key) { try { return localStorage.getItem(key); } catch { return null; } }
@@ -1966,8 +2039,10 @@ function render() {
   if (currentTeams.length !== 1) {
     home.setAttribute('hidden', '');
     home.innerHTML = '';
-    cal.innerHTML = renderFilteredList();
+    cal.innerHTML = renderViewSwitcher() +
+      (currentView === 'grid' ? renderDrawGrid() : renderFilteredList());
     wireMatchCardInteractions(cal);
+    wireViewSwitcher(cal);
     return;
   }
   home.setAttribute('hidden', '');
@@ -2125,17 +2200,31 @@ function isMobileViewport() {
 
 function positionVenueSheetForDesktop(trigger) {
   const { sheet } = venueSheetEls;
-  const rect = trigger.getBoundingClientRect();
-  // Measure after un-hiding so dimensions are real.
-  const sw = sheet.offsetWidth;
-  const sh = sheet.offsetHeight;
   const margin = 12;
-  let left = Math.min(Math.max(margin, rect.left), window.innerWidth - sw - margin);
-  let top = rect.bottom + 8;
-  // Flip above the trigger if there's no room below.
-  if (top + sh > window.innerHeight - margin && rect.top - sh - 8 > margin) {
-    top = rect.top - sh - 8;
+  const rect = trigger.getBoundingClientRect();
+  const vh = window.innerHeight, vw = window.innerWidth;
+  // Start from the design cap, but never taller than the viewport.
+  sheet.style.maxHeight = `${Math.min(640, vh - margin * 2)}px`;
+  const sw = sheet.offsetWidth;
+  let sh = sheet.offsetHeight;
+  const spaceBelow = vh - rect.bottom - 8 - margin;
+  const spaceAbove = rect.top - 8 - margin;
+  let top;
+  if (sh <= spaceBelow) {
+    top = rect.bottom + 8;                       // fits fully below
+  } else if (sh <= spaceAbove) {
+    top = rect.top - sh - 8;                      // fits fully above
+  } else {
+    // Neither side fits the whole sheet — shrink it to the roomier side and
+    // pin within the margins so it can't spill off the top or bottom. The
+    // body scrolls internally.
+    const space = Math.max(spaceBelow, spaceAbove, 220);
+    sheet.style.maxHeight = `${space}px`;
+    sh = sheet.offsetHeight;
+    top = spaceBelow >= spaceAbove ? rect.bottom + 8 : rect.top - sh - 8;
   }
+  top  = Math.max(margin, Math.min(top, vh - sh - margin));
+  const left = Math.min(Math.max(margin, rect.left), vw - sw - margin);
   sheet.style.top = `${top}px`;
   sheet.style.left = `${left}px`;
   sheet.style.right = 'auto';
@@ -2160,6 +2249,7 @@ function openVenueSheet(trigger) {
   els.sheet.style.left = '';
   els.sheet.style.right = '';
   els.sheet.style.bottom = '';
+  els.sheet.style.maxHeight = '';   // drop any desktop height cap from a prior open
   els.sheet.hidden = false;
   els.backdrop.hidden = false;
 
@@ -2237,39 +2327,36 @@ function wireMatchCardInteractions(container) {
   });
 }
 
-// Cross-team filtered list. Renders when no team is selected but at least
-// one of Rnd / Club / Age is active. Groups by competition (age band) +
-// round so the list reads "U7 Sunday · R3 · 18 matches" then the cards.
-function renderFilteredList() {
+// Shared filter predicate — the set of matches passing the active
+// Team/Rnd/Club/Age/Venue filters, chronological. Used by both the list and
+// the draw-grid views so they always agree on what's in scope.
+function filteredMatches() {
   const all = fixturesData?.matches || [];
-  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
-
   const roundSet = new Set(currentRounds);
   const clubSet  = new Set(currentClubs);
   const ageSet   = new Set(currentAges);
   const venueSet = new Set(currentVenues);
   const teamSet  = new Set(currentTeams);
   const passes = (m) => {
-    if (teamSet.size) {
-      if (!teamSet.has(m.home.id) && !teamSet.has(m.away.id)) return false;
-    }
-    if (roundSet.size) {
-      const rn = roundNumber(m.round);
-      if (!roundSet.has(rn)) return false;
-    }
-    if (clubSet.size) {
-      if (!clubSet.has(m.home.clubKey) && !clubSet.has(m.away.clubKey)) return false;
-    }
-    if (ageSet.size) {
-      if (!ageSet.has(m.age)) return false;
-    }
+    if (teamSet.size && !teamSet.has(m.home.id) && !teamSet.has(m.away.id)) return false;
+    if (roundSet.size && !roundSet.has(roundNumber(m.round))) return false;
+    if (clubSet.size && !clubSet.has(m.home.clubKey) && !clubSet.has(m.away.clubKey)) return false;
+    if (ageSet.size && !ageSet.has(m.age)) return false;
     if (venueSet.size) {
       const base = parseVenue(m.venue || '', VENUES || {}).base;
       if (!base || !venueSet.has(venueSlug(base))) return false;
     }
     return true;
   };
-  const matches = all.filter(passes).sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+  return all.filter(passes).sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+}
+
+// Cross-team filtered list. Renders when no team is selected but at least
+// one of Rnd / Club / Age is active. Groups by competition (age band) +
+// round so the list reads "U7 Sunday · R3 · 18 matches" then the cards.
+function renderFilteredList() {
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+  const matches = filteredMatches();
 
   if (!matches.length) {
     return `<div class="welcome">
@@ -2307,6 +2394,93 @@ function renderFilteredList() {
     parts.push(past.map(renderMatch).join(''));
   }
   return parts.join('');
+}
+
+// ── view switcher (List ↔ organiser Draw grid) ───────────────────────────────
+function renderViewSwitcher() {
+  const opt = (v, ico, label) =>
+    `<button class="vs-btn ${currentView === v ? 'active' : ''}" type="button" data-view="${v}" aria-pressed="${currentView === v}">
+       <span aria-hidden="true">${ico}</span> ${label}</button>`;
+  return `<div class="view-switcher" role="group" aria-label="View mode">
+    ${opt('list', '📋', 'List')}${opt('grid', '🗓️', 'Draw grid')}
+  </div>`;
+}
+function wireViewSwitcher(container) {
+  container.querySelectorAll('.vs-btn').forEach(b =>
+    b.addEventListener('click', () => setView(b.dataset.view)));
+}
+function setView(v) {
+  currentView = v === 'grid' ? 'grid' : 'list';
+  lsSet(VIEW_KEY, currentView === 'grid' ? 'grid' : null);
+  render();
+}
+
+// Natural sort so TT2 < TT10 (and "Field 2" < "Field 10").
+function naturalPitchCmp(a, b) {
+  const na = parseInt(String(a).replace(/\D/g, ''), 10);
+  const nb = parseInt(String(b).replace(/\D/g, ''), 10);
+  if (!Number.isNaN(na) && !Number.isNaN(nb) && na !== nb) return na - nb;
+  return String(a).localeCompare(String(b));
+}
+
+// Organiser "draw" view: a time × field grid per (round, venue), mirroring the
+// master draw sheets SJRU hands out. Each cell is the matchup at that pitch +
+// kick-off, colour-banded by age band.
+function renderDrawGrid() {
+  const matches = filteredMatches();
+  if (!matches.length) {
+    return `<div class="welcome"><p class="welcome-sub">No matches match the current filter.
+      The draw grid works best with a single round selected — pick a round above.</p></div>`;
+  }
+  const fieldOf = m => parseVenue(m.venue || '', VENUES || {}).pitch || '—';
+  // Group by round → venue base.
+  const groups = new Map();
+  for (const m of matches) {
+    const rn = roundNumber(m.round);
+    const pv = parseVenue(m.venue || '', VENUES || {});
+    const base = pv.base || pv.display || 'Venue TBC';
+    const key = `${rn}|${base}`;
+    if (!groups.has(key)) groups.set(key, { rn, display: pv.display || base, mapsUrl: pv.mapsUrl, matches: [] });
+    groups.get(key).matches.push(m);
+  }
+  const ordered = [...groups.values()].sort((a, b) => (a.rn - b.rn) || a.display.localeCompare(b.display));
+  return ordered.map(renderOneDrawGrid).join('');
+}
+function renderOneDrawGrid(g) {
+  const fieldOf = m => parseVenue(m.venue || '', VENUES || {}).pitch || '—';
+  const fields = [...new Set(g.matches.map(fieldOf))].sort(naturalPitchCmp);
+  // Distinct kick-off times, ordered chronologically.
+  const timeMin = new Map();
+  for (const m of g.matches) {
+    const t = fmtTime(m.dateTime);
+    if (!timeMin.has(t) || m.dateTime < timeMin.get(t)) timeMin.set(t, m.dateTime);
+  }
+  const times = [...timeMin.keys()].sort((a, b) => new Date(timeMin.get(a)) - new Date(timeMin.get(b)));
+  const ageLabel = [...new Set(g.matches.map(m => m.age))].sort().join(' / ');
+  const cellMatches = (t, f) => g.matches.filter(m => fmtTime(m.dateTime) === t && fieldOf(m) === f);
+
+  const head = `<tr><th class="dg-time-h">Time</th>${fields.map(f => `<th>${esc(f)}</th>`).join('')}</tr>`;
+  const rows = times.map(t => `<tr>
+    <th class="dg-time">${esc(t)}</th>
+    ${fields.map(f => {
+      const ms = cellMatches(t, f);
+      if (!ms.length) return '<td class="dg-empty"></td>';
+      return `<td>${ms.map(m => `<div class="dg-cell age-${esc(String(m.age).toLowerCase())}">
+        <span class="dg-team">${esc(m.home.name)}</span>
+        <span class="dg-v">v</span>
+        <span class="dg-team">${esc(m.away.name)}</span></div>`).join('')}</td>`;
+    }).join('')}
+  </tr>`).join('');
+
+  const venueLink = g.mapsUrl
+    ? `<a class="dg-venue" href="${esc(g.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(g.display)}</a>`
+    : `<span class="dg-venue">📍 ${esc(g.display)}</span>`;
+  return `<div class="draw-grid-wrap">
+    <div class="draw-grid-head">
+      <span class="dg-round">Round ${esc(g.rn)}</span>${venueLink}<span class="dg-age">${esc(ageLabel)}</span>
+    </div>
+    <div class="draw-grid-scroll"><table class="draw-grid"><thead>${head}</thead><tbody>${rows}</tbody></table></div>
+  </div>`;
 }
 
 function renderMatch(match) {
@@ -2735,6 +2909,8 @@ window.addEventListener('hashchange', applyHashState);
 
   currentVenues = parseCsv(f.venue).sort();
   if (!currentVenues.length) currentVenues = parseCsv(lsGet(VENUE_KEY));
+
+  currentView = lsGet(VIEW_KEY) === 'grid' ? 'grid' : 'list';
 
   buildRoundRow();
   buildClubRow(); syncClubChips();
