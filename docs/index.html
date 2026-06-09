@@ -141,13 +141,11 @@
   .header-nav-link[hidden] { display: none; }
   .header-nav-action { display: inline-flex; align-items: center; }
   .header-nav-action[hidden] { display: none; }
-  /* Let the nav claim leftover header width so the Filters toggle can sit hard
-     left (margin-right:auto) while Clubs / Venues / Share stay right. */
-  .header-nav { flex: 1 1 auto; min-width: 0; }
   /* Filters toggle — primary control, so filled-gold instead of gold-outline.
-     margin-right:auto pushes it to the left edge of the nav group. */
+     On desktop it groups with the other nav links at the right; on mobile the
+     nav becomes a full-width row and margin-right:auto pushes it hard-left
+     (see the ≤600px block). */
   .filters-toggle {
-    margin-right: auto;
     background: var(--gold); color: var(--ink-on-gold);
     border-color: var(--gold-soft); font-weight: 800;
   }
@@ -183,6 +181,7 @@
       margin-left: 0;
       gap: 6px;
     }
+    .filters-toggle { margin-right: auto; }
     .header-nav-link { padding: 5px 10px; font-size: 11px; }
   }
   /* Home button removed: users deselect a team by clicking the active token
@@ -766,6 +765,10 @@
     content: 'No matches found for this team yet.';
     display: block; text-align: center; padding: 40px 28px; color: var(--muted);
   }
+  /* …but not on the home view — when the welcome/round-cards are showing the
+     calendar is intentionally empty, so suppress the "no matches" placeholder
+     (it implies a team is selected when none is). */
+  #home-content:not([hidden]) ~ #calendar:empty::after { content: none; }
   .section-header {
     padding: 14px 20px 6px;
     padding-left: max(20px, env(safe-area-inset-left));
