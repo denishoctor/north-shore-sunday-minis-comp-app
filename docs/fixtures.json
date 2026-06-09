@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-09T09:00:15.364Z",
+  "updated": "2026-06-09T11:12:31.576Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
     "shortName": "NSM Sunday"
   },
-  "totalMatches": 400,
+  "totalMatches": 402,
   "clubs": {
     "lane-cove": {
       "id": 30901,
@@ -5061,6 +5061,35 @@
           }
         },
         {
+          "id": "manual-r6-u7-npred-kwpgold",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-14T00:20:00Z",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "Z7CTp2o6AWcLiY7AP",
+            "name": "Norths Pirates Red 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "e7BqvC4k5RA2b3vN9",
+            "name": "Killara-West Pymble Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
+          }
+        },
+        {
           "id": "86fa2a08f3f9eaafb",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -5087,6 +5116,35 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
             "clubKey": "norths-pirates"
+          }
+        },
+        {
+          "id": "manual-r6-u7-npwhite-kwpgold",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 6",
+          "roundLabel": "Round 6",
+          "dateTime": "2026-06-14T00:40:00Z",
+          "venue": "Tantallon Oval TT4 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": null,
+          "home": {
+            "id": "eXBshKqYwo7kiLhRx",
+            "name": "Norths Pirates White 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "e7BqvC4k5RA2b3vN9",
+            "name": "Killara-West Pymble Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
           }
         },
         {
@@ -12203,7 +12261,7 @@
         "u8u9": "James Morgan Reserve"
       },
       "matches": {
-        "u6u7": 17,
+        "u6u7": 19,
         "u8u9": 16
       }
     },
@@ -17819,6 +17877,35 @@
       }
     },
     {
+      "id": "manual-r6-u7-npred-kwpgold",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:20:00Z",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "Z7CTp2o6AWcLiY7AP",
+        "name": "Norths Pirates Red 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "e7BqvC4k5RA2b3vN9",
+        "name": "Killara-West Pymble Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
+      }
+    },
+    {
       "id": "835447e8a8ceb6fcc",
       "type": "fixture",
       "competition": "SJRU Minis U8 Sunday",
@@ -17961,6 +18048,35 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
         "clubKey": "norths-pirates"
+      }
+    },
+    {
+      "id": "manual-r6-u7-npwhite-kwpgold",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:40:00Z",
+      "venue": "Tantallon Oval TT4 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "eXBshKqYwo7kiLhRx",
+        "name": "Norths Pirates White 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "e7BqvC4k5RA2b3vN9",
+        "name": "Killara-West Pymble Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
       }
     },
     {

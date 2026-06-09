@@ -29,7 +29,7 @@ function writeFileAtomic(path, contents) {
 }
 import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
-  FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES, MATCH_OVERRIDES,
+  FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES, MATCH_OVERRIDES, MATCH_ADDITIONS,
 } from './config.mjs';
 import { ROUNDS } from './rounds.mjs';
 import { parseVenue, slugifyTeam, clubFromCrest } from '../docs/render.mjs';
@@ -214,6 +214,44 @@ export function applyOverrides(matches, overrides = MATCH_OVERRIDES) {
   const missing = Object.keys(overrides).filter(id => !applied.has(id));
   if (missing.length) console.warn(`⚠️  ${missing.length} override(s) had no matching fixture (already passed / id changed?): ${missing.join(', ')}`);
   if (applied.size)   console.log(`✓ Applied ${applied.size} match override(s)`);
+  return matches;
+}
+
+// Inject manual MATCH_ADDITIONS (scripts/config.mjs): real fixtures SJRU runs
+// but Rugby Xplorer doesn't carry (e.g. a 3-way split when a team would
+// otherwise have a bye). Team objects (id / crest / clubKey) are resolved by
+// name from the feed so crests + per-team .ics still work. Idempotent: a spec
+// whose id already exists is skipped, so --from-cache re-runs don't duplicate.
+// Runs before applyOverrides + the sort so the added games slot in correctly.
+export function applyAdditions(matches, additions = MATCH_ADDITIONS) {
+  if (!additions || !additions.length) return matches;
+  const byName = new Map();
+  for (const m of matches) {
+    for (const side of [m.home, m.away]) {
+      if (side?.name && !byName.has(side.name)) byName.set(side.name, side);
+    }
+  }
+  const have = new Set(matches.map(m => m.id));
+  let added = 0;
+  for (const a of additions) {
+    if (have.has(a.id)) continue;
+    const home = byName.get(a.home), away = byName.get(a.away);
+    if (!home || !away) {
+      console.warn(`⚠️  addition ${a.id} skipped — team not in feed: "${!home ? a.home : a.away}"`);
+      continue;
+    }
+    matches.push({
+      id: a.id, type: 'fixture',
+      competition: a.competition, compId: a.compId || null,
+      age: a.age, round: a.round, roundLabel: a.round,
+      dateTime: a.dateTime, venue: a.venue,
+      status: 'Fixture', isLive: false, isBye: false, matchLabel: a.matchLabel || null,
+      home: { id: home.id, name: home.name, score: null, crest: home.crest, clubKey: home.clubKey },
+      away: { id: away.id, name: away.name, score: null, crest: away.crest, clubKey: away.clubKey },
+    });
+    have.add(a.id); added++;
+  }
+  if (added) console.log(`✓ Added ${added} manual match(es)`);
   return matches;
 }
 
@@ -611,6 +649,7 @@ async function main() {
 
   // Layer manual corrections over the feed, then (re-)sort: an override can
   // change a kick-off time, which changes chronological order.
+  applyAdditions(combined);
   applyOverrides(combined);
   combined.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
 

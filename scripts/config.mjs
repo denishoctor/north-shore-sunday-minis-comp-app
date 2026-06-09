@@ -293,3 +293,33 @@ export const MATCH_OVERRIDES = {
   // 10:40am U7 (00:40 UTC Sun)
   '86fa2a08f3f9eaafb': { round: 'Round 6', home: 'Norths Pirates Black 7',  away: 'Norths Pirates Gold 7',     venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-14T00:40:00Z' },
 };
+
+// ── Manual match additions ───────────────────────────────────────────────────
+// Real fixtures SJRU runs but Rugby Xplorer doesn't carry — e.g. a 3-way 20-min
+// split organised on the day when a team would otherwise have a bye. Injected
+// into the feed by applyAdditions() (scripts/fetch-fixtures.mjs); team objects
+// (id / crest / clubKey) are resolved by name from the live feed so crests and
+// per-team .ics feeds work. `id` must be unique + stable (idempotent re-runs).
+// home/away are exact feed team names. dateTime is UTC ISO 8601 (AEST = +10).
+// Delete entries once the round has been played.
+export const MATCH_ADDITIONS = [
+  // Round 6 (Sun 2026-06-14) — KWP Gold 7 had no R6 opponent, so the U7s run a
+  // 3-way 20-minute split on Tantallon TT4 with Norths Pirates Red & White.
+  // The 10:00 NP Red v NP White game already exists in Xplorer
+  // (id 941ad20b8c3e98b92); these two add KWP Gold 7. Source: organiser draw,
+  // applied 2026-06-09. Remove after Round 6.
+  {
+    id: 'manual-r6-u7-npred-kwpgold',
+    round: 'Round 6', age: 'U7',
+    competition: 'SJRU Minis U7 Tri Time Sunday', compId: 'TvJJeqzzeGJYzMJpw',
+    venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-14T00:20:00Z', // 10:20am AEST
+    home: 'Norths Pirates Red 7', away: 'Killara-West Pymble Gold 7',
+  },
+  {
+    id: 'manual-r6-u7-npwhite-kwpgold',
+    round: 'Round 6', age: 'U7',
+    competition: 'SJRU Minis U7 Tri Time Sunday', compId: 'TvJJeqzzeGJYzMJpw',
+    venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-14T00:40:00Z', // 10:40am AEST
+    home: 'Norths Pirates White 7', away: 'Killara-West Pymble Gold 7',
+  },
+];
