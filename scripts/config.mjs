@@ -7,7 +7,7 @@
 // fetch script and test files; the browser loads the generated docs/config.js.
 
 export const SEASON   = '2026';
-export const SITE_URL = 'https://nssm.vercel.app';
+export const SITE_URL = 'https://nssm-rugby.vercel.app';
 
 // The Sunday Minis competitions on Rugby Xplorer that feed this aggregate.
 // Discovered from the LCJRU feed's `compId` / `compName` fields. Update annually

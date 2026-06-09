@@ -5,7 +5,7 @@ A static site (hosted on [Vercel](https://vercel.com)) that mirrors
 but for the **North Shore Minis Sunday Rugby** competition view rather than a
 single club.
 
-- **Site:** https://nssm.vercel.app
+- **Site:** https://nssm-rugby.vercel.app
 - **Live draw:** https://xplorer.rugby/sjru-/fixtures-results
 - **Reference site:** https://northshore-sunday-minis-rugby.edgeone.app/
 - **Upstream template:** [lcjru-fixtures](https://github.com/denishoctor/lcjru-fixtures)
@@ -129,9 +129,10 @@ simple); icons are checked in.
 4. **Land the upstream patch** in `denishoctor/lcjru-fixtures`
    (see [docs-internal/UPSTREAM_PATCH.md](docs-internal/UPSTREAM_PATCH.md)) — this lets the aggregate site
    re-derive from the same fetch shape upstream uses.
-5. **Connect Vercel** — import the repo into Vercel. The project is
-   configured by [`vercel.json`](vercel.json): no build step, static output
-   served from `docs/`. Every push to the production branch auto-deploys.
+5. **Connect Vercel** — import the repo into Vercel. In project settings set
+   **Root Directory = `docs`** and **Framework Preset = Other** (no build
+   command — the site is pre-built static). Every push to the production
+   branch auto-deploys.
 6. **Trigger the workflow once** manually (Actions → Refresh Fixtures →
    Run workflow) so the first `docs/fixtures.json` / `docs/*.ics` / `docs/config.js`
    commit lands.
