@@ -813,7 +813,7 @@ window.NSM_SUNDAY_CONFIG = {
       "status": "published",
       "finalRound": false,
       "hosts": {
-        "u6u7": "Tantallon Oval",
+        "u6u7": "Hassall Park",
         "u8u9": "Lofberg Oval"
       },
       "matches": {

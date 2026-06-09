@@ -233,6 +233,31 @@ export const SITE = {
 // When an override is no longer needed (the round has passed, or Xplorer has
 // been corrected upstream), delete the entry.
 export const MATCH_OVERRIDES = {
+  // Round 5 (Sun 2026-05-31) — SJRU moved the U6/U7 host from Tantallon Oval
+  // to Hassall Park, but Rugby Xplorer still lists Tantallon. Round already
+  // played; we only correct the ground name — pitch numbers and kick-off
+  // times are kept as Xplorer recorded them (TT1–TT4 are valid at Hassall's
+  // 8-field ground). Source: SJRU, applied 2026-06-09.
+  '665a0daeb25dc4d5d': { round: 'Round 5', home: "Killara-West Pymble Blue 6",      away: "Killara-West Pymble Gold 6",        venue: 'Hassall Park TT1 (U6/U7)' },
+  'c08d8993155234f53': { round: 'Round 5', home: "Chatswood Gold 6",                away: "Norths Pirates Gold 6",             venue: 'Hassall Park TT2 (U6/U7)' },
+  'c70b0a2c1971a1f71': { round: 'Round 5', home: "Lane Cove Blue 6",                away: "Wakehurst Wombats 6",               venue: 'Hassall Park TT3 (U6/U7)' },
+  'ddd4bb16e339a8be6': { round: 'Round 5', home: "St Ives Blue 6",                  away: "Forest 6",                          venue: 'Hassall Park TT4 (U6/U7)' },
+  '4a746db728e32befe': { round: 'Round 5', home: "Norths Pirates Black 6",          away: "St Ives Yellow 6",                  venue: 'Hassall Park TT1 (U6/U7)' },
+  '86454c8c13e20711e': { round: 'Round 5', home: "Norths Pirates Red 6",            away: "Wakehurst Wallabies 6",             venue: 'Hassall Park TT2 (U6/U7)' },
+  '86933b3e18f2cb807': { round: 'Round 5', home: "Lane Cove Gold 6",                away: "Chatswood Black 6",                 venue: 'Hassall Park TT3 (U6/U7)' },
+  '87e7654310134191f': { round: 'Round 5', home: "Norths Pirates White 6",          away: "Chatswood Green 6",                 venue: 'Hassall Park TT4 (U6/U7)' },
+  '042cc85ed7137ab67': { round: 'Round 5', home: "Lane Cove Gold 7",                away: "Chatswood Green 7",                 venue: 'Hassall Park TT1 (U6/U7)' },
+  '09c11f1d1430642b0': { round: 'Round 5', home: "Norths Pirates Red 7",            away: "St Ives Blue 7",                    venue: 'Hassall Park TT2 (U6/U7)' },
+  'c6a7f2d5456a92c91': { round: 'Round 5', home: "Forest Green 7",                  away: "Wakehurst Wildcats 7",              venue: 'Hassall Park TT3 (U6/U7)' },
+  '09a706f5a5775be51': { round: 'Round 5', home: "Wakehurst Warthogs 7",            away: "Lane Cove Blue 7",                  venue: 'Hassall Park TT4 (U6/U7)' },
+  '731eb3ad114121567': { round: 'Round 5', home: "Chatswood Gold 7",                away: "Killara-West Pymble Blue 7",        venue: 'Hassall Park TT1 (U6/U7)' },
+  '1b1a6bb9ab725d1d7': { round: 'Round 5', home: "Norths Pirates Black 7",          away: "Forest Black 7",                    venue: 'Hassall Park TT2 (U6/U7)' },
+  '0d8ea7bdc437bae24': { round: 'Round 5', home: "Hornsby 7",                       away: "Lindfield 7",                       venue: 'Hassall Park TT4 (U6/U7)' },
+  '9a27f04891ce42f2b': { round: 'Round 5', home: "Norths Pirates Gold 7",           away: "Wakehurst Wasps 7",                 venue: 'Hassall Park TT3 (U6/U7)' },
+  '9845bb8f9ce29c9c8': { round: 'Round 5', home: "Norths Pirates White 7",          away: "St Ives Yellow 7",                  venue: 'Hassall Park TT1 (U6/U7)' },
+  '31761dbb1b4149253': { round: 'Round 5', home: "Norths Pirates White 7",          away: "Killara-West Pymble Gold 7",        venue: 'Hassall Park TT1 (U6/U7)' },
+  '50cff2dba77df8459': { round: 'Round 5', home: "St Ives Yellow 7",                away: "Killara-West Pymble Gold 7",        venue: 'Hassall Park TT1 (U6/U7)' },
+
   // Round 6 (Sun 2026-06-14) — SJRU moved the U6/U7 host from Hassall Park
   // (8 fields) to Tantallon Oval (4 fields, TT1–TT4) after the draw was
   // published; Rugby Xplorer still lists Hassall. With only 4 pitches the
