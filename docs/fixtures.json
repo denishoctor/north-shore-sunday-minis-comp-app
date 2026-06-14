@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T17:04:54.870Z",
+  "updated": "2026-06-14T19:02:40.088Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -17674,6 +17674,93 @@
       }
     },
     {
+      "id": "a06bc7cc5b0660575",
+      "type": "fixture",
+      "competition": "SJRU Minis U8 Sunday",
+      "compId": "hvxK25gJJt24GLGPp",
+      "age": "U8",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "James Morgan Reserve TT2 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "8-G-23",
+      "home": {
+        "id": "BKWEZ7Kev7a3KvTRd",
+        "name": "Chatswood Gold 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      },
+      "away": {
+        "id": "rxY89HyQFHSSc56D6",
+        "name": "Norths Pirates Red 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      }
+    },
+    {
+      "id": "54ea20cd9f9dcbabb",
+      "type": "fixture",
+      "competition": "SJRU Minis U8 Sunday",
+      "compId": "hvxK25gJJt24GLGPp",
+      "age": "U8",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "James Morgan Reserve TT4 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "8-G-25",
+      "home": {
+        "id": "SgMo5P2wrBkSsiA75",
+        "name": "Chatswood Black 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
+        "clubKey": "chatswood"
+      },
+      "away": {
+        "id": "ohBqYch2RBPg4rKdQ",
+        "name": "Wakehurst Kings 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      }
+    },
+    {
+      "id": "46f6609ab18797987",
+      "type": "fixture",
+      "competition": "SJRU Minis U8 Sunday",
+      "compId": "hvxK25gJJt24GLGPp",
+      "age": "U8",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:00:00Z",
+      "venue": "James Morgan Reserve TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "8-G-22",
+      "home": {
+        "id": "mmBoZi7hZRiEknpBh",
+        "name": "St Ives 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
+        "clubKey": "st-ives"
+      },
+      "away": {
+        "id": "7bGNHP8djsGgvYMZY",
+        "name": "Norths Pirates Black 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      }
+    },
+    {
       "id": "b76a9883894dd80b9",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -17790,93 +17877,6 @@
       }
     },
     {
-      "id": "a06bc7cc5b0660575",
-      "type": "fixture",
-      "competition": "SJRU Minis U8 Sunday",
-      "compId": "hvxK25gJJt24GLGPp",
-      "age": "U8",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-14T00:00:00Z",
-      "venue": "James Morgan Reserve TT2 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "8-G-23",
-      "home": {
-        "id": "BKWEZ7Kev7a3KvTRd",
-        "name": "Chatswood Gold 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      },
-      "away": {
-        "id": "rxY89HyQFHSSc56D6",
-        "name": "Norths Pirates Red 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      }
-    },
-    {
-      "id": "54ea20cd9f9dcbabb",
-      "type": "fixture",
-      "competition": "SJRU Minis U8 Sunday",
-      "compId": "hvxK25gJJt24GLGPp",
-      "age": "U8",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-14T00:00:00Z",
-      "venue": "James Morgan Reserve TT4 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "8-G-25",
-      "home": {
-        "id": "SgMo5P2wrBkSsiA75",
-        "name": "Chatswood Black 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
-        "clubKey": "chatswood"
-      },
-      "away": {
-        "id": "ohBqYch2RBPg4rKdQ",
-        "name": "Wakehurst Kings 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      }
-    },
-    {
-      "id": "46f6609ab18797987",
-      "type": "fixture",
-      "competition": "SJRU Minis U8 Sunday",
-      "compId": "hvxK25gJJt24GLGPp",
-      "age": "U8",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-14T00:00:00Z",
-      "venue": "James Morgan Reserve TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "8-G-22",
-      "home": {
-        "id": "mmBoZi7hZRiEknpBh",
-        "name": "St Ives 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
-        "clubKey": "st-ives"
-      },
-      "away": {
-        "id": "7bGNHP8djsGgvYMZY",
-        "name": "Norths Pirates Black 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      }
-    },
-    {
       "id": "manual-r6-u7-npred-kwpgold",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -17903,35 +17903,6 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
         "clubKey": "kwp"
-      }
-    },
-    {
-      "id": "86fa2a08f3f9eaafb",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 6",
-      "roundLabel": "Round 6",
-      "dateTime": "2026-06-14T00:40:00Z",
-      "venue": "Tantallon Oval TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "Tc3RzjML5PEatcEWC",
-        "name": "Norths Pirates Black 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      },
-      "away": {
-        "id": "c5MgknZYXfnEi8dye",
-        "name": "Norths Pirates Gold 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
       }
     },
     {
@@ -18048,6 +18019,35 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
         "clubKey": "wakehurst"
+      }
+    },
+    {
+      "id": "86fa2a08f3f9eaafb",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 6",
+      "roundLabel": "Round 6",
+      "dateTime": "2026-06-14T00:40:00Z",
+      "venue": "Tantallon Oval TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "Tc3RzjML5PEatcEWC",
+        "name": "Norths Pirates Black 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "c5MgknZYXfnEi8dye",
+        "name": "Norths Pirates Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
       }
     },
     {
@@ -23532,35 +23532,6 @@
       }
     },
     {
-      "id": "3efa2fadbc1faca81",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 13",
-      "roundLabel": "Round 13",
-      "dateTime": "2026-08-29T23:20:00Z",
-      "venue": "Hassall Park TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "YXKtpRcuZY2pcJsvG",
-        "name": "Wakehurst Wildcats 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      },
-      "away": {
-        "id": "oFRNkNkZX8jap2wJw",
-        "name": "Wakehurst Wasps 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      }
-    },
-    {
       "id": "5fc7198ad4f07ed9a",
       "type": "fixture",
       "competition": "SJRU Minis U8 Sunday",
@@ -23584,6 +23555,35 @@
       "away": {
         "id": "LMEwhv9GKtTfiswG2",
         "name": "Wakehurst Krakens 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      }
+    },
+    {
+      "id": "3efa2fadbc1faca81",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 13",
+      "roundLabel": "Round 13",
+      "dateTime": "2026-08-29T23:20:00Z",
+      "venue": "Hassall Park TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "YXKtpRcuZY2pcJsvG",
+        "name": "Wakehurst Wildcats 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      },
+      "away": {
+        "id": "oFRNkNkZX8jap2wJw",
+        "name": "Wakehurst Wasps 7",
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
         "clubKey": "wakehurst"
