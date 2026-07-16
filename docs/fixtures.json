@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T04:46:08.779Z",
+  "updated": "2026-07-16T07:11:57.942Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -23532,35 +23532,6 @@
       }
     },
     {
-      "id": "3efa2fadbc1faca81",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 13",
-      "roundLabel": "Round 13",
-      "dateTime": "2026-08-29T23:20:00Z",
-      "venue": "Hassall Park TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "YXKtpRcuZY2pcJsvG",
-        "name": "Wakehurst Wildcats 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      },
-      "away": {
-        "id": "oFRNkNkZX8jap2wJw",
-        "name": "Wakehurst Wasps 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      }
-    },
-    {
       "id": "5fc7198ad4f07ed9a",
       "type": "fixture",
       "competition": "SJRU Minis U8 Sunday",
@@ -23584,6 +23555,35 @@
       "away": {
         "id": "LMEwhv9GKtTfiswG2",
         "name": "Wakehurst Krakens 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      }
+    },
+    {
+      "id": "3efa2fadbc1faca81",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 13",
+      "roundLabel": "Round 13",
+      "dateTime": "2026-08-29T23:20:00Z",
+      "venue": "Hassall Park TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "YXKtpRcuZY2pcJsvG",
+        "name": "Wakehurst Wildcats 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      },
+      "away": {
+        "id": "oFRNkNkZX8jap2wJw",
+        "name": "Wakehurst Wasps 7",
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
         "clubKey": "wakehurst"
