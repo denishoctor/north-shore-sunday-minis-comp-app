@@ -875,7 +875,7 @@ window.NSM_SUNDAY_CONFIG = {
       },
       "matches": {
         "u6u7": 17,
-        "u8u9": 16
+        "u8u9": 14
       }
     },
     {
