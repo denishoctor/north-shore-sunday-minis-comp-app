@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-23T16:21:00.949Z",
+  "updated": "2026-07-23T18:04:24.691Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
     "shortName": "NSM Sunday"
   },
-  "totalMatches": 400,
+  "totalMatches": 402,
   "clubs": {
     "lane-cove": {
       "id": 30901,
@@ -2445,35 +2445,6 @@
           }
         },
         {
-          "id": "d2424bf66d395d6c9",
-          "type": "fixture",
-          "competition": "SJRU Minis U7 Tri Time Sunday",
-          "compId": "TvJJeqzzeGJYzMJpw",
-          "age": "U7",
-          "round": "Round 8",
-          "roundLabel": "Round 8",
-          "dateTime": "2026-07-26T00:00:00Z",
-          "venue": "Tunks Park TT1 (U6/U7/U8)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "c5MgknZYXfnEi8dye",
-            "name": "Norths Pirates Gold 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-            "clubKey": "norths-pirates"
-          },
-          "away": {
-            "id": "52MoHPFgMFTPppk9H",
-            "name": "Lane Cove Blue 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-            "clubKey": "lane-cove"
-          }
-        },
-        {
           "id": "69f06b910941fdda8",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -2568,7 +2539,7 @@
           "age": "U7",
           "round": "Round 8",
           "roundLabel": "Round 8",
-          "dateTime": "2026-07-26T00:40:00Z",
+          "dateTime": "2026-07-26T00:00:00+00:00",
           "venue": "Tunks Park TT1 (U6/U7/U8)",
           "status": "Fixture",
           "isLive": false,
@@ -2587,6 +2558,93 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
             "clubKey": "forest"
+          }
+        },
+        {
+          "id": "hyKxi8hN5kfJzh77i",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 8",
+          "roundLabel": "Round 8",
+          "dateTime": "2026-07-26T00:40:00+00:00",
+          "venue": "Tunks Park TT1 (U6/U7/U8)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": "Three Way Game",
+          "home": {
+            "id": "e7BqvC4k5RA2b3vN9",
+            "name": "Killara-West Pymble Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
+          },
+          "away": {
+            "id": "52MoHPFgMFTPppk9H",
+            "name": "Lane Cove Blue 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+            "clubKey": "lane-cove"
+          }
+        },
+        {
+          "id": "d2424bf66d395d6c9",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 8",
+          "roundLabel": "Round 8",
+          "dateTime": "2026-07-26T01:00:00+00:00",
+          "venue": "Tunks Park TT1 (U6/U7/U8)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": "Three Way Game",
+          "home": {
+            "id": "c5MgknZYXfnEi8dye",
+            "name": "Norths Pirates Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "52MoHPFgMFTPppk9H",
+            "name": "Lane Cove Blue 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+            "clubKey": "lane-cove"
+          }
+        },
+        {
+          "id": "bzeHevaYAfJG2dFD8",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 8",
+          "roundLabel": "Round 8",
+          "dateTime": "2026-07-26T01:20:00+00:00",
+          "venue": "Tunks Park TT1 (U6/U7/U8)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": "Three Way Game",
+          "home": {
+            "id": "c5MgknZYXfnEi8dye",
+            "name": "Norths Pirates Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+            "clubKey": "norths-pirates"
+          },
+          "away": {
+            "id": "e7BqvC4k5RA2b3vN9",
+            "name": "Killara-West Pymble Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
           }
         },
         {
@@ -12232,7 +12290,7 @@
         "u8u9": "Beauchamp Park"
       },
       "matches": {
-        "u6u7": 17,
+        "u6u7": 19,
         "u8u9": 16
       }
     },
@@ -18921,35 +18979,6 @@
       }
     },
     {
-      "id": "d2424bf66d395d6c9",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 8",
-      "roundLabel": "Round 8",
-      "dateTime": "2026-07-26T00:00:00Z",
-      "venue": "Tunks Park TT1 (U6/U7/U8)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": null,
-      "home": {
-        "id": "c5MgknZYXfnEi8dye",
-        "name": "Norths Pirates Gold 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
-        "clubKey": "norths-pirates"
-      },
-      "away": {
-        "id": "52MoHPFgMFTPppk9H",
-        "name": "Lane Cove Blue 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-        "clubKey": "lane-cove"
-      }
-    },
-    {
       "id": "69f06b910941fdda8",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -19037,6 +19066,35 @@
       }
     },
     {
+      "id": "f8d538e72e4c9611a",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 8",
+      "roundLabel": "Round 8",
+      "dateTime": "2026-07-26T00:00:00+00:00",
+      "venue": "Tunks Park TT1 (U6/U7/U8)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "home": {
+        "id": "8oabGeCSmRTm23tGf",
+        "name": "Forest Green 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
+        "clubKey": "forest"
+      },
+      "away": {
+        "id": "WFbv5u7EoC8LLZEAp",
+        "name": "Forest Black 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
+        "clubKey": "forest"
+      }
+    },
+    {
       "id": "6d8f23d10fa3e7fc5",
       "type": "fixture",
       "competition": "SJRU Minis U9 Sunday",
@@ -19095,32 +19153,32 @@
       }
     },
     {
-      "id": "f8d538e72e4c9611a",
+      "id": "hyKxi8hN5kfJzh77i",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
       "compId": "TvJJeqzzeGJYzMJpw",
       "age": "U7",
       "round": "Round 8",
       "roundLabel": "Round 8",
-      "dateTime": "2026-07-26T00:40:00Z",
+      "dateTime": "2026-07-26T00:40:00+00:00",
       "venue": "Tunks Park TT1 (U6/U7/U8)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
-      "matchLabel": null,
+      "matchLabel": "Three Way Game",
       "home": {
-        "id": "8oabGeCSmRTm23tGf",
-        "name": "Forest Green 7",
+        "id": "e7BqvC4k5RA2b3vN9",
+        "name": "Killara-West Pymble Gold 7",
         "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
-        "clubKey": "forest"
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
       },
       "away": {
-        "id": "WFbv5u7EoC8LLZEAp",
-        "name": "Forest Black 7",
+        "id": "52MoHPFgMFTPppk9H",
+        "name": "Lane Cove Blue 7",
         "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
-        "clubKey": "forest"
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+        "clubKey": "lane-cove"
       }
     },
     {
@@ -19153,6 +19211,35 @@
       }
     },
     {
+      "id": "d2424bf66d395d6c9",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 8",
+      "roundLabel": "Round 8",
+      "dateTime": "2026-07-26T01:00:00+00:00",
+      "venue": "Tunks Park TT1 (U6/U7/U8)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "Three Way Game",
+      "home": {
+        "id": "c5MgknZYXfnEi8dye",
+        "name": "Norths Pirates Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "52MoHPFgMFTPppk9H",
+        "name": "Lane Cove Blue 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+        "clubKey": "lane-cove"
+      }
+    },
+    {
       "id": "aff162a980f04c826",
       "type": "fixture",
       "competition": "SJRU Minis U9 Sunday",
@@ -19179,6 +19266,35 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
         "clubKey": "st-ives"
+      }
+    },
+    {
+      "id": "bzeHevaYAfJG2dFD8",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 8",
+      "roundLabel": "Round 8",
+      "dateTime": "2026-07-26T01:20:00+00:00",
+      "venue": "Tunks Park TT1 (U6/U7/U8)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "Three Way Game",
+      "home": {
+        "id": "c5MgknZYXfnEi8dye",
+        "name": "Norths Pirates Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/50135.png?v=1712803884182",
+        "clubKey": "norths-pirates"
+      },
+      "away": {
+        "id": "e7BqvC4k5RA2b3vN9",
+        "name": "Killara-West Pymble Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
       }
     },
     {

@@ -860,7 +860,7 @@ window.NSM_SUNDAY_CONFIG = {
         "u8u9": "Beauchamp Park"
       },
       "matches": {
-        "u6u7": 17,
+        "u6u7": 19,
         "u8u9": 16
       }
     },
