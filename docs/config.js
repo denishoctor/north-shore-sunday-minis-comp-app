@@ -127,6 +127,8 @@ window.NSM_SUNDAY_CONFIG = {
     }
   },
   TEAM_SLUGS: {
+    "forest-u7-green": "8oabGeCSmRTm23tGf",
+    "forest-u7-black": "WFbv5u7EoC8LLZEAp",
     "kwp-u6-blue": "PkDXPoiwLttEqBXqb",
     "norths-pirates-u6-red": "Si2oBYRTRidL26rZ7",
     "forest-u6": "twwirDZ3nFs3dHpxf",
@@ -141,12 +143,6 @@ window.NSM_SUNDAY_CONFIG = {
     "norths-pirates-u6-gold": "Ku2vor6ak4pXw7FA9",
     "chatswood-u6-black": "CYgNhNBFBQCMPyjFs",
     "wakehurst-u6-wombats": "DHRdoD6R9ceKvaZYE",
-    "forest-u7-green": "8oabGeCSmRTm23tGf",
-    "forest-u7-black": "WFbv5u7EoC8LLZEAp",
-    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
-    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
-    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
-    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
     "norths-pirates-u7-black": "Tc3RzjML5PEatcEWC",
     "hornsby-u7": "Cq53T4h5s3be8S5uH",
     "chatswood-u7-gold": "iBeagYjimSQGosTcw",
@@ -159,6 +155,14 @@ window.NSM_SUNDAY_CONFIG = {
     "wakehurst-u7-wildcats": "YXKtpRcuZY2pcJsvG",
     "wakehurst-u7-wasps": "oFRNkNkZX8jap2wJw",
     "st-ives-u7-blue": "MzNyb9tB2ZxzFzcQE",
+    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
+    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
+    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
+    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
+    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
+    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
+    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
+    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-black": "SgMo5P2wrBkSsiA75",
     "wakehurst-u8-krakens": "LMEwhv9GKtTfiswG2",
     "chatswood-u8-green": "bZ59JmnzFc2gn5og6",
@@ -171,10 +175,6 @@ window.NSM_SUNDAY_CONFIG = {
     "lane-cove-u8-gold": "azWv34qmnBYrN7atm",
     "kwp-u8-lindfield": "K6KJYRD4rKcpPgrdx",
     "lane-cove-u8-blue": "5SyzYzsjmbeaPZsXT",
-    "st-ives-u7-yellow": "wXumK7xeYAM7xkdkD",
-    "lane-cove-u7-blue": "52MoHPFgMFTPppk9H",
-    "chatswood-u7-green": "zuXwJ9BmQHnz36gfH",
-    "lindfield-u7": "7ji49P5fD74pry8Sh",
     "chatswood-u8-gold": "BKWEZ7Kev7a3KvTRd",
     "wakehurst-u8-kings": "ohBqYch2RBPg4rKdQ",
     "chatswood-u9-green": "DbR93yCwTwovLMP8T",
@@ -195,6 +195,18 @@ window.NSM_SUNDAY_CONFIG = {
     "kwp-u7-gold": "e7BqvC4k5RA2b3vN9"
   },
   TEAM_META: {
+    "8oabGeCSmRTm23tGf": {
+      "name": "Forest Green 7",
+      "clubKey": "forest",
+      "age": "U7",
+      "slug": "forest-u7-green"
+    },
+    "WFbv5u7EoC8LLZEAp": {
+      "name": "Forest Black 7",
+      "clubKey": "forest",
+      "age": "U7",
+      "slug": "forest-u7-black"
+    },
     "PkDXPoiwLttEqBXqb": {
       "name": "Killara-West Pymble Blue 6",
       "clubKey": "kwp",
@@ -279,42 +291,6 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U6",
       "slug": "wakehurst-u6-wombats"
     },
-    "8oabGeCSmRTm23tGf": {
-      "name": "Forest Green 7",
-      "clubKey": "forest",
-      "age": "U7",
-      "slug": "forest-u7-green"
-    },
-    "WFbv5u7EoC8LLZEAp": {
-      "name": "Forest Black 7",
-      "clubKey": "forest",
-      "age": "U7",
-      "slug": "forest-u7-black"
-    },
-    "s8nwXDACJDAyqFEKA": {
-      "name": "St Ives Blue 6",
-      "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-blue"
-    },
-    "9xzWKyPJcHTkkfprX": {
-      "name": "St Ives Yellow 6",
-      "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-yellow"
-    },
-    "ymJaTNwY3jux89Ck9": {
-      "name": "Wakehurst Wallabies 6",
-      "clubKey": "wakehurst",
-      "age": "U6",
-      "slug": "wakehurst-u6-wallabies"
-    },
-    "9qtLtsMwDeFQ86H5J": {
-      "name": "Lindfield 6",
-      "clubKey": "lindfield",
-      "age": "U6",
-      "slug": "lindfield-u6"
-    },
     "Tc3RzjML5PEatcEWC": {
       "name": "Norths Pirates Black 7",
       "clubKey": "norths-pirates",
@@ -387,6 +363,54 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U7",
       "slug": "st-ives-u7-blue"
     },
+    "s8nwXDACJDAyqFEKA": {
+      "name": "St Ives Blue 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-blue"
+    },
+    "9xzWKyPJcHTkkfprX": {
+      "name": "St Ives Yellow 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-yellow"
+    },
+    "ymJaTNwY3jux89Ck9": {
+      "name": "Wakehurst Wallabies 6",
+      "clubKey": "wakehurst",
+      "age": "U6",
+      "slug": "wakehurst-u6-wallabies"
+    },
+    "9qtLtsMwDeFQ86H5J": {
+      "name": "Lindfield 6",
+      "clubKey": "lindfield",
+      "age": "U6",
+      "slug": "lindfield-u6"
+    },
+    "wXumK7xeYAM7xkdkD": {
+      "name": "St Ives Yellow 7",
+      "clubKey": "st-ives",
+      "age": "U7",
+      "slug": "st-ives-u7-yellow"
+    },
+    "52MoHPFgMFTPppk9H": {
+      "name": "Lane Cove Blue 7",
+      "clubKey": "lane-cove",
+      "age": "U7",
+      "slug": "lane-cove-u7-blue"
+    },
+    "zuXwJ9BmQHnz36gfH": {
+      "name": "Chatswood Green 7",
+      "clubKey": "chatswood",
+      "age": "U7",
+      "slug": "chatswood-u7-green"
+    },
+    "7ji49P5fD74pry8Sh": {
+      "name": "Lindfield 7",
+      "clubKey": "lindfield",
+      "age": "U7",
+      "slug": "lindfield-u7"
+    },
     "SgMo5P2wrBkSsiA75": {
       "name": "Chatswood Black 8",
       "clubKey": "chatswood",
@@ -458,30 +482,6 @@ window.NSM_SUNDAY_CONFIG = {
       "clubKey": "lane-cove",
       "age": "U8",
       "slug": "lane-cove-u8-blue"
-    },
-    "wXumK7xeYAM7xkdkD": {
-      "name": "St Ives Yellow 7",
-      "clubKey": "st-ives",
-      "age": "U7",
-      "slug": "st-ives-u7-yellow"
-    },
-    "52MoHPFgMFTPppk9H": {
-      "name": "Lane Cove Blue 7",
-      "clubKey": "lane-cove",
-      "age": "U7",
-      "slug": "lane-cove-u7-blue"
-    },
-    "zuXwJ9BmQHnz36gfH": {
-      "name": "Chatswood Green 7",
-      "clubKey": "chatswood",
-      "age": "U7",
-      "slug": "chatswood-u7-green"
-    },
-    "7ji49P5fD74pry8Sh": {
-      "name": "Lindfield 7",
-      "clubKey": "lindfield",
-      "age": "U7",
-      "slug": "lindfield-u7"
     },
     "BKWEZ7Kev7a3KvTRd": {
       "name": "Chatswood Gold 8",
