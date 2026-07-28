@@ -888,8 +888,8 @@ window.NSM_SUNDAY_CONFIG = {
         "u8u9": "Wakehurst Rugby Park"
       },
       "matches": {
-        "u6u7": 19,
-        "u8u9": 16
+        "u6u7": 18,
+        "u8u9": 14
       }
     },
     {
