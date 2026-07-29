@@ -151,11 +151,7 @@ export const VENUES = {
   },
   'Kingsford Oval':                  { suburb: 'Longueville',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Kingsford+Smith+Oval%2C+Longueville+NSW+2066%2C+Australia',
     details: {
-      // NOTE: docs/assets/venues/kingsford-oval.jpg is still to be committed
-      // (Lane Cove supply the shared layout image). Until it lands the venue
-      // sheet just drops the image and shows the text details — see the
-      // onerror in renderVenueDetails (docs/render.mjs).
-      map:     { src: 'assets/venues/kingsford-oval.jpg', caption: 'Pitch layout — M1 across the northern end, TT1/TT2 upper half, TT3/TT4 lower half, M2 across the southern end', asOf: '2026-07' },
+      map:     { src: 'assets/venues/kingsford-oval.jpg', caption: 'Same ground, two layouts — quarter pitches TT1 (NW) / TT2 (NE) / TT3 (SW) / TT4 (SE), or half pitches M1 (north) / M2 (south)', asOf: '2026-07' },
       parking: 'On-street only — Kenneth St (east) and William Edward St (west). Both fill early; allow extra time and expect a short walk in.',
       notes:   'Lane Cove Junior Rugby ground at Longueville (Kingsford Smith Oval). Hosting the relocated U8/U9 Round 9 day. Entry from Kenneth St or William Edward St; Longueville Tennis Club sits on the north-east corner.',
     },

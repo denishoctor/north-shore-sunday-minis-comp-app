@@ -649,7 +649,7 @@ window.NSM_SUNDAY_CONFIG = {
       "details": {
         "map": {
           "src": "assets/venues/kingsford-oval.jpg",
-          "caption": "Pitch layout — M1 across the northern end, TT1/TT2 upper half, TT3/TT4 lower half, M2 across the southern end",
+          "caption": "Same ground, two layouts — quarter pitches TT1 (NW) / TT2 (NE) / TT3 (SW) / TT4 (SE), or half pitches M1 (north) / M2 (south)",
           "asOf": "2026-07"
         },
         "parking": "On-street only — Kenneth St (east) and William Edward St (west). Both fill early; allow extra time and expect a short walk in.",
