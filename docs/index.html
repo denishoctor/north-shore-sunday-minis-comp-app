@@ -1298,6 +1298,9 @@ const INSTALL_DISMISSED_KEY = `${STORAGE_PREFIX}-install-hint-dismissed`;
 
 let fixturesData = null;
 let lineupsData  = null;
+// Raw fixtures.json text as last applied — the change key for revalidateFixtures()
+// so an unchanged payload costs us nothing and never disturbs the DOM.
+let fixturesRaw  = null;
 // All filter axes are multi-select arrays. Team is multi-select too — clicking
 // additional team cards toggles them into the set. When exactly one team is
 // active the render dispatcher falls into the timeline view (with placeholders
@@ -1879,6 +1882,58 @@ function updateHash({ push = false } = {}) {
   const target = want || location.pathname;
   if (push) history.pushState(null, '', target);
   else      history.replaceState(null, '', target);
+}
+
+// Header stamp. If the upstream fetch is more than 4h old the bundled
+// fixtures.json is potentially behind Rugby Xplorer (CI is hourly, so >4h means
+// several missed runs) — surface that to the user as an amber "sync delayed"
+// pill so they don't assume the page is live. Split out of init() so
+// revalidateFixtures() can refresh the timestamp along with the calendar.
+function updateUpdatedStamp() {
+  const stamp = document.getElementById('updated-stamp');
+  if (!stamp) return;
+  if (fixturesData?.updated) {
+    const updatedAt = new Date(fixturesData.updated);
+    const label = updatedAt.toLocaleString('en-AU', {
+      timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
+    }).replace(' am', 'am').replace(' pm', 'pm');
+    const stale = (Date.now() - updatedAt.getTime()) > 4 * 60 * 60 * 1000;
+    stamp.innerHTML = `Updated ${esc(label)}${stale ? ' <span class="stale-tag" title="Last refresh more than 4 hours ago — sync may be delayed">sync delayed</span>' : ''}`;
+  } else {
+    stamp.textContent = 'No fixture data yet — CI will populate on first run.';
+  }
+}
+
+// The service worker serves fixtures.json stale-while-revalidate, so the fetch
+// in init() paints instantly but hands us whatever was cached on the PREVIOUS
+// visit; the fresh copy lands in the cache and never reaches the page. With no
+// polling or refocus refresh in this app, that left it permanently one visit
+// behind — a relocated ground or a re-paired fixture only showed up after the
+// user had opened the site twice.
+//
+// So immediately after first paint, re-fetch past the cache and re-render only
+// if the payload actually changed. The `?t=` is what makes it cache-bypassing:
+// sw.js routes any query-string'd data request straight to the network.
+// Failure is deliberately silent — offline, or a flaky signal at the ground,
+// just keeps the cached data already on screen.
+async function revalidateFixtures() {
+  try {
+    const res = await fetch(`./fixtures.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const text = await res.text();
+    if (text === fixturesRaw) return;          // unchanged — leave the DOM alone
+    const data = JSON.parse(text);
+    if (!data?.matches) return;                // never blank a good render on a bad payload
+    fixturesRaw  = text;
+    fixturesData = data;
+    // Everything downstream of fixturesData. The chip rows and team cards are
+    // driven by config.js TEAM_META (static), so they don't need rebuilding —
+    // only the venue row, the venue pill labels, the stamp and the calendar do.
+    buildVenueRow();
+    syncActiveFilterBar();
+    updateUpdatedStamp();
+    render();
+  } catch { /* keep the cached paint */ }
 }
 
 // Share button is visible whenever there's something share-worthy to encode —
@@ -2785,32 +2840,26 @@ window.addEventListener('hashchange', applyHashState);
   // are nice-to-have (badge + roster modal). Await fixtures first so we can
   // paint the calendar immediately, then hydrate lineups in the background
   // — a slow or 404'd lineups.json must not block first render.
-  const fxRes = await fetch('./fixtures.json').then(r => r.ok ? r.json() : null).catch(() => null);
-  fixturesData = fxRes;
+  // Read as text, not json(), so revalidateFixtures() can diff the raw payload
+  // and skip re-rendering when nothing changed.
+  const fxText = await fetch('./fixtures.json').then(r => r.ok ? r.text() : null).catch(() => null);
+  fixturesRaw  = fxText;
+  try { fixturesData = fxText ? JSON.parse(fxText) : null; } catch { fixturesData = null; }
 
   buildVenueRow();
   buildClubRow(); syncClubChips();
 
-  // Update header stamp. If the upstream fetch is more than 4h old the
-  // bundled fixtures.json is potentially behind Rugby Xplorer (CI is hourly,
-  // so >4h means several missed runs) — surface that to the user as an amber
-  // "sync delayed" pill so they don't assume the page is live.
-  const stamp = document.getElementById('updated-stamp');
-  if (fixturesData?.updated) {
-    const updatedAt = new Date(fixturesData.updated);
-    const label = updatedAt.toLocaleString('en-AU', {
-      timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
-    }).replace(' am', 'am').replace(' pm', 'pm');
-    const stale = (Date.now() - updatedAt.getTime()) > 4 * 60 * 60 * 1000;
-    stamp.innerHTML = `Updated ${esc(label)}${stale ? ' <span class="stale-tag" title="Last refresh more than 4 hours ago — sync may be delayed">sync delayed</span>' : ''}`;
-  } else {
-    stamp.textContent = 'No fixture data yet — CI will populate on first run.';
-  }
+  updateUpdatedStamp();
 
   syncShareButton();
   syncActiveFilterBar();
   buildTeamCards();
   render();
+
+  // First paint is done and came from cache — now go past the cache for the
+  // live copy. Not awaited: startup stays as fast (and as offline-capable) as
+  // it was, and the page only re-renders if the data actually moved.
+  revalidateFixtures();
 
   // Hydrate lineups asynchronously and re-render once they land. The lineup
   // badge + roster modal degrade gracefully when lineupsData is null.

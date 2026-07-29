@@ -72,6 +72,26 @@ async function staleWhileRevalidate(request, cacheName) {
   return cached || network;
 }
 
+// Page-driven cache-bypassing refresh — the `?t=<now>` request that
+// index.html's revalidateFixtures() issues after first paint. Goes straight to
+// the network, then writes the result back under the CANONICAL (query-less)
+// key so the offline copy and the next visit's first paint are current too.
+//
+// That write is load-bearing, not a nicety: staleWhileRevalidate() above kicks
+// off its background refresh without holding the SW alive via waitUntil, so the
+// worker is routinely terminated before that cache.put lands. Left to itself
+// the cached copy can sit unchanged indefinitely — which is what made the app
+// stale in the first place. Storing under the canonical key also means we never
+// accumulate one dead `?t=` entry per refresh.
+async function refreshDataCache(request, url) {
+  const res = await fetch(request);
+  if (res.ok) {
+    const cache = await caches.open(DATA_CACHE);
+    await cache.put(url.origin + url.pathname, res.clone());
+  }
+  return res;
+}
+
 async function networkFirstNavigation(request) {
   const cache = await caches.open(SHELL_CACHE);
   try {
@@ -144,6 +164,14 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (isDataRequest(url)) {
+    // A query string on a data request is the page explicitly asking to skip
+    // the cache (index.html's revalidateFixtures() appends `?t=<now>`).
+    // The plain, un-suffixed request keeps stale-while-revalidate below, so
+    // first paint stays instant and offline still works.
+    if (url.search) {
+      event.respondWith(refreshDataCache(request, url));
+      return;
+    }
     event.respondWith(staleWhileRevalidate(request, DATA_CACHE));
     return;
   }
