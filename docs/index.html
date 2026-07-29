@@ -2714,6 +2714,56 @@ function applyHashState() {
 
 window.addEventListener('hashchange', applyHashState);
 
+// ── live fixture refresh ─────────────────────────────────────────────────────
+// Paint cached data immediately, then revalidate from the network on every
+// launch, every 2 minutes while visible, and after returning from background.
+// Offline/transient failures leave the current cached view untouched.
+const LIVE_REFRESH_MS = 2 * 60 * 1000;
+let lastLiveCheck = 0;
+
+function setUpdatedStamp(data) {
+  const stamp = document.getElementById('updated-stamp');
+  if (!stamp) return;
+  if (!data?.updated) {
+    stamp.textContent = 'No fixture data yet — CI will populate on first run.';
+    return;
+  }
+  const updatedAt = new Date(data.updated);
+  const label = updatedAt.toLocaleString('en-AU', {
+    timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
+  }).replace(' am', 'am').replace(' pm', 'pm');
+  const stale = (Date.now() - updatedAt.getTime()) > 4 * 60 * 60 * 1000;
+  stamp.innerHTML = `Updated ${esc(label)}${stale ? ' <span class="stale-tag" title="Last refresh more than 4 hours ago — sync may be delayed">sync delayed</span>' : ''}`;
+}
+
+async function refreshLiveData() {
+  lastLiveCheck = Date.now();
+  try {
+    const res = await fetch(`./fixtures.json?live=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const fresh = await res.json();
+    if (fixturesData && fresh.updated === fixturesData.updated) return;
+
+    fixturesData = fresh;
+    setUpdatedStamp(fresh);
+    buildVenueRow();
+    buildClubRow(); syncClubChips();
+    buildTeamCards();
+    syncShareButton();
+    syncActiveFilterBar();
+    render();
+  } catch { /* offline or transient — keep showing cached fixtures */ }
+}
+
+setInterval(() => {
+  if (document.visibilityState === 'visible') refreshLiveData();
+}, LIVE_REFRESH_MS);
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && Date.now() - lastLiveCheck > LIVE_REFRESH_MS) {
+    refreshLiveData();
+  }
+});
+
 // ── boot ─────────────────────────────────────────────────────────────────────
 (async function boot() {
   // Restore previous selection. URL hash wins for every axis it specifies;
@@ -2791,26 +2841,19 @@ window.addEventListener('hashchange', applyHashState);
   buildVenueRow();
   buildClubRow(); syncClubChips();
 
-  // Update header stamp. If the upstream fetch is more than 4h old the
-  // bundled fixtures.json is potentially behind Rugby Xplorer (CI is hourly,
-  // so >4h means several missed runs) — surface that to the user as an amber
-  // "sync delayed" pill so they don't assume the page is live.
-  const stamp = document.getElementById('updated-stamp');
-  if (fixturesData?.updated) {
-    const updatedAt = new Date(fixturesData.updated);
-    const label = updatedAt.toLocaleString('en-AU', {
-      timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true,
-    }).replace(' am', 'am').replace(' pm', 'pm');
-    const stale = (Date.now() - updatedAt.getTime()) > 4 * 60 * 60 * 1000;
-    stamp.innerHTML = `Updated ${esc(label)}${stale ? ' <span class="stale-tag" title="Last refresh more than 4 hours ago — sync may be delayed">sync delayed</span>' : ''}`;
-  } else {
-    stamp.textContent = 'No fixture data yet — CI will populate on first run.';
-  }
+  // If the upstream fetch is more than 4h old, surface an amber "sync
+  // delayed" pill so users don't assume the bundled data is current.
+  setUpdatedStamp(fixturesData);
 
   syncShareButton();
   syncActiveFilterBar();
   buildTeamCards();
   render();
+
+  // The first paint above may have come from the service-worker cache. Start a
+  // cache-bypassing revalidation immediately so every browser/PWA launch
+  // reaches the latest deployed draw without requiring a manual refresh.
+  refreshLiveData();
 
   // Hydrate lineups asynchronously and re-render once they land. The lineup
   // badge + roster modal degrade gracefully when lineupsData is null.
