@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T05:34:15.360Z",
+  "updated": "2026-07-29T02:02:48.792Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -8468,7 +8468,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T22:00:00Z",
-          "venue": "Tantallon Oval TT1 (U6/U7)",
+          "venue": "Kingsford Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -8486,6 +8486,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
             "clubKey": "dee-why"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -8497,7 +8501,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T22:00:00Z",
-          "venue": "Tantallon Oval TT2 (U6/U7)",
+          "venue": "Kingsford Oval TT2 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -8515,6 +8519,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
             "clubKey": "chatswood"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -8526,7 +8534,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T22:00:00Z",
-          "venue": "Tantallon Oval TT3 (U6/U7)",
+          "venue": "Kingsford Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -8544,6 +8552,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
             "clubKey": "chatswood"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -8555,7 +8567,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T22:00:00Z",
-          "venue": "Tantallon Oval TT4 (U6/U7)",
+          "venue": "Kingsford Oval TT4 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -8573,10 +8585,14 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
             "clubKey": "chatswood"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
-          "id": "aaf7349956611066f",
+          "id": "manual-r9-u8-lcblue-stives",
           "type": "fixture",
           "competition": "SJRU Minis U8 Sunday",
           "compId": "hvxK25gJJt24GLGPp",
@@ -8584,11 +8600,15 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T22:40:00+00:00",
-          "venue": "Tantallon Oval TT1 (U6/U7)",
+          "venue": "Kingsford Oval TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
-          "matchLabel": "8-G-40",
+          "matchLabel": null,
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
+          },
           "home": {
             "id": "5SyzYzsjmbeaPZsXT",
             "name": "Lane Cove Blue 8",
@@ -8597,40 +8617,44 @@
             "clubKey": "lane-cove"
           },
           "away": {
-            "id": "azWv34qmnBYrN7atm",
-            "name": "Lane Cove Gold 8",
+            "id": "mmBoZi7hZRiEknpBh",
+            "name": "St Ives 8",
             "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-            "clubKey": "lane-cove"
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
+            "clubKey": "st-ives"
           }
         },
         {
-          "id": "c1aef5bf8c9137103",
+          "id": "manual-r9-u8-lcgold-kings",
           "type": "fixture",
           "competition": "SJRU Minis U8 Sunday",
           "compId": "hvxK25gJJt24GLGPp",
           "age": "U8",
           "round": "Round 9",
           "roundLabel": "Round 9",
-          "dateTime": "2026-08-01T22:40:00Z",
-          "venue": "Tantallon Oval TT3 (U6/U7)",
+          "dateTime": "2026-08-01T22:40:00+00:00",
+          "venue": "Kingsford Oval TT3 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
-          "matchLabel": "8-G-42",
+          "matchLabel": null,
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
+          },
           "home": {
+            "id": "azWv34qmnBYrN7atm",
+            "name": "Lane Cove Gold 8",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+            "clubKey": "lane-cove"
+          },
+          "away": {
             "id": "ohBqYch2RBPg4rKdQ",
             "name": "Wakehurst Kings 8",
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
             "clubKey": "wakehurst"
-          },
-          "away": {
-            "id": "mmBoZi7hZRiEknpBh",
-            "name": "St Ives 8",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
-            "clubKey": "st-ives"
           }
         },
         {
@@ -11229,7 +11253,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T23:30:00Z",
-          "venue": "Tantallon Oval M1 (U8/U9)",
+          "venue": "Kingsford Oval M1 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11247,6 +11271,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
             "clubKey": "forest"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11258,7 +11286,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T23:30:00Z",
-          "venue": "Tantallon Oval M2 (U8/U9)",
+          "venue": "Kingsford Oval M2 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11276,6 +11304,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
             "clubKey": "st-ives"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11287,7 +11319,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-01T23:55:00Z",
-          "venue": "Tantallon Oval M1 (U8/U9)",
+          "venue": "Kingsford Oval M1 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11305,6 +11337,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
             "clubKey": "dee-why"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11316,7 +11352,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-02T00:20:00Z",
-          "venue": "Tantallon Oval M1 (U8/U9)",
+          "venue": "Kingsford Oval M1 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11334,6 +11370,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
             "clubKey": "dee-why"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11345,7 +11385,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-02T00:20:00Z",
-          "venue": "Tantallon Oval M2 (U8/U9)",
+          "venue": "Kingsford Oval M2 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11363,6 +11403,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
             "clubKey": "wakehurst"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11374,7 +11418,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-02T01:10:00Z",
-          "venue": "Tantallon Oval M2 (U8/U9)",
+          "venue": "Kingsford Oval M2 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11392,6 +11436,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/48060.png?v=1712741642942",
             "clubKey": "lindfield"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11403,7 +11451,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-02T01:35:00Z",
-          "venue": "Tantallon Oval M1 (U8/U9)",
+          "venue": "Kingsford Oval M1 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11421,6 +11469,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
             "clubKey": "wakehurst"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -11432,7 +11484,7 @@
           "round": "Round 9",
           "roundLabel": "Round 9",
           "dateTime": "2026-08-02T02:00:00+00:00",
-          "venue": "Tantallon Oval M2 (U8/U9)",
+          "venue": "Kingsford Oval M2 (U8/U9)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -11450,6 +11502,10 @@
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
             "clubKey": "chatswood"
+          },
+          "venueChange": {
+            "from": "Tantallon Oval",
+            "note": "Moved from Tantallon Oval"
           }
         },
         {
@@ -12591,7 +12647,7 @@
       "finalRound": false,
       "hosts": {
         "u6u7": "Mark Taylor Oval",
-        "u8u9": "Tantallon Oval"
+        "u8u9": "Kingsford Oval"
       },
       "matches": {
         "u6u7": 19,
@@ -19654,7 +19710,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T22:00:00Z",
-      "venue": "Tantallon Oval TT1 (U6/U7)",
+      "venue": "Kingsford Oval TT1 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -19672,6 +19728,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
         "clubKey": "dee-why"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -19683,7 +19743,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T22:00:00Z",
-      "venue": "Tantallon Oval TT2 (U6/U7)",
+      "venue": "Kingsford Oval TT2 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -19701,6 +19761,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -19712,7 +19776,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T22:00:00Z",
-      "venue": "Tantallon Oval TT3 (U6/U7)",
+      "venue": "Kingsford Oval TT3 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -19730,6 +19794,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -19741,7 +19809,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T22:00:00Z",
-      "venue": "Tantallon Oval TT4 (U6/U7)",
+      "venue": "Kingsford Oval TT4 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -19759,6 +19827,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -19878,64 +19950,6 @@
       }
     },
     {
-      "id": "aaf7349956611066f",
-      "type": "fixture",
-      "competition": "SJRU Minis U8 Sunday",
-      "compId": "hvxK25gJJt24GLGPp",
-      "age": "U8",
-      "round": "Round 9",
-      "roundLabel": "Round 9",
-      "dateTime": "2026-08-01T22:40:00+00:00",
-      "venue": "Tantallon Oval TT1 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "8-G-40",
-      "home": {
-        "id": "5SyzYzsjmbeaPZsXT",
-        "name": "Lane Cove Blue 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-        "clubKey": "lane-cove"
-      },
-      "away": {
-        "id": "azWv34qmnBYrN7atm",
-        "name": "Lane Cove Gold 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
-        "clubKey": "lane-cove"
-      }
-    },
-    {
-      "id": "c1aef5bf8c9137103",
-      "type": "fixture",
-      "competition": "SJRU Minis U8 Sunday",
-      "compId": "hvxK25gJJt24GLGPp",
-      "age": "U8",
-      "round": "Round 9",
-      "roundLabel": "Round 9",
-      "dateTime": "2026-08-01T22:40:00Z",
-      "venue": "Tantallon Oval TT3 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "8-G-42",
-      "home": {
-        "id": "ohBqYch2RBPg4rKdQ",
-        "name": "Wakehurst Kings 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      },
-      "away": {
-        "id": "mmBoZi7hZRiEknpBh",
-        "name": "St Ives 8",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
-        "clubKey": "st-ives"
-      }
-    },
-    {
       "id": "2cc9f819ae717018c",
       "type": "fixture",
       "competition": "SJRU Minis U6 Tri Time Sunday",
@@ -20049,6 +20063,72 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
+      }
+    },
+    {
+      "id": "manual-r9-u8-lcblue-stives",
+      "type": "fixture",
+      "competition": "SJRU Minis U8 Sunday",
+      "compId": "hvxK25gJJt24GLGPp",
+      "age": "U8",
+      "round": "Round 9",
+      "roundLabel": "Round 9",
+      "dateTime": "2026-08-01T22:40:00+00:00",
+      "venue": "Kingsford Oval TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
+      },
+      "home": {
+        "id": "5SyzYzsjmbeaPZsXT",
+        "name": "Lane Cove Blue 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+        "clubKey": "lane-cove"
+      },
+      "away": {
+        "id": "mmBoZi7hZRiEknpBh",
+        "name": "St Ives 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
+        "clubKey": "st-ives"
+      }
+    },
+    {
+      "id": "manual-r9-u8-lcgold-kings",
+      "type": "fixture",
+      "competition": "SJRU Minis U8 Sunday",
+      "compId": "hvxK25gJJt24GLGPp",
+      "age": "U8",
+      "round": "Round 9",
+      "roundLabel": "Round 9",
+      "dateTime": "2026-08-01T22:40:00+00:00",
+      "venue": "Kingsford Oval TT3 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": null,
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
+      },
+      "home": {
+        "id": "azWv34qmnBYrN7atm",
+        "name": "Lane Cove Gold 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30901.png?v=1712622586154",
+        "clubKey": "lane-cove"
+      },
+      "away": {
+        "id": "ohBqYch2RBPg4rKdQ",
+        "name": "Wakehurst Kings 8",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
       }
     },
     {
@@ -20176,7 +20256,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T23:30:00Z",
-      "venue": "Tantallon Oval M1 (U8/U9)",
+      "venue": "Kingsford Oval M1 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20194,6 +20274,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53322.png?v=1712711829740",
         "clubKey": "forest"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20205,7 +20289,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T23:30:00Z",
-      "venue": "Tantallon Oval M2 (U8/U9)",
+      "venue": "Kingsford Oval M2 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20223,6 +20307,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53546.png?v=1712622712123",
         "clubKey": "st-ives"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20234,7 +20322,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-01T23:55:00Z",
-      "venue": "Tantallon Oval M1 (U8/U9)",
+      "venue": "Kingsford Oval M1 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20252,6 +20340,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
         "clubKey": "dee-why"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20379,7 +20471,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-02T00:20:00Z",
-      "venue": "Tantallon Oval M1 (U8/U9)",
+      "venue": "Kingsford Oval M1 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20397,6 +20489,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53286.png?v=1712798529153",
         "clubKey": "dee-why"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20408,7 +20504,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-02T00:20:00Z",
-      "venue": "Tantallon Oval M2 (U8/U9)",
+      "venue": "Kingsford Oval M2 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20426,6 +20522,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
         "clubKey": "wakehurst"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20524,7 +20624,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-02T01:10:00Z",
-      "venue": "Tantallon Oval M2 (U8/U9)",
+      "venue": "Kingsford Oval M2 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20542,6 +20642,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/48060.png?v=1712741642942",
         "clubKey": "lindfield"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20553,7 +20657,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-02T01:35:00Z",
-      "venue": "Tantallon Oval M1 (U8/U9)",
+      "venue": "Kingsford Oval M1 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20571,6 +20675,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
         "clubKey": "wakehurst"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {
@@ -20582,7 +20690,7 @@
       "round": "Round 9",
       "roundLabel": "Round 9",
       "dateTime": "2026-08-02T02:00:00+00:00",
-      "venue": "Tantallon Oval M2 (U8/U9)",
+      "venue": "Kingsford Oval M2 (U8/U9)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
@@ -20600,6 +20708,10 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30878.png?v=1712622597350",
         "clubKey": "chatswood"
+      },
+      "venueChange": {
+        "from": "Tantallon Oval",
+        "note": "Moved from Tantallon Oval"
       }
     },
     {

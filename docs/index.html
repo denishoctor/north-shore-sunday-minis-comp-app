@@ -846,6 +846,20 @@
     padding: 1px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;
   }
 
+  /* Relocation flag — set when a match carries `venueChange` (SJRU moved the
+     ground after Xplorer published the draw). Deliberately the one red thing
+     on the card: a parent scanning the list must not drive to the old ground. */
+  .match-venue .venue-moved {
+    background: #FFEBEE; color: #b71c1c;
+    padding: 1px 6px; border-radius: 4px;
+    font-size: 10px; font-weight: 800;
+    letter-spacing: .5px; text-transform: uppercase;
+  }
+  .match-venue .moved-note {
+    flex-basis: 100%;
+    color: #b71c1c; font-weight: 600; font-size: 11.5px;
+  }
+
   /* In-context venue chip — the loud "open the bottom sheet" affordance.
      Rendered on a fixture card whenever VENUES[base].details exists. Filled
      accent + shadow makes it read as a primary action, one tier louder than
@@ -2358,7 +2372,9 @@ function renderMatch(match) {
       ${venue.display ? `<div class="match-venue">
         <a href="${esc(venue.mapsUrl)}" target="_blank" rel="noopener">📍 ${esc(venue.display)}</a>
         ${venue.pitch ? `<span class="pitch-badge">${esc(venue.pitch)}</span>` : ''}
+        ${match.venueChange ? '<span class="venue-moved">Moved</span>' : ''}
         ${venue.hasDetails ? `<button class="venue-info-chip" type="button" data-venue-base="${esc(venue.base)}" aria-haspopup="dialog" aria-expanded="false" aria-controls="venue-sheet" aria-label="Pitch map and parking for ${esc(venue.display)}"><span class="venue-info-chip-icon" aria-hidden="true">🗺️</span><span class="venue-info-chip-label">Pitch map · Parking</span></button>` : ''}
+        ${match.venueChange ? `<div class="moved-note">⚠ ${esc(match.venueChange.note)}</div>` : ''}
       </div>` : ''}
       ${hasLineup ? renderLineupPanel(match.id) : ''}
     </div>`;

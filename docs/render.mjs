@@ -179,14 +179,20 @@ export function renderVenueDetails(baseName, venues, { assetPrefix = '' } = {}) 
     const asOf = d.map.asOf
       ? new Date(d.map.asOf + '-01').toLocaleDateString('en-AU', { month: 'short', year: 'numeric', timeZone: 'Australia/Sydney' })
       : '';
-    parts.push(
+    // Wrapped + self-removing on error: a venue can be configured with its
+    // layout image before the file itself is committed (a ground added
+    // mid-season), and a broken image icon plus an orphan caption reads worse
+    // than simply showing the text details until the asset lands.
+    const inner = [
       `<a class="venue-map-link" href="${esc(src)}" target="_blank" rel="noopener">` +
-        `<img class="venue-map" src="${esc(src)}" alt="${esc(d.map.caption ?? `${baseName} pitch layout`)}" loading="lazy">` +
-      `</a>`
-    );
+        `<img class="venue-map" src="${esc(src)}" alt="${esc(d.map.caption ?? `${baseName} pitch layout`)}" loading="lazy"` +
+        ` onerror="this.closest('.venue-map-wrap')?.remove()">` +
+      `</a>`,
+    ];
     if (d.map.caption || asOf) {
-      parts.push(`<div class="venue-map-caption">${esc(d.map.caption ?? '')}${d.map.caption && asOf ? ' · ' : ''}${asOf ? `Layout as of ${esc(asOf)}` : ''}</div>`);
+      inner.push(`<div class="venue-map-caption">${esc(d.map.caption ?? '')}${d.map.caption && asOf ? ' · ' : ''}${asOf ? `Layout as of ${esc(asOf)}` : ''}</div>`);
     }
+    parts.push(`<div class="venue-map-wrap">${inner.join('')}</div>`);
   }
   return parts.join('');
 }
