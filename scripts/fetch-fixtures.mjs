@@ -192,26 +192,52 @@ function normaliseTeam(t) {
 //
 // Apply the manual MATCH_OVERRIDES corrections (scripts/config.mjs) over the
 // live feed in place. Keyed by Xplorer match id; only the listed fields
-// (venue / dateTime) are replaced. As a safety guard an override is applied
-// only when the live match for that id still has the expected home/away teams
-// — a recycled id (Xplorer reusing the id for a different game) is logged and
-// skipped rather than mislabelled. Runs before the sort so dateTime changes
-// re-order correctly, and before every downstream artifact is built.
+// (venue / dateTime / remove) are replaced. As a safety guard an override is
+// applied only when the live match for that id still has the expected
+// home/away teams — a recycled id (Xplorer reusing the id for a different
+// game) is logged and skipped rather than mislabelled. `remove: true` drops
+// the fixture entirely (a game SJRU scrapped from the published draw); when an
+// override changes the ground and carries a `note`, the match is tagged
+// `venueChange = { from, note }` so the card and the .ics description flag the
+// relocation. Runs before applyAdditions (so a replacement fixture isn't
+// competing with the game it replaces) and before the sort, so dateTime
+// changes re-order correctly and every downstream artifact sees the result.
 export function applyOverrides(matches, overrides = MATCH_OVERRIDES) {
   if (!overrides) return matches;
   const applied = new Set();
-  for (const m of matches) {
+  // Backwards so `remove: true` entries can splice in place mid-iteration.
+  for (let i = matches.length - 1; i >= 0; i--) {
+    const m = matches[i];
     const ov = overrides[m.id];
     if (!ov) continue;
     if ((ov.home && m.home.name !== ov.home) || (ov.away && m.away.name !== ov.away)) {
       console.warn(`⚠️  override ${m.id} skipped — live match is "${m.home.name} vs ${m.away.name}", expected "${ov.home} vs ${ov.away}"`);
       continue;
     }
-    if (ov.venue != null)    m.venue = ov.venue;
+    if (ov.remove) {
+      matches.splice(i, 1);
+      applied.add(m.id);
+      continue;
+    }
+    if (ov.venue != null) {
+      // Tag the move for the UI before overwriting — `from` is the base ground
+      // name ("Tantallon Oval"), not the pitch-suffixed string, since the pitch
+      // usually survives a relocation and the ground is what parents drive to.
+      const fromBase = parseVenue(m.venue || '', VENUES).base || m.venue;
+      const toBase   = parseVenue(ov.venue, VENUES).base || ov.venue;
+      if (ov.note && fromBase && fromBase !== toBase) {
+        m.venueChange = { from: fromBase, note: ov.note };
+      }
+      m.venue = ov.venue;
+    }
     if (ov.dateTime != null) m.dateTime = ov.dateTime;
     applied.add(m.id);
   }
-  const missing = Object.keys(overrides).filter(id => !applied.has(id));
+  // A `remove` entry that matches nothing is the steady state, not a problem:
+  // once the fixture is gone (or --from-cache rebuilds from output that already
+  // dropped it) there is nothing left to remove. Warning every hourly run would
+  // train us to ignore the warning that matters — a stale venue/time override.
+  const missing = Object.keys(overrides).filter(id => !applied.has(id) && !overrides[id].remove);
   if (missing.length) console.warn(`⚠️  ${missing.length} override(s) had no matching fixture (already passed / id changed?): ${missing.join(', ')}`);
   if (applied.size)   console.log(`✓ Applied ${applied.size} match override(s)`);
   return matches;
@@ -219,10 +245,19 @@ export function applyOverrides(matches, overrides = MATCH_OVERRIDES) {
 
 // Inject manual MATCH_ADDITIONS (scripts/config.mjs): real fixtures SJRU runs
 // but Rugby Xplorer doesn't carry (e.g. a 3-way split when a team would
-// otherwise have a bye). Team objects (id / crest / clubKey) are resolved by
-// name from the feed so crests + per-team .ics still work. Idempotent: a spec
-// whose id already exists is skipped, so --from-cache re-runs don't duplicate.
-// Runs before applyOverrides + the sort so the added games slot in correctly.
+// otherwise have a bye, or a re-pairing after a published game was scrapped).
+// Team objects (id / crest / clubKey) are resolved by name from the feed so
+// crests + per-team .ics still work.
+//
+// Idempotent by REPLACEMENT, not by skip: a spec whose id is already present
+// drops the existing copy first, then re-adds from config. That matters for
+// `--from-cache`, which rebuilds from the previous run's docs/fixtures.json —
+// if we skipped on id-already-present, the rebuild's own prior output would
+// shadow the config and an edited entry (corrected venue, time, opponent)
+// could never land.
+//
+// Runs after applyOverrides so a `remove: true` fixture is already gone, and
+// before the sort so the added games slot into the day in the right order.
 export function applyAdditions(matches, additions = MATCH_ADDITIONS) {
   if (!additions || !additions.length) return matches;
   const byName = new Map();
@@ -231,10 +266,10 @@ export function applyAdditions(matches, additions = MATCH_ADDITIONS) {
       if (side?.name && !byName.has(side.name)) byName.set(side.name, side);
     }
   }
-  const have = new Set(matches.map(m => m.id));
   let added = 0;
   for (const a of additions) {
-    if (have.has(a.id)) continue;
+    const prev = matches.findIndex(m => m.id === a.id);
+    if (prev !== -1) matches.splice(prev, 1);
     const home = byName.get(a.home), away = byName.get(a.away);
     if (!home || !away) {
       console.warn(`⚠️  addition ${a.id} skipped — team not in feed: "${!home ? a.home : a.away}"`);
@@ -246,10 +281,11 @@ export function applyAdditions(matches, additions = MATCH_ADDITIONS) {
       age: a.age, round: a.round, roundLabel: a.round,
       dateTime: a.dateTime, venue: a.venue,
       status: 'Fixture', isLive: false, isBye: false, matchLabel: a.matchLabel || null,
+      ...(a.venueChange ? { venueChange: { ...a.venueChange } } : {}),
       home: { id: home.id, name: home.name, score: null, crest: home.crest, clubKey: home.clubKey },
       away: { id: away.id, name: away.name, score: null, crest: away.crest, clubKey: away.clubKey },
     });
-    have.add(a.id); added++;
+    added++;
   }
   if (added) console.log(`✓ Added ${added} manual match(es)`);
   return matches;
@@ -415,6 +451,9 @@ function buildDescription(match, slug, ownTeam, opponent, loc) {
   return [
     `🏉 ${ownTeam.name} vs ${opponent.name}`,
     `📍 ${loc}`,
+    // Relocated after the draw was published — call it out, since a subscriber
+    // who saw the original event may still have the old ground in mind.
+    ...(match.venueChange ? [`⚠️ ${match.venueChange.note}`] : []),
     `📅 Round ${roundNum} · ${date}${hasTime ? ' · ' + time + ' AEST' : ''}`,
     `🏆 ${match.competition}`,
     '',
@@ -648,9 +687,11 @@ async function main() {
   }
 
   // Layer manual corrections over the feed, then (re-)sort: an override can
-  // change a kick-off time, which changes chronological order.
-  applyAdditions(combined);
+  // change a kick-off time, which changes chronological order. Overrides run
+  // first so a scrapped fixture (`remove: true`) is gone before the addition
+  // that replaces it is injected.
   applyOverrides(combined);
+  applyAdditions(combined);
   combined.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
 
   buildAndWrite(combined, oldData);

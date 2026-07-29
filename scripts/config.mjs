@@ -149,6 +149,13 @@ export const VENUES = {
       map: { src: 'assets/venues/keirle-park.jpg', caption: 'Pitch layout — TT1–TT8 plus MOD1, MOD2', asOf: '2026-03' },
     },
   },
+  'Kingsford Oval':                  { suburb: 'Longueville',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Kingsford+Smith+Oval%2C+Longueville+NSW+2066%2C+Australia',
+    details: {
+      map:     { src: 'assets/venues/kingsford-oval.jpg', caption: 'Same ground, two layouts — quarter pitches TT1 (NW) / TT2 (NE) / TT3 (SW) / TT4 (SE), or half pitches M1 (north) / M2 (south)', asOf: '2026-07' },
+      parking: 'On-street only — Kenneth St (east) and William Edward St (west). Both fill early; allow extra time and expect a short walk in.',
+      notes:   'Lane Cove Junior Rugby ground at Longueville (Kingsford Smith Oval). Hosting the relocated U8/U9 Round 9 day. Entry from Kenneth St or William Edward St; Longueville Tennis Club sits on the north-east corner.',
+    },
+  },
   'Lofberg Oval':                    { suburb: 'West Pymble',     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia',
     details: {
       parking: 'Wheelchair-accessible carpark; additional parking on the corner of Lofberg Rd and Yanko Rd.',
@@ -219,8 +226,16 @@ export const SITE = {
 // the source of truth for almost everything, but occasionally a venue or time
 // is wrong or stale — most often when SJRU moves a host ground after the draw
 // is published and never updates Xplorer. Each entry is keyed by the Xplorer
-// match `id` (stable across fetches) and overrides only the fields it lists
-// (`venue` and/or `dateTime`, dateTime in ISO 8601 / UTC).
+// match `id` (stable across fetches) and overrides only the fields it lists:
+//
+//   venue     corrected venue string, e.g. 'Kingsford Oval TT1 (U6/U7)'
+//   dateTime  corrected kick-off (ISO 8601 / UTC)
+//   note      short parent-facing message ('Moved from Tantallon Oval'). When
+//             set alongside a venue change, applyOverrides() tags the match
+//             `venueChange = { from, note }` so the UI shows a "Moved" badge
+//             and the .ics description carries the warning.
+//   remove    true drops the fixture entirely — for a game SJRU scrapped from
+//             the published draw. Any replacement goes in MATCH_ADDITIONS.
 //
 // The `round`, `home`, and `away` fields are documentation *and* a safety
 // guard: applyOverrides() (scripts/fetch-fixtures.mjs) only applies an entry
@@ -292,6 +307,33 @@ export const MATCH_OVERRIDES = {
 
   // 10:40am U7 (00:40 UTC Sun)
   '86fa2a08f3f9eaafb': { round: 'Round 6', home: 'Norths Pirates Black 7',  away: 'Norths Pirates Gold 7',     venue: 'Tantallon Oval TT1 (U6/U7)', dateTime: '2026-06-14T00:40:00Z' },
+
+  // ── Round 9 (Sun 2026-08-02) — U8/U9 day moves Tantallon Oval → Kingsford
+  // Oval, Longueville (Kingsford Smith Oval). Times and pitches keep the
+  // published Xplorer draw — only the ground name changes, so each match keeps
+  // its TT<n>/M<n> suffix. `note` tags the match `venueChange` so the card and
+  // the calendar feed show the relocation. U6/U7 are at Mark Taylor Oval that
+  // day and are untouched. Source: SJRU/Lane Cove, applied 2026-07-29. Delete
+  // once Rugby Xplorer carries Kingsford Oval itself.
+  '9a536d9731abbd382': { round: 'Round 9', home: 'Wakehurst Krakens 8',           away: 'Dee Why 8',              venue: 'Kingsford Oval TT1 (U6/U7)', note: 'Moved from Tantallon Oval' },
+  'ce5541f5f6b67c978': { round: 'Round 9', home: 'Hornsby Red 8',                 away: 'Chatswood Black 8',      venue: 'Kingsford Oval TT2 (U6/U7)', note: 'Moved from Tantallon Oval' },
+  '57cf0be906750abf7': { round: 'Round 9', home: 'Hornsby Black 8',               away: 'Chatswood Green 8',      venue: 'Kingsford Oval TT3 (U6/U7)', note: 'Moved from Tantallon Oval' },
+  'd21f831b8fe61c36d': { round: 'Round 9', home: 'Killara-West Pymble/Lindfield 8', away: 'Chatswood Gold 8',     venue: 'Kingsford Oval TT4 (U6/U7)', note: 'Moved from Tantallon Oval' },
+  '32c1d9f243ef1e398': { round: 'Round 9', home: 'Lane Cove Gold 9',              away: 'Forest White 9',         venue: 'Kingsford Oval M1 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '49c3a42c9d9ff0cb6': { round: 'Round 9', home: 'Killara-West Pymble Blue 9',    away: 'St Ives 9',              venue: 'Kingsford Oval M2 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  'e1760beac5fd8f6e0': { round: 'Round 9', home: 'Lane Cove Gold 9',              away: 'Dee Why Black 9',        venue: 'Kingsford Oval M1 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '04432abed12a25ce1': { round: 'Round 9', home: 'Forest White 9',                away: 'Dee Why Black 9',        venue: 'Kingsford Oval M1 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '79d6abeee912a659e': { round: 'Round 9', home: 'Forest Green 9',                away: 'Wakehurst Wizards 9',    venue: 'Kingsford Oval M2 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '3730d2d3bf3e7a9ff': { round: 'Round 9', home: 'Lane Cove Blue 9',              away: 'Lindfield 9',            venue: 'Kingsford Oval M2 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '371b4a36ac9741a53': { round: 'Round 9', home: 'Chatswood Gold 9',              away: 'Wakehurst Warriors 9',   venue: 'Kingsford Oval M1 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+  '501afba1ea39a742d': { round: 'Round 9', home: 'Dee Why White 9',               away: 'Chatswood Green 9',      venue: 'Kingsford Oval M2 (U8/U9)',  note: 'Moved from Tantallon Oval' },
+
+  // Round 9 U8 8:40am wave — the Lane Cove derby was scrapped and both games
+  // re-paired across clubs. `remove: true` drops the published fixture from the
+  // app and every .ics; the replacements are in MATCH_ADDITIONS below (they
+  // can't be expressed as overrides, which only correct venue/dateTime).
+  'aaf7349956611066f': { round: 'Round 9', home: 'Lane Cove Blue 8',   away: 'Lane Cove Gold 8', remove: true }, // was 8:40 TT1
+  'c1aef5bf8c9137103': { round: 'Round 9', home: 'Wakehurst Kings 8',  away: 'St Ives 8',        remove: true }, // was 8:40 TT3
 };
 
 // ── Manual match additions ───────────────────────────────────────────────────
@@ -321,5 +363,31 @@ export const MATCH_ADDITIONS = [
     competition: 'SJRU Minis U7 Tri Time Sunday', compId: 'TvJJeqzzeGJYzMJpw',
     venue: 'Tantallon Oval TT4 (U6/U7)', dateTime: '2026-06-14T00:40:00Z', // 10:40am AEST
     home: 'Norths Pirates White 7', away: 'Killara-West Pymble Gold 7',
+  },
+
+  // Round 9 (Sun 2026-08-02) — the U8 8:40am Lane Cove derby was scrapped and
+  // both games re-paired across clubs. The two published fixtures are dropped
+  // via `remove: true` in MATCH_OVERRIDES above; these are the replacements.
+  // Same 8:40 slot and the same TT1/TT3 pitches, at the relocated ground.
+  // `venueChange` tags them as moved so they carry the same "Moved" badge as
+  // the twelve venue-overridden games — parents comparing the app against the
+  // Xplorer draw need to see that this whole day is not at Tantallon.
+  // Source: Lane Cove JRU, applied 2026-07-29. Delete once Xplorer carries the
+  // real re-paired fixtures (drop the two `remove` entries at the same time).
+  {
+    id: 'manual-r9-u8-lcblue-stives',
+    round: 'Round 9', age: 'U8',
+    competition: 'SJRU Minis U8 Sunday', compId: 'hvxK25gJJt24GLGPp',
+    venue: 'Kingsford Oval TT1 (U6/U7)', dateTime: '2026-08-01T22:40:00+00:00', // 8:40am AEST
+    venueChange: { from: 'Tantallon Oval', note: 'Moved from Tantallon Oval' },
+    home: 'Lane Cove Blue 8', away: 'St Ives 8',
+  },
+  {
+    id: 'manual-r9-u8-lcgold-kings',
+    round: 'Round 9', age: 'U8',
+    competition: 'SJRU Minis U8 Sunday', compId: 'hvxK25gJJt24GLGPp',
+    venue: 'Kingsford Oval TT3 (U6/U7)', dateTime: '2026-08-01T22:40:00+00:00', // 8:40am AEST
+    venueChange: { from: 'Tantallon Oval', note: 'Moved from Tantallon Oval' },
+    home: 'Lane Cove Gold 8', away: 'Wakehurst Kings 8',
   },
 ];

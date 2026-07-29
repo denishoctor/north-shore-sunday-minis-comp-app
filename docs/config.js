@@ -643,6 +643,19 @@ window.NSM_SUNDAY_CONFIG = {
         }
       }
     },
+    "Kingsford Oval": {
+      "suburb": "Longueville",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kingsford+Smith+Oval%2C+Longueville+NSW+2066%2C+Australia",
+      "details": {
+        "map": {
+          "src": "assets/venues/kingsford-oval.jpg",
+          "caption": "Same ground, two layouts — quarter pitches TT1 (NW) / TT2 (NE) / TT3 (SW) / TT4 (SE), or half pitches M1 (north) / M2 (south)",
+          "asOf": "2026-07"
+        },
+        "parking": "On-street only — Kenneth St (east) and William Edward St (west). Both fill early; allow extra time and expect a short walk in.",
+        "notes": "Lane Cove Junior Rugby ground at Longueville (Kingsford Smith Oval). Hosting the relocated U8/U9 Round 9 day. Entry from Kenneth St or William Edward St; Longueville Tennis Club sits on the north-east corner."
+      }
+    },
     "Lofberg Oval": {
       "suburb": "West Pymble",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lofberg+Oval+Lofberg+Rd%2C+West+Pymble+NSW+2073%2C+Australia",
@@ -871,7 +884,7 @@ window.NSM_SUNDAY_CONFIG = {
       "finalRound": false,
       "hosts": {
         "u6u7": "Mark Taylor Oval",
-        "u8u9": "Tantallon Oval"
+        "u8u9": "Kingsford Oval"
       },
       "matches": {
         "u6u7": 19,
