@@ -5,9 +5,10 @@
  *   - HTML navigations         → network-first with cache fallback
  *     (so a fresh deploy lands without a manual SHELL_CACHE bump; cache
  *     only wins when the user is offline)
+ *   - same-origin JS modules   → network-first with cache fallback
+ *     (render.mjs / config.js stay in lockstep with fresh HTML)
  *   - other same-origin assets → stale-while-revalidate
- *     (instant render from cache, refreshed in the background — keeps
- *     render.mjs / config.js / manifest / icons updates one reload away)
+ *     (icons / manifest paint instantly and refresh in the background)
  *   - cross-origin CDN images  → network-first with cache fallback
  *
  * Bumping SHELL_CACHE / DATA_CACHE versions still helps when an asset is
@@ -62,6 +63,11 @@ function isDataRequest(url) {
       || url.pathname.endsWith('.ics');
 }
 
+function isShellScript(url) {
+  return url.origin === self.location.origin
+      && (url.pathname.endsWith('.mjs') || url.pathname.endsWith('/config.js'));
+}
+
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cached = await cache.match(request);
@@ -85,6 +91,19 @@ async function networkFirstNavigation(request) {
       status: 503,
       headers: { 'content-type': 'text/html; charset=utf-8' },
     });
+  }
+}
+
+async function networkFirst(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  try {
+    const res = await fetch(request);
+    if (res.ok) cache.put(request, res.clone());
+    return res;
+  } catch (err) {
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    throw err;
   }
 }
 
@@ -132,6 +151,11 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
 
+  // Live fixture refreshes must always reach the network. Returning without
+  // respondWith lets the browser handle the request directly and avoids
+  // accumulating timestamped entries in the service-worker data cache.
+  if (url.origin === self.location.origin && url.searchParams.has('live')) return;
+
   if (url.origin !== self.location.origin) {
     // CDN crests etc. — keep the page resilient when offline.
     event.respondWith(networkFirstCrossOrigin(request));
@@ -145,6 +169,11 @@ self.addEventListener('fetch', (event) => {
 
   if (isDataRequest(url)) {
     event.respondWith(staleWhileRevalidate(request, DATA_CACHE));
+    return;
+  }
+
+  if (isShellScript(url)) {
+    event.respondWith(networkFirst(request, SHELL_CACHE));
     return;
   }
 
