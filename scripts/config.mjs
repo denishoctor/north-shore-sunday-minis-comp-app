@@ -334,6 +334,17 @@ export const MATCH_OVERRIDES = {
   // can't be expressed as overrides, which only correct venue/dateTime).
   'aaf7349956611066f': { round: 'Round 9', home: 'Lane Cove Blue 8',   away: 'Lane Cove Gold 8', remove: true }, // was 8:40 TT1
   'c1aef5bf8c9137103': { round: 'Round 9', home: 'Wakehurst Kings 8',  away: 'St Ives 8',        remove: true }, // was 8:40 TT3
+
+  // Round 10 (Sun 2026-08-09) — U9 Lane Cove Gold v Norths Pirates Black moves
+  // up from the 12:00pm slot to 10:20am. Ground and pitch are unchanged
+  // (Wakehurst Rugby Park M2), so this is a time-only correction and the match
+  // deliberately carries no `note` — nothing has relocated, and a "Moved" badge
+  // would send parents looking for a different ground. The 10:20 M2 slot is
+  // free in the published draw (M2 runs 9:30 / 11:10 / 12:00) and neither side
+  // has another Round 10 game, so nothing else has to shift. SJRU is not
+  // expected to correct this in Rugby Xplorer. Applied 2026-08-06; delete after
+  // Round 10.
+  'bf45e3555d9fb0a71': { round: 'Round 10', home: 'Lane Cove Gold 9', away: 'Norths Pirates Black 9', dateTime: '2026-08-09T00:20:00Z' }, // 10:20am AEST, was 12:00pm
 };
 
 // ── Manual match additions ───────────────────────────────────────────────────
