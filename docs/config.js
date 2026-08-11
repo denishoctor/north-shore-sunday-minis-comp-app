@@ -915,8 +915,8 @@ window.NSM_SUNDAY_CONFIG = {
         "u8u9": "Mark Taylor Oval"
       },
       "matches": {
-        "u6u7": 18,
-        "u8u9": 18
+        "u6u7": 16,
+        "u8u9": 13
       }
     },
     {
