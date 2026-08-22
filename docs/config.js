@@ -143,6 +143,10 @@ window.NSM_SUNDAY_CONFIG = {
     "wakehurst-u6-wombats": "DHRdoD6R9ceKvaZYE",
     "forest-u7-green": "8oabGeCSmRTm23tGf",
     "forest-u7-black": "WFbv5u7EoC8LLZEAp",
+    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
+    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
+    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
+    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
     "norths-pirates-u7-black": "Tc3RzjML5PEatcEWC",
     "hornsby-u7": "Cq53T4h5s3be8S5uH",
     "chatswood-u7-gold": "iBeagYjimSQGosTcw",
@@ -151,10 +155,6 @@ window.NSM_SUNDAY_CONFIG = {
     "wakehurst-u7-warthogs": "wvLWfoHbJ3ma98kbQ",
     "norths-pirates-u7-white": "eXBshKqYwo7kiLhRx",
     "norths-pirates-u7-red": "Z7CTp2o6AWcLiY7AP",
-    "st-ives-u6-blue": "s8nwXDACJDAyqFEKA",
-    "st-ives-u6-yellow": "9xzWKyPJcHTkkfprX",
-    "wakehurst-u6-wallabies": "ymJaTNwY3jux89Ck9",
-    "lindfield-u6": "9qtLtsMwDeFQ86H5J",
     "norths-pirates-u7-gold": "c5MgknZYXfnEi8dye",
     "wakehurst-u7-wildcats": "YXKtpRcuZY2pcJsvG",
     "wakehurst-u7-wasps": "oFRNkNkZX8jap2wJw",
@@ -291,6 +291,30 @@ window.NSM_SUNDAY_CONFIG = {
       "age": "U7",
       "slug": "forest-u7-black"
     },
+    "s8nwXDACJDAyqFEKA": {
+      "name": "St Ives Blue 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-blue"
+    },
+    "9xzWKyPJcHTkkfprX": {
+      "name": "St Ives Yellow 6",
+      "clubKey": "st-ives",
+      "age": "U6",
+      "slug": "st-ives-u6-yellow"
+    },
+    "ymJaTNwY3jux89Ck9": {
+      "name": "Wakehurst Wallabies 6",
+      "clubKey": "wakehurst",
+      "age": "U6",
+      "slug": "wakehurst-u6-wallabies"
+    },
+    "9qtLtsMwDeFQ86H5J": {
+      "name": "Lindfield 6",
+      "clubKey": "lindfield",
+      "age": "U6",
+      "slug": "lindfield-u6"
+    },
     "Tc3RzjML5PEatcEWC": {
       "name": "Norths Pirates Black 7",
       "clubKey": "norths-pirates",
@@ -338,30 +362,6 @@ window.NSM_SUNDAY_CONFIG = {
       "clubKey": "norths-pirates",
       "age": "U7",
       "slug": "norths-pirates-u7-red"
-    },
-    "s8nwXDACJDAyqFEKA": {
-      "name": "St Ives Blue 6",
-      "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-blue"
-    },
-    "9xzWKyPJcHTkkfprX": {
-      "name": "St Ives Yellow 6",
-      "clubKey": "st-ives",
-      "age": "U6",
-      "slug": "st-ives-u6-yellow"
-    },
-    "ymJaTNwY3jux89Ck9": {
-      "name": "Wakehurst Wallabies 6",
-      "clubKey": "wakehurst",
-      "age": "U6",
-      "slug": "wakehurst-u6-wallabies"
-    },
-    "9qtLtsMwDeFQ86H5J": {
-      "name": "Lindfield 6",
-      "clubKey": "lindfield",
-      "age": "U6",
-      "slug": "lindfield-u6"
     },
     "c5MgknZYXfnEi8dye": {
       "name": "Norths Pirates Gold 7",
