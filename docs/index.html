@@ -803,14 +803,15 @@
     background: var(--gold); padding: 2px 9px; border-radius: 999px; margin-left: auto;
   }
   /* Horizontal scroll wrapper so a 4–8 field grid never breaks the layout on
-     a phone. The header row stays put while scrolling sideways. */
+     a phone. The sticky time column (th.dg-time, left:0) stays put during a
+     sideways scroll; the header row (thead th, top:0) sticks on vertical scroll. */
   .draw-grid-scroll {
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     border: 1px solid var(--cream-edge); border-radius: 12px; background: #fff;
   }
   table.draw-grid { border-collapse: collapse; width: 100%; font-size: 12px; }
   table.draw-grid th, table.draw-grid td {
-    border: 1px solid var(--rule); padding: 0; vertical-align: stretch;
+    border: 1px solid var(--rule); padding: 0;
   }
   table.draw-grid thead th {
     background: #1273c2; color: #fff; font-weight: 800; font-size: 11px;
