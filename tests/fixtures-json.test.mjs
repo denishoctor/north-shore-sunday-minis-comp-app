@@ -107,5 +107,27 @@ if (!existsSync(FIXTURES_PATH)) {
         `Results with null score(s): ${offenders.slice(0, 3).map(m => `${m.id} (${m.home?.name} vs ${m.away?.name})`).join('; ')}${offenders.length > 3 ? ` (+${offenders.length - 3} more)` : ''}`,
       );
     });
+
+    // Minis rounds run in pods, so a dozen games share one kick-off time and a
+    // sort on dateTime alone leaves their order to however Rugby Xplorer
+    // happened to return them that minute. That varied run to run: consecutive
+    // refreshes held the same 405 matches in a different order, rewrote 2,500
+    // lines across 68 files, and turned every commit into a Vercel deployment
+    // for data that had not changed. The tie-break on id is what stops that,
+    // and this is the invariant that notices if it ever goes away.
+    test('matches are ordered by kick-off then id, with no ambiguity left', () => {
+      const key = (m) => [Date.parse(m.dateTime), String(m.id)];
+      for (let i = 1; i < data.matches.length; i++) {
+        const [prevTime, prevId] = key(data.matches[i - 1]);
+        const [thisTime, thisId] = key(data.matches[i]);
+        if (!Number.isFinite(prevTime) || !Number.isFinite(thisTime)) continue;
+        const ordered = prevTime < thisTime || (prevTime === thisTime && prevId <= thisId);
+        assert.ok(
+          ordered,
+          `matches[${i - 1}] and matches[${i}] are out of order: ` +
+          `${data.matches[i - 1].dateTime}/${prevId} before ${data.matches[i].dateTime}/${thisId}`,
+        );
+      }
+    });
   });
 }
