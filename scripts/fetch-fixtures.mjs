@@ -27,6 +27,30 @@ function writeFileAtomic(path, contents) {
   writeFileSync(tmp, contents);
   renameSync(tmp, path);
 }
+
+// Every artifact carries a build timestamp — `updated` in fixtures.json,
+// DTSTAMP and LAST-MODIFIED in each ICS feed — so a rewrite always differs from
+// the file already on disk even when not one fixture has moved. The workflow's
+// `git diff --cached --quiet` guard was therefore never true: it committed on
+// all 442 runs in August, each one a Vercel production deployment, for data
+// that changes about once a week.
+//
+// So compare with the volatile lines stripped, and when only those differ leave
+// the existing file alone. The stamp then means what it says — the last time
+// the data actually changed — and the guard in the workflow starts working
+// without needing to know any of this.
+function writeFileAtomicIfChanged(path, contents, volatile = []) {
+  if (existsSync(path)) {
+    const strip = (text) => volatile.reduce((acc, re) => acc.replace(re, ''), text);
+    if (strip(readFileSync(path, 'utf8')) === strip(contents)) return false;
+  }
+  writeFileAtomic(path, contents);
+  return true;
+}
+
+// The build stamp in fixtures.json, and the two in every ICS event.
+const VOLATILE_JSON = [/^\s*"updated":.*$/m];
+const VOLATILE_ICS  = [/^(?:DTSTAMP|LAST-MODIFIED):.*$/gm];
 import {
   SEASON, SITE_URL, SITE, SEASON_END, ICS_EVENT_MIN,
   FEEDS, CLUBS, COMPETITIONS, COMP_IDS, AGE_GROUPS, VENUES, MATCH_OVERRIDES, MATCH_ADDITIONS,
@@ -692,7 +716,20 @@ async function main() {
   // that replaces it is injected.
   applyOverrides(combined);
   applyAdditions(combined);
-  combined.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
+  // Tie-break on id. Minis rounds run in pods, so a dozen games share one
+  // kick-off time and a sort on dateTime alone leaves their order to however
+  // Rugby Xplorer happened to return them that minute. It varies run to run:
+  // consecutive refreshes held the same 405 matches in a different order, which
+  // rewrote 2,500 lines across 68 files and made every diff unreadable.
+  // Plain code-point comparison, not localeCompare: that one reads the
+  // runtime's default locale, which would make the tie-break itself vary
+  // between a laptop and a CI runner — the exact class of thing being fixed.
+  combined.sort((a, b) => {
+    const byTime = new Date(a.dateTime) - new Date(b.dateTime);
+    if (byTime) return byTime;
+    const [x, y] = [String(a.id), String(b.id)];
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
 
   buildAndWrite(combined, oldData);
 }
@@ -738,8 +775,10 @@ function buildAndWrite(combined, oldData) {
 
   const changes = detectChanges(oldData, output);
 
-  writeFileAtomic(OUT_PATH, JSON.stringify(output, null, 2));
-  console.log(`✓ Written ${combined.length} matches → docs/fixtures.json`);
+  const fixturesChanged = writeFileAtomicIfChanged(OUT_PATH, JSON.stringify(output, null, 2), VOLATILE_JSON);
+  console.log(fixturesChanged
+    ? `✓ Written ${combined.length} matches → docs/fixtures.json`
+    : `· ${combined.length} matches, unchanged since ${oldData?.updated ?? 'the last run'} — left on disk`);
 
   if (changes.length > 0) {
     const msg = formatChanges(changes);
@@ -751,16 +790,23 @@ function buildAndWrite(combined, oldData) {
     console.log('✓ No changes to upcoming fixtures');
   }
 
-  // Regenerate ICS feeds. Remove any stale .ics files first so a team
-  // disappearing from the draw doesn't leave a dead feed in place.
-  for (const f of readdirSync(DOCS_DIR)) {
-    if (f.endsWith('.ics')) unlinkSync(join(DOCS_DIR, f));
-  }
+  // Regenerate ICS feeds, then sweep. This used to unlink every .ics first,
+  // which achieved the same cleanup but destroyed the previous file before
+  // writeFileAtomicIfChanged could compare against it — so every feed was
+  // rewritten every run for the sake of a DTSTAMP. Write first, delete after,
+  // and a team disappearing from the draw still loses its dead feed.
+  const wanted = new Set(Object.keys(TEAM_SLUGS).map((slug) => `${slug}.ics`));
+  let icsRewritten = 0;
   for (const [slug, teamId] of Object.entries(TEAM_SLUGS)) {
     const ics = generateICS(slug, teamId, TEAM_META[teamId], combined, output.updated);
-    writeFileAtomic(join(DOCS_DIR, `${slug}.ics`), ics);
+    if (writeFileAtomicIfChanged(join(DOCS_DIR, `${slug}.ics`), ics, VOLATILE_ICS)) icsRewritten++;
   }
-  console.log(`✓ Written ${Object.keys(TEAM_SLUGS).length} ICS feeds → docs/*.ics`);
+  for (const f of readdirSync(DOCS_DIR)) {
+    if (f.endsWith('.ics') && !wanted.has(f)) unlinkSync(join(DOCS_DIR, f));
+  }
+  console.log(icsRewritten
+    ? `✓ Written ${icsRewritten} of ${wanted.size} ICS feeds → docs/*.ics`
+    : `· ${wanted.size} ICS feeds unchanged — left on disk`);
 
   // Emit docs/config.js — the browser-side mirror of the static config plus
   // the dynamically-discovered TEAM_SLUGS / TEAM_META so index.html can build
@@ -783,7 +829,7 @@ function buildAndWrite(combined, oldData) {
     '};',
     '',
   ].join('\n');
-  writeFileAtomic(CFG_PATH, configJs);
+  writeFileAtomicIfChanged(CFG_PATH, configJs);
   console.log('✓ Written docs/config.js');
 
   // Per-competition summary.
