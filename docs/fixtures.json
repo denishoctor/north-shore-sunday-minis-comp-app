@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T08:18:53.573Z",
+  "updated": "2026-08-25T13:16:12.776Z",
   "season": "2026",
   "site": {
     "name": "North Shore Minis Sunday Rugby",
@@ -6859,6 +6859,35 @@
           }
         },
         {
+          "id": "XCahakiEW8wSa9bNn",
+          "type": "fixture",
+          "competition": "SJRU Minis U7 Tri Time Sunday",
+          "compId": "TvJJeqzzeGJYzMJpw",
+          "age": "U7",
+          "round": "Round 13",
+          "roundLabel": "Round 13",
+          "dateTime": "2026-08-29T23:00:00+00:00",
+          "venue": "Hassall Park TT1 (U6/U7)",
+          "status": "Fixture",
+          "isLive": false,
+          "isBye": false,
+          "matchLabel": "Three Way Game",
+          "home": {
+            "id": "YXKtpRcuZY2pcJsvG",
+            "name": "Wakehurst Wildcats 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+            "clubKey": "wakehurst"
+          },
+          "away": {
+            "id": "e7BqvC4k5RA2b3vN9",
+            "name": "Killara-West Pymble Gold 7",
+            "score": null,
+            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+            "clubKey": "kwp"
+          }
+        },
+        {
           "id": "f16cbfc158a22eee7",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -6888,35 +6917,6 @@
           }
         },
         {
-          "id": "XCahakiEW8wSa9bNn",
-          "type": "fixture",
-          "competition": "SJRU Minis U7 Tri Time Sunday",
-          "compId": "TvJJeqzzeGJYzMJpw",
-          "age": "U7",
-          "round": "Round 13",
-          "roundLabel": "Round 13",
-          "dateTime": "2026-08-29T23:40:00+00:00",
-          "venue": "Hassall Park TT1 (U6/U7)",
-          "status": "Fixture",
-          "isLive": false,
-          "isBye": false,
-          "matchLabel": null,
-          "home": {
-            "id": "YXKtpRcuZY2pcJsvG",
-            "name": "Wakehurst Wildcats 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-            "clubKey": "wakehurst"
-          },
-          "away": {
-            "id": "e7BqvC4k5RA2b3vN9",
-            "name": "Killara-West Pymble Gold 7",
-            "score": null,
-            "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
-            "clubKey": "kwp"
-          }
-        },
-        {
           "id": "k9aNpa3Y7NaHmTNmA",
           "type": "fixture",
           "competition": "SJRU Minis U7 Tri Time Sunday",
@@ -6924,8 +6924,8 @@
           "age": "U7",
           "round": "Round 13",
           "roundLabel": "Round 13",
-          "dateTime": "2026-08-30T00:00:00+00:00",
-          "venue": "Hassall Park TT2 (U6/U7)",
+          "dateTime": "2026-08-29T23:20:00+00:00",
+          "venue": "Hassall Park TT1 (U6/U7)",
           "status": "Fixture",
           "isLive": false,
           "isBye": false,
@@ -6938,8 +6938,8 @@
             "clubKey": "kwp"
           },
           "away": {
-            "id": "wvLWfoHbJ3ma98kbQ",
-            "name": "Wakehurst Warthogs 7",
+            "id": "oFRNkNkZX8jap2wJw",
+            "name": "Wakehurst Wasps 7",
             "score": null,
             "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
             "clubKey": "wakehurst"
@@ -23760,6 +23760,35 @@
       }
     },
     {
+      "id": "XCahakiEW8wSa9bNn",
+      "type": "fixture",
+      "competition": "SJRU Minis U7 Tri Time Sunday",
+      "compId": "TvJJeqzzeGJYzMJpw",
+      "age": "U7",
+      "round": "Round 13",
+      "roundLabel": "Round 13",
+      "dateTime": "2026-08-29T23:00:00+00:00",
+      "venue": "Hassall Park TT1 (U6/U7)",
+      "status": "Fixture",
+      "isLive": false,
+      "isBye": false,
+      "matchLabel": "Three Way Game",
+      "home": {
+        "id": "YXKtpRcuZY2pcJsvG",
+        "name": "Wakehurst Wildcats 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
+      },
+      "away": {
+        "id": "e7BqvC4k5RA2b3vN9",
+        "name": "Killara-West Pymble Gold 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
+        "clubKey": "kwp"
+      }
+    },
+    {
       "id": "5fc7198ad4f07ed9a",
       "type": "fixture",
       "competition": "SJRU Minis U8 Sunday",
@@ -23818,32 +23847,32 @@
       }
     },
     {
-      "id": "XCahakiEW8wSa9bNn",
+      "id": "k9aNpa3Y7NaHmTNmA",
       "type": "fixture",
       "competition": "SJRU Minis U7 Tri Time Sunday",
       "compId": "TvJJeqzzeGJYzMJpw",
       "age": "U7",
       "round": "Round 13",
       "roundLabel": "Round 13",
-      "dateTime": "2026-08-29T23:40:00+00:00",
+      "dateTime": "2026-08-29T23:20:00+00:00",
       "venue": "Hassall Park TT1 (U6/U7)",
       "status": "Fixture",
       "isLive": false,
       "isBye": false,
-      "matchLabel": null,
+      "matchLabel": "Three Way Game",
       "home": {
-        "id": "YXKtpRcuZY2pcJsvG",
-        "name": "Wakehurst Wildcats 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
-      },
-      "away": {
         "id": "e7BqvC4k5RA2b3vN9",
         "name": "Killara-West Pymble Gold 7",
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
         "clubKey": "kwp"
+      },
+      "away": {
+        "id": "oFRNkNkZX8jap2wJw",
+        "name": "Wakehurst Wasps 7",
+        "score": null,
+        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
+        "clubKey": "wakehurst"
       }
     },
     {
@@ -24018,35 +24047,6 @@
         "score": null,
         "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
         "clubKey": "kwp"
-      }
-    },
-    {
-      "id": "k9aNpa3Y7NaHmTNmA",
-      "type": "fixture",
-      "competition": "SJRU Minis U7 Tri Time Sunday",
-      "compId": "TvJJeqzzeGJYzMJpw",
-      "age": "U7",
-      "round": "Round 13",
-      "roundLabel": "Round 13",
-      "dateTime": "2026-08-30T00:00:00+00:00",
-      "venue": "Hassall Park TT2 (U6/U7)",
-      "status": "Fixture",
-      "isLive": false,
-      "isBye": false,
-      "matchLabel": "Three Way Game",
-      "home": {
-        "id": "e7BqvC4k5RA2b3vN9",
-        "name": "Killara-West Pymble Gold 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/30900.png?v=1712740003301",
-        "clubKey": "kwp"
-      },
-      "away": {
-        "id": "wvLWfoHbJ3ma98kbQ",
-        "name": "Wakehurst Warthogs 7",
-        "score": null,
-        "crest": "https://dpf0m541u9zk8.cloudfront.net/ru/team/53597.png?v=1712285508850",
-        "clubKey": "wakehurst"
       }
     },
     {
