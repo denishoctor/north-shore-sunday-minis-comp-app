@@ -1,21 +1,11 @@
 name: Refresh Fixtures
 
+# No schedule. The homeserver runs this pipeline now, on its own timer
+# (infra jobs/nssm-sync, Forge's, mirroring the old cadence: 6-hourly at :23,
+# hourly Saturday 18:41 through Sunday 09:41 Sydney). Two schedulers pushing
+# the same files is worse than one. workflow_dispatch stays as the escape
+# hatch if the box is down.
 on:
-  schedule:
-    # Sunday Minis rounds drop weekly with the occasional mid-week tweak, and
-    # the competition records no scores at all, so there is nothing that moves
-    # during a game. Hourly, 24/7 was 442 runs in August to publish data that
-    # changed about four times.
-    #
-    # Odd minutes on purpose: GitHub's scheduler is congested at :00 and at
-    # multiples of 5, and runs there routinely slip or get shed entirely.
-    - cron: '23 */6 * * *'     # every 6 hours, all week
-    # The one window where latency actually costs someone a wasted trip: a
-    # venue change published late Saturday for Sunday morning. AEST is UTC+10,
-    # so Saturday 18:41 through Sunday 09:41 Sydney is one unbroken run of
-    # Saturday UTC hours.
-    - cron: '41 8-23 * * 6'    # hourly, Sat evening → Sun morning AEST
-    # Faster pick-up than that: use `workflow_dispatch`, not a tighter cron.
   workflow_dispatch:
 
 # Serialise runs so a long-running fetch from one trigger can't race with the
